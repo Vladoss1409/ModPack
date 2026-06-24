@@ -1,0 +1,14 @@
+{
+  "name": "Кодекс завершён",
+  "icon": "minecraft:nether_star",
+  "category": "patchouli:progress",
+  "advancement": "cooptech:journal/ch6_finale",
+  "secret": true,
+  "sortnum": 61,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Экспедиция закрыта$()$(br2)Якорь стабилен, кодекс исполнен. Журнал остаётся — для $(#DD55DD)ваших$() заметок и будущих сезонов."
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Specification-Title: incendium
+Specification-Vendor: Stardust Labs
+Specification-Version: 5.3.5
+Implementation-Title: incendium
+Implementation-Version: 5.3.5
+Implementation-Vendor: Stardust Labs
+Implementation-Timestamp: 2024-05-11T17:47:55+0200

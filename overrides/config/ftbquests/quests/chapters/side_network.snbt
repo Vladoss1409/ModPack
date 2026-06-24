@@ -1,0 +1,188 @@
+{
+	default_quest_disable_jei: true
+	default_hide_dependency_lines: false
+	progression_mode: "linear"
+	hide_quest_until_deps_complete: true
+	hide_quest_details_until_startable: true
+	default_quest_shape: "circle"
+	filename: "side_network"
+	group: "B100000000000003"
+	icon: { count: 1, id: "ae2:controller" }
+	id: "A805000000000000"
+	order_index: 6
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+			"§dМолекулярная сеть§r — ветка открыта основной линией."
+			"Следующие узлы появятся по цепочке зависимостей."
+			]
+			dependencies: ["A501000000000019"]
+			icon: { count: 1, id: "ae2:certus_quartz_crystal" }
+			id: "A805000000000001"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 32, id: "T805000000000001", item: "ae2:certus_quartz_crystal", title: "Certus", type: "item" }
+			]
+			title: "Certus"
+			x: -3.0d
+			y: 3.0d
+		},
+		{
+			dependencies: ["A805000000000001"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "ae2:growth_accelerator" }
+			id: "A805000000000002"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 4, id: "T805000000000002", item: "ae2:growth_accelerator", title: "Growth Accelerator", type: "item" }
+			]
+			title: "Growth Accelerator"
+			x: -1.0d
+			y: 3.0d
+		},
+		{
+			dependencies: ["A805000000000002"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "ae2:inscriber" }
+			id: "A805000000000003"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T805000000000003", item: "ae2:inscriber", title: "Inscriber", type: "item" }
+			]
+			title: "Inscriber"
+			x: 1.0d
+			y: 3.0d
+		},
+		{
+			dependencies: ["A805000000000003"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "ae2:calculation_processor" }
+			id: "A805000000000004"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 4, id: "T805000000000004", item: "ae2:calculation_processor", title: "Processor", type: "item" }
+			]
+			title: "Processor"
+			x: 3.0d
+			y: 3.0d
+		},
+		{
+			dependencies: ["A805000000000004"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "ae2:drive" }
+			id: "A805000000000005"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T805000000000005", item: "ae2:drive", title: "ME Drive", type: "item" }
+			]
+			title: "ME Drive"
+			x: -3.0d
+			y: 6.0d
+		},
+		{
+			dependencies: ["A805000000000005"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "ae2:interface" }
+			id: "A805000000000006"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 2, id: "T805000000000006", item: "ae2:interface", title: "ME Interface", type: "item" }
+			]
+			title: "ME Interface"
+			x: -1.0d
+			y: 6.0d
+		},
+		{
+			dependencies: ["A805000000000006"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "ae2:import_bus" }
+			id: "A805000000000007"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 4, id: "T805000000000007", item: "ae2:import_bus", title: "Import Bus", type: "item" }
+			]
+			title: "Import Bus"
+			x: 1.0d
+			y: 6.0d
+		},
+		{
+			dependencies: ["A805000000000007"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "ae2:export_bus" }
+			id: "A805000000000008"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 4, id: "T805000000000008", item: "ae2:export_bus", title: "Export Bus", type: "item" }
+			]
+			title: "Export Bus"
+			x: 3.0d
+			y: 6.0d
+		},
+		{
+			dependencies: ["A805000000000008"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "ae2:crafting_unit" }
+			id: "A805000000000009"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 4, id: "T805000000000009", item: "ae2:crafting_unit", title: "Crafting CPU", type: "item" }
+			]
+			title: "Crafting CPU"
+			x: -3.0d
+			y: 9.0d
+		},
+		{
+			dependencies: ["A805000000000009"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "ae2:controller" }
+			id: "A805000000000010"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T805000000000010", item: "ae2:controller", title: "Controller", type: "item" }
+			]
+			title: "Controller"
+			x: -1.0d
+			y: 9.0d
+		},
+		{
+			dependencies: ["A805000000000010"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "ae2:wireless_access_point" }
+			id: "A805000000000011"
+			disable_jei: true
+			shape: "diamond"
+			size: 1.2d
+			tasks: [
+				{ id: "T805000000000011", item: "ae2:wireless_access_point", title: "Wireless", type: "item" }
+			]
+			title: "Wireless"
+			x: 0.0d
+			y: 11.0d
+		}
+	]
+	subtitle: [
+		"Сайд-ветка"
+	]
+	title: "Молекулярная сеть"
+}

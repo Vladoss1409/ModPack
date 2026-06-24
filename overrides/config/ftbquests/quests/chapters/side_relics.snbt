@@ -1,0 +1,98 @@
+{
+	default_quest_disable_jei: true
+	default_hide_dependency_lines: false
+	progression_mode: "linear"
+	hide_quest_until_deps_complete: true
+	hide_quest_details_until_startable: true
+	default_quest_shape: "circle"
+	filename: "side_relics"
+	group: "B100000000000004"
+	icon: { count: 1, id: "relics:roller_skates" }
+	id: "A816000000000000"
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+			"§dРеликвии§r — ветка открыта основной линией."
+			"Следующие узлы появятся по цепочке зависимостей."
+			]
+			dependencies: ["A601000000000015"]
+			icon: { count: 1, id: "relics:roller_skates" }
+			id: "A816000000000001"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T816000000000001", item: "relics:roller_skates", title: "Roller Skates", type: "item" }
+			]
+			title: "Roller Skates"
+			x: -2.5d
+			y: 3.0d
+		},
+		{
+			dependencies: ["A816000000000001"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "relics:horseshoe" }
+			id: "A816000000000002"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T816000000000002", item: "relics:horseshoe", title: "Horse Shoe", type: "item" }
+			]
+			title: "Horse Shoe"
+			x: 2.5d
+			y: 5.2d
+		},
+		{
+			dependencies: ["A816000000000002"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "relics:aqua_walker" }
+			id: "A816000000000003"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T816000000000003", item: "relics:aqua_walker", title: "Aqua Walker", type: "item" }
+			]
+			title: "Aqua Walker"
+			x: -2.5d
+			y: 7.4d
+		},
+		{
+			dependencies: ["A816000000000003"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "relics:midnight_roast" }
+			id: "A816000000000004"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T816000000000004", item: "relics:midnight_roast", title: "Midnight Roast", type: "item" }
+			]
+			title: "Midnight Roast"
+			x: 2.5d
+			y: 9.6d
+		},
+		{
+			dependencies: ["A816000000000004"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "relics:amphibian_boot" }
+			id: "A816000000000005"
+			disable_jei: true
+			shape: "diamond"
+			size: 1.2d
+			tasks: [
+				{ id: "T816000000000005", item: "relics:amphibian_boot", title: "Relics Finale", type: "item" }
+			]
+			title: "Relics Finale"
+			x: -2.5d
+			y: 11.8d
+		}
+	]
+	subtitle: [
+		"Сайд-ветка"
+	]
+	title: "Реликвии"
+}

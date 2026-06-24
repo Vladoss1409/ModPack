@@ -1,0 +1,28 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:potion",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_name",
+                            "name": {
+                                "translate": "incendium.item.miners_ale.name",
+                                "fallback": "Miner's Ale",
+                                "color": "#ff4e21",
+                                "italic": false
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{CustomPotionColor:16735265,HideFlags:32,Potion:\"minecraft:water\",CustomPotionEffects:[{Id:3,Amplifier:2,Duration:18000}],custom_potion_effects:[{id:\"minecraft:haste\",amplifier:2,duration:18000}]}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

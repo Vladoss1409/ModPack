@@ -1,0 +1,14 @@
+{
+  "name": "Applied Energistics",
+  "icon": "ae2:controller",
+  "category": "patchouli:branches",
+  "advancement": "cooptech:journal/side_network",
+  "secret": true,
+  "sortnum": 5,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)ME-сеть$()$(br2)После Главы III — процессоры, диски, автокрафт. Один проектирует сеть, второй — поставляет кварц."
+    }
+  ]
+}

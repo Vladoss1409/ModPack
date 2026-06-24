@@ -1,0 +1,14 @@
+{
+  "name": "Путеводитель прочитан",
+  "icon": "minecraft:map",
+  "category": "patchouli:main",
+  "advancement": "cooptech:journal/guides_done",
+  "secret": true,
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Справка в кармане$()$(br2)JEI, Teams, JourneyMap — базовые инструменты коопа. Дальше — полевой Prologue у лагеря."
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Глава V: рубеж Nano",
+  "icon": "minecraft:netherite_ingot",
+  "category": "patchouli:progress",
+  "advancement": "cooptech:journal/ch5_gate",
+  "secret": true,
+  "sortnum": 50,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Нано-экспедиция$()$(br2)Незерит и $(#FFAA00)Silent Gear$() — модульные инструменты под ваш стиль игры. Кооп: один качает шаблоны, второй — зачарования и Apotheosis."
+    }
+  ]
+}

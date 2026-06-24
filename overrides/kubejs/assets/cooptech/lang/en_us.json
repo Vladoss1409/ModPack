@@ -1,0 +1,5 @@
+{
+  "item.kubejs.expedition_journal": "Expedition Journal",
+  "patchouli.book.cooptech.expedition_journal.name": "Expedition Journal",
+  "patchouli.book.cooptech.expedition_journal.landing_text": "$(bold)Expedition Journal «Anchor»$()$(br2)Field notes, legends and observations — not to be confused with the $(#d)Quest Codex$() of expedition tasks.$(br2)$(thing)RMB$() journal pages in inventory — short excerpts in chat."
+}

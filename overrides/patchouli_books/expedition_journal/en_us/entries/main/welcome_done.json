@@ -1,0 +1,14 @@
+{
+  "name": "Вступление завершено",
+  "icon": "cooptech:textures/quests/gate.png",
+  "category": "patchouli:main",
+  "advancement": "cooptech:journal/welcome_done",
+  "secret": true,
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Сигнал принят$()$(br2)Вы прошли Welcome — кодекс откроет $(#DD55DD)Prologue$(). Журнал пополнится по рубежам."
+    }
+  ]
+}

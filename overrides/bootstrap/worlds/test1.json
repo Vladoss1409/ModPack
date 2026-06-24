@@ -1,0 +1,22 @@
+{
+  "world_name": "Тест1",
+  "save_folder": "Новый мир1",
+  "seed": "-1545052101796886478",
+  "camp": {
+    "x": -60,
+    "y": 92,
+    "z": 97,
+    "note": "Anchor Y = walkable floor (podzol layer)"
+  },
+  "legacy_camp": {
+    "x": -60,
+    "y": 94,
+    "z": 97
+  },
+  "biome_poi": "terralith:yellowstone",
+  "previous_world": {
+    "name": "Тест",
+    "seed": "5998437775939784656",
+    "camp": [0, 84, 0]
+  }
+}

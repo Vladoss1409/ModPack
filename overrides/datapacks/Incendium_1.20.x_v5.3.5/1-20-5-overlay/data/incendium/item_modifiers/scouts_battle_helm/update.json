@@ -1,0 +1,66 @@
+[
+  {
+    "function": "minecraft:set_components",
+    "components": {
+      "minecraft:attribute_modifiers": {
+        "modifiers": []
+      }
+    }
+  },
+  {
+    "function": "minecraft:set_attributes",
+    "modifiers": [
+      {
+        "attribute": "minecraft:generic.knockback_resistance",
+        "name": "a",
+        "amount": 0.1,
+        "operation": "add_value",
+        "slot": "head"
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_attributes",
+    "modifiers": [
+      {
+        "attribute": "minecraft:generic.armor",
+        "name": "d",
+        "amount": 3,
+        "operation": "add_value",
+        "slot": "head"
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_attributes",
+    "modifiers": [
+      {
+        "attribute": "minecraft:generic.armor_toughness",
+        "name": "s",
+        "amount": 3,
+        "operation": "add_value",
+        "slot": "head"
+      }
+    ]
+  },
+  {
+    "function": "minecraft:set_attributes",
+    "modifiers": [
+      {
+        "attribute": "minecraft:generic.movement_speed",
+        "name": "scout",
+        "amount": {
+          "type": "minecraft:score",
+          "target": {
+            "type": "minecraft:fixed",
+            "name": "$speed"
+          },
+          "score": "in.dummy",
+          "scale": 0.04
+        },
+        "operation": "add_multiplied_base",
+        "slot": "head"
+      }
+    ]
+  }
+]

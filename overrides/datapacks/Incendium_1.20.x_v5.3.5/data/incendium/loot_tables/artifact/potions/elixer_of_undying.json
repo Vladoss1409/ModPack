@@ -1,0 +1,28 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:potion",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_name",
+                            "name": {
+                                "translate": "incendium.item.undying_elixer.name",
+                                "fallback": "Elixir of Undying",
+                                "color": "#ffcc00",
+                                "italic": false
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{CustomPotionColor:14679821,HideFlags:32,Potion:\"minecraft:water\",CustomPotionEffects:[{Id:10,Amplifier:1,Duration:1200},{Id:11,Amplifier:4,Duration:600},{Id:22,Amplifier:4,Duration:4800}],custom_potion_effects:[{id:\"minecraft:regeneration\",amplifier:1,duration:1200},{id:\"minecraft:resistance\",amplifier:4,duration:600},{id:\"minecraft:absorption\",amplifier:4,duration:4800}]}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,218 @@
+{
+	default_quest_disable_jei: true
+	default_hide_dependency_lines: false
+	progression_mode: "linear"
+	hide_quest_until_deps_complete: true
+	hide_quest_details_until_startable: true
+	default_quest_shape: "circle"
+	filename: "side_thermal"
+	group: "B100000000000003"
+	icon: { count: 1, id: "thermal:machine_frame" }
+	id: "A801000000000000"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+			"§dТепловой контур§r — ветка открыта основной линией."
+			"Следующие узлы появятся по цепочке зависимостей."
+			]
+			dependencies: ["A201000000000013"]
+			icon: { count: 1, id: "thermal:machine_frame" }
+			id: "A801000000000001"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T801000000000001", item: "thermal:machine_frame", title: "Machine Frame", type: "item" }
+			]
+			title: "Machine Frame"
+			x: -3.0d
+			y: 3.0d
+		},
+		{
+			dependencies: ["A801000000000001"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "thermal:redstone_furnace" }
+			id: "A801000000000002"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T801000000000002", item: "thermal:redstone_furnace", title: "Redstone Furnace", type: "item" }
+			]
+			title: "Redstone Furnace"
+			x: -1.0d
+			y: 3.0d
+		},
+		{
+			dependencies: ["A801000000000002"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "thermal:machine_pulverizer" }
+			id: "A801000000000003"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T801000000000003", item: "thermal:machine_pulverizer", title: "Pulverizer", type: "item" }
+			]
+			title: "Pulverizer"
+			x: 1.0d
+			y: 3.0d
+		},
+		{
+			dependencies: ["A801000000000003"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "thermal:sawmill" }
+			id: "A801000000000004"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T801000000000004", item: "thermal:sawmill", title: "Sawmill", type: "item" }
+			]
+			title: "Sawmill"
+			x: 3.0d
+			y: 3.0d
+		},
+		{
+			dependencies: ["A801000000000004"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "thermal:machine_smelter" }
+			id: "A801000000000005"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T801000000000005", item: "thermal:machine_smelter", title: "Induction Smelter", type: "item" }
+			]
+			title: "Induction Smelter"
+			x: -3.0d
+			y: 6.0d
+		},
+		{
+			dependencies: ["A801000000000005"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "thermal:fluid_cell" }
+			id: "A801000000000006"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T801000000000006", item: "thermal:fluid_cell", title: "Fluid Cell", type: "item" }
+			]
+			title: "Fluid Cell"
+			x: -1.0d
+			y: 6.0d
+		},
+		{
+			dependencies: ["A801000000000006"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "thermal:dynamo_stirling" }
+			id: "A801000000000007"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T801000000000007", item: "thermal:dynamo_stirling", title: "Dynamo", type: "item" }
+			]
+			title: "Dynamo"
+			x: 1.0d
+			y: 6.0d
+		},
+		{
+			dependencies: ["A801000000000007"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "thermal:energy_cell" }
+			id: "A801000000000008"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T801000000000008", item: "thermal:energy_cell", title: "Energy Cell", type: "item" }
+			]
+			title: "Energy Cell"
+			x: 3.0d
+			y: 6.0d
+		},
+		{
+			dependencies: ["A801000000000008"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "thermal:upgrade_augment_1" }
+			id: "A801000000000009"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 4, id: "T801000000000009", item: "thermal:upgrade_augment_1", title: "Augment", type: "item" }
+			]
+			title: "Augment"
+			x: -3.0d
+			y: 9.0d
+		},
+		{
+			dependencies: ["A801000000000009"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "thermal:energy_cell" }
+			id: "A801000000000010"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 4, id: "T801000000000010", item: "thermal:energy_cell", title: "Resonant Cell", type: "item" }
+			]
+			title: "Resonant Cell"
+			x: -1.0d
+			y: 9.0d
+		},
+		{
+			dependencies: ["A801000000000010"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "thermal:rf_coil" }
+			id: "A801000000000011"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 16, id: "T801000000000011", item: "thermal:rf_coil", title: "Thermal Drive", type: "item" }
+			]
+			title: "Thermal Drive"
+			x: 1.0d
+			y: 9.0d
+		},
+		{
+			dependencies: ["A801000000000011"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "thermal:machine_crafter" }
+			id: "A801000000000012"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T801000000000012", item: "thermal:machine_crafter", title: "Thermal Finale", type: "item" }
+			]
+			title: "Thermal Finale"
+			x: 3.0d
+			y: 9.0d
+		},
+		{
+			dependencies: ["A801000000000012"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "thermal:upgrade_augment_3" }
+			id: "A801000000000013"
+			disable_jei: true
+			shape: "diamond"
+			size: 1.2d
+			tasks: [
+				{ count: 4, id: "T801000000000013", item: "thermal:upgrade_augment_3", title: "Resonant Upgrade", type: "item" }
+			]
+			title: "Resonant Upgrade"
+			x: 0.0d
+			y: 14.0d
+		}
+	]
+	subtitle: [
+		"Сайд-ветка"
+	]
+	title: "Тепловой контур"
+}

@@ -1,0 +1,18 @@
+{
+  "name": "Глава IV: рубеж Production",
+  "icon": "mekanism:metallurgic_infuser",
+  "category": "patchouli:progress",
+  "advancement": "cooptech:journal/ch4_gate",
+  "secret": true,
+  "sortnum": 40,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Промышленный контур$()$(br2)После стабильного RF якорь требует $(#DD55DD)массовое производство$(): Mekanism, EnderIO, AE2. Делите роли: один — руды и плавка, второй — сеть и крафт."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "В сайдбаре кодекса открываются $(#FFAA00)ветки модов$() — Thermal, Network, Apotheosis. Записи о них — в разделе «Ветки модов» этого журнала."
+    }
+  ]
+}

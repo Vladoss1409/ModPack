@@ -1,0 +1,19 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:black_banner",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{BlockEntityTag:{Base:0,Patterns:[{Pattern:tts,Color:4},{Pattern:bts,Color:4},{Pattern:bo,Color:4},{Pattern:flo,Color:11},{Pattern:sku,Color:11},{Pattern:gru,Color:4}]},HideFlags:32,display:{Name:'[{\"text\":\"A Sanctums Oath\",\"italic\":true,\"color\":\"gold\"}]'}}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

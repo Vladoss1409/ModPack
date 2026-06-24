@@ -1,0 +1,8 @@
+{
+  "name": "Журнал экспедиции «Якорь»",
+  "landing_text": "$(bold)Журнал экспедиции «Якорь»$()$(br2)Записи $(#DD55DD)появляются по мере поручений$() в Кодексе — открывайте книгу после рубежей.$(br2)Страницы в инвентаре — $(#FFAA00)ПКМ$(): выписки в чат.",
+  "book_texture": "patchouli:textures/gui/book_purple.png",
+  "model": "patchouli:book_purple",
+  "version": 3,
+  "show_progress": true
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Arcane — арканные ремёсла",
+  "icon": "irons_spellbooks:arcane_essence",
+  "category": "patchouli:branches",
+  "advancement": "cooptech:journal/side_arcane",
+  "secret": true,
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Ветка Arcane$()$(br2)Iron's Spellbooks — руны, чернила, книга заклинаний. Один маг, второй — танк с реликвариями."
+    }
+  ]
+}

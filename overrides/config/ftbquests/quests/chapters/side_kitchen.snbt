@@ -1,0 +1,293 @@
+{
+	default_quest_disable_jei: true
+	default_hide_dependency_lines: false
+	progression_mode: "linear"
+	hide_quest_until_deps_complete: true
+	hide_quest_details_until_startable: true
+	default_quest_shape: "circle"
+	filename: "side_kitchen"
+	group: "B100000000000005"
+	icon: { count: 1, id: "farmersdelight:cooking_pot" }
+	id: "A802000000000000"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+			"§dПолевая кухня§r — ветка открыта основной линией."
+			"Следующие узлы появятся по цепочке зависимостей."
+			]
+			dependencies: ["A101000000000002"]
+			icon: { count: 1, id: "farmersdelight:cooking_pot" }
+			id: "A802000000000001"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T802000000000001", item: "farmersdelight:cooking_pot", title: "Cooking Pot", type: "item" }
+			]
+			title: "Cooking Pot"
+			x: -2.5d
+			y: 3.0d
+		},
+		{
+			dependencies: ["A802000000000001"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "farmersdelight:cutting_board" }
+			id: "A802000000000002"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T802000000000002", item: "farmersdelight:cutting_board", title: "Cutting Board", type: "item" }
+			]
+			title: "Cutting Board"
+			x: 2.5d
+			y: 5.2d
+		},
+		{
+			dependencies: ["A802000000000002"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "farmersdelight:skillet" }
+			id: "A802000000000003"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T802000000000003", item: "farmersdelight:skillet", title: "Skillet", type: "item" }
+			]
+			title: "Skillet"
+			x: -2.5d
+			y: 7.4d
+		},
+		{
+			dependencies: ["A802000000000003"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "farmersdelight:stove" }
+			id: "A802000000000004"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T802000000000004", item: "farmersdelight:stove", title: "Stove", type: "item" }
+			]
+			title: "Stove"
+			x: 2.5d
+			y: 9.6d
+		},
+		{
+			dependencies: ["A802000000000004"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "farmersdelight:spruce_cabinet" }
+			id: "A802000000000005"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 4, id: "T802000000000005", item: "farmersdelight:spruce_cabinet", title: "Cabinet", type: "item" }
+			]
+			title: "Cabinet"
+			x: -2.5d
+			y: 11.8d
+		},
+		{
+			dependencies: ["A802000000000005"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "farmersdelight:apple_pie" }
+			id: "A802000000000006"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 4, id: "T802000000000006", item: "farmersdelight:apple_pie", title: "Pie", type: "item" }
+			]
+			title: "Pie"
+			x: 2.5d
+			y: 14.0d
+		},
+		{
+			dependencies: ["A802000000000006"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "farmersdelight:roast_chicken_block" }
+			id: "A802000000000007"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T802000000000007", item: "farmersdelight:roast_chicken_block", title: "Feast", type: "item" }
+			]
+			title: "Feast"
+			x: -2.5d
+			y: 16.2d
+		},
+		{
+			dependencies: ["A802000000000007"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "farmersdelight:hot_cocoa" }
+			id: "A802000000000008"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 8, id: "T802000000000008", item: "farmersdelight:hot_cocoa", title: "Hot Cocoa", type: "item" }
+			]
+			title: "Hot Cocoa"
+			x: 2.5d
+			y: 18.4d
+		},
+		{
+			dependencies: ["A802000000000008"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "farmersdelight:dog_food" }
+			id: "A802000000000009"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 8, id: "T802000000000009", item: "farmersdelight:dog_food", title: "Dog Food", type: "item" }
+			]
+			title: "Dog Food"
+			x: -2.5d
+			y: 20.6d
+		},
+		{
+			dependencies: ["A802000000000009"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "farmersdelight:cooked_bacon" }
+			id: "A802000000000010"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 16, id: "T802000000000010", item: "farmersdelight:cooked_bacon", title: "Bacon", type: "item" }
+			]
+			title: "Bacon"
+			x: 2.5d
+			y: 22.8d
+		},
+		{
+			dependencies: ["A802000000000010"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "minecraft:cooked_beef" }
+			id: "A802000000000011"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 32, id: "T802000000000011", item: "minecraft:cooked_beef", title: "Steak", type: "item" }
+			]
+			title: "Steak"
+			x: -2.5d
+			y: 25.0d
+		},
+		{
+			dependencies: ["A802000000000011"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "minecraft:golden_carrot" }
+			id: "A802000000000012"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 16, id: "T802000000000012", item: "minecraft:golden_carrot", title: "Golden Carrot", type: "item" }
+			]
+			title: "Golden Carrot"
+			x: 2.5d
+			y: 27.2d
+		},
+		{
+			dependencies: ["A802000000000012"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "minecraft:suspicious_stew" }
+			id: "A802000000000013"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 4, id: "T802000000000013", item: "minecraft:suspicious_stew", title: "Suspicious Stew", type: "item" }
+			]
+			title: "Suspicious Stew"
+			x: -2.5d
+			y: 29.4d
+		},
+		{
+			dependencies: ["A802000000000013"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "minecraft:cake" }
+			id: "A802000000000014"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T802000000000014", item: "minecraft:cake", title: "Cake", type: "item" }
+			]
+			title: "Cake"
+			x: 2.5d
+			y: 31.6d
+		},
+		{
+			dependencies: ["A802000000000014"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "minecraft:honey_bottle" }
+			id: "A802000000000015"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 8, id: "T802000000000015", item: "minecraft:honey_bottle", title: "Honey", type: "item" }
+			]
+			title: "Honey"
+			x: -2.5d
+			y: 33.8d
+		},
+		{
+			dependencies: ["A802000000000015"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "minecraft:campfire" }
+			id: "A802000000000016"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 4, id: "T802000000000016", item: "minecraft:campfire", title: "Campfire", type: "item" }
+			]
+			title: "Campfire"
+			x: 2.5d
+			y: 36.0d
+		},
+		{
+			dependencies: ["A802000000000016"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "minecraft:barrel" }
+			id: "A802000000000017"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 8, id: "T802000000000017", item: "minecraft:barrel", title: "Barrel", type: "item" }
+			]
+			title: "Barrel"
+			x: -2.5d
+			y: 38.2d
+		},
+		{
+			dependencies: ["A802000000000017"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "farmersdelight:rich_soil" }
+			id: "A802000000000018"
+			disable_jei: true
+			shape: "diamond"
+			size: 1.2d
+			tasks: [
+				{ count: 8, id: "T802000000000018", item: "farmersdelight:rich_soil", title: "Kitchen Finale", type: "item" }
+			]
+			title: "Kitchen Finale"
+			x: 2.5d
+			y: 40.4d
+		}
+	]
+	subtitle: [
+		"Сайд-ветка"
+	]
+	title: "Полевая кухня"
+}

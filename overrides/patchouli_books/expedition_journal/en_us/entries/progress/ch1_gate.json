@@ -1,0 +1,18 @@
+{
+  "name": "Глава I: рубеж «Фундамент»",
+  "icon": "ironfurnaces:iron_furnace",
+  "category": "patchouli:progress",
+  "advancement": "cooptech:journal/ch1_gate",
+  "secret": true,
+  "sortnum": 10,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Инфраструктура якоря$()$(br2)После Пролога кодекс требует $(#DD55DD)фундамент базы$(): автоплавка, хранение, запас железа. Нужны $(#FFAA00)2 из 4 pool$() — как в Прологе, но моды серьёзнее.$(br2)- $(italic)Iron Furnaces$(): печь без ручного угля на каждый слиток.$(br2)- $(italic)Storage Drawers$(): сортировка руды по типам."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "- $(italic)Sophisticated Storage$(): рюкзак/сундук с фильтрами на рейд.$(br2)- $(italic)Добыча$(): железный резерв — один копает, второй тащит в ящики.$(br2)После рубежа — $(#DD55DD)совместный финал$(): первая $(#FFAA00)Thermal$()-машина. Делите роли: один ставит, второй подаёт материалы."
+    }
+  ]
+}

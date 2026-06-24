@@ -1,0 +1,5 @@
+{
+	# Pin quests on HUD bar. After first launch copy to config/ftbquests-client.snbt if needed.
+	pinned_quests_in_bar: true
+	quest_widget: true
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": { "min": 3, "max": 5 },
+      "entries": [
+        { "type": "minecraft:item", "name": "mekanism:ingot_osmium", "weight": 8, "functions": [{ "function": "minecraft:set_count", "count": { "min": 4, "max": 16 } }] },
+        { "type": "minecraft:item", "name": "mekanism:dust_sulfur", "weight": 6, "functions": [{ "function": "minecraft:set_count", "count": { "min": 4, "max": 12 } }] },
+        { "type": "minecraft:item", "name": "alexscaves:cave_tablet", "weight": 3 },
+        { "type": "minecraft:item", "name": "appliedenergistics2:certus_quartz_crystal", "weight": 5, "functions": [{ "function": "minecraft:set_count", "count": { "min": 8, "max": 16 } }] }
+      ]
+    }
+  ]
+}

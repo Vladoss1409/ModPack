@@ -1,0 +1,5 @@
+{
+  "item.kubejs.expedition_journal": "Журнал экспедиции",
+  "patchouli.book.cooptech.expedition_journal.name": "Журнал экспедиции «Якорь»",
+  "patchouli.book.cooptech.expedition_journal.landing_text": "$(bold)Журнал экспедиции «Якорь»$()$(br2)Личные записи, легенды и наблюдения — не путать с $(#d)Кодексом поручений$(), где задачи экспедиции.$(br2)$(thing)ПКМ$() по «Странице журнала» в инвентаре — выписка в чат."
+}

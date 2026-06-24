@@ -1,0 +1,317 @@
+{
+	default_quest_disable_jei: true
+	default_hide_dependency_lines: false
+	progression_mode: "linear"
+	hide_quest_until_deps_complete: false
+	hide_quest_details_until_startable: true
+	filename: "03_flux"
+	group: "B100000000000001"
+	icon: { count: 1, id: "thermal:energy_cell" }
+	id: "A400000000000001"
+	order_index: 3
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["A301000000000006"]
+			description: [
+				"Thermal Expansion: Redstone Furnace или Pulverizer."
+				""
+				"JEI → Thermal Expansion."
+			]
+			id: "A401000000000001"
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			rewards: [
+				{ count: 16, id: "R401000000000001", item: "thermal:rf_coil", type: "item" }
+			]
+			subtitle: "Pool: Thermal"
+			tasks: [{ id: "T401000000000001", item: "thermal:redstone_furnace", type: "item" }]
+			title: "Thermal машина"
+			x: -3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["A301000000000006"]
+			description: [
+				"Powah: Magmator или Furnator."
+				""
+				"JEI → Powah → basic tier."
+			]
+			id: "A401000000000002"
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			rewards: [
+				{ id: "R401000000000002", item: "powah:capacitor_basic", type: "item" }
+			]
+			subtitle: "Pool: Powah"
+			tasks: [{ id: "T401000000000002", item: "powah:furnator_basic", type: "item" }]
+			title: "Базовая энергия"
+			x: -1.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["A301000000000006"]
+			description: [
+				"Immersive Engineering: Water Wheel или Coke Oven."
+				""
+				"JEI → Immersive Engineering."
+			]
+			id: "A401000000000003"
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			rewards: [
+				{ count: 32, id: "R401000000000003", item: "immersiveengineering:coal_coke", type: "item" }
+			]
+			subtitle: "Pool: IE"
+			tasks: [{ id: "T401000000000003", item: "immersiveengineering:cokebrick", count: 27, type: "item" }]
+			title: "Coke Oven"
+			x: 1.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["A301000000000006"]
+			description: [
+				"Автоплавка: submit 256 ingots любого типа (накопительный)."
+			]
+			id: "A401000000000004"
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			rewards: [
+				{ count: 64, id: "R401000000000004", item: "minecraft:redstone", type: "item" }
+			]
+			subtitle: "Pool: автоплавка"
+			tasks: [{ id: "T401000000000004", item: "minecraft:iron_ingot", count: 256, type: "item" }]
+			title: "Поток слитков"
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["A401000000000001", "A401000000000002", "A401000000000003", "A401000000000004"]
+			id: "A401000000000005"
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			min_required_dependencies: 2
+			rewards: [
+				{ id: "R401000000000005", item: "thermal:energy_cell", type: "item" }
+			]
+			shape: "diamond"
+			subtitle: "Gate 2/4"
+			tasks: [{ id: "T401000000000005", type: "checkmark" }]
+			title: "Энергокontur"
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["A401000000000005"]
+			description: [
+				"Совместный финал: RF-магистраль."
+				""
+				"Цель: submit 4× Energy Cell + 16× RF Coil."
+				""
+				"Кооп: постройте общую энергосеть на базе."
+			]
+			id: "A401000000000006"
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			rewards: [
+				{ id: "R401000000000006", item: "kubejs:anchor_shard_04", type: "item" }
+				{ id: "R401000000000007", item: "kubejs:reliquary_resonant", type: "item" }
+				{ id: "R401000000000008", item: "kubejs:journal_page_04", type: "item" }
+			]
+			shape: "gear"
+			size: 1.5d
+			subtitle: "Joint: RF camp"
+			tasks: [
+				{ id: "T401000000000006", item: "thermal:energy_cell", count: 4, type: "item" }
+				{ id: "T401000000000007", item: "thermal:rf_coil", count: 16, type: "item" }
+			]
+			title: "Фрагмент: Поток"
+			x: 0.0d
+			y: 4.0d
+		}
+	]
+	subtitle: [
+		"~12 ч"
+	]
+	title: "Ch3 — Поток энергии"
+}

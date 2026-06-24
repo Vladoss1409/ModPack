@@ -1,0 +1,325 @@
+{
+	default_quest_disable_jei: true
+	default_hide_dependency_lines: false
+	progression_mode: "linear"
+	hide_quest_until_deps_complete: false
+	hide_quest_details_until_startable: true
+	filename: "01_foundation"
+	group: "B100000000000001"
+	icon: { count: 1, id: "ironfurnaces:iron_furnace" }
+	id: "A200000000000001"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["A101000000000009"]
+			description: [
+				"Tech-инфраструктура якоря начинается с автоплавки."
+				""
+				"Цель: Iron Furnace."
+				""
+				"Как выполнить:"
+				"1. JEI → «Iron Furnace»."
+				"2. Скрафтите и установите."
+			]
+			id: "A201000000000001"
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			rewards: [
+				{ count: 32, id: "R201000000000001", item: "minecraft:iron_ingot", type: "item" }
+				{ count: 16, id: "R201000000000002", item: "minecraft:coal", type: "item" }
+			]
+			subtitle: "Pool: Iron Furnaces"
+			tasks: [{ id: "T201000000000001", item: "ironfurnaces:iron_furnace", type: "item" }]
+			title: "Автоплавка"
+			x: -3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["A101000000000009"]
+			description: [
+				"Цель: Oak Drawer 2x2 + Drawer Controller."
+				""
+				"JEI → Storage Drawers → Drawer Controller."
+			]
+			id: "A201000000000002"
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			rewards: [
+				{ count: 16, id: "R201000000000003", item: "minecraft:oak_planks", type: "item" }
+				{ id: "R201000000000004", item: "storagedrawers:drawer_key", type: "item" }
+			]
+			subtitle: "Pool: Storage Drawers"
+			tasks: [
+				{ id: "T201000000000002", item: "storagedrawers:oak_full_drawers_2", type: "item" }
+				{ id: "T201000000000003", item: "storagedrawers:controller", type: "item" }
+			]
+			title: "Сеть ящиков"
+			x: -1.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["A101000000000009"]
+			description: [
+				"Цель: Sophisticated Storage — iron chest или barrel."
+				""
+				"JEI → «Iron Barrel» / «Iron Chest»."
+			]
+			id: "A201000000000003"
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			rewards: [
+				{ count: 8, id: "R201000000000005", item: "minecraft:copper_ingot", type: "item" }
+			]
+			subtitle: "Pool: Sophisticated"
+			tasks: [{ id: "T201000000000004", item: "sophisticatedstorage:iron_barrel", type: "item" }]
+			title: "Умное хранение"
+			x: 1.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["A101000000000009"]
+			description: [
+				"Цель: добыть 512 raw iron (ручная или Excavation)."
+			]
+			id: "A201000000000004"
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			rewards: [
+				{ count: 64, id: "R201000000000006", item: "minecraft:coal", type: "item" }
+			]
+			subtitle: "Pool: добыча"
+			tasks: [{ id: "T201000000000005", item: "minecraft:raw_iron", count: 512, type: "item" }]
+			title: "Железный резерв"
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["A201000000000001", "A201000000000002", "A201000000000003", "A201000000000004"]
+			id: "A201000000000005"
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			min_required_dependencies: 2
+			rewards: [
+				{ count: 32, id: "R201000000000007", item: "thermal:copper_ingot", type: "item" }
+				{ count: 16, id: "R201000000000008", item: "thermal:tin_ingot", type: "item" }
+			]
+			shape: "diamond"
+			subtitle: "Gate 2/4"
+			tasks: [{ id: "T201000000000006", title: "Gate", type: "checkmark" }]
+			title: "Фундамент готов"
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["A201000000000005"]
+			description: [
+				"Совместный финал: первая Thermal machine."
+				""
+				"Цель: Machine Frame или любой Thermal Block."
+				""
+				"JEI → Thermal Foundation → Machine Frame."
+			]
+			id: "A201000000000006"
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			rewards: [
+				{ id: "R201000000000009", item: "kubejs:anchor_shard_02", type: "item" }
+				{ count: 16, id: "R201000000000010", item: "thermal:rf_coil", type: "item" }
+				{ id: "R201000000000011", item: "kubejs:reliquary_resonant", type: "item" }
+				{ id: "R201000000000012", item: "kubejs:journal_page_02", type: "item" }
+			]
+			shape: "gear"
+			size: 1.5d
+			subtitle: "Joint + Thermal"
+			tasks: [{ id: "T201000000000007", item: "thermal:machine_frame", type: "item" }]
+			title: "Фрагмент: Фундамент II"
+			x: 0.0d
+			y: 4.0d
+		}
+	]
+	subtitle: [
+		"~10 ч"
+	]
+	title: "Ch1 — Фундамент"
+}

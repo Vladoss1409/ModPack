@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": { "min": 2, "max": 5 },
+      "entries": [
+        { "type": "minecraft:item", "name": "irons_spellbooks:arcane_essence", "weight": 10, "functions": [{ "function": "minecraft:set_count", "count": { "min": 4, "max": 12 } }] },
+        { "type": "minecraft:item", "name": "irons_spellbooks:common_ink", "weight": 6, "functions": [{ "function": "minecraft:set_count", "count": { "min": 2, "max": 4 } }] },
+        { "type": "minecraft:item", "name": "minecraft:lapis_block", "weight": 8, "functions": [{ "function": "minecraft:set_count", "count": { "min": 2, "max": 6 } }] },
+        { "type": "minecraft:item", "name": "minecraft:experience_bottle", "weight": 5, "functions": [{ "function": "minecraft:set_count", "count": { "min": 4, "max": 12 } }] }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "description": "ghast and fireball",
+  "values": [
+    "minecraft:stray",
+    "minecraft:wither",
+    "minecraft:wither_skeleton",
+    "minecraft:skeleton",
+    "minecraft:zombified_piglin"
+  ]
+}

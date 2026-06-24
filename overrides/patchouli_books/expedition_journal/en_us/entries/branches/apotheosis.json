@@ -1,0 +1,14 @@
+{
+  "name": "Apotheosis",
+  "icon": "apotheosis:simple_reforging_table",
+  "category": "patchouli:branches",
+  "advancement": "cooptech:journal/side_apotheosis",
+  "secret": true,
+  "sortnum": 6,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Усиление лута$()$(br2)После Главы IV — перековка, гемы, спавнеры. Идеально после стабильного автокрафта."
+    }
+  ]
+}

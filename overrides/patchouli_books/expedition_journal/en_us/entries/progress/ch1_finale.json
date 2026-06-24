@@ -1,0 +1,18 @@
+{
+  "name": "Глава I: Thermal и якорь",
+  "icon": "thermal:machine_furnace",
+  "category": "patchouli:progress",
+  "advancement": "cooptech:journal/ch1_finale",
+  "secret": true,
+  "sortnum": 11,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Фрагмент: Фундамент II$()$(br2)Первая Thermal-машина — не украшение, а $(#DD55DD)первый поток$() под базой. JEI: ищите «Thermal» + нужный апгрейд.$(br2)Совместный финал: один держит линию подачи, второй — энергию/топливо. Одиночный игрок здесь $(#FF5555)теряет время$() на переключение ролей."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Дальше — Поверхность$()$(br2)Глава II откроет $(#DD55DD)компас структур$(), руины и биомы Terralith. Запасите пайки и факелы $(italic)до$() выхода из лагеря.$(br2)Новые записи журнала появятся после рубежа Главы II."
+    }
+  ]
+}

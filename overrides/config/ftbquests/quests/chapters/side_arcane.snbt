@@ -1,0 +1,158 @@
+{
+	default_quest_disable_jei: true
+	default_hide_dependency_lines: false
+	progression_mode: "linear"
+	hide_quest_until_deps_complete: true
+	hide_quest_details_until_startable: true
+	default_quest_shape: "circle"
+	filename: "side_arcane"
+	group: "B100000000000004"
+	icon: { count: 1, id: "irons_spellbooks:arcane_essence" }
+	id: "A803000000000000"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+			"§dАрканум поля§r — ветка открыта основной линией."
+			"Следующие узлы появятся по цепочке зависимостей."
+			]
+			dependencies: ["A601000000000016"]
+			icon: { count: 1, id: "irons_spellbooks:arcane_essence" }
+			id: "A803000000000001"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 16, id: "T803000000000001", item: "irons_spellbooks:arcane_essence", title: "Arcane Essence", type: "item" }
+			]
+			title: "Arcane Essence"
+			x: -2.5d
+			y: 3.0d
+		},
+		{
+			dependencies: ["A803000000000001"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "irons_spellbooks:inscription_table" }
+			id: "A803000000000002"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T803000000000002", item: "irons_spellbooks:inscription_table", title: "Inscription Table", type: "item" }
+			]
+			title: "Inscription Table"
+			x: 2.5d
+			y: 5.2d
+		},
+		{
+			dependencies: ["A803000000000002"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "irons_spellbooks:copper_spell_book" }
+			id: "A803000000000003"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T803000000000003", item: "irons_spellbooks:copper_spell_book", title: "Spell Book", type: "item" }
+			]
+			title: "Spell Book"
+			x: -2.5d
+			y: 7.4d
+		},
+		{
+			dependencies: ["A803000000000003"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "irons_spellbooks:common_ink" }
+			id: "A803000000000004"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 8, id: "T803000000000004", item: "irons_spellbooks:common_ink", title: "Mana Upgrade", type: "item" }
+			]
+			title: "Mana Upgrade"
+			x: 2.5d
+			y: 9.6d
+		},
+		{
+			dependencies: ["A803000000000004"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "irons_spellbooks:fire_rune" }
+			id: "A803000000000005"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T803000000000005", item: "irons_spellbooks:fire_rune", title: "Fire Spell", type: "item" }
+			]
+			title: "Fire Spell"
+			x: -2.5d
+			y: 11.8d
+		},
+		{
+			dependencies: ["A803000000000005"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "irons_spellbooks:ice_rune" }
+			id: "A803000000000006"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T803000000000006", item: "irons_spellbooks:ice_rune", title: "Ice Spell", type: "item" }
+			]
+			title: "Ice Spell"
+			x: 2.5d
+			y: 14.0d
+		},
+		{
+			dependencies: ["A803000000000006"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "irons_spellbooks:lightning_rune" }
+			id: "A803000000000007"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T803000000000007", item: "irons_spellbooks:lightning_rune", title: "Lightning", type: "item" }
+			]
+			title: "Lightning"
+			x: -2.5d
+			y: 16.2d
+		},
+		{
+			dependencies: ["A803000000000007"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "irons_spellbooks:pumpkin_helmet" }
+			id: "A803000000000008"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T803000000000008", item: "irons_spellbooks:pumpkin_helmet", title: "Priest Robe", type: "item" }
+			]
+			title: "Priest Robe"
+			x: 2.5d
+			y: 18.4d
+		},
+		{
+			dependencies: ["A803000000000008"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "irons_spellbooks:legendary_ink" }
+			id: "A803000000000009"
+			disable_jei: true
+			shape: "diamond"
+			size: 1.2d
+			tasks: [
+				{ count: 4, id: "T803000000000009", item: "irons_spellbooks:legendary_ink", title: "Arcane Finale", type: "item" }
+			]
+			title: "Arcane Finale"
+			x: -2.5d
+			y: 20.6d
+		}
+	]
+	subtitle: [
+		"Сайд-ветка"
+	]
+	title: "Арканум поля"
+}

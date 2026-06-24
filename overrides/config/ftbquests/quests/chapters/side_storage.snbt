@@ -1,0 +1,143 @@
+{
+	default_quest_disable_jei: true
+	default_hide_dependency_lines: false
+	progression_mode: "linear"
+	hide_quest_until_deps_complete: true
+	hide_quest_details_until_startable: true
+	default_quest_shape: "circle"
+	filename: "side_storage"
+	group: "B100000000000005"
+	icon: { count: 1, id: "storagedrawers:controller" }
+	id: "A809000000000000"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+			"§dСклад экспедиции§r — ветка открыта основной линией."
+			"Следующие узлы появятся по цепочке зависимостей."
+			]
+			dependencies: ["A201000000000002"]
+			icon: { count: 1, id: "storagedrawers:oak_full_drawers_1" }
+			id: "A809000000000001"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 4, id: "T809000000000001", item: "storagedrawers:oak_full_drawers_1", title: "Drawer 1x1", type: "item" }
+			]
+			title: "Drawer 1x1"
+			x: -3.0d
+			y: 3.0d
+		},
+		{
+			dependencies: ["A809000000000001"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "storagedrawers:oak_full_drawers_2" }
+			id: "A809000000000002"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 4, id: "T809000000000002", item: "storagedrawers:oak_full_drawers_2", title: "Drawer 2x2", type: "item" }
+			]
+			title: "Drawer 2x2"
+			x: -1.0d
+			y: 3.0d
+		},
+		{
+			dependencies: ["A809000000000002"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "storagedrawers:controller" }
+			id: "A809000000000003"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T809000000000003", item: "storagedrawers:controller", title: "Controller", type: "item" }
+			]
+			title: "Controller"
+			x: 1.0d
+			y: 3.0d
+		},
+		{
+			dependencies: ["A809000000000003"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "storagedrawers:drawer_key" }
+			id: "A809000000000004"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T809000000000004", item: "storagedrawers:drawer_key", title: "Keyring", type: "item" }
+			]
+			title: "Keyring"
+			x: 3.0d
+			y: 3.0d
+		},
+		{
+			dependencies: ["A809000000000004"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "sophisticatedstorage:barrel" }
+			id: "A809000000000005"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 4, id: "T809000000000005", item: "sophisticatedstorage:barrel", title: "Barrel", type: "item" }
+			]
+			title: "Barrel"
+			x: -3.0d
+			y: 6.0d
+		},
+		{
+			dependencies: ["A809000000000005"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "sophisticatedstorage:iron_barrel" }
+			id: "A809000000000006"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T809000000000006", item: "sophisticatedstorage:iron_barrel", title: "Iron Barrel", type: "item" }
+			]
+			title: "Iron Barrel"
+			x: -1.0d
+			y: 6.0d
+		},
+		{
+			dependencies: ["A809000000000006"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "sophisticatedstorage:controller" }
+			id: "A809000000000007"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T809000000000007", item: "sophisticatedstorage:controller", title: "Storage Controller", type: "item" }
+			]
+			title: "Storage Controller"
+			x: 1.0d
+			y: 6.0d
+		},
+		{
+			dependencies: ["A809000000000007"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "sophisticatedstorage:gold_barrel" }
+			id: "A809000000000008"
+			disable_jei: true
+			shape: "diamond"
+			size: 1.2d
+			tasks: [
+				{ id: "T809000000000008", item: "sophisticatedstorage:gold_barrel", title: "Storage Finale", type: "item" }
+			]
+			title: "Storage Finale"
+			x: 0.0d
+			y: 8.0d
+		}
+	]
+	subtitle: [
+		"Сайд-ветка"
+	]
+	title: "Склад экспедиции"
+}

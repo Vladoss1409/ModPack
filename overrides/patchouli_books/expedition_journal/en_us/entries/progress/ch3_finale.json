@@ -1,0 +1,14 @@
+{
+  "name": "Глава III: фрагмент потока",
+  "icon": "thermal:energy_cell",
+  "category": "patchouli:progress",
+  "advancement": "cooptech:journal/ch3_finale",
+  "secret": true,
+  "sortnum": 31,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Поток стабилен$()$(br2)RF-лагерь работает — разломы у базы $(italic)тише$(). Следующие главы кодекса (Arcane, Twilight, Industrial…) откроют $(#DD55DD)узкие специализации$().$(br2)Журнал будет пополняться по мере добавления поручений. Пока — держите $(#FFAA00)два потока$() в резерве: еда и энергия."
+    }
+  ]
+}

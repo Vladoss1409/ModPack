@@ -1,0 +1,33 @@
+modLoader="lowcodefml"
+loaderVersion="[1,)"
+license="Stardust Labs License"
+issueTrackerURL="https://github.com/Stardust-Labs-MC/Incendium/issues"
+
+[[mods]]
+    modId="incendium"
+    version="5.3.5"
+    displayName="Incendium"
+    displayURL="https://www.stardustlabs.net/"
+    logoFile="pack.png"
+    authors="Stardust Labs"
+    credits="Starmute: Owner. catter1: Lead Developer. TheKingWhale: Builder. rx97: Developer."
+    description="A nether biome overhaul combined with challenging structures to conquer, unique weapons to obtain, and tricky mobs to defeat."
+
+[[dependencies.incendium]]
+    modId="forge"
+    mandatory=false
+    versionRange="[46,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.incendium]]
+    modId="neoforge"
+    mandatory=false
+    versionRange="[20.2,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.incendium]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20,1.21)"
+    ordering="NONE"
+    side="BOTH"

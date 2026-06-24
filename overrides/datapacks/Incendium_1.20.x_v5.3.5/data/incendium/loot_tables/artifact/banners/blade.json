@@ -1,0 +1,19 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:black_banner",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{BlockEntityTag:{Base:15,Patterns:[{Pattern:flo,Color:4},{Pattern:bt,Color:15},{Pattern:cs,Color:8},{Pattern:hh,Color:4},{Pattern:tt,Color:11},{Pattern:ts,Color:4},{Pattern:cbo,Color:15},{Pattern:tl,Color:15},{Pattern:tr,Color:15},{Pattern:tts,Color:4},{Pattern:cbo,Color:15}]},HideFlags:32,display:{Name:'[{\"text\":\"Banner of the Blade\",\"italic\":true,\"color\":\"gold\"}]'}}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

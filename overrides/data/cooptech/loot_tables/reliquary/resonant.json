@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": { "min": 2, "max": 4 },
+      "entries": [
+        { "type": "minecraft:item", "name": "thermal:copper_ingot", "weight": 10, "functions": [{ "function": "minecraft:set_count", "count": { "min": 8, "max": 24 } }] },
+        { "type": "minecraft:item", "name": "thermal:tin_ingot", "weight": 8, "functions": [{ "function": "minecraft:set_count", "count": { "min": 8, "max": 16 } }] },
+        { "type": "minecraft:item", "name": "thermal:energy_cell", "weight": 4 },
+        { "type": "minecraft:item", "name": "minecraft:redstone_block", "weight": 6, "functions": [{ "function": "minecraft:set_count", "count": { "min": 2, "max": 4 } }] },
+        { "type": "minecraft:item", "name": "powah:capacitor_basic", "weight": 3 }
+      ]
+    }
+  ]
+}

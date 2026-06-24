@@ -1,0 +1,2 @@
+CoopTech FTB Quests — оригінал до TechnoMagic preview.
+Відкат: python scripts/quests_technomagic_preview.py restore

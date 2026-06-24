@@ -1,0 +1,63 @@
+{
+	default_quest_disable_jei: true
+	default_hide_dependency_lines: false
+	progression_mode: "linear"
+	hide_quest_until_deps_complete: false
+	hide_quest_details_until_startable: true
+	filename: "04_ember"
+	group: "B100000000000001"
+	icon: { count: 1, id: "kubejs:expedition_journal" }
+	id: "A500000000000001"
+	order_index: 4
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["A401000000000006"]
+			description: ["Глава в разработке. Следующее обновление сборки.", "", "Зависимость от предыдущей главы сохранена."]
+			id: "A501000000000001"
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			rewards: [
+				{ id: "R40100000000001", type: "xp_levels", xp_levels: 1 }
+			]
+			tasks: [{ id: "T40100000000001", title: "Placeholder", type: "checkmark" }]
+			title: "Ch4 — Трещина Эмбера [WIP]"
+			x: 0.0d
+			y: 0.0d
+		}
+	]
+	subtitle: [
+		"WIP"
+	]
+	title: "Ch4 — Трещина Эмбера"
+}

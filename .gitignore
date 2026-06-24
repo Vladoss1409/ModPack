@@ -1,0 +1,17 @@
+# Mod jars — ставятся через scripts/install_mods.py
+mods/*.jar
+
+# Генерируемые отчёты установки
+install-report.json
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Локальные миры и инстансы (не часть репозитория)
+saves/
+world/
+*.log

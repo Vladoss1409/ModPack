@@ -1,0 +1,14 @@
+{
+  "name": "Thermal — тепловые машины",
+  "icon": "thermal:machine_furnace",
+  "category": "patchouli:branches",
+  "advancement": "cooptech:journal/side_thermal",
+  "secret": true,
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Ветка Thermal$()$(br2)Открыта после рубежа Главы I. Кольцо машин: плавка, измельчение, энергия. Кооп: один строит RF, второй — автокрафт."
+    }
+  ]
+}

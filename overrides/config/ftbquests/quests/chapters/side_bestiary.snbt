@@ -1,0 +1,143 @@
+{
+	default_quest_disable_jei: true
+	default_hide_dependency_lines: false
+	progression_mode: "linear"
+	hide_quest_until_deps_complete: true
+	hide_quest_details_until_startable: true
+	default_quest_shape: "circle"
+	filename: "side_bestiary"
+	group: "B100000000000005"
+	icon: { count: 1, id: "alexsmobs:animal_dictionary" }
+	id: "A813000000000000"
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+			"§dПолевой бестиарий§r — ветка открыта основной линией."
+			"Следующие узлы появятся по цепочке зависимостей."
+			]
+			dependencies: ["A301000000000003"]
+			icon: { count: 1, id: "alexsmobs:animal_dictionary" }
+			id: "A813000000000001"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T813000000000001", item: "alexsmobs:animal_dictionary", title: "Animal Dictionary", type: "item" }
+			]
+			title: "Animal Dictionary"
+			x: 0.0d
+			y: 0.6d
+		},
+		{
+			dependencies: ["A813000000000001"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "explorerscompass:explorerscompass" }
+			id: "A813000000000002"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T813000000000002", item: "explorerscompass:explorerscompass", title: "Explorer's Compass", type: "item" }
+			]
+			title: "Explorer's Compass"
+			x: 2.8d
+			y: 1.6d
+		},
+		{
+			dependencies: ["A813000000000002"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "naturescompass:naturescompass" }
+			id: "A813000000000003"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T813000000000003", item: "naturescompass:naturescompass", title: "Nature's Compass", type: "item" }
+			]
+			title: "Nature's Compass"
+			x: 4.0d
+			y: 3.6d
+		},
+		{
+			dependencies: ["A813000000000003"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "alexsmobs:grizzly_bear_fur" }
+			id: "A813000000000004"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 4, id: "T813000000000004", item: "alexsmobs:grizzly_bear_fur", title: "Grizzly Fur", type: "item" }
+			]
+			title: "Grizzly Fur"
+			x: 2.8d
+			y: 5.6d
+		},
+		{
+			dependencies: ["A813000000000004"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "alexsmobs:void_worm_eye" }
+			id: "A813000000000005"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T813000000000005", item: "alexsmobs:void_worm_eye", title: "Void Worm Eye", type: "item" }
+			]
+			title: "Void Worm Eye"
+			x: 0.0d
+			y: 6.6d
+		},
+		{
+			dependencies: ["A813000000000005"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "mowziesmobs:wroughtnaut_helmet" }
+			id: "A813000000000006"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T813000000000006", item: "mowziesmobs:wroughtnaut_helmet", title: "Wrought Helm", type: "item" }
+			]
+			title: "Wrought Helm"
+			x: -2.8d
+			y: 6.2d
+		},
+		{
+			dependencies: ["A813000000000006"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "minecraft:golden_apple" }
+			id: "A813000000000007"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 4, id: "T813000000000007", item: "minecraft:golden_apple", title: "Dungeon Loot", type: "item" }
+			]
+			title: "Dungeon Loot"
+			x: -4.0d
+			y: 4.8d
+		},
+		{
+			dependencies: ["A813000000000007"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "minecraft:nether_star" }
+			id: "A813000000000008"
+			disable_jei: true
+			shape: "diamond"
+			size: 1.2d
+			tasks: [
+				{ id: "T813000000000008", item: "minecraft:nether_star", title: "Bestiary Finale", type: "item" }
+			]
+			title: "Bestiary Finale"
+			x: -2.8d
+			y: 3.4d
+		}
+	]
+	subtitle: [
+		"Сайд-ветка"
+	]
+	title: "Полевой бестиарий"
+}

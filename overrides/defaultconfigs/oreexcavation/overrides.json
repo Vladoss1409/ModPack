@@ -1,0 +1,14 @@
+{
+  "blocks": {
+    "limit": 64,
+    "exhaust": true
+  },
+  "items": {
+    "limit": 64,
+    "exhaust": true
+  },
+  "misc": {
+    "skipTileEntities": true,
+    "disableForSneaking": false
+  }
+}

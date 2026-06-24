@@ -1,0 +1,40 @@
+{
+    "schema_version": 1,
+    "quilt_loader": {
+        "group": "net.stardustlabs",
+        "id": "nullscape",
+        "version": "1.2.7",
+        "metadata": {
+            "name": "Terralith",
+            "description": "Transforms the boring Vanilla end into an alien dimension with the most surreal terrain imaginable. Topped with a couple of new biomes to add to the experience, whilst keeping the end desolate.",
+            "contributors": {
+                "Starmute": "Owner",
+                "catter1": "Maintainer"
+            },
+            "contact": {
+                "homepage": "https://www.stardustlabs.net/",
+                "issues": "https://github.com/Stardust-Labs-MC/Terralith/issues",
+                "sources": "https://github.com/Stardust-Labs-MC/Terralith"
+            },
+            "license": {
+                "name": "Stardust Labs License",
+                "id": "SLL",
+                "url": "https://github.com/Stardust-Labs-MC/license/blob/main/license.txt",
+                "description": "The official license for all Stardust Labs projects"
+            },
+            "icon": "pack.png"
+        },
+        "intermediate_mappings": "net.fabricmc:intermediary",
+        "depends": [
+            {
+                "id": "minecraft",
+                "versions": ">=1.20"
+            },
+            {
+                "id": "quilt_resource_loader",
+                "versions": "*",
+                "unless": "fabric-resource-loader-v0"
+            }
+        ]
+    }
+}

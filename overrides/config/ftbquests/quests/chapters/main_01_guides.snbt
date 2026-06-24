@@ -1,0 +1,191 @@
+{
+	default_quest_disable_jei: true
+	default_hide_dependency_lines: false
+	progression_mode: "linear"
+	hide_quest_until_deps_complete: false
+	hide_quest_details_until_startable: true
+	default_quest_shape: "circle"
+	filename: "main_01_guides"
+	group: "B100000000000001"
+	icon: { count: 1, id: "minecraft:map" }
+	id: "A002000000000000"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+			"§l[ Справка экспедиции ]§r"
+			"Краткие правила: §eJEI§r, §eFTB Teams§r, §eJourneyMap§r, §ePatchouli§r."
+			"Подробности — в следующих узлах и в журнале."
+			]
+			icon: { count: 1, id: "minecraft:map" }
+			id: "A002000000000001"
+			disable_jei: true
+			shape: "gear"
+			size: 1.3d
+			tasks: [
+				{ id: "T002000000000001", item: "minecraft:map", title: "Карта маршрута", type: "item" }
+			]
+			title: "Путеводитель"
+			x: 0d
+			y: 0d
+		},
+		{
+			description: [
+			"Скрафтите деревянную кирку."
+			]
+			dependencies: ["A002000000000001"]
+			icon: { count: 1, id: "minecraft:book" }
+			id: "A002000000000002"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T002000000000002", item: "minecraft:wooden_pickaxe", title: "Деревянная кирка", type: "item" }
+			]
+			title: "JEI / REI"
+			x: -4d
+			y: 2d
+		},
+		{
+			description: [
+			"/ftbteams party create — затем щит."
+			]
+			dependencies: ["A002000000000001"]
+			icon: { count: 1, id: "minecraft:shield" }
+			id: "A002000000000003"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T002000000000003", item: "minecraft:shield", title: "Щит гильдии", type: "item" }
+			]
+			title: "FTB Teams"
+			x: -2d
+			y: 2d
+		},
+		{
+			description: [
+			"Клавиша Gr — Кодекс поручений."
+			]
+			dependencies: ["A002000000000001"]
+			icon: { count: 1, id: "ftbquests:book" }
+			id: "A002000000000004"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T002000000000004", item: "ftbquests:book", title: "Книга квестов", type: "item" }
+			]
+			title: "Книга квестов"
+			x: 0d
+			y: 2d
+		},
+		{
+			description: [
+			"ПКМ — Patchouli."
+			]
+			dependencies: ["A002000000000001"]
+			icon: { count: 1, id: "kubejs:expedition_journal" }
+			id: "A002000000000005"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T002000000000005", item: "kubejs:expedition_journal", title: "Журнал экспедиции", type: "item" }
+			]
+			title: "Журнал"
+			x: 2d
+			y: 2d
+		},
+		{
+			description: [
+			"Waypoints для разломов."
+			]
+			dependencies: ["A002000000000001"]
+			icon: { count: 1, id: "minecraft:filled_map" }
+			id: "A002000000000006"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T002000000000006", item: "minecraft:filled_map", title: "Карта", type: "item" }
+			]
+			title: "JourneyMap"
+			x: 4d
+			y: 2d
+		},
+		{
+			description: [
+			"ПКМ у костра лагеря."
+			]
+			dependencies: ["A002000000000001"]
+			icon: { count: 1, id: "kubejs:resonance_beacon" }
+			id: "A002000000000007"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T002000000000007", item: "kubejs:resonance_beacon", title: "Кооп-маяк", type: "item" }
+			]
+			title: "Кооп-маяк"
+			x: -3d
+			y: 4d
+		},
+		{
+			description: [
+			"ПКМ — полевые сундуки."
+			]
+			dependencies: ["A002000000000001"]
+			icon: { count: 1, id: "kubejs:reliquary_field" }
+			id: "A002000000000008"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T002000000000008", item: "kubejs:reliquary_field", title: "Реликварий поля", type: "item" }
+			]
+			title: "Реликварии"
+			x: -1d
+			y: 4d
+		},
+		{
+			description: [
+			"Зажмите клавишу копания."
+			]
+			dependencies: ["A002000000000001"]
+			icon: { count: 1, id: "minecraft:iron_shovel" }
+			id: "A002000000000009"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T002000000000009", item: "minecraft:iron_shovel", title: "Железная лопата", type: "item" }
+			]
+			title: "Vein mining"
+			x: 1d
+			y: 4d
+		},
+		{
+			description: [
+			"В Главу 1!"
+			]
+			dependencies: ["A002000000000001"]
+			icon: { count: 1, id: "minecraft:experience_bottle" }
+			id: "A002000000000010"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T002000000000010", item: "minecraft:experience_bottle", title: "Пузырёк опыта", type: "item" }
+			]
+			title: "Справка готова"
+			x: 0d
+			y: 6d
+		}
+	]
+	subtitle: [
+		"~10 мин"
+	]
+	title: "Гайды"
+}

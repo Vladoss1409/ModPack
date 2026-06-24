@@ -1,0 +1,43 @@
+{
+    "schemaVersion": 1,
+    "id": "incendium",
+    "version": "5.3.5",
+    "name": "Incendium",
+    "description": "A nether biome overhaul combined with challenging structures to conquer, unique weapons to obtain, and tricky mobs to defeat.",
+    "authors": [
+        "Starmute",
+        "catter1",
+        "TheKingWhale",
+        "rx97"
+    ],
+    "contact": {
+        "homepage": "https://www.stardustlabs.net/",
+        "sources": "https://github.com/Stardust-Labs-MC/Incendium",
+        "issues": "https://github.com/Stardust-Labs-MC/Incendium/issues",
+        "discord": "https://discord.gg/stardustlabs"
+    },
+    "license": "Stardust Labs License",
+    "icon": "pack.png",
+    "environment": "*",
+    "entrypoints": {},
+    "mixins": [],
+    "depends": {
+        "fabricloader": ">=0.12.7",
+        "fabric-api-base": "*",
+        "minecraft": ">=1.20"
+    },
+    "custom": {
+        "modmenu": {
+            "links": {
+                "modmenu.curseforge": "https://www.curseforge.com/minecraft/mc-mods/incendium",
+                "modmenu.discord": "https://discord.gg/stardustlabs",
+                "modmenu.kofi": "https://ko-fi.com/stardustlabs",
+                "modmenu.modrinth": "https://modrinth.com/mod/incendium",
+                "modmenu.patreon": "https://www.patreon.com/stardustlabs",
+                "modmenu.twitter": "https://twitter.com/StardustLabs",
+                "modmenu.wiki": "https://stardustlabs.miraheze.org/",
+                "modmenu.youtube": "https://www.youtube.com/@stardustlabs"
+            }
+        }
+    }
+}

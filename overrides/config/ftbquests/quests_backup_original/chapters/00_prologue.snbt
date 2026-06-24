@@ -1,0 +1,1002 @@
+{
+	default_quest_disable_jei: true
+	default_hide_dependency_lines: false
+	progression_mode: "linear"
+	hide_quest_until_deps_complete: false
+	hide_quest_details_until_startable: true
+	default_quest_shape: "hexagon"
+	filename: "00_prologue"
+	group: "B100000000000001"
+	icon: { count: 1, id: "minecraft:writable_book" }
+	id: "A100000000000001"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"§eПуть экспедиции§r (сверху вниз в Кодексе поручений):"
+				""
+				"1. Старт → 2. Четыре ветки (§eлюбые 2§r) → 3. §eРубеж I§r"
+				"4. Волна 2 → снова §e2 из 4§r → §eРубеж II§r → пайки → брифинг → финал"
+				""
+				"§l[ Сигнал якоря ]§r"
+				""
+				"§bГде:§r точка спавна мира. Рядом — §dлагерь экспедиции§r (палатки/факелы)."
+				"§bКто:§r §dДиспетчер якоря§r — у костра, бирюзовая бирка на плаще."
+				""
+				"§bЧто сделать:§r"
+				"1. Создайте с товарищем §eэкспедиционную гильдию§r — клятва общего пути."
+				"2. Откройте §eКодекс поручений§r — он ведёт по задачам."
+				"3. Закрепите цель §eкристаллом-меткой§r — она останется перед глазами."
+				"4. Когда готовы — отметьте поручение выполненным."
+				""
+				"§bДальше:§r откроются §e4 параллельных§r задания — нужны любые §e2§r."
+			]
+			hide_dependency_lines: false
+			icon: { count: 1, id: "minecraft:writable_book" }
+			id: "A101000000000001"
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			rewards: [
+				{ id: "R101000000000001", item: "kubejs:expedition_journal", type: "item" }
+				{ id: "R101000000000002", item: "kubejs:journal_page_00", type: "item" }
+				{ count: 32, id: "R101000000000003", item: "minecraft:torch", type: "item" }
+			]
+			shape: "gear"
+			size: 1.5d
+			subtitle: "Шаг 1 · Старт"
+			tasks: [{
+				id: "T101000000000001"
+				title: "Начать экспедицию"
+				type: "checkmark"
+			}]
+			title: "Сигнал из пустоты"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["A101000000000001"]
+			description: [
+				"§l[ Полевая кухня ]§r · §aветка Крафт§r · §eВолна 1 (опционально)§r"
+				""
+				"§bГде:§r верстак/кухня на вашей базе у спавна."
+				"§bЧто сделать:§r"
+				"1. В §eальманахе ремесел§r найди §eполевой котёл§r — скрафти и поставь у костра."
+				"2. Приготовь и §eсдай§r в квест: рис, яичницу, салат."
+				""
+				"§bПодсказка:§r один готовит, второй добывает дерево/уголь."
+				"§bПосле:§r засчитается к §eРубежу I§r (нужно 2 из 4 веток)."
+			]
+			hide_dependency_lines: false
+			icon: { count: 1, id: "farmersdelight:cooking_pot" }
+			id: "A101000000000002"
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			rewards: [
+				{ count: 16, id: "R101000000000004", item: "minecraft:wheat", type: "item" }
+				{ count: 8, id: "R101000000000005", item: "farmersdelight:tomato", type: "item" }
+				{ id: "R101000000000006", item: "minecraft:chest", type: "item" }
+			]
+			shape: "hexagon"
+			subtitle: "В1 · Крафт"
+			tags: ["branch_craft"]
+			tasks: [
+				{ id: "T101000000000002", item: "farmersdelight:cooking_pot", title: "Полевой котёл", type: "item" }
+				{ id: "T101000000000005", item: "farmersdelight:cooked_rice", title: "Рис", type: "item" }
+				{ id: "T101000000000006", item: "farmersdelight:fried_egg", title: "Яичница", type: "item" }
+				{ id: "T101000000000007", item: "farmersdelight:mixed_salad", title: "Салат", type: "item" }
+			]
+			title: "Полевая кухня"
+			x: -6.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["A101000000000001"]
+			description: [
+				"§l[ Полевой штаб ]§r · §dветка Кооп§r · §eВолна 1 (опционально)§r"
+				""
+				"§bГде:§r построй §eбазу§r в радиусе ~100 блоков от спавна."
+				"§bЧто сделать:§r"
+				"1. Срубите §e64 дубовых бревна§r — при §eвливании силы§r (зажми §eR§r) топором."
+				"2. Скрафтите §eсундук§r и сдайте оба предмета."
+				""
+				"§bКооп:§r один рубит лес, второй строит коробку 5×5."
+				"§bПосле:§r засчитается к §eРубеж I§r."
+			]
+			hide_dependency_lines: false
+			icon: { count: 1, id: "minecraft:chest" }
+			id: "A101000000000003"
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			rewards: [
+				{ count: 64, id: "R101000000000007", item: "minecraft:cobblestone", type: "item" }
+				{ count: 32, id: "R101000000000008", item: "minecraft:oak_planks", type: "item" }
+			]
+			shape: "hexagon"
+			subtitle: "В1 · Кооп-база"
+			tags: ["branch_coop"]
+			tasks: [
+				{ id: "T101000000000003", item: "minecraft:oak_log", count: 64, type: "item" }
+				{ id: "T101000000000004", item: "minecraft:chest", type: "item" }
+			]
+			title: "Полевой штаб"
+			x: -2.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["A101000000000001"]
+			description: [
+				"§l[ Компас биомов ]§r · §bветка Исследование§r · §eВолна 1 (опционально)§r"
+				""
+				"§bГде:§r мастерская у лагеря → путь в дальние земли."
+				"§bЧто сделать:§r"
+				"1. Скрафти §eкомпас стихий§r — он укажет на незнакомый биом."
+				"2. ПКМ компасом → выбери §eлюбой биом§r, которого ещё не видел."
+				"3. Дойди до биома → вернись → поставь галочку «Посетил биом»."
+				""
+				"§bПосле:§r засчитается к §eРубеж I§r."
+			]
+			hide_dependency_lines: false
+			icon: { count: 1, id: "naturescompass:naturescompass" }
+			id: "A101000000000005"
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			rewards: [
+				{ count: 16, id: "R101000000000012", item: "minecraft:bread", type: "item" }
+				{ id: "R101000000000013", item: "minecraft:map", type: "item" }
+			]
+			shape: "hexagon"
+			subtitle: "В1 · Исследование"
+			tags: ["branch_explore"]
+			tasks: [
+				{ id: "T101000000000008", item: "naturescompass:naturescompass", type: "item" }
+				{ id: "T101000000000023", title: "Посетить новый биом", type: "checkmark" }
+			]
+			title: "Компас биомов"
+			x: 2.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["A101000000000001"]
+			description: [
+				"§l[ Полевой карьер ]§r · §6ветка Добыча§r · §eВолна 1 (опционально)§r"
+				""
+				"§bГде:§r пещера или траншея §eY 40…0§r рядом с базой."
+				"§bЧто сделать:§r"
+				"1. Найди §eжелезную руду§r."
+				"2. С §eвливанием силы§r (§eR§r) и киркой добудь §e64 необработанного железа§r."
+				"3. Сдай в квест."
+				""
+				"§cНе копай:§r spawner, сундуки."
+				"§bПосле:§r засчитается к §eРубеж I§r."
+			]
+			hide_dependency_lines: false
+			icon: { count: 1, id: "minecraft:iron_ore" }
+			id: "A101000000000006"
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			rewards: [
+				{ count: 32, id: "R101000000000014", item: "minecraft:coal", type: "item" }
+				{ count: 16, id: "R101000000000015", item: "minecraft:iron_ingot", type: "item" }
+			]
+			shape: "hexagon"
+			subtitle: "В1 · Добыча"
+			tags: ["branch_mine"]
+			tasks: [{
+				id: "T101000000000009"
+				item: "minecraft:raw_iron"
+				count: 64
+				type: "item"
+			}]
+			title: "Полевой карьер"
+			x: 6.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"A101000000000002"
+				"A101000000000003"
+				"A101000000000005"
+				"A101000000000006"
+			]
+			description: [
+				"§l[ Рубеж I — Стабилизация лагеря ]§r"
+				""
+				"§bУсловие:§r выполнены §eлюбые 2§r из 4 веток выше (линии ведут сюда)."
+				"§bЧто сделать:§r нажми галочку — подтверди готовность."
+				"§bДальше:§r откроется §e«Усиление сигнала»§r (волна 2)."
+			]
+			hide_dependency_lines: false
+			icon: { count: 1, id: "minecraft:iron_bars" }
+			id: "A101000000000007"
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			min_required_dependencies: 2
+			rewards: [
+				{ count: 16, id: "R101000000000016", item: "minecraft:iron_ingot", type: "item" }
+				{ id: "R101000000000017", type: "xp_levels", xp_levels: 2 }
+			]
+			shape: "diamond"
+			size: 1.25d
+			subtitle: "Рубеж I · 2 из 4"
+			tasks: [{
+				id: "T101000000000010"
+				title: "Этап 1 завершён"
+				type: "checkmark"
+			}]
+			title: "Стабилизация лагеря"
+			x: 0.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["A101000000000007"]
+			description: [
+				"§l[ Усиление сигнала ]§r · §eМост к волне 2§r"
+				""
+				"§bГде:§r лагерь у костра-маяка. Найди §dПолевого наставника§r — он даст следующие поручения."
+				"§bЧто сделать:§r галочка «Принять приказ»."
+				"§bНаграда:§r §eРезонансный маяк§r — нужен для кооп-квеста волны 2."
+				"§bДальше:§r снова §e4 ветки§r, нужны §e2§r."
+			]
+			hide_dependency_lines: false
+			icon: { count: 1, id: "minecraft:bell" }
+			id: "A101000000000010"
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			rewards: [
+				{ id: "R101000000000024", item: "kubejs:resonance_beacon", type: "item" }
+				{ count: 8, id: "R101000000000025", item: "minecraft:iron_ingot", type: "item" }
+			]
+			shape: "gear"
+			subtitle: "Шаг · Волна 2"
+			tasks: [{
+				id: "T101000000000024"
+				title: "Принять приказ на волну 2"
+				type: "checkmark"
+			}]
+			title: "Усиление сигнала"
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["A101000000000010"]
+			description: [
+				"§l[ Компас руин ]§r · §bИсследование§r · §eВолна 2 (опционально)§r"
+				""
+				"§bГде:§r верстак → потом поверхность/пещеры."
+				"§bЧто сделать:§r скрафти §eкомпас руин§r и сдай — он тянется к забытым постройкам."
+				"§bЗачем:§r ведёт к руинам и перестроенным крепостям в дальних землях."
+				"§bПосле:§r засчитается к §eРубеж II§r."
+			]
+			hide_dependency_lines: false
+			icon: { count: 1, id: "minecraft:compass" }
+			id: "A101000000000011"
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			rewards: [
+				{ count: 8, id: "R101000000000026", item: "minecraft:compass", type: "item" }
+				{ count: 16, id: "R101000000000027", item: "minecraft:bread", type: "item" }
+			]
+			shape: "hexagon"
+			subtitle: "В2 · Исследование"
+			tags: ["branch_explore"]
+			tasks: [{
+				id: "T101000000000016"
+				item: "explorerscompass:explorerscompass"
+				type: "item"
+			}]
+			title: "Компас руин"
+			x: -6.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["A101000000000010"]
+			description: [
+				"§l[ Глубинная жила ]§r · §6Добыча§r · §eВолна 2 (опционально)§r"
+				""
+				"§bГде:§r §edeepslate§r на глубине §eY 0…-32§r."
+				"§bЧто сделать:§r добудь §e48 raw iron§r + §e32 raw copper§r, сдай."
+				"§bПосле:§r засчитается к §eРубеж II§r."
+			]
+			hide_dependency_lines: false
+			icon: { count: 1, id: "minecraft:deepslate_iron_ore" }
+			id: "A101000000000012"
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			rewards: [
+				{ count: 32, id: "R101000000000028", item: "minecraft:coal", type: "item" }
+				{ count: 24, id: "R101000000000029", item: "minecraft:iron_ingot", type: "item" }
+			]
+			shape: "hexagon"
+			subtitle: "В2 · Добыча"
+			tags: ["branch_mine"]
+			tasks: [
+				{ id: "T101000000000017", item: "minecraft:raw_iron", count: 48, type: "item" }
+				{ id: "T101000000000018", item: "minecraft:raw_copper", count: 32, type: "item" }
+			]
+			title: "Глубинная жила"
+			x: -2.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["A101000000000010"]
+			description: [
+				"§l[ Полевой верстак ]§r · §aКрафт§r · §eВолна 2 (опционально)§r"
+				""
+				"§bГде:§r база у спавна."
+				"§bЧто сделать:§r скрафти §eкузнечный стол§r и §eразделочную доску§r, сдай оба."
+				"§bПосле:§r засчитается к §eРубеж II§r."
+			]
+			hide_dependency_lines: false
+			icon: { count: 1, id: "minecraft:smithing_table" }
+			id: "A101000000000013"
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			rewards: [
+				{ count: 16, id: "R101000000000030", item: "minecraft:iron_ingot", type: "item" }
+				{ count: 8, id: "R101000000000031", item: "minecraft:copper_ingot", type: "item" }
+			]
+			shape: "hexagon"
+			subtitle: "В2 · Крафт"
+			tags: ["branch_craft"]
+			tasks: [
+				{ id: "T101000000000019", item: "minecraft:smithing_table", type: "item" }
+				{ id: "T101000000000020", item: "farmersdelight:cutting_board", type: "item" }
+			]
+			title: "Полевой верстак"
+			x: 2.0d
+			y: 8.0d
+		}
+		{
+			dependencies: ["A101000000000010"]
+			description: [
+				"§l[ Синхронизация команды ]§r · §dКооп§r · §eВолна 2 (опционально)§r"
+				""
+				"§bГде:§r §eлагерь у костра-маяка§r (там же, где наставники)."
+				"§bЧто сделать:§r"
+				"1. Возьми §eрезонансный маяк§r из награды «Усиление сигнала»."
+				"2. §eОба игрока§r: §eПКМ§r с маяком в руке у спавна (лагерь)."
+				"3. В чате: (1/2) → (2/2) → квест засчитается."
+				""
+				"§bКооп:§r без двух отметок не пройдёт."
+				"§bПосле:§r засчитается к §eРубеж II§r."
+			]
+			hide_dependency_lines: false
+			icon: { count: 1, id: "minecraft:end_rod" }
+			id: "A101000000000014"
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			rewards: [
+				{ count: 4, id: "R101000000000032", item: "minecraft:golden_carrot", type: "item" }
+				{ id: "R101000000000033", type: "xp_levels", xp_levels: 3 }
+			]
+			shape: "hexagon"
+			subtitle: "В2 · Кооп"
+			tags: ["branch_coop"]
+			tasks: [{
+				id: "T101000000000015"
+				title: "Оба игрока: ПКМ маяком у спавна"
+				type: "checkmark"
+			}]
+			title: "Синхронизация команды"
+			x: 6.0d
+			y: 8.0d
+		}
+		{
+			dependencies: [
+				"A101000000000011"
+				"A101000000000012"
+				"A101000000000013"
+				"A101000000000014"
+			]
+			description: [
+				"§l[ Рубеж II — Резонанс якоря ]§r"
+				""
+				"§bУсловие:§r §e2 из 4§r веток волны 2."
+				"§bНаграда:§r §eФрагмент якоря #1§r — храни как зеницу ока."
+				"§bДальше:§r пайки → брифинг у диспетчера → финал."
+			]
+			hide_dependency_lines: false
+			icon: { count: 1, id: "minecraft:amethyst_shard" }
+			id: "A101000000000015"
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			min_required_dependencies: 2
+			rewards: [
+				{ id: "R101000000000034", item: "kubejs:anchor_shard_01", type: "item" }
+				{ count: 8, id: "R101000000000035", item: "minecraft:gold_ingot", type: "item" }
+				{ id: "R101000000000036", type: "xp_levels", xp_levels: 3 }
+			]
+			shape: "diamond"
+			size: 1.25d
+			subtitle: "Рубеж II · 2 из 4"
+			tasks: [{
+				id: "T101000000000025"
+				title: "Этап 2 завершён"
+				type: "checkmark"
+			}]
+			title: "Резонанс якоря"
+			x: 0.0d
+			y: 10.0d
+		}
+		{
+			dependencies: ["A101000000000015"]
+			description: [
+				"§l[ Пайки на рейд ]§r"
+				""
+				"§bГде:§r полевая кухня у лагеря (котёл или костёр)."
+				"§bЧто сделать:§r приготовь §e16 steak/beef§r + §e8 golden carrot§r, сдай."
+				"§bКооп:§r по §e8 мяса§r на игрока."
+				"§bДальше:§r брифинг у §dДиспетчера§r."
+			]
+			hide_dependency_lines: false
+			icon: { count: 1, id: "minecraft:cooked_beef" }
+			id: "A101000000000008"
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			rewards: [
+				{ count: 4, id: "R101000000000018", item: "minecraft:golden_apple", type: "item" }
+				{ count: 16, id: "R101000000000037", item: "minecraft:torch", type: "item" }
+			]
+			subtitle: "Prep · пайки"
+			tasks: [
+				{ id: "T101000000000011", item: "minecraft:cooked_beef", count: 16, type: "item" }
+				{ id: "T101000000000012", item: "minecraft:golden_carrot", count: 8, type: "item" }
+			]
+			title: "Пайки на рейд"
+			x: 0.0d
+			y: 12.0d
+		}
+		{
+			dependencies: ["A101000000000008"]
+			description: [
+				"§l[ Приказ на финал ]§r · §dСовместное поручение§r"
+				""
+				"§bГде:§r §eлагерь у костра-маяка§r."
+				"§bКто:§r §dДиспетчер якоря§r — у центра лагеря, у костра."
+				"§bЧто сделать:§r"
+				"1. Поговори с Диспетчером — прочитай приказ до конца."
+				"2. Если диспетчер ещё не прибыл — отметься сам, когда будешь готов."
+				""
+				"§bДальше:§r финал «Фрагмент: Фундамент»."
+			]
+			hide_dependency_lines: false
+			icon: { count: 1, id: "minecraft:player_head" }
+			id: "A101000000000016"
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			rewards: [
+				{ id: "R101000000000038", item: "minecraft:paper", type: "item" }
+				{ count: 32, id: "R101000000000039", item: "minecraft:brick", type: "item" }
+			]
+			subtitle: "Совместно · брифинг"
+			tasks: [{
+				id: "T101000000000021"
+				title: "Брифинг у Диспетчера якоря"
+				type: "checkmark"
+			}]
+			title: "Приказ на финал"
+			x: 0.0d
+			y: 14.0d
+		}
+		{
+			dependencies: ["A101000000000016"]
+			description: [
+				"§l[ Фрагмент: Фундамент ]§r · §eФинал Prologue§r"
+				""
+				"§bГде:§r база у спавна — построй §eмаркер§r (столб/арка)."
+				"§bЧто сделать:§r"
+				"1. Стабилизируй фрагмент якоря — получишь §eочищенный осколок§r для маркера."
+				"2. Построй маркер базы (столб/арка) из §e32 кирпичей§r + §e16 фонарей§r."
+				"3. Сдай: осколок + кирпичи + фонари."
+				""
+				"§bКооп:§r стройте маркер вместе."
+				"§bПосле:§r откроется §eГлава I — Фундамент§r."
+			]
+			hide_dependency_lines: false
+			icon: { count: 1, id: "minecraft:lodestone" }
+			id: "A101000000000009"
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			rewards: [
+				{ id: "R101000000000020", item: "kubejs:reliquary_field", type: "item" }
+				{ id: "R101000000000022", type: "xp_levels", xp_levels: 5 }
+			]
+			shape: "gear"
+			size: 1.5d
+			subtitle: "Финал Prologue"
+			tasks: [
+				{ id: "T101000000000022", item: "kubejs:stabilized_shard_01", type: "item" }
+				{ id: "T101000000000013", item: "minecraft:bricks", count: 32, type: "item" }
+				{ id: "T101000000000014", item: "minecraft:lantern", count: 16, type: "item" }
+			]
+			title: "Фрагмент: Фундамент"
+			x: 0.0d
+			y: 16.0d
+		}
+	]
+	subtitle: [
+		"Сверху→вниз · ~1.5–2 ч · 2 из 4 на каждой волне"
+	]
+	title: "Prologue — Сигнал из пустоты"
+}

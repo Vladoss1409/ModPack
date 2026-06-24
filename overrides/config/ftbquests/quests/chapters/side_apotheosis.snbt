@@ -1,0 +1,143 @@
+{
+	default_quest_disable_jei: true
+	default_hide_dependency_lines: false
+	progression_mode: "linear"
+	hide_quest_until_deps_complete: true
+	hide_quest_details_until_startable: true
+	default_quest_shape: "circle"
+	filename: "side_apotheosis"
+	group: "B100000000000004"
+	icon: { count: 1, id: "apotheosis:simple_reforging_table" }
+	id: "A806000000000000"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+			"§dАпофеоз§r — ветка открыта основной линией."
+			"Следующие узлы появятся по цепочке зависимостей."
+			]
+			dependencies: ["A501000000000031"]
+			icon: { count: 1, id: "apotheosis:simple_reforging_table" }
+			id: "A806000000000001"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T806000000000001", item: "apotheosis:simple_reforging_table", title: "Simple Reforging", type: "item" }
+			]
+			title: "Simple Reforging"
+			x: -2.5d
+			y: 3.0d
+		},
+		{
+			dependencies: ["A806000000000001"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "apotheosis:salvaging_table" }
+			id: "A806000000000002"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T806000000000002", item: "apotheosis:salvaging_table", title: "Salvaging", type: "item" }
+			]
+			title: "Salvaging"
+			x: 2.5d
+			y: 5.2d
+		},
+		{
+			dependencies: ["A806000000000002"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "apotheosis:gem" }
+			id: "A806000000000003"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T806000000000003", item: "apotheosis:gem", title: "Gem", type: "item" }
+			]
+			title: "Gem"
+			x: -2.5d
+			y: 7.4d
+		},
+		{
+			dependencies: ["A806000000000003"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "apotheosis:sigil_of_enhancement" }
+			id: "A806000000000004"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T806000000000004", item: "apotheosis:sigil_of_enhancement", title: "Sigil", type: "item" }
+			]
+			title: "Sigil"
+			x: 2.5d
+			y: 9.6d
+		},
+		{
+			dependencies: ["A806000000000004"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "apotheosis:ender_lead" }
+			id: "A806000000000005"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T806000000000005", item: "apotheosis:ender_lead", title: "Spawner", type: "item" }
+			]
+			title: "Spawner"
+			x: -2.5d
+			y: 11.8d
+		},
+		{
+			dependencies: ["A806000000000005"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "apotheosis:boss_summoner" }
+			id: "A806000000000006"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T806000000000006", item: "apotheosis:boss_summoner", title: "Boss Summoner", type: "item" }
+			]
+			title: "Boss Summoner"
+			x: 2.5d
+			y: 14.0d
+		},
+		{
+			dependencies: ["A806000000000006"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "apotheosis:mythic_gem" }
+			id: "A806000000000007"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T806000000000007", item: "apotheosis:mythic_gem", title: "Mythic Gem", type: "item" }
+			]
+			title: "Mythic Gem"
+			x: -2.5d
+			y: 16.2d
+		},
+		{
+			dependencies: ["A806000000000007"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "apotheosis:reforging_table" }
+			id: "A806000000000008"
+			disable_jei: true
+			shape: "diamond"
+			size: 1.2d
+			tasks: [
+				{ id: "T806000000000008", item: "apotheosis:reforging_table", title: "Apothic Finale", type: "item" }
+			]
+			title: "Apothic Finale"
+			x: 2.5d
+			y: 18.4d
+		}
+	]
+	subtitle: [
+		"Сайд-ветка"
+	]
+	title: "Апофеоз"
+}

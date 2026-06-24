@@ -1,0 +1,113 @@
+{
+	default_quest_disable_jei: true
+	default_hide_dependency_lines: false
+	progression_mode: "linear"
+	hide_quest_until_deps_complete: true
+	hide_quest_details_until_startable: true
+	default_quest_shape: "circle"
+	filename: "side_twilight"
+	group: "B100000000000005"
+	icon: { count: 1, id: "twilightforest:liveroot" }
+	id: "A815000000000000"
+	order_index: 3
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+			"§dСумеречный рубеж§r — ветка открыта основной линией."
+			"Следующие узлы появятся по цепочке зависимостей."
+			]
+			dependencies: ["A301000000000016"]
+			icon: { count: 1, id: "twilightforest:liveroot" }
+			id: "A815000000000001"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 4, id: "T815000000000001", item: "twilightforest:liveroot", title: "Liveroot", type: "item" }
+			]
+			title: "Liveroot"
+			x: 0.0d
+			y: 3.0d
+		},
+		{
+			dependencies: ["A815000000000001"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "twilightforest:torchberries" }
+			id: "A815000000000002"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 8, id: "T815000000000002", item: "twilightforest:torchberries", title: "Torchberries", type: "item" }
+			]
+			title: "Torchberries"
+			x: 0.0d
+			y: 5.5d
+		},
+		{
+			dependencies: ["A815000000000002"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "twilightforest:naga_scale" }
+			id: "A815000000000003"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 4, id: "T815000000000003", item: "twilightforest:naga_scale", title: "Naga Scale", type: "item" }
+			]
+			title: "Naga Scale"
+			x: 0.0d
+			y: 8.0d
+		},
+		{
+			dependencies: ["A815000000000003"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "twilightforest:steeleaf_ingot" }
+			id: "A815000000000004"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 8, id: "T815000000000004", item: "twilightforest:steeleaf_ingot", title: "Steeleaf", type: "item" }
+			]
+			title: "Steeleaf"
+			x: 0.0d
+			y: 10.5d
+		},
+		{
+			dependencies: ["A815000000000004"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "twilightforest:knightmetal_ingot" }
+			id: "A815000000000005"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 8, id: "T815000000000005", item: "twilightforest:knightmetal_ingot", title: "Knightmetal", type: "item" }
+			]
+			title: "Knightmetal"
+			x: 0.0d
+			y: 13.0d
+		},
+		{
+			dependencies: ["A815000000000005"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "twilightforest:phantom_helmet" }
+			id: "A815000000000006"
+			disable_jei: true
+			shape: "diamond"
+			size: 1.2d
+			tasks: [
+				{ id: "T815000000000006", item: "twilightforest:phantom_helmet", title: "Twilight Finale", type: "item" }
+			]
+			title: "Twilight Finale"
+			x: 0.0d
+			y: 15.5d
+		}
+	]
+	subtitle: [
+		"Сайд-ветка"
+	]
+	title: "Сумеречный рубеж"
+}

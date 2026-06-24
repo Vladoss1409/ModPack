@@ -1,0 +1,169 @@
+{
+	default_quest_disable_jei: true
+	default_hide_dependency_lines: false
+	progression_mode: "linear"
+	hide_quest_until_deps_complete: false
+	hide_quest_details_until_startable: true
+	default_quest_shape: "circle"
+	filename: "main_00_welcome"
+	group: "B100000000000001"
+	icon: { count: 1, id: "minecraft:writable_book" }
+	id: "A001000000000000"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+			"§l[ Журнал «Якорь» ]§r"
+			""
+			"§bCoopTech§r — кооперативная экспедиция. Прогресс ведёт §dКодекс поручений§r (Gr)."
+			"§bЛор и подсказки§r — в §dЖурнале экспедиции§r и §eСтраницах журнала§r (ПКМ)."
+			""
+			"NPC нет — только записи, квесты и мир."
+			]
+			icon: { count: 1, id: "minecraft:writable_book" }
+			id: "A001000000000001"
+			disable_jei: true
+			rewards: [
+				{ id: "R001000000000001", item: "kubejs:expedition_journal", type: "item" }
+				{ id: "R001000000000002", item: "kubejs:journal_page_00", type: "item" }
+				{ id: "R001000000000003", type: "xp", xp: 25 }
+			]
+			shape: "gear"
+			size: 1.4d
+			tasks: [
+				{ id: "T001000000000001", title: "Начать путь экспедиции", type: "checkmark" }
+			]
+			title: "Сигнал якоря"
+			x: 0d
+			y: 0d
+		},
+		{
+			description: [
+			"§dКодекс и журнал§r — выполните задание для отметки в кодексе."
+			]
+			dependencies: ["A001000000000001"]
+			icon: { count: 1, id: "minecraft:book" }
+			id: "A001000000000002"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tags: ["branch_explore"]
+			tasks: [
+				{ advancement: "cooptech:journal/page_00_read", criterion: "unlock", id: "T001000000000002", title: "Прочитать страницу §8#0§r", type: "advancement" }
+			]
+			title: "Кодекс и журнал"
+			x: -3d
+			y: 2d
+		},
+		{
+			description: [
+			"§dКооп-клятва§r — выполните задание для отметки в кодексе."
+			]
+			dependencies: ["A001000000000001"]
+			icon: { count: 1, id: "minecraft:shield" }
+			id: "A001000000000003"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tags: ["branch_coop"]
+			tasks: [
+				{ id: "T001000000000003", item: "minecraft:shield", title: "Щит экспедиции", type: "item" }
+			]
+			title: "Кооп-клятва"
+			x: 0d
+			y: 2d
+		},
+		{
+			description: [
+			"§dЛагерь у спавна§r — выполните задание для отметки в кодексе."
+			]
+			dependencies: ["A001000000000001"]
+			icon: { count: 1, id: "minecraft:campfire" }
+			id: "A001000000000004"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tags: ["branch_craft"]
+			tasks: [
+				{ id: "T001000000000004", item: "minecraft:campfire", title: "Костёр лагеря", type: "item" }
+			]
+			title: "Лагерь у спавна"
+			x: 3d
+			y: 2d
+		},
+		{
+			description: [
+			"§bЗадание:§r §eПКМ§r по §dСтранице журнала §8#0§r — приказ из хроники в чат."
+			"§7Тот же текст — в §dЖурнале экспедиции§r → «Хроника»."
+			]
+			dependencies: ["A001000000000002"]
+			icon: { count: 1, id: "kubejs:journal_page_00" }
+			id: "A001000000000005"
+			disable_jei: true
+			shape: "diamond"
+			tasks: [
+				{ advancement: "cooptech:journal/page_00_read", criterion: "unlock", id: "T001000000000005", title: "ПКМ по Странице журнала §8#0§r", type: "advancement" }
+			]
+			title: "Первая запись"
+			x: -1.5d
+			y: 4d
+		},
+		{
+			dependencies: ["A001000000000003"]
+			icon: { count: 1, id: "minecraft:spyglass" }
+			id: "A001000000000006"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T001000000000006", item: "minecraft:spyglass", title: "Подзорная труба", type: "item" }
+			]
+			title: "Закрепить цель"
+			x: 1.5d
+			y: 4d
+		},
+		{
+			description: [
+			"Найдите костёр, палатки и сундук. Лагерь построен у спавна."
+			]
+			dependencies: ["A001000000000004", "A001000000000005"]
+			min_required_dependencies: 2
+			icon: { count: 1, id: "minecraft:lodestone" }
+			id: "A001000000000007"
+			disable_jei: true
+			shape: "diamond"
+			tasks: [
+				{ id: "T001000000000007", item: "minecraft:lodestone", title: "Лодестон", type: "item" }
+			]
+			title: "Полевой штаб"
+			x: 0d
+			y: 6d
+		},
+		{
+			description: [
+			"Вступление закрыто — откройте §eГайды§r, затем §eГлаву 1§r."
+			]
+			dependencies: ["A001000000000006", "A001000000000007"]
+			min_required_dependencies: 2
+			icon: { count: 1, id: "kubejs:quest_gate" }
+			id: "A001000000000008"
+			disable_jei: true
+			rewards: [
+				{ id: "R001000000000008", type: "xp", xp: 50 }
+			]
+			shape: "gear"
+			size: 1.2d
+			tasks: [
+				{ count: 16, id: "T001000000000008", item: "minecraft:torch", title: "Факел экспедиции", type: "item" }
+			]
+			title: "Вступление завершено"
+			x: 0d
+			y: 8d
+		}
+	]
+	subtitle: [
+		"~15 мин"
+	]
+	title: "Добро пожаловать!"
+}

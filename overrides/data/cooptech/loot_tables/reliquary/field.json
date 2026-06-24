@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": { "min": 2, "max": 4 },
+      "entries": [
+        { "type": "minecraft:item", "name": "minecraft:iron_ingot", "weight": 10, "functions": [{ "function": "minecraft:set_count", "count": { "min": 4, "max": 16 } }] },
+        { "type": "minecraft:item", "name": "minecraft:cooked_beef", "weight": 8, "functions": [{ "function": "minecraft:set_count", "count": { "min": 4, "max": 8 } }] },
+        { "type": "minecraft:item", "name": "farmersdelight:tomato", "weight": 6, "functions": [{ "function": "minecraft:set_count", "count": { "min": 4, "max": 12 } }] },
+        { "type": "minecraft:item", "name": "minecraft:torch", "weight": 8, "functions": [{ "function": "minecraft:set_count", "count": { "min": 16, "max": 32 } }] },
+        { "type": "minecraft:item", "name": "minecraft:golden_apple", "weight": 2 },
+        { "type": "minecraft:item", "name": "kubejs:journal_page_00", "weight": 3 }
+      ]
+    }
+  ]
+}

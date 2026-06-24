@@ -1,0 +1,19 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:black_banner",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{BlockEntityTag:{Base:15,Patterns:[{Pattern:flo,Color:5},{Pattern:moj,Color:5},{Pattern:lud,Color:15},{Pattern:tl,Color:14},{Pattern:cbo,Color:15},{Pattern:tts,Color:15}]},HideFlags:32,display:{Name:'[{\"text\":\"A Poppys Pledge\",\"italic\":true,\"color\":\"gold\"}]'}}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

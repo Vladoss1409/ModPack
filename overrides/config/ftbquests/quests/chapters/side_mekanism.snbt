@@ -1,0 +1,128 @@
+{
+	default_quest_disable_jei: true
+	default_hide_dependency_lines: false
+	progression_mode: "linear"
+	hide_quest_until_deps_complete: true
+	hide_quest_details_until_startable: true
+	default_quest_shape: "circle"
+	filename: "side_mekanism"
+	group: "B100000000000003"
+	icon: { count: 1, id: "mekanism:metallurgic_infuser" }
+	id: "A811000000000000"
+	order_index: 4
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+			"§dПромышленный узел§r — ветка открыта основной линией."
+			"Следующие узлы появятся по цепочке зависимостей."
+			]
+			dependencies: ["A501000000000001"]
+			icon: { count: 1, id: "mekanism:metallurgic_infuser" }
+			id: "A811000000000001"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T811000000000001", item: "mekanism:metallurgic_infuser", title: "Metallurgic Infuser", type: "item" }
+			]
+			title: "Metallurgic Infuser"
+			x: -3.0d
+			y: 3.0d
+		},
+		{
+			dependencies: ["A811000000000001"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "mekanism:enrichment_chamber" }
+			id: "A811000000000002"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T811000000000002", item: "mekanism:enrichment_chamber", title: "Enrichment Chamber", type: "item" }
+			]
+			title: "Enrichment Chamber"
+			x: -1.0d
+			y: 3.0d
+		},
+		{
+			dependencies: ["A811000000000002"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "mekanism:crusher" }
+			id: "A811000000000003"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T811000000000003", item: "mekanism:crusher", title: "Crusher", type: "item" }
+			]
+			title: "Crusher"
+			x: 1.0d
+			y: 3.0d
+		},
+		{
+			dependencies: ["A811000000000003"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "mekanism:energized_smelter" }
+			id: "A811000000000004"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T811000000000004", item: "mekanism:energized_smelter", title: "Energized Smelter", type: "item" }
+			]
+			title: "Energized Smelter"
+			x: 3.0d
+			y: 3.0d
+		},
+		{
+			dependencies: ["A811000000000004"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "mekanism:basic_factory" }
+			id: "A811000000000005"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T811000000000005", item: "mekanism:basic_factory", title: "Basic Factory", type: "item" }
+			]
+			title: "Basic Factory"
+			x: -3.0d
+			y: 6.0d
+		},
+		{
+			dependencies: ["A811000000000005"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "mekanism:digital_miner" }
+			id: "A811000000000006"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T811000000000006", item: "mekanism:digital_miner", title: "Digital Miner", type: "item" }
+			]
+			title: "Digital Miner"
+			x: -1.0d
+			y: 6.0d
+		},
+		{
+			dependencies: ["A811000000000006"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "mekanism:teleportation_core" }
+			id: "A811000000000007"
+			disable_jei: true
+			shape: "diamond"
+			size: 1.2d
+			tasks: [
+				{ id: "T811000000000007", item: "mekanism:teleportation_core", title: "Mekanism Finale", type: "item" }
+			]
+			title: "Mekanism Finale"
+			x: 0.0d
+			y: 8.0d
+		}
+	]
+	subtitle: [
+		"Сайд-ветка"
+	]
+	title: "Промышленный узел"
+}

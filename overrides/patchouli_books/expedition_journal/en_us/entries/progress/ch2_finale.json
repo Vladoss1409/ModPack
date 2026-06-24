@@ -1,0 +1,14 @@
+{
+  "name": "Глава II: фрагмент поверхности",
+  "icon": "mowziesmobs:wrought_helmet",
+  "category": "patchouli:progress",
+  "advancement": "cooptech:journal/ch2_finale",
+  "secret": true,
+  "sortnum": 21,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Поверхность изучена$()$(br2)Осколок поверхности получен — карта перестала быть «плоской». Глава III — $(#DD55DD)Поток энергии$(): Thermal, Powah, Immersive Engineering, автоплавка в цепочке.$(br2)Подготовьте $(#FFAA00)RF-хранилище$() и место под провода — спорить о layout лучше $(italic)до$(), а не во время разлома."
+    }
+  ]
+}

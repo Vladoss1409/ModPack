@@ -1,0 +1,128 @@
+{
+	default_quest_disable_jei: true
+	default_hide_dependency_lines: false
+	progression_mode: "linear"
+	hide_quest_until_deps_complete: true
+	hide_quest_details_until_startable: true
+	default_quest_shape: "circle"
+	filename: "side_flux"
+	group: "B100000000000003"
+	icon: { count: 1, id: "fluxnetworks:flux_dust" }
+	id: "A804000000000000"
+	order_index: 3
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+			"§dFlux Networks§r — ветка открыта основной линией."
+			"Следующие узлы появятся по цепочке зависимостей."
+			]
+			dependencies: ["A401000000000018"]
+			icon: { count: 1, id: "fluxnetworks:flux_dust" }
+			id: "A804000000000001"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 16, id: "T804000000000001", item: "fluxnetworks:flux_dust", title: "Flux Dust", type: "item" }
+			]
+			title: "Flux Dust"
+			x: -3.0d
+			y: 3.0d
+		},
+		{
+			dependencies: ["A804000000000001"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "fluxnetworks:flux_core" }
+			id: "A804000000000002"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 4, id: "T804000000000002", item: "fluxnetworks:flux_core", title: "Flux Core", type: "item" }
+			]
+			title: "Flux Core"
+			x: -1.0d
+			y: 3.0d
+		},
+		{
+			dependencies: ["A804000000000002"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "fluxnetworks:flux_plug" }
+			id: "A804000000000003"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T804000000000003", item: "fluxnetworks:flux_plug", title: "Flux Plug", type: "item" }
+			]
+			title: "Flux Plug"
+			x: 1.0d
+			y: 3.0d
+		},
+		{
+			dependencies: ["A804000000000003"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "fluxnetworks:flux_point" }
+			id: "A804000000000004"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 4, id: "T804000000000004", item: "fluxnetworks:flux_point", title: "Flux Point", type: "item" }
+			]
+			title: "Flux Point"
+			x: 3.0d
+			y: 3.0d
+		},
+		{
+			dependencies: ["A804000000000004"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "fluxnetworks:basic_flux_storage" }
+			id: "A804000000000005"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T804000000000005", item: "fluxnetworks:basic_flux_storage", title: "Basic Storage", type: "item" }
+			]
+			title: "Basic Storage"
+			x: -3.0d
+			y: 6.0d
+		},
+		{
+			dependencies: ["A804000000000005"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "fluxnetworks:gargantuan_flux_storage" }
+			id: "A804000000000006"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T804000000000006", item: "fluxnetworks:gargantuan_flux_storage", title: "Gargantuan", type: "item" }
+			]
+			title: "Gargantuan"
+			x: -1.0d
+			y: 6.0d
+		},
+		{
+			dependencies: ["A804000000000006"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "fluxnetworks:flux_controller" }
+			id: "A804000000000007"
+			disable_jei: true
+			shape: "diamond"
+			size: 1.2d
+			tasks: [
+				{ id: "T804000000000007", item: "fluxnetworks:flux_controller", title: "Wireless", type: "item" }
+			]
+			title: "Wireless"
+			x: 0.0d
+			y: 8.0d
+		}
+	]
+	subtitle: [
+		"Сайд-ветка"
+	]
+	title: "Flux Networks"
+}

@@ -1,0 +1,28 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:potion",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_name",
+                            "name": {
+                                "translate": "incendium.item.suspicious_brew.name",
+                                "fallback": "Suspicious Brew",
+                                "color": "#8957ff",
+                                "italic": false
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{CustomPotionColor:12162815,HideFlags:32,Potion:\"minecraft:water\",CustomPotionEffects:[{Id:2,Amplifier:0,Duration:4000},{Id:5,Amplifier:3,Duration:1500},{Id:9,Amplifier:0,Duration:200},{Id:11,Amplifier:1,Duration:1000}],custom_potion_effects:[{id:\"minecraft:slowness\",amplifier:0,duration:4000},{id:\"minecraft:strength\",amplifier:3,duration:1500},{id:\"minecraft:nausea\",amplifier:0,duration:200},{id:\"minecraft:resistance\",amplifier:1,duration:1000}]}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

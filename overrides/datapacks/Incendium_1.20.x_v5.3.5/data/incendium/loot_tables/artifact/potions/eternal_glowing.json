@@ -1,0 +1,38 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:splash_potion",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_name",
+                            "name": {
+                                "translate": "incendium.item.eternal_glowing.name",
+                                "fallback": "Splash Potion of Eternal Glowing",
+                                "italic": false
+                            }
+                        },
+                        {
+                            "function": "minecraft:set_lore",
+                            "lore": [
+                                {
+                                    "translate": "incendium.item.eternal_glowing.desc",
+                                    "fallback": "Glowing (∞)",
+                                    "color": "red",
+                                    "italic": false
+                                }
+                            ]
+                        },
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{CustomPotionColor:16514882,HideFlags:32,Potion:\"minecraft:water\",CustomPotionEffects:[{Id:24,Duration:100000000}],custom_potion_effects:[{id:\"minecraft:glowing\",duration:100000000}]}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

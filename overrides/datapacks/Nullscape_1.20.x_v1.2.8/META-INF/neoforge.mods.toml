@@ -1,0 +1,27 @@
+modLoader="lowcodefml"
+loaderVersion="[1,)"
+license="Stardust Labs License"
+issueTrackerURL="https://github.com/Stardust-Labs-MC/Nullscape/issues"
+
+[[mods]]
+    modId="nullscape"
+    version="1.2.8"
+    displayName="Nullscape"
+    displayURL="https://www.stardustlabs.net/"
+    logoFile="pack.png"
+    authors="Stardust Labs"
+    credits="Starmute: Owner. catter1: Maintainer."
+    description="Transforms the boring Vanilla end into an alien dimension with the most surreal terrain imaginable. Topped with a couple of new biomes to add to the experience, whilst keeping the end desolate."
+
+[[dependencies.nullscape]]
+    modId="neoforge"
+    mandatory=false
+    versionRange="[20.2,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.nullscape]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20,1.21)"
+    ordering="NONE"
+    side="BOTH"

@@ -1,0 +1,14 @@
+{
+  "name": "Глава V: фрагмент Nano",
+  "icon": "kubejs:anchor_shard_06",
+  "category": "patchouli:progress",
+  "advancement": "cooptech:journal/ch5_finale",
+  "secret": true,
+  "sortnum": 51,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Снаряжение готово$()$(br2)Meka-Suit, реликвии и перековка — полевой отряд готов к $(#DD55DD)финалу$(). Драконья эволюция ждёт за рубежом VI."
+    }
+  ]
+}

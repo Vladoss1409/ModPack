@@ -1,0 +1,143 @@
+{
+	default_quest_disable_jei: true
+	default_hide_dependency_lines: false
+	progression_mode: "linear"
+	hide_quest_until_deps_complete: true
+	hide_quest_details_until_startable: true
+	default_quest_shape: "circle"
+	filename: "side_silent_gear"
+	group: "B100000000000005"
+	icon: { count: 1, id: "silentgear:pickaxe" }
+	id: "A807000000000000"
+	order_index: 4
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+			"§dКовка Silent Gear§r — ветка открыта основной линией."
+			"Следующие узлы появятся по цепочке зависимостей."
+			]
+			dependencies: ["A601000000000004"]
+			icon: { count: 1, id: "silentgear:template_board" }
+			id: "A807000000000001"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 4, id: "T807000000000001", item: "silentgear:template_board", title: "Template Board", type: "item" }
+			]
+			title: "Template Board"
+			x: -3.0d
+			y: 3.0d
+		},
+		{
+			dependencies: ["A807000000000001"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "silentgear:blueprint_paper" }
+			id: "A807000000000002"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 8, id: "T807000000000002", item: "silentgear:blueprint_paper", title: "Blueprint", type: "item" }
+			]
+			title: "Blueprint"
+			x: -1.0d
+			y: 3.0d
+		},
+		{
+			dependencies: ["A807000000000002"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "silentgear:pickaxe_head" }
+			id: "A807000000000003"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T807000000000003", item: "silentgear:pickaxe_head", title: "Pick Head", type: "item" }
+			]
+			title: "Pick Head"
+			x: 1.0d
+			y: 3.0d
+		},
+		{
+			dependencies: ["A807000000000003"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "silentgear:axe_head" }
+			id: "A807000000000004"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T807000000000004", item: "silentgear:axe_head", title: "Axe Head", type: "item" }
+			]
+			title: "Axe Head"
+			x: 3.0d
+			y: 3.0d
+		},
+		{
+			dependencies: ["A807000000000004"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "silentgear:binding" }
+			id: "A807000000000005"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 4, id: "T807000000000005", item: "silentgear:binding", title: "Binding", type: "item" }
+			]
+			title: "Binding"
+			x: -3.0d
+			y: 6.0d
+		},
+		{
+			dependencies: ["A807000000000005"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "silentgear:coating" }
+			id: "A807000000000006"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 4, id: "T807000000000006", item: "silentgear:coating", title: "Coating", type: "item" }
+			]
+			title: "Coating"
+			x: -1.0d
+			y: 6.0d
+		},
+		{
+			dependencies: ["A807000000000006"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "silentgear:pickaxe" }
+			id: "A807000000000007"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T807000000000007", item: "silentgear:pickaxe", title: "Silent Pick", type: "item" }
+			]
+			title: "Silent Pick"
+			x: 1.0d
+			y: 6.0d
+		},
+		{
+			dependencies: ["A807000000000007"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "silentgear:sword" }
+			id: "A807000000000008"
+			disable_jei: true
+			shape: "diamond"
+			size: 1.2d
+			tasks: [
+				{ id: "T807000000000008", item: "silentgear:sword", title: "Silent Sword", type: "item" }
+			]
+			title: "Silent Sword"
+			x: 0.0d
+			y: 8.0d
+		}
+	]
+	subtitle: [
+		"Сайд-ветка"
+	]
+	title: "Ковка Silent Gear"
+}

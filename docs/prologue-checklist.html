@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CoopTech — чеклист Prologue</title>
+  <style>
+    :root {
+      --bg: #0f0a18;
+      --card: #1a1228;
+      --border: #6633aa;
+      --text: #e8e0ff;
+      --muted: #9988bb;
+      --accent: #44ccff;
+      --done: #66ff88;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: Segoe UI, system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 24px 16px 48px;
+      line-height: 1.5;
+    }
+    h1 { font-size: 1.4rem; margin-bottom: 4px; }
+    .sub { color: var(--muted); font-size: 0.9rem; margin-bottom: 20px; }
+    .bar {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px 16px;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .progress-wrap { flex: 1; min-width: 160px; }
+    .progress-bg {
+      height: 8px;
+      background: #2a2040;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #44ff88, #cc66ff);
+      width: 0%;
+      transition: width 0.3s;
+    }
+    .progress-label { font-size: 0.85rem; color: var(--muted); margin-top: 4px; }
+    button {
+      background: #442266;
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 8px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.85rem;
+    }
+    button:hover { background: #553388; }
+    section {
+      background: var(--card);
+      border: 1px solid #332255;
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+    section h2 {
+      font-size: 1rem;
+      color: var(--accent);
+      margin: 0 0 12px;
+      border-bottom: 1px solid #332255;
+      padding-bottom: 8px;
+    }
+    label {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 8px 4px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    label:hover { background: #221833; }
+    label.done span { color: var(--muted); text-decoration: line-through; }
+    input[type=checkbox] {
+      width: 18px;
+      height: 18px;
+      margin-top: 2px;
+      accent-color: #8844cc;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+    td, th {
+      border: 1px solid #332255;
+      padding: 8px 10px;
+      text-align: left;
+    }
+    th { background: #221833; color: var(--accent); }
+    code {
+      background: #221833;
+      padding: 1px 5px;
+      border-radius: 3px;
+      font-size: 0.85em;
+    }
+  </style>
+</head>
+<body>
+  <h1>CoopTech Test — чеклист Prologue</h1>
+  <p class="sub">Кликай галочки — прогресс сохраняется в браузере на этом ПК.</p>
+
+  <div class="bar">
+    <div class="progress-wrap">
+      <div class="progress-bg"><div class="progress-fill" id="progressFill"></div></div>
+      <div class="progress-label" id="progressLabel">0 / 0</div>
+    </div>
+    <button type="button" id="resetBtn">Сбросить всё</button>
+  </div>
+
+  <section data-group="a">
+    <h2>A. Перед миром</h2>
+    <label><input type="checkbox" data-id="a1"><span>Java 17</span></label>
+    <label><input type="checkbox" data-id="a2"><span>Forge 1.20.1 (47.4.x)</span></label>
+    <label><input type="checkbox" data-id="a3"><span>Все jar из CoopTech-Test/mods/ (включая CustomNPCs)</span></label>
+    <label><input type="checkbox" data-id="a4"><span>overrides/ скопированы в инстанс</span></label>
+    <label><input type="checkbox" data-id="a5"><span>Клиенту 6 GB RAM</span></label>
+    <label><input type="checkbox" data-id="a6"><span>Игра через VPS (не локальный сервер на ПК)</span></label>
+    <label><input type="checkbox" data-id="a7"><span>Сервер: JVM 6G, enable-command-blocks=true</span></label>
+    <label><input type="checkbox" data-id="a8"><span>CNPC: NpcUseOpCommands=true</span></label>
+  </section>
+
+  <section data-group="b">
+    <h2>B. Первые 10 минут</h2>
+    <label><input type="checkbox" data-id="b1"><span>Оба в одной FTB Team</span></label>
+    <label><input type="checkbox" data-id="b2"><span>Gr → Prologue в книге квестов</span></label>
+    <label><input type="checkbox" data-id="b3"><span>Фиолетовая тема (Reload Themes если нет)</span></label>
+    <label><input type="checkbox" data-id="b4"><span>Первый квест закреплён (pin)</span></label>
+    <label><input type="checkbox" data-id="b5"><span>«Сигнал из пустоты» завершён</span></label>
+  </section>
+
+  <section data-group="c">
+    <h2>C. Лager NPC</h2>
+    <label><input type="checkbox" data-id="c1"><span>Лager у world spawn</span></label>
+    <label><input type="checkbox" data-id="c2"><span>Диспетчер якоря + dialog Command</span></label>
+    <label><input type="checkbox" data-id="c3"><span>(опц.) квартирмейстер, наставник</span></label>
+  </section>
+
+  <section data-group="d">
+    <h2>D. Волна 1 — 2 из 4</h2>
+    <label><input type="checkbox" data-id="d1"><span>Крафт: Cooking Pot + 3 блюда FD</span></label>
+    <label><input type="checkbox" data-id="d2"><span>Кооп-база: 64 oak_log + chest</span></label>
+    <label><input type="checkbox" data-id="d3"><span>Исследование: Nature's Compass + биом</span></label>
+    <label><input type="checkbox" data-id="d4"><span>Добыча: 64 raw_iron</span></label>
+    <label><input type="checkbox" data-id="d5"><span>Gate 1 завершён</span></label>
+  </section>
+
+  <section data-group="e">
+    <h2>E. Волна 2 — 2 из 4</h2>
+    <label><input type="checkbox" data-id="e1"><span>«Усиление сигнала» + маяк в инвентаре</span></label>
+    <label><input type="checkbox" data-id="e2"><span>Explorer's Compass</span></label>
+    <label><input type="checkbox" data-id="e3"><span>48 raw_iron + 32 raw_copper</span></label>
+    <label><input type="checkbox" data-id="e4"><span>smithing table + cutting board</span></label>
+    <label><input type="checkbox" data-id="e5"><span>Кооп: оба ПКМ с маяком у спавна (2/2)</span></label>
+    <label><input type="checkbox" data-id="e6"><span>Gate 2 + anchor_shard_01</span></label>
+  </section>
+
+  <section data-group="f">
+    <h2>F. Финал</h2>
+    <label><input type="checkbox" data-id="f1"><span>16 cooked_beef + 8 golden_carrot</span></label>
+    <label><input type="checkbox" data-id="f2"><span>Брифинг у диспетчера</span></label>
+    <label><input type="checkbox" data-id="f3"><span>stabilized_shard_01 + 32 bricks + 16 lanterns</span></label>
+    <label><input type="checkbox" data-id="f4"><span>Ch1 Foundation открылась</span></label>
+  </section>
+
+  <section data-group="g">
+    <h2>G. После сессии</h2>
+    <label><input type="checkbox" data-id="g1"><span>RAM клиента записан в hosting-budget.md</span></label>
+    <label><input type="checkbox" data-id="g2"><span>RAM сервера (Spark) записан</span></label>
+    <label><input type="checkbox" data-id="g3"><span>Заметки по багам / балансу</span></label>
+  </section>
+
+  <section>
+    <h2>Быстрая помощь</h2>
+    <table>
+      <tr><th>Проблема</th><th>Решение</th></tr>
+      <tr><td>Старая книга квестов</td><td>overrides/kubejs → полный перезапуск</td></tr>
+      <tr><td>Маяк «далеко»</td><td>Подойти к world spawn</td></tr>
+      <tr><td>Кооп не засчитывается</td><td>FTB Team + оба ПКМ с маяком</td></tr>
+      <tr><td>CNPC команда</td><td>command-blocks + NpcUseOpCommands</td></tr>
+    </table>
+    <p style="margin-top:12px;font-size:0.85rem;color:var(--muted)">
+      CNPC команда диспетчера: <code>ftbquests change_progress @dp complete T101000000000021</code>
+    </p>
+  </section>
+
+  <script>
+    const KEY = 'cooptech_prologue_checklist';
+    const boxes = document.querySelectorAll('input[type=checkbox][data-id]');
+
+    function load() {
+      let saved = {};
+      try { saved = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch (e) {}
+      boxes.forEach(cb => {
+        cb.checked = !!saved[cb.dataset.id];
+        cb.closest('label').classList.toggle('done', cb.checked);
+      });
+      updateProgress();
+    }
+
+    function save() {
+      const data = {};
+      boxes.forEach(cb => { data[cb.dataset.id] = cb.checked; });
+      localStorage.setItem(KEY, JSON.stringify(data));
+      updateProgress();
+    }
+
+    function updateProgress() {
+      const total = boxes.length;
+      const done = [...boxes].filter(cb => cb.checked).length;
+      const pct = total ? Math.round((done / total) * 100) : 0;
+      document.getElementById('progressFill').style.width = pct + '%';
+      document.getElementById('progressLabel').textContent = done + ' / ' + total + ' (' + pct + '%)';
+    }
+
+    boxes.forEach(cb => {
+      cb.addEventListener('change', () => {
+        cb.closest('label').classList.toggle('done', cb.checked);
+        save();
+      });
+    });
+
+    document.getElementById('resetBtn').addEventListener('click', () => {
+      if (confirm('Сбросить все галочки?')) {
+        localStorage.removeItem(KEY);
+        boxes.forEach(cb => {
+          cb.checked = false;
+          cb.closest('label').classList.remove('done');
+        });
+        updateProgress();
+      }
+    });
+
+    load();
+  </script>
+</body>
+</html>

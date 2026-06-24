@@ -1,0 +1,98 @@
+{
+	default_quest_disable_jei: true
+	default_hide_dependency_lines: false
+	progression_mode: "linear"
+	hide_quest_until_deps_complete: true
+	hide_quest_details_until_startable: true
+	default_quest_shape: "circle"
+	filename: "side_cataclysm"
+	group: "B100000000000004"
+	icon: { count: 1, id: "cataclysm:gauntlet_of_guard" }
+	id: "A817000000000000"
+	order_index: 3
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+			"§dБездна Cataclysm§r — ветка открыта основной линией."
+			"Следующие узлы появятся по цепочке зависимостей."
+			]
+			dependencies: ["A701000000000013"]
+			icon: { count: 1, id: "cataclysm:void_core" }
+			id: "A817000000000001"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 2, id: "T817000000000001", item: "cataclysm:void_core", title: "Void Core", type: "item" }
+			]
+			title: "Void Core"
+			x: 0.0d
+			y: 3.0d
+		},
+		{
+			dependencies: ["A817000000000001"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "cataclysm:witherite_ingot" }
+			id: "A817000000000002"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 4, id: "T817000000000002", item: "cataclysm:witherite_ingot", title: "Witherite", type: "item" }
+			]
+			title: "Witherite"
+			x: 0.0d
+			y: 5.5d
+		},
+		{
+			dependencies: ["A817000000000002"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "cataclysm:gauntlet_of_guard" }
+			id: "A817000000000003"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T817000000000003", item: "cataclysm:gauntlet_of_guard", title: "Gauntlet", type: "item" }
+			]
+			title: "Gauntlet"
+			x: 0.0d
+			y: 8.0d
+		},
+		{
+			dependencies: ["A817000000000003"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "cataclysm:ignitium_ingot" }
+			id: "A817000000000004"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 4, id: "T817000000000004", item: "cataclysm:ignitium_ingot", title: "Ignitium", type: "item" }
+			]
+			title: "Ignitium"
+			x: 0.0d
+			y: 10.5d
+		},
+		{
+			dependencies: ["A817000000000004"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "cataclysm:the_incinerator" }
+			id: "A817000000000005"
+			disable_jei: true
+			shape: "diamond"
+			size: 1.2d
+			tasks: [
+				{ id: "T817000000000005", item: "cataclysm:the_incinerator", title: "Cataclysm Finale", type: "item" }
+			]
+			title: "Cataclysm Finale"
+			x: 0.0d
+			y: 13.0d
+		}
+	]
+	subtitle: [
+		"Сайд-ветка"
+	]
+	title: "Бездна Cataclysm"
+}

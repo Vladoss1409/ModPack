@@ -1,0 +1,63 @@
+{
+	default_quest_disable_jei: true
+	default_hide_dependency_lines: false
+	progression_mode: "linear"
+	hide_quest_until_deps_complete: false
+	hide_quest_details_until_startable: true
+	filename: "08_primordial"
+	group: "B100000000000001"
+	icon: { count: 1, id: "kubejs:expedition_journal" }
+	id: "A900000000000001"
+	order_index: 8
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["A801000000000001"]
+			description: ["Глава в разработке. Следующее обновление сборки.", "", "Зависимость от предыдущей главы сохранена."]
+			id: "A901000000000001"
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			rewards: [
+				{ id: "R80100000000001", type: "xp_levels", xp_levels: 1 }
+			]
+			tasks: [{ id: "T80100000000001", title: "Placeholder", type: "checkmark" }]
+			title: "Ch8 — Первозданная геология [WIP]"
+			x: 0.0d
+			y: 0.0d
+		}
+	]
+	subtitle: [
+		"WIP"
+	]
+	title: "Ch8 — Первозданная геология"
+}

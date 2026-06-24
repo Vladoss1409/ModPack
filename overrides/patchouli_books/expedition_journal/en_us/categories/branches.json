@@ -1,0 +1,7 @@
+{
+  "name": "Ветки модов",
+  "description": "Записи открываются при разблокировке сайд-веток в Кодексе.",
+  "icon": "minecraft:iron_bars",
+  "parent": "patchouli:progress",
+  "sortnum": 5
+}

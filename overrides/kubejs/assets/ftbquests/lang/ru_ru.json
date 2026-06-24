@@ -1,0 +1,16 @@
+﻿{
+	"quest.cooptech.title": "CoopTech — Кодекс экспедиции",
+	"quest.cooptech.subtitle": "Экспедиция на 140+ часов",
+	"chapter.cooptech.welcome": "Welcome — Сигнал якоря",
+	"chapter.cooptech.guides": "Guides — Путеводитель",
+	"chapter.cooptech.prologue": "Prologue — Сигнал из пустоты",
+	"item.kubejs.expedition_journal": "Журнал экспедиции",
+	"item.kubejs.reliquary_field": "Полевая реликвария",
+	"item.kubejs.reliquary_resonant": "Резонансная реликвария",
+	"item.kubejs.reliquary_arcane": "Арканная реликвария",
+	"item.kubejs.reliquary_primordial": "Первозданная реликвария",
+	"item.kubejs.reliquary_convergence": "Реликвария схождения",
+	"item.kubejs.anchor_shard_01": "Фрагмент якоря #1",
+	"item.kubejs.stabilized_shard_01": "Стабилизированный фрагмент #1",
+	"item.kubejs.reality_anchor_core": "Ядро Якоря реальности"
+}

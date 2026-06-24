@@ -1,0 +1,14 @@
+{
+  "name": "Silent Gear",
+  "icon": "silentgear:pickaxe",
+  "category": "patchouli:branches",
+  "advancement": "cooptech:journal/side_silent_gear",
+  "secret": true,
+  "sortnum": 7,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Модульное снаряжение$()$(br2)После рубежа Главы V — шаблоны, чертежи, кастомные кирки и мечи."
+    }
+  ]
+}

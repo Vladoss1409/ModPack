@@ -1,0 +1,14 @@
+{
+  "name": "Глава IV: фрагмент Production",
+  "icon": "kubejs:anchor_shard_05",
+  "category": "patchouli:progress",
+  "advancement": "cooptech:journal/ch4_finale",
+  "secret": true,
+  "sortnum": 41,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Сеть собрана$()$(br2)Фабрики, трубы и ME-ячейки синхронизированы с якорем. Следующий рубеж — $(#DD55DD)Nano$(): нетерит, модульное снаряжение и реликвии."
+    }
+  ]
+}

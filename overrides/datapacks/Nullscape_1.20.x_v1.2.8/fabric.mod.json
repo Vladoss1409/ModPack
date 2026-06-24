@@ -1,0 +1,41 @@
+{
+    "schemaVersion": 1,
+    "id": "nullscape",
+    "version": "1.2.7",
+    "name": "Nullscape",
+    "description": "Transforms the boring Vanilla end into an alien dimension with the most surreal terrain imaginable. Topped with a couple of new biomes to add to the experience, whilst keeping the end desolate.",
+    "authors": [
+        "Starmute",
+        "catter1"
+    ],
+    "contact": {
+        "homepage": "https://www.stardustlabs.net/",
+        "sources": "https://github.com/Stardust-Labs-MC/Nullscape",
+        "issues": "https://github.com/Stardust-Labs-MC/Nullscape/issues",
+        "discord": "https://discord.gg/stardustlabs"
+    },
+    "license": "Stardust Labs License",
+    "icon": "pack.png",
+    "environment": "*",
+    "entrypoints": {},
+    "mixins": [],
+    "depends": {
+        "fabricloader": ">=0.12.7",
+        "fabric-api-base": "*",
+        "minecraft": ">=1.20"
+    },
+    "custom": {
+        "modmenu": {
+            "links": {
+                "modmenu.curseforge": "https://www.curseforge.com/minecraft/mc-mods/nullscape",
+                "modmenu.discord": "https://discord.gg/stardustlabs",
+                "modmenu.kofi": "https://ko-fi.com/stardustlabs",
+                "modmenu.modrinth": "https://modrinth.com/mod/nullscape",
+                "modmenu.patreon": "https://www.patreon.com/stardustlabs",
+                "modmenu.twitter": "https://twitter.com/StardustLabs",
+                "modmenu.wiki": "https://stardustlabs.miraheze.org/",
+                "modmenu.youtube": "https://www.youtube.com/@stardustlabs"
+            }
+        }
+    }
+}

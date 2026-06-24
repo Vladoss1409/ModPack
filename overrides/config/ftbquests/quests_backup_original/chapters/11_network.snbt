@@ -1,0 +1,63 @@
+{
+	default_quest_disable_jei: true
+	default_hide_dependency_lines: false
+	progression_mode: "linear"
+	hide_quest_until_deps_complete: false
+	hide_quest_details_until_startable: true
+	filename: "11_network"
+	group: "B100000000000001"
+	icon: { count: 1, id: "kubejs:expedition_journal" }
+	id: "AC00000000000001"
+	order_index: 11
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["A110100000000001"]
+			description: ["Глава в разработке. Следующее обновление сборки.", "", "Зависимость от предыдущей главы сохранена."]
+			id: "A120100000000001"
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			rewards: [
+				{ id: "R110100000000001", type: "xp_levels", xp_levels: 1 }
+			]
+			tasks: [{ id: "T110100000000001", title: "Placeholder", type: "checkmark" }]
+			title: "Ch11 — Сеть восхождения [WIP]"
+			x: 0.0d
+			y: 0.0d
+		}
+	]
+	subtitle: [
+		"WIP"
+	]
+	title: "Ch11 — Сеть восхождения"
+}

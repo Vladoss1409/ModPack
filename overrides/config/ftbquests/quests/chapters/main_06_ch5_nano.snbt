@@ -1,0 +1,336 @@
+{
+	default_quest_disable_jei: true
+	default_hide_dependency_lines: false
+	progression_mode: "linear"
+	hide_quest_until_deps_complete: false
+	hide_quest_details_until_startable: true
+	default_quest_shape: "circle"
+	filename: "main_06_ch5_nano"
+	group: "B100000000000002"
+	icon: { count: 1, id: "silentgear:pickaxe" }
+	id: "A600000000000000"
+	order_index: 5
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["A501000000000035"]
+			icon: { count: 1, id: "minecraft:netherite_upgrade_smithing_template" }
+			id: "A601000000000001"
+			disable_jei: true
+			shape: "gear"
+			size: 1.3d
+			tasks: [
+				{ id: "T601000000000001", item: "minecraft:netherite_upgrade_smithing_template", title: "Netherite шаблон", type: "item" }
+			]
+			title: "Netherite шаблон"
+			x: 0d
+			y: -2d
+		},
+		{
+			dependencies: ["A601000000000001"]
+			icon: { count: 1, id: "minecraft:ancient_debris" }
+			id: "A601000000000002"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 8, id: "T601000000000002", item: "minecraft:ancient_debris", title: "Ancient Debris", type: "item" }
+			]
+			title: "Ancient Debris"
+			x: -2d
+			y: 0d
+		},
+		{
+			dependencies: ["A601000000000001"]
+			icon: { count: 1, id: "minecraft:netherite_ingot" }
+			id: "A601000000000003"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 4, id: "T601000000000003", item: "minecraft:netherite_ingot", title: "Netherite Ingot", type: "item" }
+			]
+			title: "Netherite Ingot"
+			x: 2d
+			y: 0d
+		},
+		{
+			dependencies: ["A601000000000002", "A601000000000003"]
+			min_required_dependencies: 1
+			icon: { count: 1, id: "silentgear:template_board" }
+			id: "A601000000000004"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T601000000000004", item: "silentgear:template_board", title: "Silent Template", type: "item" }
+			]
+			title: "Silent Template"
+			x: -3d
+			y: 2d
+		},
+		{
+			dependencies: ["A601000000000002", "A601000000000003"]
+			min_required_dependencies: 1
+			icon: { count: 1, id: "silentgear:blueprint_paper" }
+			id: "A601000000000005"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 8, id: "T601000000000005", item: "silentgear:blueprint_paper", title: "Blueprint", type: "item" }
+			]
+			title: "Blueprint"
+			x: 3d
+			y: 2d
+		},
+		{
+			dependencies: ["A601000000000004", "A601000000000005"]
+			icon: { count: 1, id: "kubejs:quest_gate" }
+			id: "A601000000000006"
+			disable_jei: true
+			shape: "diamond"
+			subtitle: "Gate"
+			tasks: [
+				{ id: "T601000000000006", title: "Рубеж пройден", type: "checkmark" }
+			]
+			title: "Nano Gate I"
+			x: 0d
+			y: 4d
+		},
+		{
+			dependencies: ["A601000000000006"]
+			icon: { count: 1, id: "silentgear:pickaxe_head" }
+			id: "A601000000000007"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T601000000000007", item: "silentgear:pickaxe_head", title: "Pickaxe Head", type: "item" }
+			]
+			title: "Pickaxe Head"
+			x: -3d
+			y: 6d
+		},
+		{
+			dependencies: ["A601000000000006"]
+			icon: { count: 1, id: "silentgear:sword_blade" }
+			id: "A601000000000008"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T601000000000008", item: "silentgear:sword_blade", title: "Sword Blade", type: "item" }
+			]
+			title: "Sword Blade"
+			x: -1d
+			y: 6d
+		},
+		{
+			dependencies: ["A601000000000006"]
+			icon: { count: 1, id: "silentgear:plate" }
+			id: "A601000000000009"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 4, id: "T601000000000009", item: "silentgear:plate", title: "Armor Plate", type: "item" }
+			]
+			title: "Armor Plate"
+			x: 1d
+			y: 6d
+		},
+		{
+			dependencies: ["A601000000000006"]
+			icon: { count: 1, id: "silentgear:binding" }
+			id: "A601000000000010"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 4, id: "T601000000000010", item: "silentgear:binding", title: "Binding", type: "item" }
+			]
+			title: "Binding"
+			x: 3d
+			y: 6d
+		},
+		{
+			dependencies: ["A601000000000007", "A601000000000008", "A601000000000009", "A601000000000010"]
+			min_required_dependencies: 2
+			icon: { count: 1, id: "silentgear:pickaxe" }
+			id: "A601000000000011"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T601000000000011", item: "silentgear:pickaxe", title: "Gear Craft", type: "item" }
+			]
+			title: "Gear Craft"
+			x: 0d
+			y: 8d
+		},
+		{
+			dependencies: ["A601000000000011"]
+			icon: { count: 1, id: "kubejs:quest_gate" }
+			id: "A601000000000012"
+			disable_jei: true
+			shape: "diamond"
+			subtitle: "Gate"
+			tasks: [
+				{ id: "T601000000000012", title: "Рубеж пройден", type: "checkmark" }
+			]
+			title: "Nano Gate II"
+			x: 0d
+			y: 10d
+		},
+		{
+			dependencies: ["A601000000000012"]
+			icon: { count: 1, id: "mekanism:meka_tool" }
+			id: "A601000000000013"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T601000000000013", item: "mekanism:meka_tool", title: "Mek Meka-Tool", type: "item" }
+			]
+			title: "Mek Meka-Tool"
+			x: -2d
+			y: 12d
+		},
+		{
+			dependencies: ["A601000000000012"]
+			icon: { count: 1, id: "mekanism:mekasuit_helmet" }
+			id: "A601000000000014"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T601000000000014", item: "mekanism:mekasuit_helmet", title: "Mek Suit", type: "item" }
+			]
+			title: "Mek Suit"
+			x: 2d
+			y: 12d
+		},
+		{
+			dependencies: ["A601000000000013"]
+			icon: { count: 1, id: "relics:roller_skates" }
+			id: "A601000000000015"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T601000000000015", item: "relics:roller_skates", title: "Relics", type: "item" }
+			]
+			title: "Relics"
+			x: -2d
+			y: 14d
+		},
+		{
+			dependencies: ["A601000000000014"]
+			icon: { count: 1, id: "irons_spellbooks:arcane_essence" }
+			id: "A601000000000016"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 16, id: "T601000000000016", item: "irons_spellbooks:arcane_essence", title: "Iron Spells", type: "item" }
+			]
+			title: "Iron Spells"
+			x: 2d
+			y: 14d
+		},
+		{
+			dependencies: ["A601000000000015", "A601000000000016"]
+			min_required_dependencies: 1
+			icon: { count: 1, id: "minecraft:enchanting_table" }
+			id: "A601000000000017"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T601000000000017", item: "minecraft:enchanting_table", title: "Enchant Table", type: "item" }
+			]
+			title: "Enchant Table"
+			x: 0d
+			y: 16d
+		},
+		{
+			dependencies: ["A601000000000017"]
+			icon: { count: 1, id: "apotheosis:gem" }
+			id: "A601000000000018"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T601000000000018", item: "apotheosis:gem", title: "Apotheosis Gem", type: "item" }
+			]
+			title: "Apotheosis Gem"
+			x: -2d
+			y: 18d
+		},
+		{
+			dependencies: ["A601000000000017"]
+			icon: { count: 1, id: "apotheosis:reforging_table" }
+			id: "A601000000000019"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T601000000000019", item: "apotheosis:reforging_table", title: "Reforging", type: "item" }
+			]
+			title: "Reforging"
+			x: 2d
+			y: 18d
+		},
+		{
+			dependencies: ["A601000000000018", "A601000000000019"]
+			icon: { count: 1, id: "kubejs:quest_gate" }
+			id: "A601000000000020"
+			disable_jei: true
+			shape: "diamond"
+			subtitle: "Gate"
+			tasks: [
+				{ id: "T601000000000020", title: "Рубеж пройден", type: "checkmark" }
+			]
+			title: "Nano Gate III"
+			x: 0d
+			y: 20d
+		},
+		{
+			dependencies: ["A601000000000020"]
+			icon: { count: 1, id: "kubejs:quest_gate" }
+			id: "A601000000000021"
+			disable_jei: true
+			shape: "diamond"
+			subtitle: "Gate"
+			tasks: [
+				{ id: "T601000000000021", title: "Рубеж пройден", type: "checkmark" }
+			]
+			title: "Рубеж V"
+			x: 0d
+			y: 22d
+		},
+		{
+			dependencies: ["A601000000000021"]
+			icon: { count: 1, id: "kubejs:anchor_shard_06" }
+			id: "A601000000000022"
+			disable_jei: true
+			rewards: [
+				{ id: "R601000000000022", item: "kubejs:journal_page_05", type: "item" }
+				{ id: "R601000000000023", type: "xp", xp: 100 }
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [
+				{ id: "T601000000000022", item: "kubejs:anchor_shard_06", title: "Фрагмент: Nano", type: "item" }
+			]
+			title: "Фрагмент: Nano"
+			x: 0d
+			y: 24d
+		}
+	]
+	subtitle: [
+		"~16 ч"
+	]
+	title: "Глава 5: Наноковка"
+}

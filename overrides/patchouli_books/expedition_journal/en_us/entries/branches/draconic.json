@@ -1,0 +1,14 @@
+{
+  "name": "Draconic Evolution",
+  "icon": "draconicevolution:wyvern_core",
+  "category": "patchouli:branches",
+  "advancement": "cooptech:journal/side_draconic",
+  "secret": true,
+  "sortnum": 8,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Драконья сила$()$(br2)Финальная ветка — ядра, реактор, хаос. Только после рубежа Главы VI."
+    }
+  ]
+}

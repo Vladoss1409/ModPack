@@ -1,0 +1,58 @@
+[*]
+background: ftbquests:textures/gui/stars_dark.png; color=#CC06040F; tile_size=256
+chapter_panel_background: ftbquests:textures/gui/stars_dark.png; color=#CC06040F; tile_size=256
+
+widget_border: #CCAA66FF
+widget_background: #77281838
+
+text_color: #FFFFFFFF
+hover_text_color: #FFFFEEAA
+disabled_text_color: #FF9999AA
+
+selected_chapter_highlight_1: #FFAA66FF
+selected_chapter_highlight_2: #FFDDAAFF
+
+tasks_text_color: #FF88CCFF
+rewards_text_color: #FFFFDD44
+quest_view_border: #FFAA66FF
+quest_view_title: #FFFFFFFF
+
+quest_completed_color: #C856FF88
+quest_started_color: #C8AA66FF
+quest_not_started_color: #96EEAAFF
+quest_locked_color: #C8AA4444
+
+dependency_line_texture: ftbquests:textures/gui/dependency.png
+dependency_line_completed_color: #B464FF88
+dependency_line_uncompleted_color: #B4AA88EE
+dependency_line_requires_color: #B4CCAAFF
+dependency_line_required_for_color: #B4FF8888
+dependency_line_thickness: 1.5
+dependency_line_unselected_speed: 1.0
+dependency_line_selected_speed: 1.0
+
+pinned_quest_size: 0.75
+quest_spacing: 1.0
+extra_quest_shapes: hexagon,gear,diamond,circle
+symbol_in: #FFFFCCFF
+symbol_out: #FFAA88EE
+
+[branch_explore]
+quest_not_started_color: #FFBBEEFF
+quest_started_color: #FF88EEFF
+quest_completed_color: #FF55FFAA
+
+[branch_mine]
+quest_not_started_color: #FFFFCCAA
+quest_started_color: #FFFFAA55
+quest_completed_color: #FF55FFAA
+
+[branch_craft]
+quest_not_started_color: #FFCCFFBB
+quest_started_color: #FFBBFF88
+quest_completed_color: #FF55FFAA
+
+[branch_coop]
+quest_not_started_color: #FFFFCCFF
+quest_started_color: #FFEEAAFF
+quest_completed_color: #FF55FFAA

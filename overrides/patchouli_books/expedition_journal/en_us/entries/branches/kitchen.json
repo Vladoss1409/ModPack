@@ -1,0 +1,14 @@
+{
+  "name": "Kitchen — полевая кухня",
+  "icon": "farmersdelight:cooking_pot",
+  "category": "patchouli:branches",
+  "advancement": "cooptech:journal/side_kitchen",
+  "secret": true,
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Ветка Kitchen$()$(br2)Farmer's Delight после Главы I. Готовьте пайки для рейдов — $(#FFAA00)золотая морковь$() спасает на боссах."
+    }
+  ]
+}

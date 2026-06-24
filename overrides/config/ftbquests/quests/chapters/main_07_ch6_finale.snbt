@@ -1,0 +1,451 @@
+{
+	default_quest_disable_jei: true
+	default_hide_dependency_lines: false
+	progression_mode: "linear"
+	hide_quest_until_deps_complete: false
+	hide_quest_details_until_startable: true
+	default_quest_shape: "circle"
+	filename: "main_07_ch6_finale"
+	group: "B100000000000002"
+	icon: { count: 1, id: "minecraft:beacon" }
+	id: "A700000000000000"
+	order_index: 6
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["A601000000000022"]
+			icon: { count: 1, id: "draconicevolution:draconium_dust" }
+			id: "A701000000000001"
+			disable_jei: true
+			shape: "gear"
+			size: 1.3d
+			tasks: [
+				{ count: 16, id: "T701000000000001", item: "draconicevolution:draconium_dust", title: "Draconium Dust", type: "item" }
+			]
+			title: "Draconium Dust"
+			x: 0d
+			y: -2d
+		},
+		{
+			dependencies: ["A701000000000001"]
+			icon: { count: 1, id: "draconicevolution:wyvern_core" }
+			id: "A701000000000002"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T701000000000002", item: "draconicevolution:wyvern_core", title: "Wyvern Core", type: "item" }
+			]
+			title: "Wyvern Core"
+			x: -2d
+			y: 0d
+		},
+		{
+			dependencies: ["A701000000000001"]
+			icon: { count: 1, id: "draconicevolution:draconic_core" }
+			id: "A701000000000003"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T701000000000003", item: "draconicevolution:draconic_core", title: "Draconic Core", type: "item" }
+			]
+			title: "Draconic Core"
+			x: 2d
+			y: 0d
+		},
+		{
+			dependencies: ["A701000000000002", "A701000000000003"]
+			min_required_dependencies: 1
+			icon: { count: 1, id: "draconicevolution:energy_core" }
+			id: "A701000000000004"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T701000000000004", item: "draconicevolution:energy_core", title: "Energy Core", type: "item" }
+			]
+			title: "Energy Core"
+			x: 0d
+			y: 2d
+		},
+		{
+			dependencies: ["A701000000000004"]
+			icon: { count: 1, id: "kubejs:quest_gate" }
+			id: "A701000000000005"
+			disable_jei: true
+			shape: "diamond"
+			subtitle: "Gate"
+			tasks: [
+				{ id: "T701000000000005", title: "Рубеж пройден", type: "checkmark" }
+			]
+			title: "Finale Gate I"
+			x: 0d
+			y: 4d
+		},
+		{
+			dependencies: ["A701000000000005"]
+			icon: { count: 1, id: "draconicevolution:crafting_core" }
+			id: "A701000000000006"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T701000000000006", item: "draconicevolution:crafting_core", title: "Fusion Crafting", type: "item" }
+			]
+			title: "Fusion Crafting"
+			x: -3d
+			y: 6d
+		},
+		{
+			dependencies: ["A701000000000005"]
+			icon: { count: 1, id: "draconicevolution:draconium_block" }
+			id: "A701000000000007"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 4, id: "T701000000000007", item: "draconicevolution:draconium_block", title: "Draconium Block", type: "item" }
+			]
+			title: "Draconium Block"
+			x: 3d
+			y: 6d
+		},
+		{
+			dependencies: ["A701000000000006", "A701000000000007"]
+			min_required_dependencies: 1
+			icon: { count: 1, id: "draconicevolution:chaos_shard" }
+			id: "A701000000000008"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T701000000000008", item: "draconicevolution:chaos_shard", title: "Chaos Shard", type: "item" }
+			]
+			title: "Chaos Shard"
+			x: 0d
+			y: 8d
+		},
+		{
+			dependencies: ["A701000000000008"]
+			icon: { count: 1, id: "kubejs:quest_gate" }
+			id: "A701000000000009"
+			disable_jei: true
+			shape: "diamond"
+			subtitle: "Gate"
+			tasks: [
+				{ id: "T701000000000009", title: "Рубеж пройден", type: "checkmark" }
+			]
+			title: "Finale Gate II"
+			x: 0d
+			y: 10d
+		},
+		{
+			dependencies: ["A701000000000009"]
+			icon: { count: 1, id: "draconicevolution:wyvern_sword" }
+			id: "A701000000000010"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T701000000000010", item: "draconicevolution:wyvern_sword", title: "Wyvern Sword", type: "item" }
+			]
+			title: "Wyvern Sword"
+			x: -2d
+			y: 12d
+		},
+		{
+			dependencies: ["A701000000000009"]
+			icon: { count: 1, id: "draconicevolution:wyvern_pickaxe" }
+			id: "A701000000000011"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T701000000000011", item: "draconicevolution:wyvern_pickaxe", title: "Wyvern Pick", type: "item" }
+			]
+			title: "Wyvern Pick"
+			x: 2d
+			y: 12d
+		},
+		{
+			dependencies: ["A701000000000010", "A701000000000011"]
+			min_required_dependencies: 1
+			icon: { count: 1, id: "draconicevolution:wyvern_chestpiece" }
+			id: "A701000000000012"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T701000000000012", item: "draconicevolution:wyvern_chestpiece", title: "Draconic Armor", type: "item" }
+			]
+			title: "Draconic Armor"
+			x: 0d
+			y: 14d
+		},
+		{
+			dependencies: ["A701000000000012"]
+			icon: { count: 1, id: "cataclysm:gauntlet_of_guard" }
+			id: "A701000000000013"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T701000000000013", item: "cataclysm:gauntlet_of_guard", title: "Cataclysm Weapon", type: "item" }
+			]
+			title: "Cataclysm Weapon"
+			x: -2d
+			y: 16d
+		},
+		{
+			dependencies: ["A701000000000012"]
+			icon: { count: 1, id: "twilightforest:knightmetal_ingot" }
+			id: "A701000000000014"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 8, id: "T701000000000014", item: "twilightforest:knightmetal_ingot", title: "Twilight Boss", type: "item" }
+			]
+			title: "Twilight Boss"
+			x: 2d
+			y: 16d
+		},
+		{
+			dependencies: ["A701000000000013", "A701000000000014"]
+			min_required_dependencies: 1
+			icon: { count: 1, id: "blue_skies:pyrope_gem" }
+			id: "A701000000000015"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 8, id: "T701000000000015", item: "blue_skies:pyrope_gem", title: "Небесный рубеж", type: "item" }
+			]
+			title: "Небесный рубеж"
+			x: 0d
+			y: 18d
+		},
+		{
+			dependencies: ["A701000000000015"]
+			icon: { count: 1, id: "kubejs:quest_gate" }
+			id: "A701000000000016"
+			disable_jei: true
+			shape: "diamond"
+			subtitle: "Gate"
+			tasks: [
+				{ id: "T701000000000016", title: "Рубеж пройден", type: "checkmark" }
+			]
+			title: "Finale Gate III"
+			x: 0d
+			y: 20d
+		},
+		{
+			dependencies: ["A701000000000016"]
+			icon: { count: 1, id: "minecraft:beacon" }
+			id: "A701000000000017"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T701000000000017", item: "minecraft:beacon", title: "Beacon", type: "item" }
+			]
+			title: "Beacon"
+			x: -2d
+			y: 22d
+		},
+		{
+			dependencies: ["A701000000000016"]
+			icon: { count: 1, id: "minecraft:nether_star" }
+			id: "A701000000000018"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 4, id: "T701000000000018", item: "minecraft:nether_star", title: "Nether Star Farm", type: "item" }
+			]
+			title: "Nether Star Farm"
+			x: 2d
+			y: 22d
+		},
+		{
+			dependencies: ["A701000000000017", "A701000000000018"]
+			min_required_dependencies: 1
+			icon: { count: 1, id: "minecraft:elytra" }
+			id: "A701000000000019"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T701000000000019", item: "minecraft:elytra", title: "Elytra", type: "item" }
+			]
+			title: "Elytra"
+			x: 0d
+			y: 24d
+		},
+		{
+			dependencies: ["A701000000000019"]
+			icon: { count: 1, id: "powah:energy_cell_nitro" }
+			id: "A701000000000020"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T701000000000020", item: "powah:energy_cell_nitro", title: "Creative Cell", type: "item" }
+			]
+			title: "Creative Cell"
+			x: -2d
+			y: 26d
+		},
+		{
+			dependencies: ["A701000000000019"]
+			icon: { count: 1, id: "fluxnetworks:flux_point" }
+			id: "A701000000000021"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T701000000000021", item: "fluxnetworks:flux_point", title: "Flux Point", type: "item" }
+			]
+			title: "Flux Point"
+			x: 2d
+			y: 26d
+		},
+		{
+			dependencies: ["A701000000000020", "A701000000000021"]
+			min_required_dependencies: 1
+			icon: { count: 1, id: "draconicevolution:reactor_core" }
+			id: "A701000000000022"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T701000000000022", item: "draconicevolution:reactor_core", title: "Draconic Reactor", type: "item" }
+			]
+			title: "Draconic Reactor"
+			x: 0d
+			y: 28d
+		},
+		{
+			dependencies: ["A701000000000022"]
+			icon: { count: 1, id: "draconicevolution:chaos_shard" }
+			id: "A701000000000023"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 4, id: "T701000000000023", item: "draconicevolution:chaos_shard", title: "Chaos Guardian", type: "item" }
+			]
+			title: "Chaos Guardian"
+			x: -2d
+			y: 30d
+		},
+		{
+			dependencies: ["A701000000000022"]
+			icon: { count: 1, id: "kubejs:anchor_shard_07" }
+			id: "A701000000000024"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T701000000000024", item: "kubejs:anchor_shard_07", title: "Anchor Shard", type: "item" }
+			]
+			title: "Anchor Shard"
+			x: 2d
+			y: 30d
+		},
+		{
+			dependencies: ["A701000000000023", "A701000000000024"]
+			icon: { count: 1, id: "kubejs:quest_gate" }
+			id: "A701000000000025"
+			disable_jei: true
+			shape: "diamond"
+			subtitle: "Gate"
+			tasks: [
+				{ id: "T701000000000025", title: "Рубеж пройден", type: "checkmark" }
+			]
+			title: "Finale Gate IV"
+			x: 0d
+			y: 32d
+		},
+		{
+			dependencies: ["A701000000000025"]
+			icon: { count: 1, id: "kubejs:expedition_seal" }
+			id: "A701000000000026"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T701000000000026", item: "kubejs:expedition_seal", title: "Expedition Seal", type: "item" }
+			]
+			title: "Expedition Seal"
+			x: -2d
+			y: 34d
+		},
+		{
+			dependencies: ["A701000000000025"]
+			icon: { count: 1, id: "kubejs:expedition_journal" }
+			id: "A701000000000027"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T701000000000027", item: "kubejs:expedition_journal", title: "Journal Finale", type: "item" }
+			]
+			title: "Journal Finale"
+			x: 2d
+			y: 34d
+		},
+		{
+			dependencies: ["A701000000000026", "A701000000000027"]
+			min_required_dependencies: 1
+			icon: { count: 1, id: "minecraft:dragon_egg" }
+			id: "A701000000000028"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T701000000000028", item: "minecraft:dragon_egg", title: "Coop Trophy", type: "item" }
+			]
+			title: "Coop Trophy"
+			x: 0d
+			y: 36d
+		},
+		{
+			dependencies: ["A701000000000028"]
+			icon: { count: 1, id: "kubejs:quest_gate" }
+			id: "A701000000000029"
+			disable_jei: true
+			shape: "diamond"
+			subtitle: "Gate"
+			tasks: [
+				{ id: "T701000000000029", title: "Рубеж пройден", type: "checkmark" }
+			]
+			title: "Рубеж VI"
+			x: 0d
+			y: 38d
+		},
+		{
+			dependencies: ["A701000000000029"]
+			icon: { count: 1, id: "minecraft:nether_star" }
+			id: "A701000000000030"
+			disable_jei: true
+			rewards: [
+				{ id: "R701000000000030", item: "kubejs:journal_page_05", type: "item" }
+				{ id: "R701000000000031", type: "xp", xp: 100 }
+			]
+			shape: "gear"
+			size: 1.6d
+			tasks: [
+				{ id: "T701000000000030", item: "minecraft:nether_star", title: "Кодекс завершён", type: "item" }
+			]
+			title: "Кодекс завершён"
+			x: 0d
+			y: 40d
+		}
+	]
+	subtitle: [
+		"~24 ч"
+	]
+	title: "Глава 6: Сход с якорем"
+}

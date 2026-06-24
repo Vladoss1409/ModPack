@@ -1,0 +1,128 @@
+{
+	default_quest_disable_jei: true
+	default_hide_dependency_lines: false
+	progression_mode: "linear"
+	hide_quest_until_deps_complete: true
+	hide_quest_details_until_startable: true
+	default_quest_shape: "circle"
+	filename: "side_enderio"
+	group: "B100000000000003"
+	icon: { count: 1, id: "enderio:conductive_alloy_ingot" }
+	id: "A812000000000000"
+	order_index: 5
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+			"§dПроводник Ender IO§r — ветка открыта основной линией."
+			"Следующие узлы появятся по цепочке зависимостей."
+			]
+			dependencies: ["A501000000000014"]
+			icon: { count: 1, id: "enderio:grains_of_infinity" }
+			id: "A812000000000001"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 8, id: "T812000000000001", item: "enderio:grains_of_infinity", title: "Grains of Infinity", type: "item" }
+			]
+			title: "Grains of Infinity"
+			x: -2.5d
+			y: 3.0d
+		},
+		{
+			dependencies: ["A812000000000001"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "enderio:conductive_alloy_ingot" }
+			id: "A812000000000002"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 16, id: "T812000000000002", item: "enderio:conductive_alloy_ingot", title: "Conductive Alloy", type: "item" }
+			]
+			title: "Conductive Alloy"
+			x: 2.5d
+			y: 5.2d
+		},
+		{
+			dependencies: ["A812000000000002"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "enderio:sag_mill" }
+			id: "A812000000000003"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T812000000000003", item: "enderio:sag_mill", title: "SAG Mill", type: "item" }
+			]
+			title: "SAG Mill"
+			x: -2.5d
+			y: 7.4d
+		},
+		{
+			dependencies: ["A812000000000003"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "enderio:alloy_smelter" }
+			id: "A812000000000004"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T812000000000004", item: "enderio:alloy_smelter", title: "Alloy Smelter", type: "item" }
+			]
+			title: "Alloy Smelter"
+			x: 2.5d
+			y: 9.6d
+		},
+		{
+			dependencies: ["A812000000000004"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "enderio:basic_capacitor_bank" }
+			id: "A812000000000005"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T812000000000005", item: "enderio:basic_capacitor_bank", title: "Capacitor Bank", type: "item" }
+			]
+			title: "Capacitor Bank"
+			x: -2.5d
+			y: 11.8d
+		},
+		{
+			dependencies: ["A812000000000005"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "enderio:item_conduit" }
+			id: "A812000000000006"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 32, id: "T812000000000006", item: "enderio:item_conduit", title: "Item Conduit", type: "item" }
+			]
+			title: "Item Conduit"
+			x: 2.5d
+			y: 14.0d
+		},
+		{
+			dependencies: ["A812000000000006"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "enderio:wireless_antenna" }
+			id: "A812000000000007"
+			disable_jei: true
+			shape: "diamond"
+			size: 1.2d
+			tasks: [
+				{ id: "T812000000000007", item: "enderio:wireless_antenna", title: "EnderIO Finale", type: "item" }
+			]
+			title: "EnderIO Finale"
+			x: -2.5d
+			y: 16.2d
+		}
+	]
+	subtitle: [
+		"Сайд-ветка"
+	]
+	title: "Проводник Ender IO"
+}

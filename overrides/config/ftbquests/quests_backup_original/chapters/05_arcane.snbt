@@ -1,0 +1,63 @@
+{
+	default_quest_disable_jei: true
+	default_hide_dependency_lines: false
+	progression_mode: "linear"
+	hide_quest_until_deps_complete: false
+	hide_quest_details_until_startable: true
+	filename: "05_arcane"
+	group: "B100000000000001"
+	icon: { count: 1, id: "kubejs:expedition_journal" }
+	id: "A600000000000001"
+	order_index: 5
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["A501000000000001"]
+			description: ["Глава в разработке. Следующее обновление сборки.", "", "Зависимость от предыдущей главы сохранена."]
+			id: "A601000000000001"
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			rewards: [
+				{ id: "R50100000000001", type: "xp_levels", xp_levels: 1 }
+			]
+			tasks: [{ id: "T50100000000001", title: "Placeholder", type: "checkmark" }]
+			title: "Ch5 — Арканум [WIP]"
+			x: 0.0d
+			y: 0.0d
+		}
+	]
+	subtitle: [
+		"WIP"
+	]
+	title: "Ch5 — Арканум"
+}

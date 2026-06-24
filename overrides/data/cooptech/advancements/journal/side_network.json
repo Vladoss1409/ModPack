@@ -1,0 +1,8 @@
+{
+  "parent": "cooptech:journal/ch3_gate",
+  "criteria": {
+    "unlock": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

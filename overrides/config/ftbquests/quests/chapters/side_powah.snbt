@@ -1,0 +1,113 @@
+{
+	default_quest_disable_jei: true
+	default_hide_dependency_lines: false
+	progression_mode: "linear"
+	hide_quest_until_deps_complete: true
+	hide_quest_details_until_startable: true
+	default_quest_shape: "circle"
+	filename: "side_powah"
+	group: "B100000000000003"
+	icon: { count: 1, id: "powah:furnator_basic" }
+	id: "A814000000000000"
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+			"§dРезонанс Powah§r — ветка открыта основной линией."
+			"Следующие узлы появятся по цепочке зависимостей."
+			]
+			dependencies: ["A401000000000002"]
+			icon: { count: 1, id: "powah:furnator_basic" }
+			id: "A814000000000001"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T814000000000001", item: "powah:furnator_basic", title: "Furnator", type: "item" }
+			]
+			title: "Furnator"
+			x: -2.5d
+			y: 3.0d
+		},
+		{
+			dependencies: ["A814000000000001"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "powah:capacitor_basic" }
+			id: "A814000000000002"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T814000000000002", item: "powah:capacitor_basic", title: "Capacitor", type: "item" }
+			]
+			title: "Capacitor"
+			x: 2.5d
+			y: 5.2d
+		},
+		{
+			dependencies: ["A814000000000002"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "powah:capacitor_hardened" }
+			id: "A814000000000003"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T814000000000003", item: "powah:capacitor_hardened", title: "Hardened Cap", type: "item" }
+			]
+			title: "Hardened Cap"
+			x: -2.5d
+			y: 7.4d
+		},
+		{
+			dependencies: ["A814000000000003"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "powah:blazing_crystal" }
+			id: "A814000000000004"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 4, id: "T814000000000004", item: "powah:blazing_crystal", title: "Blazing Crystal", type: "item" }
+			]
+			title: "Blazing Crystal"
+			x: 2.5d
+			y: 9.6d
+		},
+		{
+			dependencies: ["A814000000000004"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "powah:capacitor_niotic" }
+			id: "A814000000000005"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T814000000000005", item: "powah:capacitor_niotic", title: "Niotic Cap", type: "item" }
+			]
+			title: "Niotic Cap"
+			x: -2.5d
+			y: 11.8d
+		},
+		{
+			dependencies: ["A814000000000005"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "powah:energy_cell_nitro" }
+			id: "A814000000000006"
+			disable_jei: true
+			shape: "diamond"
+			size: 1.2d
+			tasks: [
+				{ id: "T814000000000006", item: "powah:energy_cell_nitro", title: "Powah Finale", type: "item" }
+			]
+			title: "Powah Finale"
+			x: 2.5d
+			y: 14.0d
+		}
+	]
+	subtitle: [
+		"Сайд-ветка"
+	]
+	title: "Резонанс Powah"
+}

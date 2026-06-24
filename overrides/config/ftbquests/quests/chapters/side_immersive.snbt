@@ -1,0 +1,128 @@
+{
+	default_quest_disable_jei: true
+	default_hide_dependency_lines: false
+	progression_mode: "linear"
+	hide_quest_until_deps_complete: true
+	hide_quest_details_until_startable: true
+	default_quest_shape: "circle"
+	filename: "side_immersive"
+	group: "B100000000000003"
+	icon: { count: 1, id: "immersiveengineering:hammer" }
+	id: "A810000000000000"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+			"§dИндустриальная ковка§r — ветка открыта основной линией."
+			"Следующие узлы появятся по цепочке зависимостей."
+			]
+			dependencies: ["A301000000000018"]
+			icon: { count: 1, id: "immersiveengineering:hammer" }
+			id: "A810000000000001"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T810000000000001", item: "immersiveengineering:hammer", title: "Engineer's Hammer", type: "item" }
+			]
+			title: "Engineer's Hammer"
+			x: 0.0d
+			y: 3.0d
+		},
+		{
+			dependencies: ["A810000000000001"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "immersiveengineering:cokebrick" }
+			id: "A810000000000002"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 27, id: "T810000000000002", item: "immersiveengineering:cokebrick", title: "Coke Brick", type: "item" }
+			]
+			title: "Coke Brick"
+			x: 0.0d
+			y: 5.5d
+		},
+		{
+			dependencies: ["A810000000000002"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "immersiveengineering:cokeoven" }
+			id: "A810000000000003"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T810000000000003", item: "immersiveengineering:cokeoven", title: "Coke Oven", type: "item" }
+			]
+			title: "Coke Oven"
+			x: 0.0d
+			y: 8.0d
+		},
+		{
+			dependencies: ["A810000000000003"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "immersiveengineering:capacitor_lv" }
+			id: "A810000000000004"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T810000000000004", item: "immersiveengineering:capacitor_lv", title: "LV Capacitor", type: "item" }
+			]
+			title: "LV Capacitor"
+			x: 0.0d
+			y: 10.5d
+		},
+		{
+			dependencies: ["A810000000000004"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "immersiveengineering:wirecoil_copper" }
+			id: "A810000000000005"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 16, id: "T810000000000005", item: "immersiveengineering:wirecoil_copper", title: "Copper Wire", type: "item" }
+			]
+			title: "Copper Wire"
+			x: 0.0d
+			y: 13.0d
+		},
+		{
+			dependencies: ["A810000000000005"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "immersiveengineering:metal_press" }
+			id: "A810000000000006"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T810000000000006", item: "immersiveengineering:metal_press", title: "Metal Press", type: "item" }
+			]
+			title: "Metal Press"
+			x: 0.0d
+			y: 15.5d
+		},
+		{
+			dependencies: ["A810000000000006"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "immersiveengineering:light_engineering" }
+			id: "A810000000000007"
+			disable_jei: true
+			shape: "diamond"
+			size: 1.2d
+			tasks: [
+				{ count: 4, id: "T810000000000007", item: "immersiveengineering:light_engineering", title: "IE Finale", type: "item" }
+			]
+			title: "IE Finale"
+			x: 0.0d
+			y: 18.0d
+		}
+	]
+	subtitle: [
+		"Сайд-ветка"
+	]
+	title: "Индустриальная ковка"
+}

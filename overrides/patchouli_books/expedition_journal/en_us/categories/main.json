@@ -1,0 +1,6 @@
+{
+  "name": "Протокол экспедиции",
+  "description": "Зачем этот журнал и чем он отличается от кодекса.",
+  "icon": "kubejs:expedition_journal",
+  "sortnum": 0
+}

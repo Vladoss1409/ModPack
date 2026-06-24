@@ -1,0 +1,14 @@
+{
+  "name": "Глава VI: рубеж Finale",
+  "icon": "minecraft:beacon",
+  "category": "patchouli:progress",
+  "advancement": "cooptech:journal/ch6_gate",
+  "secret": true,
+  "sortnum": 60,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Финальный рубеж$()$(br2)Draconic Evolution, боссы измерений и беспроводной RF — последний слой кода. Держите $(#FFAA00)резерв хаоса$() под контролем."
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+{
+	default_quest_disable_jei: true
+	default_hide_dependency_lines: false
+	progression_mode: "linear"
+	hide_quest_until_deps_complete: true
+	hide_quest_details_until_startable: true
+	default_quest_shape: "circle"
+	filename: "side_draconic"
+	group: "B100000000000003"
+	icon: { count: 1, id: "draconicevolution:wyvern_core" }
+	id: "A808000000000000"
+	order_index: 7
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+			"§dДраконья эволюция§r — ветка открыта основной линией."
+			"Следующие узлы появятся по цепочке зависимостей."
+			]
+			dependencies: ["A701000000000001"]
+			icon: { count: 1, id: "draconicevolution:draconium_dust" }
+			id: "A808000000000001"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 32, id: "T808000000000001", item: "draconicevolution:draconium_dust", title: "Draconium", type: "item" }
+			]
+			title: "Draconium"
+			x: 0.0d
+			y: 3.0d
+		},
+		{
+			dependencies: ["A808000000000001"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "draconicevolution:wyvern_core" }
+			id: "A808000000000002"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T808000000000002", item: "draconicevolution:wyvern_core", title: "Wyvern Core", type: "item" }
+			]
+			title: "Wyvern Core"
+			x: 0.0d
+			y: 5.5d
+		},
+		{
+			dependencies: ["A808000000000002"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "draconicevolution:energy_core" }
+			id: "A808000000000003"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T808000000000003", item: "draconicevolution:energy_core", title: "Energy Core", type: "item" }
+			]
+			title: "Energy Core"
+			x: 0.0d
+			y: 8.0d
+		},
+		{
+			dependencies: ["A808000000000003"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "draconicevolution:crafting_core" }
+			id: "A808000000000004"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T808000000000004", item: "draconicevolution:crafting_core", title: "Crafting Core", type: "item" }
+			]
+			title: "Crafting Core"
+			x: 0.0d
+			y: 10.5d
+		},
+		{
+			dependencies: ["A808000000000004"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "draconicevolution:wyvern_pickaxe" }
+			id: "A808000000000005"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T808000000000005", item: "draconicevolution:wyvern_pickaxe", title: "Wyvern Pick", type: "item" }
+			]
+			title: "Wyvern Pick"
+			x: 0.0d
+			y: 13.0d
+		},
+		{
+			dependencies: ["A808000000000005"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "draconicevolution:wyvern_sword" }
+			id: "A808000000000006"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T808000000000006", item: "draconicevolution:wyvern_sword", title: "Wyvern Sword", type: "item" }
+			]
+			title: "Wyvern Sword"
+			x: 0.0d
+			y: 15.5d
+		},
+		{
+			dependencies: ["A808000000000006"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "draconicevolution:draconic_core" }
+			id: "A808000000000007"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T808000000000007", item: "draconicevolution:draconic_core", title: "Draconic Core", type: "item" }
+			]
+			title: "Draconic Core"
+			x: 0.0d
+			y: 18.0d
+		},
+		{
+			dependencies: ["A808000000000007"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "draconicevolution:chaos_shard" }
+			id: "A808000000000008"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 2, id: "T808000000000008", item: "draconicevolution:chaos_shard", title: "Chaos Shard", type: "item" }
+			]
+			title: "Chaos Shard"
+			x: 0.0d
+			y: 20.5d
+		},
+		{
+			dependencies: ["A808000000000008"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "draconicevolution:reactor_core" }
+			id: "A808000000000009"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T808000000000009", item: "draconicevolution:reactor_core", title: "Reactor", type: "item" }
+			]
+			title: "Reactor"
+			x: 0.0d
+			y: 23.0d
+		},
+		{
+			dependencies: ["A808000000000009"]
+			hide_quest_until_deps_visible: true
+			icon: { count: 1, id: "draconicevolution:draconic_pickaxe" }
+			id: "A808000000000010"
+			disable_jei: true
+			shape: "diamond"
+			size: 1.2d
+			tasks: [
+				{ id: "T808000000000010", item: "draconicevolution:draconic_pickaxe", title: "Draconic Finale", type: "item" }
+			]
+			title: "Draconic Finale"
+			x: 0.0d
+			y: 25.5d
+		}
+	]
+	subtitle: [
+		"Сайд-ветка"
+	]
+	title: "Драконья эволюция"
+}

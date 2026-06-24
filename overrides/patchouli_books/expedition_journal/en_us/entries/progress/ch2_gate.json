@@ -1,0 +1,18 @@
+{
+  "name": "Глава II: рубеж «Поверхность»",
+  "icon": "explorerscompass:explorerscompass",
+  "category": "patchouli:progress",
+  "advancement": "cooptech:journal/ch2_gate",
+  "secret": true,
+  "sortnum": 20,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Мир за холмом$()$(br2)Компас структур ведёт к $(#DD55DD)данжам и башням$() — там реликварии и XP. Pool на рубеж:$(br2)- Разведка руин (name tag + изумруды).$(br2)- Bestiary Alex's Mobs — знание = выживание.$(br2)- Образец Terralith — биомы меняют правила."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Риски$()$(br2)Разлом $(#FF5555)усиливается$() вдали от костра. Идите парой: один впереди с факелами, второй — прикрывает и лутит.$(br2)Финал главы — $(#DD55DD)Wroughtnaut$() (Mowzie's Mobs): броня, еда, терпение."
+    }
+  ]
+}

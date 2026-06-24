@@ -1,0 +1,323 @@
+{
+	default_quest_disable_jei: true
+	default_hide_dependency_lines: false
+	progression_mode: "linear"
+	hide_quest_until_deps_complete: false
+	hide_quest_details_until_startable: true
+	filename: "02_surface"
+	group: "B100000000000001"
+	icon: { count: 1, id: "explorerscompass:explorerscompass" }
+	id: "A300000000000001"
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["A201000000000006"]
+			description: [
+				"Explorers Compass находит структуры модов."
+				""
+				"Цель: скрафтить компас."
+				""
+				"ПКМ → выберите структуру When Dungeons Arise (любую)."
+			]
+			id: "A301000000000001"
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			rewards: [
+				{ count: 16, id: "R301000000000001", item: "minecraft:arrow", type: "item" }
+				{ count: 4, id: "R301000000000002", item: "minecraft:golden_apple", type: "item" }
+			]
+			subtitle: "Pool: Compass"
+			tasks: [{ id: "T301000000000001", item: "explorerscompass:explorerscompass", type: "item" }]
+			title: "Компас структур"
+			x: -3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["A201000000000006"]
+			description: [
+				"Посетите любую крупную структуру (WDA / Repurposed Structures)."
+				""
+				"Цель: submit 1 name tag + 8 emerald (трофей экспедиции)."
+			]
+			id: "A301000000000002"
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			rewards: [
+				{ id: "R301000000000003", item: "minecraft:compass", type: "item" }
+				{ count: 8, id: "R301000000000004", item: "minecraft:gold_ingot", type: "item" }
+			]
+			subtitle: "Pool: данж"
+			tasks: [
+				{ id: "T301000000000002", item: "minecraft:name_tag", type: "item" }
+				{ id: "T301000000000003", item: "minecraft:emerald", count: 8, type: "item" }
+			]
+			title: "Разведка руин"
+			x: -1.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["A201000000000006"]
+			description: [
+				"Alex's Mobs: соберите 4 разных предмета из мода."
+				""
+				"JEI → @alexsmobs — любые drops."
+			]
+			id: "A301000000000003"
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			rewards: [
+				{ id: "R301000000000005", item: "kubejs:reliquary_field", type: "item" }
+			]
+			subtitle: "Pool: Bestiary"
+			tasks: [
+				{ id: "T301000000000004", item: "alexsmobs:animal_dictionary", type: "item" }
+			]
+			title: "Бestiарий"
+			x: 1.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["A201000000000006"]
+			description: [
+				"Terralith: найдите biome с Nature's Compass и submit 16 moss block."
+			]
+			id: "A301000000000004"
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			rewards: [
+				{ count: 32, id: "R301000000000006", item: "minecraft:moss_block", type: "item" }
+			]
+			subtitle: "Pool: Terralith"
+			tasks: [{ id: "T301000000000005", item: "minecraft:moss_block", count: 16, type: "item" }]
+			title: "Биом-образец"
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["A301000000000001", "A301000000000002", "A301000000000003", "A301000000000004"]
+			id: "A301000000000005"
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			min_required_dependencies: 2
+			rewards: [
+				{ count: 4, id: "R301000000000007", item: "minecraft:golden_apple", type: "item" }
+			]
+			shape: "diamond"
+			subtitle: "Gate 2/4"
+			tasks: [{ id: "T301000000000006", type: "checkmark" }]
+			title: "Поверхность изучена"
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["A301000000000005"]
+			description: [
+				"Совместный рейд: Ferrous Wroughtnaut (Mowzie's)."
+				""
+				"Подготовка: golden apple, iron armor+."
+				""
+				"Цель: submit Wroughtnaut Iron ×2."
+			]
+			id: "A301000000000006"
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			disable_jei: true
+			rewards: [
+				{ id: "R301000000000008", item: "kubejs:anchor_shard_03", type: "item" }
+				{ count: 4, id: "R301000000000009", item: "mowziesmobs:wroughtnaut_iron", type: "item" }
+				{ id: "R301000000000010", item: "kubejs:journal_page_03", type: "item" }
+			]
+			shape: "gear"
+			size: 1.5d
+			subtitle: "Joint: Wroughtnaut"
+			tasks: [{ id: "T301000000000007", item: "mowziesmobs:wroughtnaut_iron", count: 2, type: "item" }]
+			title: "Фрагмент: Поверхность"
+			x: 0.0d
+			y: 4.0d
+		}
+	]
+	subtitle: [
+		"~12 ч"
+	]
+	title: "Ch2 — Поверхностный резонанс"
+}
