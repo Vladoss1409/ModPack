@@ -2,16 +2,12 @@
   "configVersion": 8,
   "renderNametagsThroughWalls": true,
   "blockEntityWhitelist": [
-    "botania:flame_ring",
     "create:rope_pulley",
     "minecraft:beacon",
     "create:hose_pulley",
-    "betterend:eternal_pedestal",
-    "botania:magic_missile",
-    "botania:falling_star"
+    "betterend:eternal_pedestal"
   ],
   "entityWhitelist": [
-    "botania:mana_burst",
     "drg_flares:drg_flares",
     "quark:soul_bead"
   ],

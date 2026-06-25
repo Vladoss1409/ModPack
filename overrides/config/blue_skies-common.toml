@@ -33,7 +33,7 @@
 	#
 	# A list of mods that are allowed to generate features in the Everbright and Everdawn.
 	# This does not make them generate, it just allows them to pass the filter.
-	# Example: ["minecraft", "farlanders", "botania"]
+	# Example: ["minecraft", "farlanders"]
 	# Default: []
 	allowed_mods_for_feature_gen = []
 	#
