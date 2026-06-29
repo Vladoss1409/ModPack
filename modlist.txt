@@ -110,7 +110,6 @@ structure_gel-1.20.1-2.16.2.jar
 supplementaries-1.20-3.1.43-forge.jar
 TerraBlender-forge-1.20.1-3.0.1.10.jar
 Terralith_1.20.x_v2.5.4.jar
-textrues_embeddium_options-0.1.5+mc1.20.1.jar
 The_Undergarden-1.20.1-0.8.14.jar
 thermal_cultivation-1.20.1-11.0.1.24.jar
 thermal_dynamics-1.20.1-11.0.1.23.jar
