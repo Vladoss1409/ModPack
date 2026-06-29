@@ -1,0 +1,49 @@
+{
+  "name": "Инструменты сети",
+  "icon": "next_ae:network_analyzer",
+  "category": "patchouli:next_ae",
+  "sortnum": 11,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Анализатор сети$() — показывает каналы, устройства и нагрузку ME-сети. $(#FFAA00)ПКМ$() по кабелю/блоку для диагностики."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "next_ae:craft/network_analyzer",
+      "text": "Анализатор сети."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Беспроводной соединитель (инструмент)$() — связывает блоки-соединители.$(br2)$(#FFAA00)ПКМ$() по соединителю — выбрать; ещё раз — связать; $(#FF5555)Shift+ПКМ$() — сброс."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "next_ae:craft/wireless_connector_tool",
+      "text": "Инструмент: беспроводной соединитель."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Авто-прокладчик кабелей$() — прокладывает кабель между двумя точками автоматически.$(br2)- $(#FFAA00)ПКМ$() — точка A.$(br2)- $(#FFAA00)ПКМ$() — точка B, кабель проложен.$(br2)- $(#FF5555)Shift+ПКМ$() — отмена. Лимит расстояния: 128 блоков."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "next_ae:craft/cable_auto_router",
+      "text": "Авто-прокладчик кабелей."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Модули апгрейдов$() вставляются в машины:$(br2)- $(#FFAA00)Модуль скорости$() — быстрее обработка.$(br2)- $(#FFAA00)Модуль множителя рецептов$() — больше выпуска за цикл."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "next_ae:craft/module_speed",
+      "text": "Модуль: скорость обработки."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "next_ae:craft/module_recipe_multiplier",
+      "text": "Модуль: множитель рецептов."
+    }
+  ]
+}

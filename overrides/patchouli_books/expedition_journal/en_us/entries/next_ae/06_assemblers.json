@@ -1,0 +1,27 @@
+{
+  "name": "Молекулярные сборщики",
+  "icon": "next_ae:ultimate_molecular_assembler",
+  "category": "patchouli:next_ae",
+  "sortnum": 6,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Молекулярные сборщики$() выполняют шаблоны крафта. Тиры Next: AE работают быстрее ванильного AE2 и держат больше параллельных задач.$(br2)Тиры: $(#FFAA00)Продвинутый$() -> $(#FFAA00)Элитный$() -> $(#FFAA00)Совершенный$(). Высокие тиры используют $(#DD55DD)параллельный процессор$()."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "next_ae:craft/advanced_molecular_assembler",
+      "text": "Продвинутый сборщик."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "next_ae:craft/elite_molecular_assembler",
+      "text": "Элитный сборщик."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "next_ae:craft/ultimate_molecular_assembler",
+      "text": "Совершенный сборщик (пробуждённое ядро)."
+    }
+  ]
+}

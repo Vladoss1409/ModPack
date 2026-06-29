@@ -1,0 +1,17 @@
+{
+  "name": "Старт: Машинное ядро",
+  "icon": "next_ae:machine_core",
+  "category": "patchouli:next_ae",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Машинное ядро$() (machine core) — общий компонент почти для всех машин и блоков Next: AE.$(br2)Сначала наладьте $(#FFAA00)AE2$(): процессоры (инженерный) и базовую сеть. Параллельно ставьте $(#FFAA00)Ender IO$() для вибрирующего сплава и $(#FFAA00)Draconic Evolution$() для драконитового ядра."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "next_ae:craft/machine_core",
+      "text": "Вибрирующий сплав + инженерный процессор + драконитовое ядро."
+    }
+  ]
+}

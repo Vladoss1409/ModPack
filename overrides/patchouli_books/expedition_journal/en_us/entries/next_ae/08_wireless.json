@@ -1,0 +1,36 @@
+{
+  "name": "Беспроводные соединители",
+  "icon": "next_ae:ultimate_wireless_connector",
+  "category": "patchouli:next_ae",
+  "sortnum": 8,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Беспроводные соединители$() связывают две точки сети без кабеля. У каждого тира своя $(#FFAA00)пропускная способность$() и число $(#FFAA00)каналов$().$(br2)Тиры: $(#FFAA00)Базовый$() -> $(#FFAA00)Продвинутый$() -> $(#FFAA00)Элитный$() -> $(#FFAA00)Совершенный$()."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "next_ae:craft/basic_wireless_connector",
+      "text": "Базовый соединитель."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "next_ae:craft/advanced_wireless_connector",
+      "text": "Продвинутый соединитель."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "next_ae:craft/elite_wireless_connector",
+      "text": "Элитный соединитель."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "next_ae:craft/ultimate_wireless_connector",
+      "text": "Совершенный соединитель."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Как связать:$()$(br2)1. Возьмите инструмент $(#FFAA00)Беспроводной соединитель$() (см. «Инструменты сети»).$(br2)2. $(#FFAA00)ПКМ$() по первому блоку-соединителю — точка сохранена.$(br2)3. $(#FFAA00)ПКМ$() по второму — связь установлена.$(br2)4. $(#FF5555)Shift+ПКМ$() по воздуху — сбросить выбор."
+    }
+  ]
+}

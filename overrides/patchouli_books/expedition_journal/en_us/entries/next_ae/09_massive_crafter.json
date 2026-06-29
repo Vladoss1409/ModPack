@@ -1,0 +1,56 @@
+{
+  "name": "Массивный сборщик (мультиблок)",
+  "icon": "next_ae:massive_crafter_core",
+  "category": "patchouli:next_ae",
+  "sortnum": 9,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Массивный сборщик$() — мультиблок для $(#FFAA00)массового автокрафта$(): много параллельных задач за раз, как огромный крафт-CPU.$(br2)Соберите коробку из стен, стекла и каркаса, внутри — ядро, поставщик шаблонов и ускорители. Подайте энергию и подключите к ME-сети."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Детали мультиблока:$()$(br2)- $(#FFAA00)Каркас$() и $(#FFAA00)Стена$() — корпус.$(br2)- $(#FFAA00)Стекло$() — смотровые/портовые грани.$(br2)- $(#FFAA00)Ядро$() — управляющий блок.$(br2)- $(#FFAA00)Поставщик шаблонов$() — приём патернов.$(br2)- $(#FFAA00)Ускоритель$() — скорость.$(br2)- $(#FFAA00)Расширитель$() и $(#FFAA00)Заполнитель$() — объём."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "next_ae:craft/massive_crafter_core",
+      "text": "Ядро."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "next_ae:craft/massive_crafter_frame",
+      "text": "Каркас."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "next_ae:craft/massive_crafter_wall",
+      "text": "Стена (x2)."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "next_ae:craft/massive_crafter_glass",
+      "text": "Стекло (x2)."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "next_ae:craft/massive_crafter_pattern",
+      "text": "Поставщик шаблонов."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "next_ae:craft/massive_crafter_speed",
+      "text": "Ускоритель."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "next_ae:craft/massive_crafter_expansion",
+      "text": "Расширитель."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "next_ae:craft/massive_crafter_filler",
+      "text": "Заполнитель."
+    }
+  ]
+}

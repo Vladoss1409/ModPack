@@ -1,0 +1,22 @@
+{
+  "name": "Стабилизированный спавнер",
+  "icon": "next_ae:stabilized_spawner",
+  "category": "patchouli:next_ae",
+  "sortnum": 12,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Стабилизированный спавнер$() позволяет $(#FFAA00)захватить моба$() и стабильно спавнить его.$(br2)Количество мобов вокруг ограничено — спавнер не разрастается бесконтрольно. Используйте призыв для установки нужного моба."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "next_ae:craft/stabilized_core",
+      "text": "Стабилизированное ядро (сердце дракона + прострю. кристалл)."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "next_ae:craft/stabilized_spawner",
+      "text": "Стабилизированный спавнер (на основе ядра)."
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "name": "Компоненты и материалы",
+  "icon": "next_ae:parallel_processor",
+  "category": "patchouli:next_ae",
+  "sortnum": 4,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Промежуточные материалы$() (делаются в машинах, не на верстаке):$(br2)- $(#FFAA00)Флюикс-сталь$() — прочный сплав для корпусов и кабелей.$(br2)- $(#FFAA00)Карбоновая флюикс-смесь$() — основа для процессоров.$(br2)- $(#FFAA00)Пространственный кристалл$() — для хранилищ и спавнера.$(br2)- $(#FFAA00)Параллельный процессор$() — сердце высоких тиров."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Кабельные части$() — апгрейд проводки сети по тирам:$(br2)- $(#FFAA00)Продвинутая$() -> $(#FFAA00)Элитная$() -> $(#FFAA00)Безупречная$().$(br2)Каждый тир строится из предыдущего и более редкого материала."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "next_ae:craft/advanced_cable_part",
+      "text": "Продвинутая умная кабельная часть (x2)."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "next_ae:craft/elite_cable_part",
+      "text": "Элитная кабельная часть."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "next_ae:craft/flawless_cable_part",
+      "text": "Безупречная кабельная часть."
+    }
+  ]
+}

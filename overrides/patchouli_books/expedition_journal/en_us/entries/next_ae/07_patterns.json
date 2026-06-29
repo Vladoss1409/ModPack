@@ -1,0 +1,46 @@
+{
+  "name": "Терминалы и шаблоны патернов",
+  "icon": "next_ae:ultimate_pattern_terminal",
+  "category": "patchouli:next_ae",
+  "sortnum": 7,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Терминалы шаблонов$() — расширенные терминалы доступа к патернам AE2: больше слотов и удобнее массовое редактирование.$(br2)Тиры: $(#FFAA00)Продвинутый$() -> $(#FFAA00)Элитный$() -> $(#FFAA00)Совершенный$(). $(#DD55DD)Базового$() тира в моде нет."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "next_ae:craft/advanced_pattern_terminal",
+      "text": "Продвинутый терминал."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "next_ae:craft/elite_pattern_terminal",
+      "text": "Элитный терминал."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "next_ae:craft/ultimate_pattern_terminal",
+      "text": "Совершенный терминал."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Шаблоны крафта$() Next: AE хранят больше рецептов/выходов, чем обычный бланк AE2.$(br2)Тиры: $(#FFAA00)Продвинутый$() -> $(#FFAA00)Элитный$() -> $(#FFAA00)Совершенный$(). $(#DD55DD)Базового$() тира в моде нет."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "next_ae:craft/advanced_crafting_pattern",
+      "text": "Продвинутый шаблон крафта (x2)."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "next_ae:craft/elite_crafting_pattern",
+      "text": "Элитный шаблон."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "next_ae:craft/ultimate_crafting_pattern",
+      "text": "Совершенный шаблон."
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "name": "Машины обработки",
+  "icon": "next_ae:fluix_aggregator",
+  "category": "patchouli:next_ae",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Три машины делают промежуточные материалы мода. Это $(bold)машинные рецепты$() — варятся внутри блока, их вход/выход смотрите в $(#DD55DD)JEI/EMI$().$(br2)- $(#FFAA00)Продвинутый высекатель$() — делает $(bold)параллельный процессор$().$(br2)- $(#FFAA00)Флюикс-агрегатор$() — флюикс-сталь, карбоновую смесь, пространственный кристалл.$(br2)- $(#FFAA00)Зарядник$() — зарядка компонентов."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "next_ae:craft/advanced_inscriber",
+      "text": "Продвинутый высекатель."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "next_ae:craft/fluix_aggregator",
+      "text": "Флюикс-агрегатор."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "next_ae:craft/charger",
+      "text": "Зарядник."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Машины потребляют энергию и работают быстрее обычного AE2. Подайте питание (FE/AE) и подключите к сети.$(br2)$(#FFAA00)Модули$() (скорость, множитель) ускоряют и умножают выпуск — см. раздел «Инструменты сети»."
+    }
+  ]
+}
