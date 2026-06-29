@@ -75,8 +75,8 @@
 
 ## 4. Що ще перевірити
 - [x] **Валідація jar-ів** (`scripts/validate_mods.py`, 2026-06-29): усі 129 jar валідні; 0 попереджень для AE2/EMC модів. Лишились 2 раніше наявні попередження не з цієї роботи: `aether` та `cumulus_menus` — NeoForge-збірки в Forge-паку.
-- [ ] Запуск гри/сервера (особливо `next_ae` як «-client» збірка).
-- [ ] За потреби — смоук-тест через `scripts/smoke_test_mods.py` / `launch_smoke_test.py`.
+- [x] **Статичний смоук-тест** (`scripts/smoke_test_mods.py --mods mods`, 2026-06-29): усі 129 jar відкриваються як коректний ZIP, 0 помилок. Попередження не з цієї роботи: `aether`, `cumulus_menus` (NeoForge) і хибне спрацювання патерна на `textrues_embeddium_options` (нормальний Forge-мод).
+- [ ] **Реальний запуск гри/сервера** (особливо `next_ae` як «-client» збірка) — `scripts/launch_smoke_test.py` прив'язаний до чужого шляху (`C:\Users\GameOn_Dp\...`) і потребує `minecraft_launcher_lib`; виконати на цільовій машині.
 - [ ] Балансування EMC-цінностей AE2 за смаком.
 
 ## Файли, змінені цією роботою
