@@ -1,0 +1,13 @@
+{
+  "comment": "AE2 base EMC seeds for MyModPack. Only non-derivable 'root' AE2 materials get a fixed value here; everything else (fluix-based components, cells, controllers, etc.) is auto-calculated by ProjectE from crafting recipes. Tune these numbers to taste.",
+  "values": {
+    "before": {
+      "ae2:certus_quartz_crystal": 256,
+      "ae2:charged_certus_quartz_crystal": 256,
+      "ae2:fluix_crystal": 256,
+      "ae2:sky_stone_block": 64,
+      "ae2:certus_quartz_dust": 256,
+      "ae2:sky_dust": 64
+    }
+  }
+}
