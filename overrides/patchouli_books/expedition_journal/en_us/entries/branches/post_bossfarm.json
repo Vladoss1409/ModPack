@@ -1,0 +1,18 @@
+{
+  "name": "Бос-фарм якоря",
+  "icon": "cataclysm:void_eye",
+  "category": "patchouli:branches",
+  "advancement": "cooptech:journal/side_post_bossfarm",
+  "secret": true,
+  "sortnum": 19,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Бос-фарм якоря$()$(br2)Пост-T5 охота. Зірки Незера, трофеї Cataclysm, Wroughtnaut — кооп-фарм для сильних предметів."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Після якоря$()$(br2)Ветка открывается после финала T5 и выбора пути в хабе «Після якоря». Описания — от первого лица.$(br2)$(italic)«Эпилог — для тех, кто хочет закрыть всё до конца.»$()"
+    }
+  ]
+}

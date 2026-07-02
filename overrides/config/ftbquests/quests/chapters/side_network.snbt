@@ -6,10 +6,10 @@
 	hide_quest_details_until_startable: true
 	default_quest_shape: "circle"
 	filename: "side_network"
-	group: "B100000000000003"
+	group: "B100000000000002"
 	icon: { count: 1, id: "ae2:controller" }
 	id: "A805000000000000"
-	order_index: 6
+	order_index: 41
 	quest_links: [ ]
 	quests: [
 		{
@@ -17,7 +17,7 @@
 			"§dМолекулярная сеть§r — ветка открыта основной линией."
 			"Следующие узлы появятся по цепочке зависимостей."
 			]
-			dependencies: ["A501000000000019"]
+			dependencies: ["5223A0000000000B"]
 			icon: { count: 1, id: "ae2:certus_quartz_crystal" }
 			id: "A805000000000001"
 			disable_jei: true

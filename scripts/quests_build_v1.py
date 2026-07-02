@@ -732,6 +732,10 @@ def remove_stale_chapters() -> None:
         'side_powah.snbt', 'side_bestiary.snbt', 'side_twilight.snbt', 'side_relics.snbt',
         'side_cataclysm.snbt',
     }
+    for p in CHAPTERS.glob('main_t*.snbt'):
+        keep.add(p.name)
+    for p in CHAPTERS.glob('side_*.snbt'):
+        keep.add(p.name)
     for p in CHAPTERS.glob('*.snbt'):
         if p.name not in keep:
             p.unlink()

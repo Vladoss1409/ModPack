@@ -1,0 +1,29 @@
+{
+  "name": "Склад — ящики и бочки",
+  "icon": "storagedrawers:controller",
+  "category": "patchouli:codex_branches",
+  "advancement": "cooptech:journal/codex_side_storage",
+  "secret": true,
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Зачем$()$(br2)T0 даёт основы Drawers. Ветка добавляет $(#DD55DD)Sophisticated Storage$() и продвинутые схемы склада."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "storagedrawers:controller",
+      "text": "$(#FFAA00)Контроллер ящиков$(): один вброс — авто-раскладка. Стена 2×2 ячеек на тип руды."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "sophisticatedstorage:barrel",
+      "text": "$(#FFAA00)Бочки$(): апгрейды вместимости (железо → золото). Один столб бочек = целый склад."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "sophisticatedstorage:controller",
+      "text": "$(#FFAA00)Контроллер бочек$(): связывает бочки; воронки качают через него."
+    }
+  ]
+}

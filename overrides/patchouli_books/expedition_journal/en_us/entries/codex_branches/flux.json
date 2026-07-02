@@ -1,0 +1,29 @@
+{
+  "name": "Flux — полная сеть",
+  "icon": "fluxnetworks:flux_dust",
+  "category": "patchouli:codex_branches",
+  "advancement": "cooptech:journal/codex_side_flux",
+  "secret": true,
+  "sortnum": 8,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Зачем$()$(br2)Сайд собирает $(#FFAA00)всю Flux-сеть$(): от пыли до gargantuan storage."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "fluxnetworks:basic_flux_storage",
+      "text": "$(#FFAA00)Flux Storage$(): буфер энергии внутри сети."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "fluxnetworks:gargantuan_flux_storage",
+      "text": "$(#FFAA00)Gargantuan Storage$(): гигантский буфер — для реакторов."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "fluxnetworks:flux_controller",
+      "text": "$(#FFAA00)Controller$() (финал): управление всей сетью, права игроков."
+    }
+  ]
+}

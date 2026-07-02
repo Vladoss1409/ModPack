@@ -6,10 +6,10 @@
 	hide_quest_details_until_startable: true
 	default_quest_shape: "circle"
 	filename: "side_powah"
-	group: "B100000000000003"
+	group: "B100000000000002"
 	icon: { count: 1, id: "powah:furnator_basic" }
 	id: "A814000000000000"
-	order_index: 2
+	order_index: 22
 	quest_links: [ ]
 	quests: [
 		{
@@ -17,7 +17,7 @@
 			"§dРезонанс Powah§r — ветка открыта основной линией."
 			"Следующие узлы появятся по цепочке зависимостей."
 			]
-			dependencies: ["A401000000000002"]
+			dependencies: ["5221A00000000005"]
 			icon: { count: 1, id: "powah:furnator_basic" }
 			id: "A814000000000001"
 			disable_jei: true
@@ -63,13 +63,13 @@
 		{
 			dependencies: ["A814000000000003"]
 			hide_quest_until_deps_visible: true
-			icon: { count: 1, id: "powah:blazing_crystal" }
+			icon: { count: 1, id: "powah:crystal_blazing" }
 			id: "A814000000000004"
 			disable_jei: true
 			shape: "circle"
 			size: 1.0d
 			tasks: [
-				{ count: 4, id: "T814000000000004", item: "powah:blazing_crystal", title: "Blazing Crystal", type: "item" }
+				{ count: 4, id: "T814000000000004", item: "powah:crystal_blazing", title: "Blazing Crystal", type: "item" }
 			]
 			title: "Blazing Crystal"
 			x: 2.5d

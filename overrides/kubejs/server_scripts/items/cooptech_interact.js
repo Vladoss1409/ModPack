@@ -96,8 +96,214 @@ const PAGE_LINES = {
     '§7Пусть следующие строки напишете вы — не диспетчер и не наставник.',
     '§7Если мир снова треснет — §eкто-то§r должен оставить след на бумаге,',
     '§7а не только в кодексе.»'
+  ],
+  journal_page_rift: [
+    '§8═══ День ноль · у разлома ═══',
+    '§7Проснулся под гулом земли. Сканер мигал — §dразлом Якоря§7 дышит паром.',
+    '§7Связи нет. В блокноте первая строка: §eвыжить, обжить лагерь, поймать искру§7.',
+    '§7С неё начнётся всё, что я смогу записать дальше.',
+    '§8— запись №1, полевой журнал'
+  ],
+  journal_page_camp: [
+    '§8═══ Рубеж I · лагерь закреплён ═══',
+    '§7Дерево, камень, паёк, железо — первая волна позади. Костёр держит периметр.',
+    '§7Теперь в кодексе открылись печь, кухня и склад. Прочитал справку —',
+    '§7и только потом начал строить.',
+    '§8— запись №2'
+  ],
+  journal_page_home: [
+    '§8═══ Рубеж II · обжитой лагерь ═══',
+    '§7Печь гудит, котёл кипит, ящики помнят содержимое. Лагерь перестал быть временным.',
+    '§7Следующая страница — медь, редстоун, кремень. Якорь требует сырья под искру.',
+    '§8— запись №3'
+  ],
+  journal_page_ready: [
+    '§8═══ Рубеж III · готовность к энергии ═══',
+    '§7Сырьё в ящиках, броня на плечах. В блокноте — чертёж §dмашинной рамы§7.',
+    '§7Осталось сложить компоненты и поднести к разлому. Порог тира близко.',
+    '§8— запись №4'
+  ],
+  journal_page_spark: [
+    '§8═══ Финал T0 · искра Якоря ═══',
+    '§7Печь раскалена, редстоун поёт, кремень бьёт. Разлом §dвздрогнул§7 — и ответил теплом.',
+    '§7В ладони — §eЯкорная искра§7. С ней откроется §eТир 1§7: Thermal, RF, машины.',
+    '§7Мир треснул. Мы — те, кто остался чинить его по записи в этом журнале.',
+    '§8— запись №5, рубеж пройден'
+  ],
+  journal_page_spark_00: [
+    '§8═══ T1 · порог Thermal ═══',
+    '§7Искра всё ещё тёплая. Новая глава блокнота: §dThermal§7, первая рама, первый RF.',
+    '§7Цель проста на бумаге — сложна в металле: собрать §eмашинную раму§7.',
+    '§8— начало тира T1'
+  ],
+  journal_page_spark_01: [
+    '§8═══ T1 · контур запущен ═══',
+    '§7Рама стоит, печь плавит, дробилка жуёт руду. Контур ожил — я слышу его гул ночью.',
+    '§7Второй рубеж: автоматизация и энергия между машинами.',
+    '§8— рубеж I T1'
+  ],
+  journal_page_spark_02: [
+    '§8═══ T1 · автоматизация руды ═══',
+    '§7Катушки, серво, корпус Powah — руда течёт без моих рук. Так и должно быть.',
+    '§7Осталось стабилизировать сплавы и запас энергии.',
+    '§8— рубеж II T1'
+  ],
+  journal_page_spark_03: [
+    '§8═══ T1 · готовность к Mekanism ═══',
+    '§7Сплавы, стекло, батареи — всё на месте. В блокноте чертёж §eякорной ячейки§7.',
+    '§7За ней — Mekanism и настоящая промышленность.',
+    '§8— рубеж III T1'
+  ],
+  journal_page_spark_04: [
+    '§8═══ T1 · якорная ячейка ═══',
+    '§7Ячейка собрана. RF стабилен, руда не останавливается. Порог T1→T2 пройден.',
+    '§7Следующая глава — §dMekanism§7. Записал время удара дробилки — на память.',
+    '§8— финал тира T1'
+  ],
+  journal_page_cell_00: [
+    '§8═══ T2 · порог Mekanism ═══',
+    '§7Ячейка открыла промышленную главу. §dMekanism§7, Ender IO, Flux — три голоса в одном лагере.',
+    '§7Первый шаг: §eстальной корпус§7. Без него завод молчит.',
+    '§8— начало тира T2'
+  ],
+  journal_page_cell_01: [
+    '§8═══ T2 · промышленный старт ═══',
+    '§7Mek и EIO встали на фундамент. Руда идёт через обогатитель — я уже не считаю слитки вручную.',
+    '§8— рубеж I T2'
+  ],
+  journal_page_cell_02: [
+    '§8═══ T2 · энергоузел ═══',
+    '§7Дробитель, куб, сплавная печь, Flux — энергия и переработка держатся. Второй рубеж закрыт.',
+    '§8— рубеж II T2'
+  ],
+  journal_page_cell_03: [
+    '§8═══ T2 · готовность к сети ═══',
+    '§7Осмий, вибрант, схемы — в ящиках. Чертёж §eякорной матрицы§7 в блокноте.',
+    '§8— рубеж III T2'
+  ],
+  journal_page_cell_04: [
+    '§8═══ T2 · якорная матрица ═══',
+    '§7Матрица собрана. Mek, EIO и Flux поют в унисон. Порог T2→T3 — в журнале.',
+    '§7Дальше — §dAE2§7 и сеть, что помнит каждый болт.',
+    '§8— финал тира T2'
+  ],
+  journal_page_matrix_00: [
+    '§8═══ T3 · порог AE2 ═══',
+    '§7Матрица открыла §dApplied Energistics§7. Сеть, что помнит каждый предмет.',
+    '§7Первый шаг — §eгравёр§7. Без процессоров сеть слепа.',
+    '§8— начало тира T3'
+  ],
+  journal_page_matrix_01: [
+    '§8═══ T3 · сеть зарождается ═══',
+    '§7Гравёр, certus, fluix, камень философов — фундамент заложен.',
+    '§8— рубеж I T3'
+  ],
+  journal_page_matrix_02: [
+    '§8═══ T3 · ME-сеть работает ═══',
+    '§7Контроллер пульсирует, терминал отвечает. Склад стал единым организмом.',
+    '§8— рубеж II T3'
+  ],
+  journal_page_matrix_03: [
+    '§8═══ T3 · готовность к Draconic ═══',
+    '§7Автокрафт и шины замкнули логистику. Готовлю §eсингулярность§7.',
+    '§8— рубеж III T3'
+  ],
+  journal_page_matrix_04: [
+    '§8═══ T3 · якорная сингулярность ═══',
+    '§7Сингулярность собрана. ME и EMC слушаются матрицы. Порог T3→T4 пройден.',
+    '§7Следующая глава — §dDraconic§7.',
+    '§8— финал тира T3'
+  ],
+  journal_page_singularity_00: [
+    '§8═══ T4 · порог Draconic ═══',
+    '§7Сингулярность открыла §dDraconic Evolution§7 — силу древних драконов.',
+    '§7Первый шаг: §eядро дракония§7. Без него вся ветка молчит.',
+    '§8— начало тира T4'
+  ],
+  journal_page_singularity_01: [
+    '§8═══ T4 · драконий старт ═══',
+    '§7Ядро, пыль, энергоядро, awakened-слиток — Draconic встал на базу.',
+    '§8— рубеж I T4'
+  ],
+  journal_page_singularity_02: [
+    '§8═══ T4 · энергия дракона ═══',
+    '§7Инфузор, реактор, EMC, хаос-осколки — сила на пике. Второй рубеж закрыт.',
+    '§8— рубеж II T4'
+  ],
+  journal_page_singularity_03: [
+    '§8═══ T4 · готовность к нексусу ═══',
+    '§7Chaos Guardian позади. Компоненты нексуса в ящиках — чертёж в блокноте.',
+    '§8— рубеж III T4'
+  ],
+  journal_page_singularity_04: [
+    '§8═══ T4 · якорный нексус ═══',
+    '§7Нексус собран. Все тиры сходятся в одной точке. Порог T4→T5 пройден.',
+    '§7Дальше — §dnext_ae§7 и финал экспедиции.',
+    '§8— финал тира T4'
+  ],
+  journal_page_nexus_00: [
+    '§8═══ T5 · порог next_ae ═══',
+    '§7Нексус открыл последнюю главу: §dnext_ae§7 и стабилизация Якоря.',
+    '§7Цель: §eядро машины§7 и §dЯдро реальности§7.',
+    '§8— начало тира T5'
+  ],
+  journal_page_nexus_01: [
+    '§8═══ T5 · next_ae запущен ═══',
+    '§7Ядро машины и осколки на месте — next_ae ожил.',
+    '§8— рубеж I T5'
+  ],
+  journal_page_nexus_02: [
+    '§8═══ T5 · осколки сходятся ═══',
+    '§7Inscriber, зарядник, маяк — синхронизация идёт. Второй рубеж закрыт.',
+    '§8— рубеж II T5'
+  ],
+  journal_page_nexus_03: [
+    '§8═══ T5 · готовность к ядру ═══',
+    '§7Сборка якоря, кооп-ритуал, стабилизация — всё готово к финалу.',
+    '§8— рубеж III T5'
+  ],
+  journal_page_nexus_04: [
+    '§8═══ T5 · ядро якоря ═══',
+    '§7§dЯдро Якоря реальности§7 стабилизировано. Разлом затих. Экспедиция выполнила миссию.',
+    '§8— финал CoopTech'
+  ],
+  journal_page_post_anchor: [
+    '§8═══ Після якоря ═══',
+    '§7Якір стабільний. Розлом затих — але світ не закінчився.',
+    '§7Три шляхи: §eпечери§7, §eбос-фарм§7, §eепілог модів§7. Кожен — своя ветка.',
+    '§7Ми залишились. Далі — для себе, не для диспетчера.',
+    '§8— запис після фіналу'
   ]
 }
+
+// Чтение страницы-записки заносит соответствующую лорную запись в журнал.
+var PAGE_ADV = {
+  journal_page_rift: 't0_lore_rift',
+  journal_page_camp: 't0_lore_camp',
+  journal_page_home: 't0_lore_home',
+  journal_page_ready: 't0_lore_ready',
+  journal_page_spark: 't0_lore_spark',
+  journal_page_post_anchor: 'post_anchor'
+}
+
+// T1–T5: чтение записки → лорная запись в журнале
+;(function () {
+  var tiers = [
+    { p: 'spark', t: '1' },
+    { p: 'cell', t: '2' },
+    { p: 'matrix', t: '3' },
+    { p: 'singularity', t: '4' },
+    { p: 'nexus', t: '5' }
+  ]
+  var beatAdv = ['intro', 'w1', 'w2', 'w3', 'finale']
+  tiers.forEach(function (tier) {
+    for (var i = 0; i < 5; i++) {
+      var pageId = 'journal_page_' + tier.p + '_' + String(i).padStart(2, '0')
+      var advKey = 't' + tier.t + '_lore_' + beatAdv[i]
+      PAGE_ADV[pageId] = advKey
+    }
+  })
+})()
 
 const RELIQUARY_POOLS = {
   'cooptech:reliquary/field': [
@@ -109,7 +315,7 @@ const RELIQUARY_POOLS = {
     { item: 'kubejs:journal_page_05', weight: 3, min: 1, max: 1 }
   ],
   'cooptech:reliquary/resonant': [
-    { item: 'thermal:copper_ingot', weight: 10, min: 8, max: 24 },
+    { item: 'minecraft:copper_ingot', weight: 10, min: 8, max: 24 },
     { item: 'thermal:tin_ingot', weight: 8, min: 8, max: 16 },
     { item: 'thermal:energy_cell', weight: 4, min: 1, max: 1 },
     { item: 'minecraft:redstone_block', weight: 6, min: 2, max: 4 },
@@ -201,6 +407,17 @@ global.cooptechOpenJournal = function (entity) {
 
 global.cooptechReadJournalPage = function (player, pageId) {
   var lines = PAGE_LINES[pageId]
+  if (!lines && /^journal_page_(spark|cell|matrix|singularity|nexus)_\d{2}$/.test(pageId)) {
+    var parts = pageId.split('_')
+    var tierLabel = { spark: 'T1', cell: 'T2', matrix: 'T3', singularity: 'T4', nexus: 'T5' }[parts[2]] || '?'
+  var beat = parseInt(parts[3], 10)
+    lines = [
+      '§8═══ Записка ' + tierLabel + ' · фрагмент #' + beat + ' ═══',
+      '§7«Диспетчер якоря зафиксировал рубеж. Детали — в §dЖурнале экспедиции§7,',
+      '§7раздел §eХроника§7. Эта страница — полевой дубликат для пути.»',
+      '§8— автозапись кодекса'
+    ]
+  }
   if (!lines) {
     player.tell('§7Страница §8' + pageId.replace('journal_page_', '#') + '§7 — пустой лист, ждёт ваших записей.')
     return
@@ -208,9 +425,15 @@ global.cooptechReadJournalPage = function (player, pageId) {
   lines.forEach(function (line) { player.tell(line) })
   playSound(player, 'minecraft:entity.item.pickup', 0.35, 1.2)
 
+  if (PAGE_ADV[pageId]) {
+    try {
+      player.runCommandSilent('advancement grant ' + player.username + ' until cooptech:journal/' + PAGE_ADV[pageId])
+    } catch (ePage) { /* optional */ }
+  }
+
   if (pageId === 'journal_page_00') {
     try {
-      player.runCommandSilent('advancement grant ' + player.username + ' only cooptech:journal/page_00_read')
+      player.runCommandSilent('advancement grant ' + player.username + ' until cooptech:journal/page_00_read')
     } catch (e) { /* optional */ }
 
     try {
@@ -220,7 +443,7 @@ global.cooptechReadJournalPage = function (player, pageId) {
         hasRubeg = adv.has('cooptech:journal/rubeg_2')
       }
       if (hasRubeg) {
-        player.runCommandSilent('advancement grant ' + player.username + ' only cooptech:journal/dispatcher_briefing')
+        player.runCommandSilent('advancement grant ' + player.username + ' until cooptech:journal/dispatcher_briefing')
         player.tell('§5§l[Журнал «Якорь»]§r §fПриказ диспетчера зафиксирован в кодексе.')
       }
     } catch (e2) { /* optional */ }
@@ -242,7 +465,7 @@ global.cooptechOpenReliquary = function (player, lootId) {
 }
 
 global.cooptechUseBeacon = function (player) {
-  var COOP_TASK_ID = 'T101000000000015'
+  var COOP_TASK_ID = '5225B00000000013'
   var SPAWN_RADIUS = 48
   var CHECKIN_KEY = 'cooptech_prologue_wave2'
 
@@ -275,6 +498,7 @@ global.cooptechUseBeacon = function (player) {
   player.tell('§7[Маяк] §aСигнал отправлен. §f(' + list.length + '/2)')
 
   if (list.length >= 2) {
+    global.cooptechRegisterPair(player.level, list[0], list[1])
     player.server.runCommandSilent('ftbquests change_progress ' + player.username + ' complete ' + COOP_TASK_ID)
     player.level.players.forEach(function (p) {
       p.tell('§d[Якорь] §fСинхронизация команды подтверждена.')

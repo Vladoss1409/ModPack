@@ -1,0 +1,29 @@
+{
+  "name": "Draconic — сайд-ветка",
+  "icon": "draconicevolution:wyvern_core",
+  "category": "patchouli:codex_branches",
+  "advancement": "cooptech:journal/codex_side_draconic",
+  "secret": true,
+  "sortnum": 16,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Зачем$()$(br2)Полный путь DE $(#FFAA00)параллельно T4$(): wyvern → draconic → reactor."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "draconicevolution:wyvern_pickaxe",
+      "text": "$(#FFAA00)Wyvern tier$(): первые инструменты и cores."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "draconicevolution:awakened_core",
+      "text": "$(#FFAA00)Draconic Core$(): апгрейд после wyvern."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "draconicevolution:draconic_pickaxe",
+      "text": "$(#FFAA00)Draconic Pick$() (финал): скорость и AoE добычи."
+    }
+  ]
+}

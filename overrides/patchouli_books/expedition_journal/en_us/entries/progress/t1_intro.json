@@ -1,0 +1,18 @@
+{
+  "name": "T1: порог Thermal",
+  "icon": "kubejs:journal_page_spark_00",
+  "category": "patchouli:progress",
+  "advancement": "cooptech:journal/t1_lore_intro",
+  "secret": true,
+  "sortnum": 10,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Искра в ладони$()$(br2)$(#FFAA00)Якорная искра$() ещё тёплая. Разлом отпустил — в журнале новая глава: $(#DD55DD)Thermal$(), первый RF, первая $(#FFAA00)машинная рама$().$(br2)Без рамы ни одна машина не встанет. Записал это трижды — чтобы не забыть."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Цель тира$()$(br2)Запустить RF-контур и собрать $(#FFAA00)Якорную ячейку$() — рубеж T1→T2.$(br2)$(italic)«Выживание закончилось там, где начался гул машин.»$()"
+    }
+  ]
+}

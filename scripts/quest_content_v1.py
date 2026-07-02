@@ -53,15 +53,15 @@ CH1 = [
       deps=[18], finale=True, shape='gear', size=1.5),
     Q(7, 'Старт инфраструктуры', 'minecraft:crafting_table', x=0, y=22,
       deps=[], desc=['Рубеж пролога пройден — разверните tech-инфраструктуру якоря.']),
-    Q(8, 'Медный контур', 'thermal:copper_ingot', count=32, x=-3, y=28, deps=[5]),
+    Q(8, 'Медный контур', 'minecraft:copper_ingot', count=32, x=-3, y=28, deps=[5]),
     Q(9, 'Оловянный контур', 'thermal:tin_ingot', count=32, x=-1, y=28, deps=[5]),
     Q(10, 'Invar слитки', 'thermal:invar_ingot', count=16, x=1, y=28, deps=[5]),
     Q(11, 'RF катушки', 'thermal:rf_coil', count=8, x=3, y=28, deps=[5]),
     Q(12, 'Сплавы готовы', 'kubejs:quest_gate', x=0, y=30,
       deps=[8, 9, 10, 11], min_deps=2, gate=True, shape='diamond'),
-    Q(13, 'Redstone Furnace', 'thermal:redstone_furnace', x=-3, y=32, deps=[12]),
+    Q(13, 'Redstone Furnace', 'thermal:machine_furnace', x=-3, y=32, deps=[12]),
     Q(14, 'Pulverizer', 'thermal:machine_pulverizer', x=-1, y=32, deps=[12]),
-    Q(15, 'Sawmill', 'thermal:sawmill', x=1, y=32, deps=[12]),
+    Q(15, 'Sawmill', 'thermal:machine_sawmill', x=1, y=32, deps=[12]),
     Q(16, 'Energy Cell', 'thermal:energy_cell', x=3, y=32, deps=[12]),
     Q(17, 'Тепловой рубеж', 'kubejs:quest_gate', x=0, y=35,
       deps=[13, 14, 15, 16], min_deps=2, gate=True, shape='diamond'),
@@ -96,7 +96,7 @@ CH2 = [
       deps=[13, 14, 15, 16], min_deps=2, gate=True, shape='diamond'),
     Q(18, 'IE Hammer', 'immersiveengineering:hammer', x=-2, y=12, deps=[17]),
     Q(19, 'Flux Dust заготовка', 'minecraft:redstone', count=64, x=2, y=12, deps=[17]),
-    Q(20, 'Wroughtnaut охота', 'mowziesmobs:wroughtnaut_helmet', x=-1, y=14, deps=[18, 19], min_deps=1),
+    Q(20, 'Wroughtnaut охота', 'mowziesmobs:wrought_helmet', x=-1, y=14, deps=[18, 19], min_deps=1),
     Q(21, 'Полевой трофей', 'minecraft:nether_star', x=1, y=14, deps=[20]),
     Q(22, 'Рубеж поверхности', 'kubejs:quest_gate', x=0, y=15,
       deps=[18, 19, 20, 21], min_deps=2, gate=True, shape='diamond'),
@@ -106,7 +106,7 @@ CH2 = [
 CH3_PREFIX = 'A401'
 CH3_PREV_FINALE = f'{CH2_PREFIX}000000000006'
 CH3 = [
-    Q(1, 'Thermal машина', 'thermal:redstone_furnace', x=-3, y=0, deps=[7]),
+    Q(1, 'Thermal машина', 'thermal:machine_furnace', x=-3, y=0, deps=[7]),
     Q(2, 'Базовая энергия', 'powah:furnator_basic', x=-1, y=0, deps=[7]),
     Q(3, 'Coke Oven', 'immersiveengineering:cokebrick', count=27, x=1, y=0, deps=[7]),
     Q(4, 'Поток слитков', 'minecraft:iron_ingot', count=256, x=3, y=0, deps=[7]),
@@ -124,7 +124,7 @@ CH3 = [
       deps=[8, 9, 10, 11], min_deps=2, gate=True, shape='diamond'),
     Q(13, 'Powah Tier 2', 'powah:capacitor_hardened', x=-3, y=8, deps=[12]),
     Q(14, 'IE Wire', 'immersiveengineering:wirecoil_copper', count=16, x=-1, y=8, deps=[12]),
-    Q(15, 'Thermal Upgrade', 'thermal:upgrade_augment_1', count=4, x=1, y=8, deps=[12]),
+    Q(15, 'Thermal Upgrade', 'thermal:slot_seal', count=4, x=1, y=8, deps=[12]),
     Q(16, 'EnderIO Cap', 'enderio:basic_capacitor', count=4, x=3, y=8, deps=[12]),
     Q(17, 'Стабильный поток', 'kubejs:quest_gate', x=0, y=11,
       deps=[13, 14, 15, 16], min_deps=2, gate=True, shape='diamond'),
@@ -140,7 +140,7 @@ CH4 = [
     Q(2, 'Enrichment', 'mekanism:enrichment_chamber', x=-3, y=0, deps=[1]),
     Q(3, 'Crusher', 'mekanism:crusher', x=-1, y=0, deps=[1]),
     Q(4, 'Energized Smelter', 'mekanism:energized_smelter', x=1, y=0, deps=[1]),
-    Q(5, 'Basic Factory', 'mekanism:basic_factory', x=3, y=0, deps=[1]),
+    Q(5, 'Basic Factory', 'mekanism:basic_smelting_factory', x=3, y=0, deps=[1]),
     Q(6, 'Mek Gate I', 'kubejs:quest_gate', x=0, y=2,
       deps=[2, 3, 4, 5], min_deps=2, gate=True, shape='diamond'),
     Q(7, 'Steel Ingot', 'mekanism:ingot_steel', count=32, x=-3, y=4, deps=[6]),
@@ -219,7 +219,7 @@ CH6_PREV_FINALE = f'{CH5_PREFIX}000000000022'
 CH6 = [
     Q(1, 'Draconium Dust', 'draconicevolution:draconium_dust', count=16, x=0, y=-2, deps=[]),
     Q(2, 'Wyvern Core', 'draconicevolution:wyvern_core', x=-2, y=0, deps=[1]),
-    Q(3, 'Draconic Core', 'draconicevolution:draconic_core', x=2, y=0, deps=[1]),
+    Q(3, 'Draconic Core', 'draconicevolution:awakened_core', x=2, y=0, deps=[1]),
     Q(4, 'Energy Core', 'draconicevolution:energy_core', x=0, y=2, deps=[2, 3], min_deps=1),
     Q(5, 'Finale Gate I', 'kubejs:quest_gate', x=0, y=4,
       deps=[4], gate=True, shape='diamond'),
@@ -269,18 +269,18 @@ def _side(start: int, items: list[tuple[str, str, int]]) -> list[Q]:
 
 SIDE_THERMAL = _side(1, [
     ('Machine Frame', 'thermal:machine_frame', 1),
-    ('Redstone Furnace', 'thermal:redstone_furnace', 1),
+    ('Redstone Furnace', 'thermal:machine_furnace', 1),
     ('Pulverizer', 'thermal:machine_pulverizer', 1),
-    ('Sawmill', 'thermal:sawmill', 1),
+    ('Sawmill', 'thermal:machine_sawmill', 1),
     ('Induction Smelter', 'thermal:machine_smelter', 1),
     ('Fluid Cell', 'thermal:fluid_cell', 1),
     ('Dynamo', 'thermal:dynamo_stirling', 1),
     ('Energy Cell', 'thermal:energy_cell', 1),
-    ('Augment', 'thermal:upgrade_augment_1', 4),
+    ('Augment', 'thermal:slot_seal', 4),
     ('Resonant Cell', 'thermal:energy_cell', 4),
     ('Thermal Drive', 'thermal:rf_coil', 16),
     ('Thermal Finale', 'thermal:machine_crafter', 1),
-    ('Resonant Upgrade', 'thermal:upgrade_augment_3', 4),
+    ('Resonant Upgrade', 'thermal:flux_capacitor', 4),
 ])
 
 SIDE_KITCHEN = _side(1, [
@@ -347,7 +347,7 @@ SIDE_APOTHEOSIS = _side(1, [
     ('Sigil', 'apotheosis:sigil_of_enhancement', 1),
     ('Spawner', 'apotheosis:ender_lead', 1),
     ('Boss Summoner', 'apotheosis:boss_summoner', 1),
-    ('Mythic Gem', 'apotheosis:mythic_gem', 1),
+    ('Mythic Gem', 'apotheosis:mythic_material', 1),
     ('Apothic Finale', 'apotheosis:reforging_table', 1),
 ])
 
@@ -369,7 +369,7 @@ SIDE_DRACONIC = _side(1, [
     ('Crafting Core', 'draconicevolution:crafting_core', 1),
     ('Wyvern Pick', 'draconicevolution:wyvern_pickaxe', 1),
     ('Wyvern Sword', 'draconicevolution:wyvern_sword', 1),
-    ('Draconic Core', 'draconicevolution:draconic_core', 1),
+    ('Draconic Core', 'draconicevolution:awakened_core', 1),
     ('Chaos Shard', 'draconicevolution:chaos_shard', 2),
     ('Reactor', 'draconicevolution:reactor_core', 1),
     ('Draconic Finale', 'draconicevolution:draconic_pickaxe', 1),
@@ -391,7 +391,7 @@ SIDE_MEKANISM = _side(1, [
     ('Enrichment Chamber', 'mekanism:enrichment_chamber', 1),
     ('Crusher', 'mekanism:crusher', 1),
     ('Energized Smelter', 'mekanism:energized_smelter', 1),
-    ('Basic Factory', 'mekanism:basic_factory', 1),
+    ('Basic Factory', 'mekanism:basic_smelting_factory', 1),
     ('Digital Miner', 'mekanism:digital_miner', 1),
     ('Mekanism Finale', 'mekanism:teleportation_core', 1),
 ])
@@ -399,7 +399,7 @@ SIDE_MEKANISM = _side(1, [
 SIDE_IMMERSIVE = _side(1, [
     ('Engineer\'s Hammer', 'immersiveengineering:hammer', 1),
     ('Coke Brick', 'immersiveengineering:cokebrick', 27),
-    ('Coke Oven', 'immersiveengineering:cokeoven', 1),
+    ('Coke Oven', 'immersiveengineering:coke_oven', 1),
     ('LV Capacitor', 'immersiveengineering:capacitor_lv', 1),
     ('Copper Wire', 'immersiveengineering:wirecoil_copper', 16),
     ('Metal Press', 'immersiveengineering:metal_press', 1),
@@ -413,14 +413,14 @@ SIDE_ENDERIO = _side(1, [
     ('Alloy Smelter', 'enderio:alloy_smelter', 1),
     ('Capacitor Bank', 'enderio:basic_capacitor_bank', 1),
     ('Item Conduit', 'enderio:item_conduit', 32),
-    ('EnderIO Finale', 'enderio:wireless_antenna', 1),
+    ('EnderIO Finale', 'enderio:vibrant_capacitor_bank', 1),
 ])
 
 SIDE_POWAH = _side(1, [
     ('Furnator', 'powah:furnator_basic', 1),
     ('Capacitor', 'powah:capacitor_basic', 1),
     ('Hardened Cap', 'powah:capacitor_hardened', 1),
-    ('Blazing Crystal', 'powah:blazing_crystal', 4),
+    ('Blazing Crystal', 'powah:crystal_blazing', 4),
     ('Niotic Cap', 'powah:capacitor_niotic', 1),
     ('Powah Finale', 'powah:energy_cell_nitro', 1),
 ])
@@ -429,9 +429,9 @@ SIDE_BESTIARY = _side(1, [
     ('Animal Dictionary', 'alexsmobs:animal_dictionary', 1),
     ('Explorer\'s Compass', 'explorerscompass:explorerscompass', 1),
     ('Nature\'s Compass', 'naturescompass:naturescompass', 1),
-    ('Grizzly Fur', 'alexsmobs:grizzly_bear_fur', 4),
+    ('Grizzly Fur', 'alexsmobs:bear_fur', 4),
     ('Void Worm Eye', 'alexsmobs:void_worm_eye', 1),
-    ('Wrought Helm', 'mowziesmobs:wroughtnaut_helmet', 1),
+    ('Wrought Helm', 'mowziesmobs:wrought_helmet', 1),
     ('Dungeon Loot', 'minecraft:golden_apple', 4),
     ('Bestiary Finale', 'minecraft:nether_star', 1),
 ])
@@ -447,9 +447,9 @@ SIDE_TWILIGHT = _side(1, [
 
 SIDE_RELICS = _side(1, [
     ('Roller Skates', 'relics:roller_skates', 1),
-    ('Horse Shoe', 'relics:horseshoe', 1),
+    ('Horse Shoe', 'relics:lucky_horseshoe', 1),
     ('Aqua Walker', 'relics:aqua_walker', 1),
-    ('Midnight Roast', 'relics:midnight_roast', 1),
+    ('Midnight Roast', 'relics:midnight_robe', 1),
     ('Relics Finale', 'relics:amphibian_boot', 1),
 ])
 
@@ -460,6 +460,47 @@ SIDE_CATACLYSM = _side(1, [
     ('Ignitium', 'cataclysm:ignitium_ingot', 4),
     ('Cataclysm Finale', 'cataclysm:the_incinerator', 1),
 ])
+
+# --- Post-T5 (after reality anchor) ---
+SIDE_POST_CAVES = _side(1, [
+    ('Cave Codex', 'kubejs:decrypted_cave_codex', 1),
+    ('Cave Tablet', 'alexscaves:cave_tablet', 2),
+    ('Echo Shards', 'minecraft:echo_shard', 8),
+    ('Limestone', 'alexscaves:limestone', 32),
+    ('Sulfur', 'alexscaves:sulfur', 16),
+    ('Metal Swarf', 'alexscaves:metal_swarf', 16),
+    ('Caves Finale', 'alexscaves:cave_tablet', 4),
+])
+
+SIDE_POST_BOSS = _side(1, [
+    ('Nether Star', 'minecraft:nether_star', 2),
+    ('Void Eye', 'cataclysm:void_eye', 1),
+    ('Wroughtnaut Helm', 'mowziesmobs:wrought_helmet', 1),
+    ('Monstrous Horn', 'cataclysm:monstrous_horn', 1),
+    ('Dragon Head', 'minecraft:dragon_head', 1),
+    ('Black Steel', 'cataclysm:black_steel_ingot', 8),
+    ('Boss Finale', 'cataclysm:the_annihilator', 1),
+])
+
+SIDE_POST_EPILOGUE = _side(1, [
+    ('Anchor Core', 'kubejs:reality_anchor_core', 1),
+    ('ME 16k', 'ae2:item_storage_cell_16k', 1),
+    ('EMC Tablet', 'projecte:transmutation_tablet', 1),
+    ('Chaotic Pick', 'draconicevolution:chaotic_pickaxe', 1),
+    ('Next AE Core', 'next_ae:machine_core', 1),
+    ('Anchor Nexus', 'kubejs:anchor_nexus', 1),
+    ('Convergence Relic', 'kubejs:reliquary_convergence', 1),
+    ('Epilogue Finale', 'minecraft:beacon', 1),
+])
+
+GROUP_POST = 'B100000000000006'
+
+# hub_branch_quest_id for lock deps
+POST_SIDE_BRANCHES = [
+    ('side_post_caves', 'Печери розлому', 'kubejs:decrypted_cave_codex', 'A901', SIDE_POST_CAVES, 62, 'A900000000000002'),
+    ('side_post_bossfarm', 'Бос-фарм якоря', 'cataclysm:void_eye', 'A902', SIDE_POST_BOSS, 63, 'A900000000000003'),
+    ('side_post_epilogue', 'Епілог модів', 'kubejs:reality_anchor_core', 'A903', SIDE_POST_EPILOGUE, 64, 'A900000000000004'),
+]
 
 GROUP_INTRO = 'B100000000000001'
 GROUP_MAIN = 'B100000000000002'

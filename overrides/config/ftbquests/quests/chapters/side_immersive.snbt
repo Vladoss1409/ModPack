@@ -6,10 +6,10 @@
 	hide_quest_details_until_startable: true
 	default_quest_shape: "circle"
 	filename: "side_immersive"
-	group: "B100000000000003"
+	group: "B100000000000002"
 	icon: { count: 1, id: "immersiveengineering:hammer" }
 	id: "A810000000000000"
-	order_index: 1
+	order_index: 23
 	quest_links: [ ]
 	quests: [
 		{
@@ -17,7 +17,7 @@
 			"§dИндустриальная ковка§r — ветка открыта основной линией."
 			"Следующие узлы появятся по цепочке зависимостей."
 			]
-			dependencies: ["A301000000000018"]
+			dependencies: ["5221A00000000006"]
 			icon: { count: 1, id: "immersiveengineering:hammer" }
 			id: "A810000000000001"
 			disable_jei: true
@@ -48,13 +48,13 @@
 		{
 			dependencies: ["A810000000000002"]
 			hide_quest_until_deps_visible: true
-			icon: { count: 1, id: "immersiveengineering:cokeoven" }
+			icon: { count: 1, id: "immersiveengineering:coke_oven" }
 			id: "A810000000000003"
 			disable_jei: true
 			shape: "circle"
 			size: 1.0d
 			tasks: [
-				{ id: "T810000000000003", item: "immersiveengineering:cokeoven", title: "Coke Oven", type: "item" }
+				{ id: "T810000000000003", item: "immersiveengineering:coke_oven", title: "Coke Oven", type: "item" }
 			]
 			title: "Coke Oven"
 			x: 0.0d

@@ -11,9 +11,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 OVERRIDES = ROOT / 'overrides'
-MC = Path(r'C:\Users\GameOn_Dp\AppData\Roaming\.minecraft')
-VERSION_NAME = 'Мой мод пак'
-INSTANCE = MC / 'versions' / VERSION_NAME
+MC = Path(os.environ.get('APPDATA', '')) / '.minecraft'
+VERSION_CANDIDATES = ('ModPack', 'Мой мод пак')
 
 # Jars that must not be in instance (conflict with embeddium / duplicates)
 FORBIDDEN_MOD_PATTERNS = (
@@ -59,11 +58,28 @@ def lock_snbt_files(path: Path) -> None:
     print(f'  quest SNBT: {count} files set read-only (editor cannot corrupt)')
 
 
+def _robocopy_mirror(src: Path, dst: Path) -> bool:
+    """Mirror src -> dst via robocopy (Windows). Returns True on success."""
+    if sys.platform != 'win32':
+        return False
+    dst.mkdir(parents=True, exist_ok=True)
+    result = subprocess.run(
+        ['robocopy', str(src), str(dst), '/MIR', '/R:2', '/W:2', '/NFL', '/NDL', '/NJH', '/NJS'],
+        capture_output=True,
+        text=True,
+    )
+    # robocopy: 0 = nothing copied, 1 = copied, 2+ = extra; >=8 = failure
+    return result.returncode < 8
+
+
 def replace_tree(src: Path, dst: Path, label: str) -> None:
     if not src.is_dir():
         print(f'  skip {label}: {src} not found')
         return
     unlock_tree(dst)
+    if _robocopy_mirror(src, dst):
+        print(f'  {label}: mirrored (robocopy)')
+        return
     if dst.exists():
         shutil.rmtree(dst)
     shutil.copytree(src, dst)
@@ -73,6 +89,9 @@ def replace_tree(src: Path, dst: Path, label: str) -> None:
 def copy_tree(src: Path, dst: Path, label: str) -> None:
     if not src.is_dir():
         print(f'  skip {label}: {src} not found')
+        return
+    if _robocopy_mirror(src, dst):
+        print(f'  {label}: mirrored (robocopy)')
         return
     if dst.exists():
         shutil.rmtree(dst)
@@ -104,10 +123,25 @@ def copy_file(src: Path, dst: Path, label: str) -> None:
     print(f'  {label}: copied')
 
 
+def resolve_instance() -> Path | None:
+    versions = MC / 'versions'
+    for name in VERSION_CANDIDATES:
+        inst = versions / name
+        if inst.is_dir():
+            return inst
+    return None
+
+
 def main() -> int:
-    print('Preparing assets and SNBT...')
+    instance = resolve_instance()
+    if instance is None:
+        print('ERROR: TLauncher instance not found. Expected one of:')
+        for name in VERSION_CANDIDATES:
+            print(f'  {MC / "versions" / name}')
+        return 1
+
+    print('Preparing assets...')
     run_script('generate_cooptech_assets.py')
-    run_script('quests_build_v1.py')
 
     tex_dir = OVERRIDES / 'kubejs' / 'assets' / 'kubejs' / 'textures' / 'item'
     png_count = len(list(tex_dir.glob('*.png')))
@@ -116,63 +150,103 @@ def main() -> int:
         return 1
     print(f'  textures OK: {png_count} PNG in repo\n')
 
-    if not INSTANCE.is_dir():
-        print(f'ERROR: TLauncher instance not found:\n  {INSTANCE}')
+    if not instance.is_dir():
+        print(f'ERROR: TLauncher instance not found:\n  {instance}')
         return 1
 
-    print(f'CoopTech sync -> {INSTANCE}\n')
+    print(f'CoopTech sync -> {instance}\n')
 
     replace_tree(
         OVERRIDES / 'config' / 'ftbquests',
-        INSTANCE / 'config' / 'ftbquests',
+        instance / 'config' / 'ftbquests',
         'config/ftbquests',
     )
 
     copy_tree(
         OVERRIDES / 'kubejs',
-        INSTANCE / 'kubejs',
+        instance / 'kubejs',
         'kubejs',
     )
 
     copy_tree(
         OVERRIDES / 'resourcepacks' / 'CoopTechTheme',
-        INSTANCE / 'resourcepacks' / 'CoopTechTheme',
+        instance / 'resourcepacks' / 'CoopTechTheme',
         'resourcepacks/CoopTechTheme',
+    )
+
+    copy_tree(
+        OVERRIDES / 'shaderpacks',
+        instance / 'shaderpacks',
+        'shaderpacks',
     )
 
     merge_tree(
         OVERRIDES / 'defaultconfigs',
-        INSTANCE / 'defaultconfigs',
+        instance / 'defaultconfigs',
         'defaultconfigs',
     )
 
     merge_tree(
         OVERRIDES / 'data',
-        INSTANCE / 'data',
+        instance / 'data',
         'data',
     )
 
+    # KubeJS loads kubejs/data as a datapack; instance/data/ is not picked up by Forge.
+    cooptech_data = OVERRIDES / 'data' / 'cooptech'
+    if cooptech_data.is_dir():
+        merge_tree(
+            cooptech_data,
+            instance / 'kubejs' / 'data' / 'cooptech',
+            'kubejs/data/cooptech (from overrides/data)',
+        )
+
     merge_tree(
         OVERRIDES / 'datapacks',
-        INSTANCE / 'datapacks',
+        instance / 'datapacks',
         'datapacks',
     )
 
     copy_tree(
         OVERRIDES / 'patchouli_books',
-        INSTANCE / 'patchouli_books',
+        instance / 'patchouli_books',
         'patchouli_books',
     )
 
     copy_file(
         OVERRIDES / 'config' / 'ftbquests-client.snbt',
-        INSTANCE / 'config' / 'ftbquests-client.snbt',
+        instance / 'config' / 'ftbquests-client.snbt',
         'config/ftbquests-client.snbt',
     )
 
-    sync_mods_from_repo()
+    copy_file(
+        OVERRIDES / 'config' / 'oculus.properties',
+        instance / 'config' / 'oculus.properties',
+        'config/oculus.properties',
+    )
 
-    inst_tex = INSTANCE / 'kubejs' / 'assets' / 'kubejs' / 'textures' / 'item'
+    for stray in (instance / 'config' / 'ftbquests' / 'quests' / 'chapters').glob('*.snbt.snbt'):
+        stray.unlink(missing_ok=True)
+
+    legacy_main = [
+        'main_00_welcome.snbt',
+        'main_02_ch1_anchor.snbt',
+        'main_03_ch2_surface.snbt',
+        'main_04_ch3_flux.snbt',
+        'main_05_ch4_production.snbt',
+        'main_06_ch5_nano.snbt',
+        'main_07_ch6_finale.snbt',
+    ]
+    chapters_dir = instance / 'config' / 'ftbquests' / 'quests' / 'chapters'
+    for name in legacy_main:
+        stale = chapters_dir / name
+        if stale.is_file():
+            stale.unlink()
+            print(f'  removed stale chapter: {name}')
+
+    sync_mods_from_repo(instance)
+
+    inst_tex = instance / 'kubejs' / 'assets' / 'kubejs' / 'textures' / 'item'
     inst_png = len(list(inst_tex.glob('*.png')))
     print(f'  instance textures: {inst_png} PNG')
 
@@ -201,9 +275,9 @@ def cleanup_forbidden_mods(mods_dir: Path) -> None:
         print('  mods: no forbidden jars found')
 
 
-def sync_mods_from_repo() -> None:
+def sync_mods_from_repo(instance: Path) -> None:
     mods_src = ROOT / 'mods'
-    mods_dst = INSTANCE / 'mods'
+    mods_dst = instance / 'mods'
     cleanup_forbidden_mods(mods_dst)
     if not mods_src.is_dir():
         return

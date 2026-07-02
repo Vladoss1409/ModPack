@@ -1,0 +1,14 @@
+{
+  "name": "T4: энергия дракона",
+  "icon": "kubejs:journal_page_singularity_02",
+  "category": "patchouli:progress",
+  "advancement": "cooptech:journal/t4_lore_w2",
+  "secret": true,
+  "sortnum": 42,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Сила на пике$()$(br2)Инфузор, реактор, EMC, хаос-осколки — энергия дракона течёт через базу."
+    }
+  ]
+}

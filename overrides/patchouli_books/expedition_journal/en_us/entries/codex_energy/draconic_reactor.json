@@ -1,0 +1,28 @@
+{
+  "name": "Draconic — реактор и Chaos",
+  "icon": "draconicevolution:reactor_core",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Энергия дракона$()$(br2)Draconic Reactor — $(#DD55DD)вершина генерации$(). Ошибка в настройке = взрыв. Читай рецепт и stabilizer."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "draconicevolution:reactor_core",
+      "text": "$(#FFAA00)Reactor Core$(): сердце реактора. Обязательны stabilizers и правильная сборка."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "draconicevolution:chaos_shard",
+      "text": "$(#FFAA00)Chaos Shard$(): добыча на Chaos Island / Chaos Guardian. Нужен для awakened и chaotic tier."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Chaos Guardian$()$(br2)Босс DE — финал ветки. Готовь $(#FFAA00)draconic armor$(), зелья, кооп-роли: один танкует, второй бьёт.$(br2)Трофей — chaos shards для нексуса."
+    }
+  ],
+  "category": "patchouli:codex_energy",
+  "advancement": "cooptech:journal/t4_fusion",
+  "secret": true,
+  "sortnum": 9
+}

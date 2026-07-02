@@ -1,0 +1,29 @@
+{
+  "name": "Iron's Spells — магия",
+  "icon": "irons_spellbooks:arcane_essence",
+  "category": "patchouli:codex_branches",
+  "advancement": "cooptech:journal/codex_side_arcane",
+  "secret": true,
+  "sortnum": 13,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Зачем$()$(br2)Арканическая ветка — $(#DD55DD)заклинания$() в бою и на рейдах. Эссенция → руны → том."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "irons_spellbooks:inscription_table",
+      "text": "$(#FFAA00)Стол надписей$(): записываешь заклинания в том."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "irons_spellbooks:fire_rune",
+      "text": "$(#FFAA00)Руны стихий$(): огонь, лёд, молния — комбо с melee."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "irons_spellbooks:legendary_ink",
+      "text": "$(#FFAA00)Legendary Ink$() (финал): апгрейд маны и tier заклинаний."
+    }
+  ]
+}

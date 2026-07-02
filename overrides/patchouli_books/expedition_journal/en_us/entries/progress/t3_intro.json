@@ -1,0 +1,14 @@
+{
+  "name": "T3: порог AE2",
+  "icon": "kubejs:journal_page_matrix_00",
+  "category": "patchouli:progress",
+  "advancement": "cooptech:journal/t3_lore_intro",
+  "secret": true,
+  "sortnum": 30,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Сеть помнит всё$()$(br2)$(#FFAA00)Якорная матрица§r открыла $(#DD55DD)Applied Energistics 2§r. Первый шаг — $(#FFAA00)гравёр§r для процессоров.$(br2)$(italic)«Склад перестал быть местом — стал памятью.»$()"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "T2: готовность к сети",
+  "icon": "kubejs:journal_page_cell_03",
+  "category": "patchouli:progress",
+  "advancement": "cooptech:journal/t2_lore_w3",
+  "secret": true,
+  "sortnum": 23,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Перед матрицей$()$(br2)Осмий, вибрант, схемы — в ящиках. Чертёж $(#FFAA00)якорной матрицы$() пульсирует в блокноте."
+    }
+  ]
+}

@@ -1,14 +1,18 @@
 {
-  "name": "Apotheosis",
+  "name": "Апофеоз",
   "icon": "apotheosis:simple_reforging_table",
   "category": "patchouli:branches",
   "advancement": "cooptech:journal/side_apotheosis",
   "secret": true,
-  "sortnum": 6,
+  "sortnum": 7,
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(bold)Усиление лута$()$(br2)После Главы IV — перековка, гемы, спавнеры. Идеально после стабильного автокрафта."
+      "text": "$(bold)Апофеоз$()$(br2)Перековка снаряжения после T1. Столы, сигилы, гемы — оружие растёт с экспедицией."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Как проходить$()$(br2)Квесты идут цепочкой после рубежа главного тира. Описания — от первого лица, как записи в блокноте экспедиции.$(br2)$(italic)«Сайд не обязателен для якоря — но даёт силу и удобство.»$()"
     }
   ]
 }

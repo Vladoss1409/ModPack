@@ -1,0 +1,29 @@
+{
+  "name": "Powah — полная линия",
+  "icon": "powah:furnator_basic",
+  "category": "patchouli:codex_branches",
+  "advancement": "cooptech:journal/codex_side_powah",
+  "secret": true,
+  "sortnum": 7,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Зачем$()$(br2)Сайд проходит $(#FFAA00)все тиры Powah$(): furnator → nitro cell. Дополняет гайд T1 в «Энергия и машины»."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "powah:capacitor_hardened",
+      "text": "$(#FFAA00)Hardened → Niotic$(): каждый тир ×ёмкости. Строй башню батарей."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "powah:crystal_blazing",
+      "text": "$(#FFAA00)Blazing Crystal$(): топливо/компонент высоких тиров."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "powah:energy_cell_nitro",
+      "text": "$(#FFAA00)Nitro Energy Cell$() (финал): огромный буфер RF для Draconic/Reactor."
+    }
+  ]
+}

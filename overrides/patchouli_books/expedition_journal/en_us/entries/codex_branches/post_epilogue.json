@@ -1,0 +1,24 @@
+{
+  "name": "Фінальний облік модів",
+  "icon": "kubejs:reality_anchor_core",
+  "category": "patchouli:codex_branches",
+  "advancement": "cooptech:journal/codex_side_post_epilogue",
+  "secret": true,
+  "sortnum": 20,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Епілог$()$(br2)Збірка вершин модпаку: §eAE2 16k§r, §eProjectE tablet§r, §eDraconic chaotic§r, §enext_ae core§r, маяк над лагерем."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "kubejs:reality_anchor_core",
+      "text": "$(#FFAA00)Ядро якоря$(): символ завершення основної лінії."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "projecte:transmutation_tablet",
+      "text": "$(#FFAA00)EMC-планшет$(): пік ProjectE — трансмутація в долоні."
+    }
+  ]
+}

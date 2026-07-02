@@ -1,0 +1,14 @@
+{
+  "name": "T5: готовность к ядру",
+  "icon": "kubejs:journal_page_nexus_03",
+  "category": "patchouli:progress",
+  "advancement": "cooptech:journal/t5_lore_w3",
+  "secret": true,
+  "sortnum": 53,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Перед ритуалом$()$(br2)Сборка якоря, кооп-синхрон, стабилизация — всё готово к рождению ядра."
+    }
+  ]
+}

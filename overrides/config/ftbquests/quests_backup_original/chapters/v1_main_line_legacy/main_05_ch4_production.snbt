@@ -1,0 +1,521 @@
+{
+	default_quest_disable_jei: true
+	default_hide_dependency_lines: false
+	progression_mode: "linear"
+	hide_quest_until_deps_complete: false
+	hide_quest_details_until_startable: true
+	default_quest_shape: "circle"
+	filename: "main_05_ch4_production"
+	group: "B100000000000002"
+	icon: { count: 1, id: "mekanism:metallurgic_infuser" }
+	id: "A500000000000000"
+	order_index: 4
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["A401000000000006"]
+			icon: { count: 1, id: "mekanism:metallurgic_infuser" }
+			id: "A501000000000001"
+			disable_jei: true
+			shape: "gear"
+			size: 1.3d
+			tasks: [
+				{ id: "T501000000000001", item: "mekanism:metallurgic_infuser", title: "Mekanism Core", type: "item" }
+			]
+			title: "Mekanism Core"
+			x: 0d
+			y: -2d
+		},
+		{
+			dependencies: ["A501000000000001"]
+			icon: { count: 1, id: "mekanism:enrichment_chamber" }
+			id: "A501000000000002"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T501000000000002", item: "mekanism:enrichment_chamber", title: "Enrichment", type: "item" }
+			]
+			title: "Enrichment"
+			x: -3d
+			y: 0d
+		},
+		{
+			dependencies: ["A501000000000001"]
+			icon: { count: 1, id: "mekanism:crusher" }
+			id: "A501000000000003"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T501000000000003", item: "mekanism:crusher", title: "Crusher", type: "item" }
+			]
+			title: "Crusher"
+			x: -1d
+			y: 0d
+		},
+		{
+			dependencies: ["A501000000000001"]
+			icon: { count: 1, id: "mekanism:energized_smelter" }
+			id: "A501000000000004"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T501000000000004", item: "mekanism:energized_smelter", title: "Energized Smelter", type: "item" }
+			]
+			title: "Energized Smelter"
+			x: 1d
+			y: 0d
+		},
+		{
+			dependencies: ["A501000000000001"]
+			icon: { count: 1, id: "mekanism:basic_smelting_factory" }
+			id: "A501000000000005"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T501000000000005", item: "mekanism:basic_smelting_factory", title: "Basic Factory", type: "item" }
+			]
+			title: "Basic Factory"
+			x: 3d
+			y: 0d
+		},
+		{
+			dependencies: ["A501000000000002", "A501000000000003", "A501000000000004", "A501000000000005"]
+			min_required_dependencies: 2
+			icon: { count: 1, id: "kubejs:quest_gate" }
+			id: "A501000000000006"
+			disable_jei: true
+			shape: "diamond"
+			subtitle: "Gate"
+			tasks: [
+				{ id: "T501000000000006", title: "Рубеж пройден", type: "checkmark" }
+			]
+			title: "Mek Gate I"
+			x: 0d
+			y: 2d
+		},
+		{
+			dependencies: ["A501000000000006"]
+			icon: { count: 1, id: "mekanism:ingot_steel" }
+			id: "A501000000000007"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 32, id: "T501000000000007", item: "mekanism:ingot_steel", title: "Steel Ingot", type: "item" }
+			]
+			title: "Steel Ingot"
+			x: -3d
+			y: 4d
+		},
+		{
+			dependencies: ["A501000000000006"]
+			icon: { count: 1, id: "mekanism:ingot_osmium" }
+			id: "A501000000000008"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 16, id: "T501000000000008", item: "mekanism:ingot_osmium", title: "Osmium", type: "item" }
+			]
+			title: "Osmium"
+			x: -1d
+			y: 4d
+		},
+		{
+			dependencies: ["A501000000000006"]
+			icon: { count: 1, id: "mekanism:basic_control_circuit" }
+			id: "A501000000000009"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 8, id: "T501000000000009", item: "mekanism:basic_control_circuit", title: "Basic Control", type: "item" }
+			]
+			title: "Basic Control"
+			x: 1d
+			y: 4d
+		},
+		{
+			dependencies: ["A501000000000006"]
+			icon: { count: 1, id: "mekanism:basic_pressurized_tube" }
+			id: "A501000000000010"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 16, id: "T501000000000010", item: "mekanism:basic_pressurized_tube", title: "Pressurized Tube", type: "item" }
+			]
+			title: "Pressurized Tube"
+			x: 3d
+			y: 4d
+		},
+		{
+			dependencies: ["A501000000000007", "A501000000000008", "A501000000000009", "A501000000000010"]
+			min_required_dependencies: 2
+			icon: { count: 1, id: "kubejs:quest_gate" }
+			id: "A501000000000011"
+			disable_jei: true
+			shape: "diamond"
+			subtitle: "Gate"
+			tasks: [
+				{ id: "T501000000000011", title: "Рубеж пройден", type: "checkmark" }
+			]
+			title: "Mek Gate II"
+			x: 0d
+			y: 6d
+		},
+		{
+			dependencies: ["A501000000000011"]
+			icon: { count: 1, id: "mekanism:digital_miner" }
+			id: "A501000000000012"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T501000000000012", item: "mekanism:digital_miner", title: "Digital Miner", type: "item" }
+			]
+			title: "Digital Miner"
+			x: -2d
+			y: 8d
+		},
+		{
+			dependencies: ["A501000000000011"]
+			icon: { count: 1, id: "mekanism:advanced_factory" }
+			id: "A501000000000013"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T501000000000013", item: "mekanism:advanced_factory", title: "Advanced Factory", type: "item" }
+			]
+			title: "Advanced Factory"
+			x: 2d
+			y: 8d
+		},
+		{
+			dependencies: ["A501000000000011"]
+			icon: { count: 1, id: "enderio:conductive_alloy_ingot" }
+			id: "A501000000000014"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 32, id: "T501000000000014", item: "enderio:conductive_alloy_ingot", title: "EnderIO Alloy", type: "item" }
+			]
+			title: "EnderIO Alloy"
+			x: -3d
+			y: 10d
+		},
+		{
+			dependencies: ["A501000000000011"]
+			icon: { count: 1, id: "enderio:basic_capacitor_bank" }
+			id: "A501000000000015"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T501000000000015", item: "enderio:basic_capacitor_bank", title: "Capacitor Bank", type: "item" }
+			]
+			title: "Capacitor Bank"
+			x: 3d
+			y: 10d
+		},
+		{
+			dependencies: ["A501000000000011"]
+			icon: { count: 1, id: "enderio:sag_mill" }
+			id: "A501000000000016"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T501000000000016", item: "enderio:sag_mill", title: "SAG Mill", type: "item" }
+			]
+			title: "SAG Mill"
+			x: -1d
+			y: 10d
+		},
+		{
+			dependencies: ["A501000000000011"]
+			icon: { count: 1, id: "enderio:alloy_smelter" }
+			id: "A501000000000017"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T501000000000017", item: "enderio:alloy_smelter", title: "Alloy Smelter", type: "item" }
+			]
+			title: "Alloy Smelter"
+			x: 1d
+			y: 10d
+		},
+		{
+			dependencies: ["A501000000000012", "A501000000000013", "A501000000000014", "A501000000000015", "A501000000000016", "A501000000000017"]
+			min_required_dependencies: 3
+			icon: { count: 1, id: "kubejs:quest_gate" }
+			id: "A501000000000018"
+			disable_jei: true
+			shape: "diamond"
+			subtitle: "Gate"
+			tasks: [
+				{ id: "T501000000000018", title: "Рубеж пройден", type: "checkmark" }
+			]
+			title: "Production Gate"
+			x: 0d
+			y: 12d
+		},
+		{
+			dependencies: ["A501000000000018"]
+			icon: { count: 1, id: "ae2:inscriber" }
+			id: "A501000000000019"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T501000000000019", item: "ae2:inscriber", title: "AE2 Inscriber", type: "item" }
+			]
+			title: "AE2 Inscriber"
+			x: -3d
+			y: 14d
+		},
+		{
+			dependencies: ["A501000000000018"]
+			icon: { count: 1, id: "ae2:calculation_processor_press" }
+			id: "A501000000000020"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T501000000000020", item: "ae2:calculation_processor_press", title: "AE2 Press", type: "item" }
+			]
+			title: "AE2 Press"
+			x: -1d
+			y: 14d
+		},
+		{
+			dependencies: ["A501000000000018"]
+			icon: { count: 1, id: "mekanism:qio_drive_array" }
+			id: "A501000000000021"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T501000000000021", item: "mekanism:qio_drive_array", title: "Mek QIO", type: "item" }
+			]
+			title: "Mek QIO"
+			x: 1d
+			y: 14d
+		},
+		{
+			dependencies: ["A501000000000018"]
+			icon: { count: 1, id: "enderio:item_conduit" }
+			id: "A501000000000022"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 32, id: "T501000000000022", item: "enderio:item_conduit", title: "EnderIO Conduit", type: "item" }
+			]
+			title: "EnderIO Conduit"
+			x: 3d
+			y: 14d
+		},
+		{
+			dependencies: ["A501000000000019", "A501000000000020", "A501000000000021", "A501000000000022"]
+			min_required_dependencies: 2
+			icon: { count: 1, id: "kubejs:quest_gate" }
+			id: "A501000000000023"
+			disable_jei: true
+			shape: "diamond"
+			subtitle: "Gate"
+			tasks: [
+				{ id: "T501000000000023", title: "Рубеж пройден", type: "checkmark" }
+			]
+			title: "Network Gate"
+			x: 0d
+			y: 16d
+		},
+		{
+			dependencies: ["A501000000000023"]
+			icon: { count: 1, id: "mekanism:reactor_glass" }
+			id: "A501000000000024"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 16, id: "T501000000000024", item: "mekanism:reactor_glass", title: "Mek Reactor", type: "item" }
+			]
+			title: "Mek Reactor"
+			x: -2d
+			y: 18d
+		},
+		{
+			dependencies: ["A501000000000023"]
+			icon: { count: 1, id: "mekanism:induction_cell" }
+			id: "A501000000000025"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T501000000000025", item: "mekanism:induction_cell", title: "Induction Matrix", type: "item" }
+			]
+			title: "Induction Matrix"
+			x: 2d
+			y: 18d
+		},
+		{
+			dependencies: ["A501000000000024", "A501000000000025"]
+			min_required_dependencies: 1
+			icon: { count: 1, id: "ae2:controller" }
+			id: "A501000000000026"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T501000000000026", item: "ae2:controller", title: "AE2 Controller", type: "item" }
+			]
+			title: "AE2 Controller"
+			x: 0d
+			y: 20d
+		},
+		{
+			dependencies: ["A501000000000026"]
+			icon: { count: 1, id: "kubejs:quest_gate" }
+			id: "A501000000000027"
+			disable_jei: true
+			shape: "diamond"
+			subtitle: "Gate"
+			tasks: [
+				{ id: "T501000000000027", title: "Рубеж пройден", type: "checkmark" }
+			]
+			title: "Mek Gate III"
+			x: 0d
+			y: 22d
+		},
+		{
+			dependencies: ["A501000000000027"]
+			icon: { count: 1, id: "mekanism:ultimate_factory" }
+			id: "A501000000000028"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T501000000000028", item: "mekanism:ultimate_factory", title: "Ultimate Factory", type: "item" }
+			]
+			title: "Ultimate Factory"
+			x: -2d
+			y: 24d
+		},
+		{
+			dependencies: ["A501000000000027"]
+			icon: { count: 1, id: "mekanism:basic_energy_cube" }
+			id: "A501000000000029"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T501000000000029", item: "mekanism:basic_energy_cube", title: "Creative-ish Cell", type: "item" }
+			]
+			title: "Creative-ish Cell"
+			x: 2d
+			y: 24d
+		},
+		{
+			dependencies: ["A501000000000028", "A501000000000029"]
+			min_required_dependencies: 1
+			icon: { count: 1, id: "mekanism:teleportation_core" }
+			id: "A501000000000030"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T501000000000030", item: "mekanism:teleportation_core", title: "Production Hub", type: "item" }
+			]
+			title: "Production Hub"
+			x: 0d
+			y: 26d
+		},
+		{
+			dependencies: ["A501000000000030"]
+			icon: { count: 1, id: "apotheosis:simple_reforging_table" }
+			id: "A501000000000031"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T501000000000031", item: "apotheosis:simple_reforging_table", title: "Apotheosis Altar", type: "item" }
+			]
+			title: "Apotheosis Altar"
+			x: -2d
+			y: 28d
+		},
+		{
+			dependencies: ["A501000000000030"]
+			icon: { count: 1, id: "apotheosis:ender_lead" }
+			id: "A501000000000032"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T501000000000032", item: "apotheosis:ender_lead", title: "Spawner", type: "item" }
+			]
+			title: "Spawner"
+			x: 2d
+			y: 28d
+		},
+		{
+			dependencies: ["A501000000000031", "A501000000000032"]
+			min_required_dependencies: 1
+			icon: { count: 1, id: "minecraft:dragon_head" }
+			id: "A501000000000033"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T501000000000033", item: "minecraft:dragon_head", title: "Boss Trophy", type: "item" }
+			]
+			title: "Boss Trophy"
+			x: 0d
+			y: 30d
+		},
+		{
+			dependencies: ["A501000000000033"]
+			icon: { count: 1, id: "kubejs:quest_gate" }
+			id: "A501000000000034"
+			disable_jei: true
+			shape: "diamond"
+			subtitle: "Gate"
+			tasks: [
+				{ id: "T501000000000034", title: "Рубеж пройден", type: "checkmark" }
+			]
+			title: "Рубеж IV"
+			x: 0d
+			y: 32d
+		},
+		{
+			dependencies: ["A501000000000034"]
+			icon: { count: 1, id: "kubejs:anchor_shard_05" }
+			id: "A501000000000035"
+			disable_jei: true
+			rewards: [
+				{ id: "R501000000000035", item: "kubejs:journal_page_05", type: "item" }
+				{ id: "R501000000000036", type: "xp", xp: 100 }
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [
+				{ id: "T501000000000035", item: "kubejs:anchor_shard_05", title: "Фрагмент: Production", type: "item" }
+			]
+			title: "Фрагмент: Production"
+			x: 0d
+			y: 34d
+		}
+	]
+	subtitle: [
+		"~20 ч"
+	]
+	title: "Глава 4: Промышленный узел"
+}

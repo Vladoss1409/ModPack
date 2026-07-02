@@ -1,0 +1,7 @@
+{
+  "name": "Сайд-ветки",
+  "description": "Гайды по опциональным веткам Кодекса — углубление в моды вне главного тира.",
+  "icon": "minecraft:iron_bars",
+  "parent": "patchouli:codex",
+  "sortnum": 3
+}

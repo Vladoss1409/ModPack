@@ -1,0 +1,33 @@
+{
+  "name": "Thermal — автоматизация",
+  "icon": "thermal:machine_pulverizer",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Зачем$()$(br2)После рамы и печи — $(#FFAA00)цепочка руды$(): дробилка → плавка → слиток. Thermal даёт $(#DD55DD)×2 выход$() из руды и автоматизацию через сервоприводы."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "thermal:machine_pulverizer",
+      "text": "$(#FFAA00)Дробилка (Pulverizer)$(): руда → пыль/слиток. Основа автоплавки. Питай RF, вывод — в печь или сундук."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "thermal:redstone_servo",
+      "text": "$(#FFAA00)Сервопривод$(): автоматический ввод/вывод предметов в машину. Ставится в слоты машины — настраивается фильтром."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "thermal:rf_coil",
+      "text": "$(#FFAA00)RF-катушка$(): передаёт энергию между соседними блоками Thermal без проводов. Соедини печь ↔ дробилку ↔ динамо."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Мини-линия$()$(br2)$(li)Динамо жжёт топливо → RF в машины.$(li)Серво подаёт руду в дробилку.$(li)Вторая серво выводит пыль в печь.$(li)Слитки — в ящик или ME.$(br2)$(bold)Кооп:$() один строит линию, второй копает и подвозит руду."
+    }
+  ],
+  "category": "patchouli:codex_energy",
+  "advancement": "cooptech:journal/t1_thermal",
+  "secret": true,
+  "sortnum": 1
+}

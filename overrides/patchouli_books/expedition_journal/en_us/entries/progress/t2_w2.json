@@ -1,0 +1,14 @@
+{
+  "name": "T2: энергоузел",
+  "icon": "kubejs:journal_page_cell_02",
+  "category": "patchouli:progress",
+  "advancement": "cooptech:journal/t2_lore_w2",
+  "secret": true,
+  "sortnum": 22,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Энергия и переработка$()$(br2)Дробитель, куб, сплавная печь, Flux — контур держится. Второй рубеж T2 в журнале."
+    }
+  ]
+}

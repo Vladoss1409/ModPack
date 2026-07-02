@@ -1,0 +1,211 @@
+{
+	default_quest_disable_jei: true
+	default_hide_dependency_lines: false
+	progression_mode: "default"
+	hide_quest_until_deps_complete: false
+	hide_quest_details_until_startable: true
+	default_quest_shape: "circle"
+	filename: "side_post_bossfarm"
+	group: "B100000000000002"
+	icon: { count: 1, id: "cataclysm:void_eye" }
+	id: "A902C00000000000"
+	order_index: 63
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+			"§c§lЗаблокировано.§r"
+			""
+			"§7Нужно:"
+			"§e1.§r Финал §lT5 · Схождение§r — §eЯкорь реальности§r"
+			"§e2.§r Ветка хаба §e«Бос-фарм якоря»§r"
+			""
+			"После этого откроется §dБос-фарм якоря§r."
+			]
+			dependencies: ["5225A0000000001A"]
+			icon: { count: 1, id: "kubejs:quest_side_lock" }
+			id: "A902000000000000"
+			disable_jei: true
+			shape: "hexagon"
+			size: 1.2d
+			tasks: [
+				{ id: "T902000000000000", title: "Финал T5 + «Бос-фарм якоря»", type: "checkmark" }
+			]
+			title: "Якір не стабілізовано"
+			x: 0.0d
+			y: 0.0d
+		},
+		{
+			description: [
+			"§l[ Бос-фарм якоря ]§r"
+			""
+			"§7Якір притягує босів. §dCataclysm§r і §dMowzie's§r —"
+			"§7фарм трофеїв для двох після фіналу."
+			""
+			"Два боси — два трофеї. Кооп ділить ризик."
+			""
+			"§o§8«Зірка холодна — перемога гаряча.»§r"
+			]
+			dependencies: ["A902000000000000"]
+			icon: { count: 1, id: "minecraft:nether_star" }
+			id: "A902000000000001"
+			disable_jei: true
+			rewards: [
+				{ id: "R902000000000801", item: "minecraft:nether_star", type: "item" }
+				{ id: "R902000000000901", type: "xp", xp: 29 }
+			]
+			shape: "circle"
+			tags: ["branch_explore"]
+			tasks: [
+				{ count: 2, id: "T902000000000001", item: "minecraft:nether_star", title: "Зібрати зірки Незера", type: "item" }
+			]
+			title: "Зірки Незера"
+			x: 0.0d
+			y: 2.5d
+		},
+		{
+			description: [
+			"Void eye — мітка Cataclysm."
+			""
+			"§o§8«Око дивиться — я дивлюсь у відповідь.»§r"
+			]
+			dependencies: ["A902000000000000", "A902000000000001"]
+			icon: { count: 1, id: "cataclysm:void_eye" }
+			id: "A902000000000002"
+			disable_jei: true
+			rewards: [
+				{ id: "R902000000000802", item: "cataclysm:void_eye", type: "item" }
+				{ id: "R902000000000902", type: "xp", xp: 29 }
+			]
+			shape: "circle"
+			tags: ["branch_explore"]
+			tasks: [
+				{ id: "T902000000000002", item: "cataclysm:void_eye", title: "Добути око пустоти", type: "item" }
+			]
+			title: "Око пустоти"
+			x: 0.0d
+			y: 4.5d
+		},
+		{
+			description: [
+			"Wroughtnaut — трофей Mowzie."
+			""
+			"§o§8«Метал боса на моїй голові.»§r"
+			]
+			dependencies: ["A902000000000000", "A902000000000002"]
+			icon: { count: 1, id: "mowziesmobs:wrought_helmet" }
+			id: "A902000000000003"
+			disable_jei: true
+			rewards: [
+				{ id: "R902000000000803", item: "mowziesmobs:wrought_helmet", type: "item" }
+				{ id: "R902000000000903", type: "xp", xp: 29 }
+			]
+			shape: "circle"
+			tags: ["branch_explore"]
+			tasks: [
+				{ id: "T902000000000003", item: "mowziesmobs:wrought_helmet", title: "Добути шолом кованого", type: "item" }
+			]
+			title: "Шолом кованого"
+			x: 0.0d
+			y: 6.5d
+		},
+		{
+			description: [
+			"Ріг — трофей сильного боса."
+			""
+			"§o§8«Ріг важкий — перемога важча.»§r"
+			]
+			dependencies: ["A902000000000000", "A902000000000003"]
+			icon: { count: 1, id: "cataclysm:monstrous_horn" }
+			id: "A902000000000004"
+			disable_jei: true
+			rewards: [
+				{ id: "R902000000000804", item: "cataclysm:monstrous_horn", type: "item" }
+				{ id: "R902000000000904", type: "xp", xp: 29 }
+			]
+			shape: "circle"
+			tags: ["branch_explore"]
+			tasks: [
+				{ id: "T902000000000004", item: "cataclysm:monstrous_horn", title: "Добути монструозний ріг", type: "item" }
+			]
+			title: "Монструозний ріг"
+			x: 0.0d
+			y: 8.5d
+		},
+		{
+			description: [
+			"Голова Енд-дракона — символ фарму."
+			""
+			"§o§8«Трофей на стіні лагеря.»§r"
+			]
+			dependencies: ["A902000000000000", "A902000000000004"]
+			icon: { count: 1, id: "minecraft:dragon_head" }
+			id: "A902000000000005"
+			disable_jei: true
+			rewards: [
+				{ id: "R902000000000805", item: "minecraft:dragon_head", type: "item" }
+				{ id: "R902000000000905", type: "xp", xp: 29 }
+			]
+			shape: "circle"
+			tags: ["branch_explore"]
+			tasks: [
+				{ id: "T902000000000005", item: "minecraft:dragon_head", title: "Добути голову дракона", type: "item" }
+			]
+			title: "Голова дракона"
+			x: 0.0d
+			y: 10.5d
+		},
+		{
+			description: [
+			"Black steel — метал для фінального зброя."
+			""
+			"§o§8«Сталь темна — удар гучний.»§r"
+			]
+			dependencies: ["A902000000000000", "A902000000000005"]
+			icon: { count: 1, id: "cataclysm:black_steel_ingot" }
+			id: "A902000000000006"
+			disable_jei: true
+			rewards: [
+				{ id: "R902000000000806", item: "cataclysm:black_steel_ingot", count: 5, type: "item" }
+				{ id: "R902000000000906", type: "xp", xp: 29 }
+			]
+			shape: "circle"
+			tags: ["branch_explore"]
+			tasks: [
+				{ count: 8, id: "T902000000000006", item: "cataclysm:black_steel_ingot", title: "Виплавити чорну сталь", type: "item" }
+			]
+			title: "Чорна сталь"
+			x: 0.0d
+			y: 12.5d
+		},
+		{
+			description: [
+			"The Annihilator — вершина полювання."
+			""
+			"§o§8«Зброя гуде — боси знають ім'я.»§r"
+			]
+			dependencies: ["A902000000000000", "A902000000000006"]
+			icon: { count: 1, id: "cataclysm:the_annihilator" }
+			id: "A902000000000007"
+			disable_jei: true
+			rewards: [
+				{ id: "R902000000000807", item: "cataclysm:the_annihilator", type: "item" }
+				{ id: "R902000000001507", item: "kubejs:reliquary_convergence", type: "item" }
+				{ id: "R902000000000907", type: "xp", xp: 49 }
+			]
+			shape: "pentagon"
+			size: 1.3d
+			tags: ["branch_explore"]
+			tasks: [
+				{ id: "T902000000000007", item: "cataclysm:the_annihilator", title: "Сковати The Annihilator", type: "item" }
+			]
+			title: "Фінал фарму"
+			x: 0.0d
+			y: 14.5d
+		},
+	]
+	subtitle: [
+		"Після якоря · CoopTech"
+	]
+	title: "Бос-фарм якоря"
+}

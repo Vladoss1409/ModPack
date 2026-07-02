@@ -1,14 +1,18 @@
 {
-  "name": "Silent Gear",
+  "name": "Ковка Silent Gear",
   "icon": "silentgear:pickaxe",
   "category": "patchouli:branches",
   "advancement": "cooptech:journal/side_silent_gear",
   "secret": true,
-  "sortnum": 7,
+  "sortnum": 8,
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(bold)Модульное снаряжение$()$(br2)После рубежа Главы V — шаблоны, чертежи, кастомные кирки и мечи."
+      "text": "$(bold)Ковка Silent Gear$()$(br2)Шаблоны и части после T1. Кирка и меч собираются из головки, связки и покрытия."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Как проходить$()$(br2)Квесты идут цепочкой после рубежа главного тира. Описания — от первого лица, как записи в блокноте экспедиции.$(br2)$(italic)«Сайд не обязателен для якоря — но даёт силу и удобство.»$()"
     }
   ]
 }

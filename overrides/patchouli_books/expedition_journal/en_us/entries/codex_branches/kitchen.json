@@ -1,0 +1,29 @@
+{
+  "name": "Полевая кухня — пайки для рейдов",
+  "icon": "farmersdelight:cooking_pot",
+  "category": "patchouli:codex_branches",
+  "advancement": "cooptech:journal/codex_side_kitchen",
+  "secret": true,
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Зачем$()$(br2)Базовая кухня T0 — в разделе «Лагерь». Эта ветка — $(#FFAA00)продвинутые блюда$() и запасы для длинных рейдов и боссов."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "farmersdelight:roast_chicken_block",
+      "text": "$(#FFAA00)Праздничные блюда$() (жареная курица, пирог): дают сильные баффы на группу. Готовь блоками — делите порции."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "minecraft:golden_carrot",
+      "text": "$(#FFAA00)Золотая морковь$(): must-have перед босс-файтами. Кооп: один варит, второй тащит морковь и золото."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "farmersdelight:rich_soil",
+      "text": "$(#FFAA00)Богатая почва$() (финал ветки): ускоряет грядки — кухня сама восполняет ингредиенты."
+    }
+  ]
+}

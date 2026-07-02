@@ -1,0 +1,18 @@
+{
+  "name": "T1: автоматизация руды",
+  "icon": "kubejs:journal_page_spark_02",
+  "category": "patchouli:progress",
+  "advancement": "cooptech:journal/t1_lore_w2",
+  "secret": true,
+  "sortnum": 12,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Руда течёт сама$()$(br2)RF-катушки, сервоприводы, корпус Powah — связал машины в один контур. Руда больше не лежит в сундуках «на потом».$(br2)Второй рубеж T1 закрыт."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Следующий шаг$()$(br2)Сплавы, стабильность, запас энергии — подготовка к $(#FFAA00)якорной ячейке$().$(br2)$(italic)«Руки освободились — голова занята чертежами.»$()"
+    }
+  ]
+}

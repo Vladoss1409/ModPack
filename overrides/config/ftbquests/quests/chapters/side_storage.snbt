@@ -6,10 +6,10 @@
 	hide_quest_details_until_startable: true
 	default_quest_shape: "circle"
 	filename: "side_storage"
-	group: "B100000000000005"
+	group: "B100000000000002"
 	icon: { count: 1, id: "storagedrawers:controller" }
 	id: "A809000000000000"
-	order_index: 1
+	order_index: 12
 	quest_links: [ ]
 	quests: [
 		{
@@ -17,7 +17,7 @@
 			"§dСклад экспедиции§r — ветка открыта основной линией."
 			"Следующие узлы появятся по цепочке зависимостей."
 			]
-			dependencies: ["A201000000000002"]
+			dependencies: ["5217A00000000011"]
 			icon: { count: 1, id: "storagedrawers:oak_full_drawers_1" }
 			id: "A809000000000001"
 			disable_jei: true

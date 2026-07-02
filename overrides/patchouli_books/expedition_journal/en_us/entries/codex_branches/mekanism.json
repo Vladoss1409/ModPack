@@ -1,0 +1,29 @@
+{
+  "name": "Mekanism — полный завод",
+  "icon": "mekanism:metallurgic_infuser",
+  "category": "patchouli:codex_branches",
+  "advancement": "cooptech:journal/codex_side_mekanism",
+  "secret": true,
+  "sortnum": 9,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Зачем$()$(br2)Сайд проходит $(#FFAA00)всю рудную линию$() Mek до телепорта. Идеален, если главная T2 идёт через EIO/Flux."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "mekanism:basic_smelting_factory",
+      "text": "$(#FFAA00)Factory$(): 3 операции параллельно — ×3 throughput."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "mekanism:digital_miner",
+      "text": "$(#FFAA00)Digital Miner$(): карьер в чанке. Питай FE, фильтруй руду."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "mekanism:teleportation_core",
+      "text": "$(#FFAA00)Teleportation Core$() (финал): телепорты предметов/игроков."
+    }
+  ]
+}

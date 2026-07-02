@@ -1,0 +1,122 @@
+[
+  {
+    "quest": "A802000000000001",
+    "adv": "codex_side_kitchen",
+    "name": "Полевая кухня — пайки для рейдов",
+    "side": "side_kitchen"
+  },
+  {
+    "quest": "A809000000000001",
+    "adv": "codex_side_storage",
+    "name": "Склад — ящики и бочки",
+    "side": "side_storage"
+  },
+  {
+    "quest": "A801000000000001",
+    "adv": "codex_side_thermal",
+    "name": "Thermal — полный контур",
+    "side": "side_thermal"
+  },
+  {
+    "quest": "A813000000000001",
+    "adv": "codex_side_bestiary",
+    "name": "Разведка и бестиарий",
+    "side": "side_bestiary"
+  },
+  {
+    "quest": "A810000000000001",
+    "adv": "codex_side_immersive",
+    "name": "Immersive Engineering",
+    "side": "side_immersive"
+  },
+  {
+    "quest": "A815000000000001",
+    "adv": "codex_side_twilight",
+    "name": "Twilight Forest",
+    "side": "side_twilight"
+  },
+  {
+    "quest": "A814000000000001",
+    "adv": "codex_side_powah",
+    "name": "Powah — полная линия",
+    "side": "side_powah"
+  },
+  {
+    "quest": "A804000000000001",
+    "adv": "codex_side_flux",
+    "name": "Flux — полная сеть",
+    "side": "side_flux"
+  },
+  {
+    "quest": "A811000000000001",
+    "adv": "codex_side_mekanism",
+    "name": "Mekanism — полный завод",
+    "side": "side_mekanism"
+  },
+  {
+    "quest": "A812000000000001",
+    "adv": "codex_side_enderio",
+    "name": "Ender IO — кондуиты",
+    "side": "side_enderio"
+  },
+  {
+    "quest": "A805000000000001",
+    "adv": "codex_side_network",
+    "name": "AE2 — углублённая сеть",
+    "side": "side_network"
+  },
+  {
+    "quest": "A806000000000001",
+    "adv": "codex_side_apotheosis",
+    "name": "Apotheosis — перековка",
+    "side": "side_apotheosis"
+  },
+  {
+    "quest": "A803000000000001",
+    "adv": "codex_side_arcane",
+    "name": "Iron's Spells — магия",
+    "side": "side_arcane"
+  },
+  {
+    "quest": "A816000000000001",
+    "adv": "codex_side_relics",
+    "name": "Relics — артефакты",
+    "side": "side_relics"
+  },
+  {
+    "quest": "A807000000000001",
+    "adv": "codex_side_silent_gear",
+    "name": "Silent Gear — кастомные инструменты",
+    "side": "side_silent_gear"
+  },
+  {
+    "quest": "A808000000000001",
+    "adv": "codex_side_draconic",
+    "name": "Draconic — сайд-ветка",
+    "side": "side_draconic"
+  },
+  {
+    "quest": "A817000000000001",
+    "adv": "codex_side_cataclysm",
+    "name": "Cataclysm — боссы",
+    "side": "side_cataclysm"
+  },
+  {
+    "quest": "A901000000000001",
+    "adv": "codex_side_post_caves",
+    "name": "Alex's Caves — глибина",
+    "side": "side_post_caves"
+  },
+  {
+    "quest": "A902000000000001",
+    "adv": "codex_side_post_bossfarm",
+    "name": "Фарм босів після фіналу",
+    "side": "side_post_bossfarm"
+  },
+  {
+    "quest": "A903000000000001",
+    "adv": "codex_side_post_epilogue",
+    "name": "Фінальний облік модів",
+    "side": "side_post_epilogue"
+  }
+]

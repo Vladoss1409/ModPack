@@ -6,10 +6,10 @@
 	hide_quest_details_until_startable: true
 	default_quest_shape: "circle"
 	filename: "side_mekanism"
-	group: "B100000000000003"
+	group: "B100000000000002"
 	icon: { count: 1, id: "mekanism:metallurgic_infuser" }
 	id: "A811000000000000"
-	order_index: 4
+	order_index: 31
 	quest_links: [ ]
 	quests: [
 		{
@@ -17,7 +17,7 @@
 			"§dПромышленный узел§r — ветка открыта основной линией."
 			"Следующие узлы появятся по цепочке зависимостей."
 			]
-			dependencies: ["A501000000000001"]
+			dependencies: ["5222A00000000002"]
 			icon: { count: 1, id: "mekanism:metallurgic_infuser" }
 			id: "A811000000000001"
 			disable_jei: true
@@ -78,13 +78,13 @@
 		{
 			dependencies: ["A811000000000004"]
 			hide_quest_until_deps_visible: true
-			icon: { count: 1, id: "mekanism:basic_factory" }
+			icon: { count: 1, id: "mekanism:basic_smelting_factory" }
 			id: "A811000000000005"
 			disable_jei: true
 			shape: "circle"
 			size: 1.0d
 			tasks: [
-				{ id: "T811000000000005", item: "mekanism:basic_factory", title: "Basic Factory", type: "item" }
+				{ id: "T811000000000005", item: "mekanism:basic_smelting_factory", title: "Basic Factory", type: "item" }
 			]
 			title: "Basic Factory"
 			x: -3.0d

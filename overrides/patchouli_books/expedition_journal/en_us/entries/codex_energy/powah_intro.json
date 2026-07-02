@@ -1,0 +1,33 @@
+{
+  "name": "Powah — генерация и батареи",
+  "icon": "powah:furnator_basic",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Зачем$()$(br2)Thermal жрёт RF на машины — Powah даёт $(#FFAA00)генераторы$() и $(#DD55DD)батареи$(). Урановая руда — топливо для мощных установок."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "powah:uraninite",
+      "text": "$(#FFAA00)Урановая руда (Uraninite)$(): копай глубже железа. Перерабатывается в топливо для Furnator."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "powah:dielectric_casing",
+      "text": "$(#FFAA00)Диэлектрический корпус$(): основа всех блоков Powah — генераторов, батарей, кабелей."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "powah:battery_basic",
+      "text": "$(#FFAA00)Батарея$(): буфер RF на пиках нагрузки (дробилка + печь одновременно). Апгрейды: Hardened → Blazing → Nitro."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Схема$()$(br2)Furnator → кабель Powah → батарея → машины Thermal.$(br2)Один следит за генерацией, второй — за потреблением машин."
+    }
+  ],
+  "category": "patchouli:codex_energy",
+  "advancement": "cooptech:journal/t1_powah",
+  "secret": true,
+  "sortnum": 2
+}

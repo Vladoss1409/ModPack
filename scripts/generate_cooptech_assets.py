@@ -95,6 +95,20 @@ def core_texture() -> Image.Image:
     return img
 
 
+def anchor_gate_texture(core_hex: str, glow_hex: str) -> Image.Image:
+    """Glowing tier gem for anchor gate items (spark/cell/matrix/...)."""
+    img = Image.new("RGBA", (16, 16), (0, 0, 0, 0))
+    d = ImageDraw.Draw(img)
+    core = rgba(core_hex)
+    glow = rgba(glow_hex)
+    d.polygon([(8, 1), (14, 8), (8, 15), (2, 8)], fill=core, outline=glow)
+    d.polygon([(8, 4), (11, 8), (8, 12), (5, 8)], fill=glow)
+    d.line((8, 2, 8, 14), fill=(255, 255, 255, 150))
+    d.line((3, 8, 13, 8), fill=(255, 255, 255, 90))
+    d.point((8, 8), fill=rgba("#ffffff"))
+    return img
+
+
 def reliquary_texture(body: str, lid: str, gem: str) -> Image.Image:
     img = Image.new("RGBA", (16, 16), (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
@@ -374,6 +388,18 @@ def main() -> None:
     for i in range(13):
         name = f"journal_page_{str(i).zfill(2)}"
         write_model(name, "journal_page")
+    for name in (
+        "journal_page_rift",
+        "journal_page_camp",
+        "journal_page_home",
+        "journal_page_ready",
+        "journal_page_spark",
+        "journal_page_post_anchor",
+    ):
+        write_model(name, "journal_page")
+    for prefix in ("spark", "cell", "matrix", "singularity", "nexus"):
+        for i in range(5):
+            write_model(f"journal_page_{prefix}_{i:02d}", "journal_page")
 
     for i in range(1, 13):
         n = str(i).zfill(2)
@@ -385,6 +411,17 @@ def main() -> None:
 
     save(core_texture(), TEX_ITEM / "reality_anchor_core.png")
     write_model("reality_anchor_core")
+
+    anchor_gates = {
+        "anchor_spark": ("#FF9A2E", "#FFD27F"),
+        "anchor_cell": ("#3A7CFF", "#9ABEFF"),
+        "anchor_matrix": ("#2ED9D9", "#AEF0F0"),
+        "anchor_singularity": ("#9A3AFF", "#D0A0FF"),
+        "anchor_nexus": ("#FF3AD9", "#FFA0E8"),
+    }
+    for name, (core_hex, glow_hex) in anchor_gates.items():
+        save(anchor_gate_texture(core_hex, glow_hex), TEX_ITEM / f"{name}.png")
+        write_model(name)
 
     reliquaries = {
         "reliquary_field": ("#4a7c59", "#2d5a3d", "#7dff9a"),

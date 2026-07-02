@@ -1,0 +1,19 @@
+{
+  "name": "Финал T0: искра Якоря",
+  "icon": "kubejs:anchor_spark",
+  "category": "patchouli:progress",
+  "advancement": "cooptech:journal/t0_lore_spark",
+  "secret": true,
+  "priority": true,
+  "sortnum": 4,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Резонанс пойман$()$(br2)Печь раскалена, редстоун поёт, кремень бьёт. Разлом $(#DD55DD)вздрогнул$() и впервые ответил теплом. В ладони — $(#FFAA00)Якорная искра$().$(br2)С ней откроется $(#FFAA00)Машинная рама$() — порог первого тира."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Порог тира T1$()$(br2)$(#FFAA00)Якорная искра$() — рубеж T0 → T1. Впереди $(#FFAA00)Thermal$() и настоящая энергия.$(br2)$(italic)«Мир треснул. Мы — те, кто остался чинить его, строка за строкой.»$()"
+    }
+  ]
+}

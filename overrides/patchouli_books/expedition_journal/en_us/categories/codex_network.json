@@ -1,0 +1,7 @@
+{
+  "name": "Сеть, хранение и логистика",
+  "description": "От ящиков до ME-сети: Storage Drawers, Sophisticated Storage, Applied Energistics 2 и аддоны, next_ae.",
+  "icon": "ae2:controller",
+  "parent": "patchouli:codex",
+  "sortnum": 2
+}

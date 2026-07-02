@@ -6,10 +6,10 @@
 	hide_quest_details_until_startable: true
 	default_quest_shape: "circle"
 	filename: "side_kitchen"
-	group: "B100000000000005"
+	group: "B100000000000002"
 	icon: { count: 1, id: "farmersdelight:cooking_pot" }
 	id: "A802000000000000"
-	order_index: 0
+	order_index: 11
 	quest_links: [ ]
 	quests: [
 		{
@@ -17,7 +17,7 @@
 			"§dПолевая кухня§r — ветка открыта основной линией."
 			"Следующие узлы появятся по цепочке зависимостей."
 			]
-			dependencies: ["A101000000000002"]
+			dependencies: ["5217A00000000010"]
 			icon: { count: 1, id: "farmersdelight:cooking_pot" }
 			id: "A802000000000001"
 			disable_jei: true

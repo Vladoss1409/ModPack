@@ -6,10 +6,10 @@
 	hide_quest_details_until_startable: true
 	default_quest_shape: "circle"
 	filename: "side_relics"
-	group: "B100000000000004"
+	group: "B100000000000002"
 	icon: { count: 1, id: "relics:roller_skates" }
 	id: "A816000000000000"
-	order_index: 2
+	order_index: 53
 	quest_links: [ ]
 	quests: [
 		{
@@ -17,7 +17,7 @@
 			"§dРеликвии§r — ветка открыта основной линией."
 			"Следующие узлы появятся по цепочке зависимостей."
 			]
-			dependencies: ["A601000000000015"]
+			dependencies: ["5224A00000000010"]
 			icon: { count: 1, id: "relics:roller_skates" }
 			id: "A816000000000001"
 			disable_jei: true
@@ -33,13 +33,13 @@
 		{
 			dependencies: ["A816000000000001"]
 			hide_quest_until_deps_visible: true
-			icon: { count: 1, id: "relics:horseshoe" }
+			icon: { count: 1, id: "relics:lucky_horseshoe" }
 			id: "A816000000000002"
 			disable_jei: true
 			shape: "circle"
 			size: 1.0d
 			tasks: [
-				{ id: "T816000000000002", item: "relics:horseshoe", title: "Horse Shoe", type: "item" }
+				{ id: "T816000000000002", item: "relics:lucky_horseshoe", title: "Horse Shoe", type: "item" }
 			]
 			title: "Horse Shoe"
 			x: 2.5d
@@ -63,13 +63,13 @@
 		{
 			dependencies: ["A816000000000003"]
 			hide_quest_until_deps_visible: true
-			icon: { count: 1, id: "relics:midnight_roast" }
+			icon: { count: 1, id: "relics:midnight_robe" }
 			id: "A816000000000004"
 			disable_jei: true
 			shape: "circle"
 			size: 1.0d
 			tasks: [
-				{ id: "T816000000000004", item: "relics:midnight_roast", title: "Midnight Roast", type: "item" }
+				{ id: "T816000000000004", item: "relics:midnight_robe", title: "Midnight Roast", type: "item" }
 			]
 			title: "Midnight Roast"
 			x: 2.5d

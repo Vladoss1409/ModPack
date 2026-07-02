@@ -52,6 +52,61 @@ StartupEvents.registry('item', event => {
       })(pageId))
   }
 
+  // Лорные записки тира T0 — выдаются как награда на маяках главы «Разлом».
+  var t0Pages = [
+    ['journal_page_rift', 'Записка: День ноль'],
+    ['journal_page_camp', 'Записка: Лагерь закреплён'],
+    ['journal_page_home', 'Записка: Обжитой лагерь'],
+    ['journal_page_ready', 'Записка: Готовность к энергии'],
+    ['journal_page_spark', 'Записка: Якорная искра'],
+    ['journal_page_post_anchor', 'Записка: Після якоря']
+  ]
+  t0Pages.forEach(function (entry) {
+    var pid = entry[0]
+    interactItem(event.create(pid)
+      .displayName(entry[1])
+      .maxStackSize(16))
+      .tooltip('§7Лорная записка экспедиции (тир T0).')
+      .tooltip('§eПКМ§r — прочитать и занести в журнал.')
+      .finishUsing((function (id) {
+        return function (stack, level, entity) {
+          if (isServer(level)) {
+            global.cooptechReadJournalPage(entity, id)
+          }
+          return stack
+        }
+      })(pid))
+  })
+
+  // Лорные записки T1–T5 (по 5 на тир: интро + 3 рубежа + финал).
+  var tierPages = [
+    ['spark', 'T1', ['Порог Thermal', 'Контур запущен', 'Автоматизация руды', 'Готовность к Mekanism', 'Якорная ячейка']],
+    ['cell', 'T2', ['Порог Mekanism', 'Промышленный старт', 'Энергоузел', 'Готовность к сети', 'Якорная матрица']],
+    ['matrix', 'T3', ['Порог AE2', 'Сеть зарождается', 'ME-сеть работает', 'Готовность к Draconic', 'Якорная сингулярность']],
+    ['singularity', 'T4', ['Порог Draconic', 'Драконий старт', 'Энергия дракона', 'Готовность к нексусу', 'Якорный нексус']],
+    ['nexus', 'T5', ['Порог next_ae', 'next_ae запущен', 'Осколки сходятся', 'Готовность к ядру', 'Ядро Якоря']]
+  ]
+  tierPages.forEach(function (tier) {
+    var key = tier[0]
+    var label = tier[1]
+    tier[2].forEach(function (title, idx) {
+      var pid = 'journal_page_' + key + '_' + String(idx).padStart(2, '0')
+      interactItem(event.create(pid)
+        .displayName('Записка ' + label + ': ' + title)
+        .maxStackSize(16))
+        .tooltip('§7Лорная записка экспедиции (' + label + ').')
+        .tooltip('§eПКМ§r — прочитать и занести в журнал.')
+        .finishUsing((function (id) {
+          return function (stack, level, entity) {
+            if (isServer(level)) {
+              global.cooptechReadJournalPage(entity, id)
+            }
+            return stack
+          }
+        })(pid))
+    })
+  })
+
   for (var j = 1; j <= 12; j++) {
     var n = String(j).padStart(2, '0')
     event.create('anchor_shard_' + n)

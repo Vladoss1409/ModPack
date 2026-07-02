@@ -1,0 +1,14 @@
+{
+  "name": "T3: ME-сеть работает",
+  "icon": "kubejs:journal_page_matrix_02",
+  "category": "patchouli:progress",
+  "advancement": "cooptech:journal/t3_lore_w2",
+  "secret": true,
+  "sortnum": 32,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Контроллер пульсирует$()$(br2)Процессоры, терминал, диски — склад стал единым организмом. Второй рубеж T3 закрыт."
+    }
+  ]
+}

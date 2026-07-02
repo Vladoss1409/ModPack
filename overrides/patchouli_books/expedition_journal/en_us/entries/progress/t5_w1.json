@@ -1,0 +1,14 @@
+{
+  "name": "T5: next_ae запущен",
+  "icon": "kubejs:journal_page_nexus_01",
+  "category": "patchouli:progress",
+  "advancement": "cooptech:journal/t5_lore_w1",
+  "secret": true,
+  "sortnum": 51,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Ядро машины$()$(br2)next_ae ожил, осколки стабилизированы. Первый рубеж финального тира закрыт."
+    }
+  ]
+}

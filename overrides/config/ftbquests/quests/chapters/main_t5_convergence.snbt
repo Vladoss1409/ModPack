@@ -1,0 +1,676 @@
+{
+	default_quest_disable_jei: true
+	default_hide_dependency_lines: false
+	progression_mode: "default"
+	hide_quest_until_deps_complete: false
+	hide_quest_details_until_startable: true
+	default_quest_shape: "circle"
+	filename: "main_t5_convergence"
+	group: "B100000000000002"
+	icon: { count: 1, id: "kubejs:anchor_nexus" }
+	id: "5225C00000000000"
+	order_index: 60
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+			"§l[ T5 · Схождение ]§r"
+			""
+			"§7§eЯкорный нексус§r — все тиры сходятся в одной точке. В блокноте последняя глава:"
+			"§dnext_ae§r и финал экспедиции."
+			""
+			"§7Записал цель: собрать §eядро машины§r next_ae, стабилизировать §dЯкорь реальности§r"
+			"§7— или разлом поглотит всё, что мы построили."
+			""
+			"§8Цель тира: ультра-эндгейм и §dЯдро Якоря реальности§r."
+			]
+			dependencies: ["5224A0000000001A"]
+			icon: { count: 1, id: "kubejs:anchor_nexus" }
+			id: "5225A00000000001"
+			disable_jei: true
+			rewards: [
+				{ id: "5225D00000000001", item: "kubejs:journal_page_nexus_00", type: "item" }
+				{ id: "5225D00000000002", type: "xp", xp: 25 }
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+				{ id: "5225B00000000001", title: "Принять нексус и открыть главу next_ae", type: "checkmark" }
+			]
+			title: "Порог next_ae"
+			x: 0d
+			y: 0d
+		},
+		{
+			description: [
+			"Machine Core — база next_ae. Последний рубеж техники в блокноте."
+			""
+			"§o§8«Ядро машины — финальная дверь.»§r"
+			]
+			dependencies: ["5225A00000000001"]
+			icon: { count: 1, id: "next_ae:machine_core" }
+			id: "5225A00000000002"
+			disable_jei: true
+			rewards: [
+				{ id: "5225D000000000A2", item: "next_ae:machine_core", type: "item" }
+				{ id: "5225D000000000B2", type: "xp", xp: 37 }
+			]
+			shape: "gear"
+			tags: ["branch_pool", "pool_t5_w1", "branch_craft"]
+			tasks: [
+				{ id: "5225B00000000002", item: "next_ae:machine_core", type: "item", title: "Собрать ядро next_ae" }
+			]
+			title: "Ядро next_ae"
+			x: -6d
+			y: 2d
+		},
+		{
+			description: [
+			"Первый стабилизированный осколок — круг начинается."
+			""
+			"§o§8«Осколок поёт — якорь отвечает тихо.»§r"
+			]
+			dependencies: ["5225A00000000001"]
+			icon: { count: 1, id: "kubejs:stabilized_shard_01" }
+			id: "5225A00000000003"
+			disable_jei: true
+			rewards: [
+				{ id: "5225D000000000A3", item: "kubejs:stabilized_shard_01", type: "item" }
+				{ id: "5225D000000000B3", type: "xp", xp: 37 }
+			]
+			shape: "circle"
+			tags: ["branch_pool", "pool_t5_w1", "branch_explore", "branch_exclusive"]
+			tasks: [
+				{ id: "5225B00000000003", item: "kubejs:stabilized_shard_01", type: "item", title: "Стабилизировать осколок #1" }
+			]
+			title: "Осколок якоря #1"
+			x: -2d
+			y: 2d
+		},
+		{
+			description: [
+			"Шестой осколок — половина круга замкнута."
+			""
+			"§o§8«Шесть из двенадцати — ритм становится слышным.»§r"
+			]
+			dependencies: ["5225A00000000001"]
+			icon: { count: 1, id: "kubejs:stabilized_shard_06" }
+			id: "5225A00000000004"
+			disable_jei: true
+			rewards: [
+				{ id: "5225D000000000A4", item: "kubejs:stabilized_shard_06", type: "item" }
+				{ id: "5225D000000000B4", type: "xp", xp: 37 }
+			]
+			shape: "circle"
+			tags: ["branch_pool", "pool_t5_w1", "branch_explore"]
+			tasks: [
+				{ id: "5225B00000000004", item: "kubejs:stabilized_shard_06", type: "item", title: "Стабилизировать осколок #6" }
+			]
+			title: "Осколок якоря #6"
+			x: 2d
+			y: 2d
+		},
+		{
+			description: [
+			"Двенадцатый осколок — полный круг стабилизации."
+			""
+			"§o§8«Двенадцать осколков — якорь почти цел.»§r"
+			]
+			dependencies: ["5225A00000000001"]
+			icon: { count: 1, id: "kubejs:stabilized_shard_12" }
+			id: "5225A00000000005"
+			disable_jei: true
+			rewards: [
+				{ id: "5225D000000000A5", item: "kubejs:stabilized_shard_12", type: "item" }
+				{ id: "5225D000000000B5", type: "xp", xp: 37 }
+			]
+			shape: "circle"
+			tags: ["branch_pool", "pool_t5_w1", "branch_explore", "branch_exclusive"]
+			tasks: [
+				{ id: "5225B00000000005", item: "kubejs:stabilized_shard_12", type: "item", title: "Стабилизировать осколок #12" }
+			]
+			title: "Осколок якоря #12"
+			x: 6d
+			y: 2d
+		},
+		{
+			description: [
+			"§8Опционально.§r Ultimate crafting table — сетка 9×9."
+			""
+			"§o§8«Стол огромен — реальность подчиняется размеру.»§r"
+			]
+			dependencies: ["5225A00000000002"]
+			icon: { count: 1, id: "next_ae:ultimate_crafting_table" }
+			id: "5225A00000000006"
+			disable_jei: true
+			rewards: [
+				{ id: "5225D000000000C6", item: "kubejs:reliquary_convergence", type: "item" }
+				{ id: "5225D000000000B6", type: "xp", xp: 20 }
+			]
+			shape: "circle"
+			size: 0.75d
+			tasks: [
+				{ id: "5225B00000000006", item: "next_ae:ultimate_crafting_table", type: "item", title: "Собрать ultimate-стол" }
+			]
+			title: "Ultimate стол"
+			x: -8d
+			y: 3.5d
+		},
+		{
+			description: [
+			"§8Опционально.§r Parallel processor — считает параллельно вселенным."
+			""
+			"§o§8«Процессор не устаёт — я устаю быстрее.»§r"
+			]
+			dependencies: ["5225A00000000005"]
+			icon: { count: 1, id: "next_ae:parallel_processor" }
+			id: "5225A00000000007"
+			disable_jei: true
+			rewards: [
+				{ id: "5225D000000000B7", type: "xp", xp: 20 }
+			]
+			shape: "circle"
+			size: 0.75d
+			tasks: [
+				{ id: "5225B00000000007", item: "next_ae:parallel_processor", type: "item", title: "Собрать parallel-процессор" }
+			]
+			title: "Parallel процессор"
+			x: 8d
+			y: 3.5d
+		},
+		{
+			description: [
+			"§dРубеж.§r Ядро машины и осколки на месте — next_ae ожил. Первый рубеж T5."
+			""
+			"§7Нужны §eвсе 4§r ветки волны."
+			"§7Кооп: делите ветки между напарником."
+			]
+			dependencies: ["5225A00000000001", "5225A00000000002", "5225A00000000003", "5225A00000000004", "5225A00000000005"]
+			icon: { count: 1, id: "kubejs:quest_gate" }
+			id: "5225A00000000008"
+			disable_jei: true
+			rewards: [
+				{ id: "5225D0000000001D", item: "kubejs:journal_page_nexus_01", type: "item" }
+				{ id: "5225D00000000009", type: "xp", xp: 65 }
+			]
+			shape: "diamond"
+			size: 1.2d
+			tasks: [
+				{ id: "5225B00000000008", title: "next_ae запущен", type: "checkmark" }
+			]
+			title: "next_ae запущен"
+			x: 0d
+			y: 4.5d
+		},
+		{
+			description: [
+			"Продвинутый гравёр next_ae — AE2 на стероидах."
+			""
+			"§o§8«Гравёр высечет то, что сеть не смогла.»§r"
+			]
+			dependencies: ["5225A00000000008", "5225A00000000002"]
+			icon: { count: 1, id: "next_ae:advanced_inscriber" }
+			id: "5225A00000000009"
+			disable_jei: true
+			rewards: [
+				{ id: "5225D000000000A9", item: "next_ae:advanced_inscriber", type: "item" }
+				{ id: "5225D000000000C9", item: "kubejs:reliquary_convergence", type: "item" }
+				{ id: "5225D000000000B9", type: "xp", xp: 37 }
+			]
+			shape: "gear"
+			tags: ["branch_pool", "pool_t5_w2", "branch_craft"]
+			tasks: [
+				{ id: "5225B00000000009", item: "next_ae:advanced_inscriber", type: "item", title: "Собрать advanced inscriber" }
+			]
+			title: "Advanced Inscriber"
+			x: -6d
+			y: 6d
+		},
+		{
+			description: [
+			"Charger — питание сети next_ae. Жрёт RF, отдаёт скорость."
+			""
+			"§o§8«Зарядник гудит — привычный звук контура.»§r"
+			]
+			dependencies: ["5225A00000000008", "5225A00000000003"]
+			icon: { count: 1, id: "next_ae:charger" }
+			id: "5225A0000000000A"
+			disable_jei: true
+			rewards: [
+				{ id: "5225D000000000AA", item: "next_ae:charger", type: "item" }
+				{ id: "5225D000000000BA", type: "xp", xp: 37 }
+			]
+			shape: "gear"
+			tags: ["branch_pool", "pool_t5_w2", "branch_craft", "branch_exclusive"]
+			tasks: [
+				{ id: "5225B0000000000A", item: "next_ae:charger", type: "item", title: "Собрать зарядник next_ae" }
+			]
+			title: "Зарядник next_ae"
+			x: -2d
+			y: 6d
+		},
+		{
+			description: [
+			"Два осколка для симметрии якоря — ритуал требует баланса."
+			""
+			"§o§8«Симметрия успокаивает разлом.»§r"
+			]
+			dependencies: ["5225A00000000008", "5225A00000000004"]
+			icon: { count: 1, id: "kubejs:stabilized_shard_03" }
+			id: "5225A0000000000B"
+			disable_jei: true
+			rewards: [
+				{ id: "5225D000000000AB", item: "kubejs:stabilized_shard_03", type: "item" }
+				{ id: "5225D000000000BB", type: "xp", xp: 37 }
+			]
+			shape: "circle"
+			tags: ["branch_pool", "pool_t5_w2", "branch_explore"]
+			tasks: [
+				{ id: "5225B0000000006F", item: "kubejs:stabilized_shard_03", type: "item", title: "Стабилизировать осколок #3" }
+				{ id: "5225B00000000070", item: "kubejs:stabilized_shard_09", type: "item", title: "Стабилизировать осколок #9" }
+			]
+			title: "Осколки 3+9"
+			x: 2d
+			y: 6d
+		},
+		{
+			description: [
+			"Маяк для финальной синхронизации — кооп-ритуал у костра."
+			""
+			"§o§8«Два сигнала у маяка — якорь слушает только вдвоём.»§r"
+			]
+			dependencies: ["5225A00000000008", "5225A00000000005"]
+			icon: { count: 1, id: "kubejs:resonance_beacon" }
+			id: "5225A0000000000C"
+			disable_jei: true
+			rewards: [
+				{ id: "5225D000000000AC", item: "kubejs:resonance_beacon", type: "item" }
+				{ id: "5225D000000000BC", type: "xp", xp: 37 }
+			]
+			shape: "gear"
+			tags: ["branch_pool", "pool_t5_w2", "branch_coop", "branch_exclusive"]
+			tasks: [
+				{ id: "5225B0000000000D", item: "kubejs:resonance_beacon", type: "item", title: "Установить резонансный маяк" }
+			]
+			title: "Резонансный маяк"
+			x: 6d
+			y: 6d
+		},
+		{
+			description: [
+			"§8Опционально.§r Трофей Cataclysm эндгейма."
+			""
+			"§o§8«Трофей тяжёлый — победа осязаема.»§r"
+			]
+			dependencies: ["5225A0000000000B"]
+			icon: { count: 1, id: "cataclysm:void_eye" }
+			id: "5225A0000000000D"
+			disable_jei: true
+			rewards: [
+				{ id: "5225D000000000BD", type: "xp", xp: 20 }
+			]
+			shape: "circle"
+			size: 0.75d
+			tasks: [
+				{ id: "5225B0000000000E", item: "cataclysm:void_eye", type: "item", title: "Добыть трофей Cataclysm" }
+			]
+			title: "Финальный босс"
+			x: 8d
+			y: 7.5d
+		},
+		{
+			description: [
+			"§8Опционально.§r Reliquary convergence — голоса всех тиров."
+			""
+			"§o§8«Реликвария поёт хором — красиво и жутко.»§r"
+			]
+			dependencies: ["5225A0000000000A"]
+			icon: { count: 1, id: "kubejs:reliquary_convergence" }
+			id: "5225A0000000000E"
+			disable_jei: true
+			rewards: [
+				{ id: "5225D000000000CE", item: "kubejs:reliquary_convergence", type: "item" }
+				{ id: "5225D000000000BE", type: "xp", xp: 20 }
+			]
+			shape: "circle"
+			size: 0.75d
+			tasks: [
+				{ id: "5225B0000000001C", item: "kubejs:reliquary_convergence", type: "item", title: "Собрать реликварию схождения" }
+			]
+			title: "Реликвария схождения"
+			x: -4d
+			y: 7.5d
+		},
+		{
+			description: [
+			"§8Опционально.§r Полный набор 12 осколков якоря."
+			""
+			"§o§8«Круг замкнут — ядро готово родиться.»§r"
+			]
+			dependencies: ["5225A00000000009"]
+			icon: { count: 1, id: "kubejs:anchor_shard_12" }
+			id: "5225A0000000001C"
+			disable_jei: true
+			rewards: [
+				{ id: "5225D000000000DC", item: "kubejs:reliquary_convergence", type: "item" }
+				{ id: "5225D000000000CC", type: "xp", xp: 20 }
+			]
+			shape: "circle"
+			size: 0.75d
+			tasks: [
+				{ id: "5225B0000000000F", item: "kubejs:anchor_shard_12", type: "item", title: "Собрать все осколки якоря" }
+			]
+			title: "Все осколки"
+			x: -8d
+			y: 7.5d
+		},
+		{
+			description: [
+			"§dРубеж.§r next_ae и осколки синхронизированы. Второй рубеж T5 — в журнале."
+			""
+			"§7Нужны §eвсе 4§r ветки волны."
+			"§7Кооп: делите ветки между напарником."
+			]
+			dependencies: ["5225A00000000008", "5225A00000000009", "5225A0000000000A", "5225A0000000000B", "5225A0000000000C"]
+			icon: { count: 1, id: "kubejs:quest_gate" }
+			id: "5225A0000000000F"
+			disable_jei: true
+			rewards: [
+				{ id: "5225D0000000001E", item: "kubejs:journal_page_nexus_02", type: "item" }
+				{ id: "5225D00000000011", type: "xp", xp: 65 }
+			]
+			shape: "diamond"
+			size: 1.2d
+			tasks: [
+				{ id: "5225B0000000000F", title: "Осколки сходятся", type: "checkmark" }
+			]
+			title: "Осколки сходятся"
+			x: 0d
+			y: 8.5d
+		},
+		{
+			description: [
+			"Компоненты ядра якоря — предпоследний шаг."
+			""
+			"§o§8«Ядро ждёт — не тороплюсь с последним ударом.»§r"
+			]
+			dependencies: ["5225A0000000000F", "5225A00000000009"]
+			icon: { count: 1, id: "kubejs:reality_anchor_core" }
+			id: "5225A00000000010"
+			disable_jei: true
+			rewards: [
+				{ id: "5225D000000000B0", item: "kubejs:anchor_shard_01", type: "item" }
+				{ id: "5225D000000000C0", type: "xp", xp: 37 }
+			]
+			shape: "gear"
+			tags: ["branch_pool", "pool_t5_w3", "branch_craft"]
+			tasks: [
+				{ id: "5225B00000000010", item: "kubejs:anchor_shard_01", type: "item", title: "Осколок #1 для ядра" }
+				{ id: "5225B00000000011", item: "kubejs:anchor_shard_06", type: "item", title: "Осколок #6 для ядра" }
+				{ id: "5225B00000000012", item: "kubejs:anchor_shard_12", type: "item", title: "Осколок #12 для ядра" }
+			]
+			title: "Сборка якоря"
+			x: -6d
+			y: 10d
+		},
+		{
+			description: [
+			"Двое у маяка — финальный ритуал стабилизации."
+			""
+			"§o§8«Только вдвоём якорь слушает до конца.»§r"
+			]
+			dependencies: ["5225A0000000000F", "5225A0000000000A"]
+			icon: { count: 1, id: "kubejs:resonance_beacon" }
+			id: "5225A00000000011"
+			disable_jei: true
+			rewards: [
+				{ id: "5225D000000000C1", type: "xp", xp: 37 }
+			]
+			shape: "gear"
+			tags: ["branch_pool", "pool_t5_w3", "branch_coop", "branch_exclusive"]
+			tasks: [
+				{ id: "5225B00000000013", title: "Синхронизация у маяка", type: "checkmark" }
+			]
+			title: "Кооп-синхрон"
+			x: -2d
+			y: 10d
+		},
+		{
+			description: [
+			"Совместный рейд на разлом — последняя проверка силы."
+			""
+			"§o§8«Разлом бьётся — мы держим удар вместе.»§r"
+			]
+			dependencies: ["5225A0000000000F", "5225A0000000000B"]
+			icon: { count: 1, id: "minecraft:netherite_sword" }
+			id: "5225A00000000012"
+			disable_jei: true
+			rewards: [
+				{ id: "5225D000000000B2", item: "minecraft:netherite_sword", type: "item" }
+				{ id: "5225D000000000D2", item: "kubejs:reliquary_convergence", type: "item" }
+				{ id: "5225D000000000C2", type: "xp", xp: 37 }
+			]
+			shape: "circle"
+			tags: ["branch_pool", "pool_t5_w3", "branch_explore"]
+			tasks: [
+				{ id: "5225B00000000014", item: "minecraft:netherite_sword", type: "item", title: "Пройти финальный рейд" }
+			]
+			title: "Финальный рейд"
+			x: 2d
+			y: 10d
+		},
+		{
+			description: [
+			"Подготовка к установке ядра — последний вдох перед тишиной."
+			""
+			"§o§8«Тишина после гула — знак, что готовы.»§r"
+			]
+			dependencies: ["5225A0000000000F", "5225A0000000000C"]
+			icon: { count: 1, id: "minecraft:beacon" }
+			id: "5225A00000000013"
+			disable_jei: true
+			rewards: [
+				{ id: "5225D000000000B3", item: "minecraft:beacon", type: "item" }
+				{ id: "5225D000000000C3", type: "xp", xp: 37 }
+			]
+			shape: "circle"
+			tags: ["branch_pool", "pool_t5_w3", "branch_craft", "branch_exclusive"]
+			tasks: [
+				{ id: "5225B00000000015", item: "minecraft:beacon", type: "item", title: "Подготовить стабилизацию" }
+			]
+			title: "Стабилизация"
+			x: 6d
+			y: 10d
+		},
+		{
+			description: [
+			"§8Опционально.§r Decrypted cave codex — пещеры открыты."
+			""
+			"§o§8«Кодекс шепчет координаты — исследование не кончилось.»§r"
+			]
+			dependencies: ["5225A00000000013"]
+			icon: { count: 1, id: "kubejs:decrypted_cave_codex" }
+			id: "5225A0000000001B"
+			disable_jei: true
+			rewards: [
+				{ id: "5225D000000000CB", type: "xp", xp: 20 }
+			]
+			shape: "circle"
+			size: 0.75d
+			tasks: [
+				{ id: "5225B0000000001B", item: "kubejs:decrypted_cave_codex", type: "item", title: "Расшифровать кодекс пещер" }
+			]
+			title: "Кодекс пещер"
+			x: -8d
+			y: 11.5d
+		},
+		{
+			description: [
+			"§8Опционально.§r Диск 16k — сеть помнит всё."
+			""
+			"§o§8«Сеть помнит даже страх — и это утешает.»§r"
+			]
+			dependencies: ["5225A00000000012"]
+			icon: { count: 1, id: "ae2:item_storage_cell_16k" }
+			id: "5225A00000000014"
+			disable_jei: true
+			rewards: [
+				{ id: "5225D000000000D4", item: "kubejs:reliquary_convergence", type: "item" }
+				{ id: "5225D000000000C4", type: "xp", xp: 20 }
+			]
+			shape: "circle"
+			size: 0.75d
+			tasks: [
+				{ id: "5225B00000000016", item: "ae2:item_storage_cell_16k", type: "item", title: "Собрать диск 16k" }
+			]
+			title: "Полная сеть"
+			x: 4d
+			y: 11.5d
+		},
+		{
+			description: [
+			"§8Опционально.§r Chaotic tier — хаос подчинён почти."
+			""
+			"§o§8«Почти — слово, которое я больше не люблю.»§r"
+			]
+			dependencies: ["5225A00000000011"]
+			icon: { count: 1, id: "draconicevolution:chaotic_pickaxe" }
+			id: "5225A00000000015"
+			disable_jei: true
+			rewards: [
+				{ id: "5225D000000000C5", type: "xp", xp: 20 }
+			]
+			shape: "circle"
+			size: 0.75d
+			tasks: [
+				{ id: "5225B00000000017", item: "draconicevolution:chaotic_pickaxe", type: "item", title: "Сковать chaotic-кирку" }
+			]
+			title: "Draconic финал"
+			x: 8d
+			y: 11.5d
+		},
+		{
+			description: [
+			"§dРубеж.§r Всё готово к финальной стабилизации. Осталось ядро."
+			""
+			"§7Нужны §eвсе 4§r ветки волны."
+			"§7Кооп: делите ветки между напарником."
+			]
+			dependencies: ["5225A0000000000F", "5225A00000000010", "5225A00000000011", "5225A00000000012", "5225A00000000013"]
+			icon: { count: 1, id: "kubejs:quest_gate" }
+			id: "5225A00000000016"
+			disable_jei: true
+			rewards: [
+				{ id: "5225D0000000001F", item: "kubejs:journal_page_nexus_03", type: "item" }
+				{ id: "5225D00000000016", type: "xp", xp: 65 }
+			]
+			shape: "diamond"
+			size: 1.2d
+			tasks: [
+				{ id: "5225B00000000016", title: "Готовность к ядру", type: "checkmark" }
+			]
+			title: "Готовность к ядру"
+			x: 0d
+			y: 12.5d
+		},
+		{
+			description: [
+			"Последний чертёж в блокноте. После него — тишина."
+			""
+			"§o§8«Чертёж дрожит — якорь ждёт.»§r"
+			]
+			dependencies: ["5225A00000000016"]
+			icon: { count: 1, id: "kubejs:reality_anchor_core" }
+			id: "5225A00000000017"
+			disable_jei: true
+			rewards: [
+				{ id: "5225D000000000C7", type: "xp", xp: 37 }
+			]
+			shape: "hexagon"
+			tasks: [
+				{ id: "5225B00000000018", title: "Принять финальный чертёж", type: "checkmark" }
+			]
+			title: "Чертёж ядра"
+			x: -2d
+			y: 14d
+		},
+		{
+			description: [
+			"Осколки, нексус и ядро next_ae — финальный ритуал."
+			""
+			"§o§8«Все тиры в одной ладони — тяжело и правильно.»§r"
+			]
+			dependencies: ["5225A00000000016"]
+			icon: { count: 1, id: "kubejs:anchor_nexus" }
+			id: "5225A00000000018"
+			disable_jei: true
+			rewards: [
+				{ id: "5225D00000000018", type: "xp", xp: 40 }
+			]
+			shape: "gear"
+			tasks: [
+				{ id: "5225B00000000019", item: "kubejs:anchor_nexus", type: "item", title: "Нексус для ядра" }
+				{ id: "5225B0000000001A", item: "next_ae:machine_core", type: "item", title: "Ядро next_ae для ритуала" }
+			]
+			title: "Сбор для ядра"
+			x: 2d
+			y: 14d
+		},
+		{
+			description: [
+			"§8Опционально.§r Последний замер разлома перед рождением ядра."
+			""
+			"§o§8«График ровный — якорь готов.»§r"
+			]
+			dependencies: ["5225A00000000017"]
+			icon: { count: 1, id: "minecraft:end_crystal" }
+			id: "5225A00000000019"
+			disable_jei: true
+			rewards: [
+				{ id: "5225D00000000018", type: "xp", xp: 15 }
+			]
+			shape: "circle"
+			size: 0.75d
+			tasks: [
+				{ id: "5225B0000000001E", item: "minecraft:end_crystal", count: 4L, type: "item", title: "Финальный замер разлома" }
+			]
+			title: "Резонансный замер · финал"
+			x: 5d
+			y: 15.5d
+		},
+		{
+			description: [
+			"§l[ Финал экспедиции ]§r"
+			""
+			"§7Все осколки на месте. next_ae гудит в унисон с разломом. Якорь впервые слушается."
+			""
+			"§7§dЯдро Якоря реальности§r стабилизировано. В журнале — последняя запись экспедиции."
+			"§7Связь молчит, но разлом затих. Мы выстояли."
+			""
+			"§8Награда — Ядро Якоря реальности. Финал CoopTech.§r"
+			]
+			dependencies: ["5225A00000000017", "5225A00000000018"]
+			min_required_dependencies: 2
+			icon: { count: 1, id: "kubejs:reality_anchor_core" }
+			id: "5225A0000000001A"
+			disable_jei: true
+			rewards: [
+				{ id: "5225D00000000019", item: "kubejs:reality_anchor_core", type: "item" }
+				{ id: "5225D00000000020", item: "kubejs:journal_page_nexus_04", type: "item" }
+				{ id: "5225D0000000001B", type: "xp", xp: 130 }
+			]
+			shape: "pentagon"
+			size: 1.6d
+			tasks: [
+				{ id: "5225B0000000001D", title: "Стабилизировать Якорь реальности", type: "checkmark" }
+			]
+			title: "Ядро Якоря"
+			x: 0d
+			y: 16.5d
+		},
+	]
+	subtitle: [
+		"T5 · ~120+ мин"
+	]
+	title: "T5 · Схождение"
+}

@@ -1,0 +1,14 @@
+{
+  "name": "T5: осколки сходятся",
+  "icon": "kubejs:journal_page_nexus_02",
+  "category": "patchouli:progress",
+  "advancement": "cooptech:journal/t5_lore_w2",
+  "secret": true,
+  "sortnum": 52,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Синхронизация$()$(br2)Inscriber, зарядник, резонансный маяк — круг осколков замыкается."
+    }
+  ]
+}

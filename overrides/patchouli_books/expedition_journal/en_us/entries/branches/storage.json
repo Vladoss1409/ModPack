@@ -1,0 +1,18 @@
+{
+  "name": "Склад экспедиции",
+  "icon": "storagedrawers:controller",
+  "category": "patchouli:branches",
+  "advancement": "cooptech:journal/side_storage",
+  "secret": true,
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Склад экспедиции$()$(br2)Ящики и бочки после рубежа T0. $(#FFAA00)Контроллер$() раскладывает добычу; кооп сбрасывает всё в одну точку."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Как проходить$()$(br2)Квесты идут цепочкой после рубежа главного тира. Описания — от первого лица, как записи в блокноте экспедиции.$(br2)$(italic)«Сайд не обязателен для якоря — но даёт силу и удобство.»$()"
+    }
+  ]
+}

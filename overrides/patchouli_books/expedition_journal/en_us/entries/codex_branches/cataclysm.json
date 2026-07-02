@@ -1,0 +1,29 @@
+{
+  "name": "Cataclysm — боссы",
+  "icon": "cataclysm:gauntlet_of_guard",
+  "category": "patchouli:codex_branches",
+  "advancement": "cooptech:journal/codex_side_cataclysm",
+  "secret": true,
+  "sortnum": 17,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Зачем$()$(br2)Cataclysm — $(#DD55DD)эндгейм-боссы$() и оружие. Готовь броню, зелья, кооп-роли."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "cataclysm:void_core",
+      "text": "$(#FFAA00)Void Core$(): компонент высоких крафтов."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "cataclysm:gauntlet_of_guard",
+      "text": "$(#FFAA00)Gauntlet of Guard$(): трофей и мощное оружие."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "cataclysm:the_incinerator",
+      "text": "$(#FFAA00)The Incinerator$() (финал): топовое оружие ветки."
+    }
+  ]
+}

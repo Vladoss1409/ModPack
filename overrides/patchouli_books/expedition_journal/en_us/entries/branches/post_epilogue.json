@@ -1,0 +1,18 @@
+{
+  "name": "Епілог модів",
+  "icon": "kubejs:reality_anchor_core",
+  "category": "patchouli:branches",
+  "advancement": "cooptech:journal/side_post_epilogue",
+  "secret": true,
+  "sortnum": 20,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Епілог модів$()$(br2)Пост-T5 збірка сил. Ядро якоря, ME 16k, EMC-планшет, chaotic-кирка — фінальний портрет експедиції."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Після якоря$()$(br2)Ветка открывается после финала T5 и выбора пути в хабе «Після якоря». Описания — от первого лица.$(br2)$(italic)«Эпилог — для тех, кто хочет закрыть всё до конца.»$()"
+    }
+  ]
+}

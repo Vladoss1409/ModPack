@@ -1,14 +1,18 @@
 {
-  "name": "Draconic Evolution",
+  "name": "Драконья эволюция",
   "icon": "draconicevolution:wyvern_core",
   "category": "patchouli:branches",
   "advancement": "cooptech:journal/side_draconic",
   "secret": true,
-  "sortnum": 8,
+  "sortnum": 15,
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(bold)Драконья сила$()$(br2)Финальная ветка — ядра, реактор, хаос. Только после рубежа Главы VI."
+      "text": "$(bold)Драконья эволюция$()$(br2)Глубокая DE после ядра дракония T4. Wyvern, реактор, chaos — полная ветка."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Как проходить$()$(br2)Квесты идут цепочкой после рубежа главного тира. Описания — от первого лица, как записи в блокноте экспедиции.$(br2)$(italic)«Сайд не обязателен для якоря — но даёт силу и удобство.»$()"
     }
   ]
 }

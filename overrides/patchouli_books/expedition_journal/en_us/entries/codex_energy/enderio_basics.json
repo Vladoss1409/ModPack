@@ -1,0 +1,33 @@
+{
+  "name": "Ender IO — сплавы и логистика",
+  "icon": "enderio:alloy_smelter",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Зачем$()$(br2)Ender IO — $(#FFAA00)сплавы$(), SAG Mill и $(#DD55DD)кондуиты$(). Параллельная ветка к Mek, синергия на одной базе."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "enderio:conductive_alloy_ingot",
+      "text": "$(#FFAA00)Проводящий сплав$(): базовый сплав EIO. Нужен для машин и проводов."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "enderio:alloy_smelter",
+      "text": "$(#FFAA00)Сплавная печь$(): три слота — три металла → один сплав. Vibrant alloy — вершина линии."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "enderio:sag_mill",
+      "text": "$(#FFAA00)SAG Mill$(): измельчение руды и материалов. Альтернатива/дополнение к Mek Crusher."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Кооп$()$(br2)Один тянет Mek-линию, второй EIO-сплавы — ресурсы не дублируются, выход растёт."
+    }
+  ],
+  "category": "patchouli:codex_energy",
+  "advancement": "cooptech:journal/t2_enderio",
+  "secret": true,
+  "sortnum": 4
+}

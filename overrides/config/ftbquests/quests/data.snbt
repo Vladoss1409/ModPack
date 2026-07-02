@@ -3,8 +3,8 @@
 	default_consume_items: false
 	default_quest_disable_jei: true
 	default_quest_shape: "circle"
-	default_reward_team: true
-	default_team_reward: true
+	default_reward_team: false
+	default_team_reward: false
 	disable_gui: false
 	drop_book_on_death: false
 	drop_loot_crates: false
@@ -15,8 +15,8 @@
 	lock_message: "§cЗакрыто.§r Завершите предыдущие поручения или рубеж главы."
 	loot_crate_no_drop: true
 	pause_game: false
-	progression_mode: "linear"
+	progression_mode: "default"
 	quest_links: [ ]
 	title: "CoopTech — Кодекс экспедиции"
-	version: 22
+	version: 39
 }

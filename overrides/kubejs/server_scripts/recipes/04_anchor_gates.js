@@ -93,7 +93,7 @@ ServerEvents.recipes(event => {
   // ───────────────────── 2. Переопределение чокпоинтов тиров ─────────────────────
 
   // T1 — Thermal: Машинная рама требует Якорную искру.
-  event.remove({ output: 'thermal:machine_frame' })
+  event.remove({ id: 'thermal:machine_frame' })
   shaped('thermal:machine_frame', [
     'III',
     'RAR',
@@ -101,7 +101,7 @@ ServerEvents.recipes(event => {
   ], { I: 'minecraft:iron_ingot', R: 'minecraft:redstone', A: A.spark }, 'lock_machine_frame')
 
   // T2 — Mekanism: Стальной корпус требует Якорную ячейку.
-  event.remove({ output: 'mekanism:steel_casing' })
+  event.remove({ id: 'mekanism:steel_casing' })
   shaped('mekanism:steel_casing', [
     'RIR',
     'IAI',
@@ -109,7 +109,7 @@ ServerEvents.recipes(event => {
   ], { R: 'minecraft:redstone', I: 'minecraft:iron_block', A: A.cell }, 'lock_steel_casing')
 
   // T3 — AE2: Гравёр требует Якорную матрицу (без него нет процессоров → нет ME-сети).
-  event.remove({ output: 'ae2:inscriber' })
+  event.remove({ id: 'ae2:network/blocks/inscribers' })
   shaped('ae2:inscriber', [
     'III',
     'PAP',
@@ -118,7 +118,8 @@ ServerEvents.recipes(event => {
 
   // T3 — ProjectE: Камень философов требует Якорную матрицу (привязка EMC к T3).
   // Это запирает ВСЮ EMC-экономику (трансмутация/конденсатор/Кляйн) до T3.
-  event.remove({ output: 'projecte:philosophers_stone' })
+  event.remove({ id: 'projecte:philosophers_stone' })
+  event.remove({ id: 'projecte:philosophers_stone_alt' })
   shaped('projecte:philosophers_stone', [
     'GRG',
     'RAR',
@@ -126,7 +127,7 @@ ServerEvents.recipes(event => {
   ], { G: 'minecraft:glowstone_dust', R: 'minecraft:redstone', A: A.matrix }, 'lock_philosophers_stone')
 
   // T4 — Draconic: Ядро дракония требует Якорную сингулярность (база всей ветки).
-  event.remove({ output: 'draconicevolution:draconium_core' })
+  event.remove({ id: 'draconicevolution:components/draconium_core' })
   shaped('draconicevolution:draconium_core', [
     'DDD',
     'DAD',

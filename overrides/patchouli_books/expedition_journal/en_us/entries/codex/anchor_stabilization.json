@@ -1,0 +1,29 @@
+{
+  "name": "Стабилизация Якоря",
+  "icon": "kubejs:reality_anchor_core",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Финал экспедиции$()$(br2)12 $(#FFAA00)осколков якоря$() → стабилизация → $(#DD55DD)Ядро реальности$(). Кооп-ритуал у $(#FFAA00)резонансного маяка$() обязателен."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "kubejs:stabilized_shard_01",
+      "text": "$(#FFAA00)Стабилизированные осколки$(): собираются по квестам T5. Симметрия (#1, #6, #12…) важна для ритуала."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "kubejs:resonance_beacon",
+      "text": "$(#FFAA00)Резонансный маяк$(): оба игрока у маяка — финальная синхронизация. Checkmark-квест «Синхронизация у маяка»."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "kubejs:reality_anchor_core",
+      "text": "$(#FFAA00)Ядро Якоря реальности$(): награда финала. Разлом стабилизируется — экспедиция завершена."
+    }
+  ],
+  "category": "patchouli:codex",
+  "advancement": "cooptech:journal/t5_anchor",
+  "secret": true,
+  "sortnum": 11
+}

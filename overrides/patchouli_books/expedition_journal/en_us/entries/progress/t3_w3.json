@@ -1,0 +1,14 @@
+{
+  "name": "T3: готовность к Draconic",
+  "icon": "kubejs:journal_page_matrix_03",
+  "category": "patchouli:progress",
+  "advancement": "cooptech:journal/t3_lore_w3",
+  "secret": true,
+  "sortnum": 33,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Логистика замкнута$()$(br2)Автокрафт и шины снабжают базу сами. Осталось собрать $(#FFAA00)сингулярность$()."
+    }
+  ]
+}

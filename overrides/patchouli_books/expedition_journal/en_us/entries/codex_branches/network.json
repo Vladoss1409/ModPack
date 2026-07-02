@@ -1,0 +1,29 @@
+{
+  "name": "AE2 — углублённая сеть",
+  "icon": "ae2:controller",
+  "category": "patchouli:codex_branches",
+  "advancement": "cooptech:journal/codex_side_network",
+  "secret": true,
+  "sortnum": 11,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Зачем$()$(br2)Сайд строит $(#FFAA00)полную ME-сеть$() с автокрафтом и wireless. Дополняет гайд T3."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "ae2:growth_accelerator",
+      "text": "$(#FFAA00)Growth Accelerator$(): ферма certus-кварца на базе."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "ae2:crafting_unit",
+      "text": "$(#FFAA00)Crafting CPU$(): автокрафт — заказ из терминала."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "ae2:wireless_access_point",
+      "text": "$(#FFAA00)Wireless AP$() (финал): терминал работает в радиусе."
+    }
+  ]
+}

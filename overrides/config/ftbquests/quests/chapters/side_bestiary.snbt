@@ -6,10 +6,10 @@
 	hide_quest_details_until_startable: true
 	default_quest_shape: "circle"
 	filename: "side_bestiary"
-	group: "B100000000000005"
+	group: "B100000000000002"
 	icon: { count: 1, id: "alexsmobs:animal_dictionary" }
 	id: "A813000000000000"
-	order_index: 2
+	order_index: 13
 	quest_links: [ ]
 	quests: [
 		{
@@ -17,7 +17,7 @@
 			"§dПолевой бестиарий§r — ветка открыта основной линией."
 			"Следующие узлы появятся по цепочке зависимостей."
 			]
-			dependencies: ["A301000000000003"]
+			dependencies: ["5217A00000000020"]
 			icon: { count: 1, id: "alexsmobs:animal_dictionary" }
 			id: "A813000000000001"
 			disable_jei: true
@@ -63,13 +63,13 @@
 		{
 			dependencies: ["A813000000000003"]
 			hide_quest_until_deps_visible: true
-			icon: { count: 1, id: "alexsmobs:grizzly_bear_fur" }
+			icon: { count: 1, id: "alexsmobs:bear_fur" }
 			id: "A813000000000004"
 			disable_jei: true
 			shape: "circle"
 			size: 1.0d
 			tasks: [
-				{ count: 4, id: "T813000000000004", item: "alexsmobs:grizzly_bear_fur", title: "Grizzly Fur", type: "item" }
+				{ count: 4, id: "T813000000000004", item: "alexsmobs:bear_fur", title: "Grizzly Fur", type: "item" }
 			]
 			title: "Grizzly Fur"
 			x: 2.8d
@@ -93,13 +93,13 @@
 		{
 			dependencies: ["A813000000000005"]
 			hide_quest_until_deps_visible: true
-			icon: { count: 1, id: "mowziesmobs:wroughtnaut_helmet" }
+			icon: { count: 1, id: "mowziesmobs:wrought_helmet" }
 			id: "A813000000000006"
 			disable_jei: true
 			shape: "circle"
 			size: 1.0d
 			tasks: [
-				{ id: "T813000000000006", item: "mowziesmobs:wroughtnaut_helmet", title: "Wrought Helm", type: "item" }
+				{ id: "T813000000000006", item: "mowziesmobs:wrought_helmet", title: "Wrought Helm", type: "item" }
 			]
 			title: "Wrought Helm"
 			x: -2.8d

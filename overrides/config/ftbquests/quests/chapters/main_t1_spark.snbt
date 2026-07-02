@@ -1,0 +1,677 @@
+{
+	default_quest_disable_jei: true
+	default_hide_dependency_lines: false
+	progression_mode: "default"
+	hide_quest_until_deps_complete: false
+	hide_quest_details_until_startable: true
+	default_quest_shape: "circle"
+	filename: "main_t1_spark"
+	group: "B100000000000002"
+	icon: { count: 1, id: "kubejs:anchor_spark" }
+	id: "5221C00000000000"
+	order_index: 20
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+			"§l[ T1 · Искра ]§r"
+			""
+			"§7§eЯкорная искра§r всё ещё тёплая в ладони. Разлом отпустил — в блокноте новая глава: §dThermal§r,"
+			"§7первый RF, первая машинная рама."
+			""
+			"§7Записал цель: собрать §eМашинную раму§r — без неё ни одна машина не встанет."
+			"§7Потом плавка, дробление, энергия."
+			""
+			"§8Цель тира: запустить RF-контур и собрать §eЯкорную ячейку§r (рубеж T1→T2)."
+			]
+			dependencies: ["5217A00000000026"]
+			icon: { count: 1, id: "kubejs:anchor_spark" }
+			id: "5221A00000000001"
+			disable_jei: true
+			rewards: [
+				{ id: "5221D00000000001", item: "kubejs:journal_page_spark_00", type: "item" }
+				{ id: "5221D00000000002", type: "xp", xp: 25 }
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+				{ id: "5221B00000000001", title: "Принять искру и открыть главу Thermal", type: "checkmark" }
+			]
+			title: "Порог Thermal"
+			x: 0d
+			y: 0d
+		},
+		{
+			description: [
+			"Сердце Thermal — рама, на которой стоят все машины. Соберу первой."
+			""
+			"§o§8«Без рамы контур глохнет на первом же скачке — так пишут в старых записках.»§r"
+			]
+			dependencies: ["5221A00000000001"]
+			icon: { count: 1, id: "thermal:machine_frame" }
+			id: "5221A00000000002"
+			disable_jei: true
+			rewards: [
+				{ id: "5221D000000000A2", item: "thermal:machine_frame", type: "item" }
+				{ id: "5221D000000000B2", type: "xp", xp: 17 }
+			]
+			shape: "gear"
+			tags: ["branch_pool", "pool_t1_w1", "branch_craft"]
+			tasks: [
+				{ id: "5221B00000000002", item: "thermal:machine_frame", type: "item", title: "Собрать машинную раму" }
+			]
+			title: "Машинная рама"
+			x: -6d
+			y: 2d
+		},
+		{
+			description: [
+			"Машинная печь Thermal плавит быстрее ванильной — пора отпустить железную печь с почётом."
+			""
+			"§o§8«Первый автомат в контуре — печь, что не спит.»§r"
+			]
+			dependencies: ["5221A00000000001"]
+			icon: { count: 1, id: "thermal:machine_furnace" }
+			id: "5221A00000000003"
+			disable_jei: true
+			rewards: [
+				{ id: "5221D000000000A3", item: "thermal:machine_furnace", type: "item" }
+				{ id: "5221D000000000B3", type: "xp", xp: 17 }
+			]
+			shape: "gear"
+			tags: ["branch_pool", "pool_t1_w1", "branch_craft", "branch_exclusive"]
+			tasks: [
+				{ id: "5221B00000000003", item: "thermal:machine_furnace", type: "item", title: "Собрать машинную печь" }
+			]
+			title: "Красная печь"
+			x: -2d
+			y: 2d
+		},
+		{
+			description: [
+			"Pulverizer удваивает выход руды — основа автоплавки, о которой мечтал ещё у разлома."
+			""
+			"§o§8«Дроблёная руда — вдвое богаче; так держали лагерь.»§r"
+			]
+			dependencies: ["5221A00000000001"]
+			icon: { count: 1, id: "thermal:machine_pulverizer" }
+			id: "5221A00000000004"
+			disable_jei: true
+			rewards: [
+				{ id: "5221D000000000A4", item: "thermal:machine_pulverizer", type: "item" }
+				{ id: "5221D000000000B4", type: "xp", xp: 17 }
+			]
+			shape: "gear"
+			tags: ["branch_pool", "pool_t1_w1", "branch_craft"]
+			tasks: [
+				{ id: "5221B00000000004", item: "thermal:machine_pulverizer", type: "item", title: "Собрать дробилку" }
+			]
+			title: "Дробилка"
+			x: 2d
+			y: 2d
+		},
+		{
+			description: [
+			"Уран для Powah — первый серьёзный генератор. Искать глубже, чем железо."
+			""
+			"§o§8«Уран фонит сильнее редстоуна — разлом будто подсказывает жилу.»§r"
+			]
+			dependencies: ["5221A00000000001"]
+			icon: { count: 1, id: "powah:uraninite" }
+			id: "5221A00000000005"
+			disable_jei: true
+			rewards: [
+				{ id: "5221D000000000A5", item: "powah:uraninite", count: 10, type: "item" }
+				{ id: "5221D000000000B5", type: "xp", xp: 17 }
+			]
+			shape: "circle"
+			tags: ["branch_pool", "pool_t1_w1", "branch_mine", "branch_exclusive"]
+			tasks: [
+				{ id: "5221B00000000005", item: "powah:uraninite", count: 16L, type: "item", title: "Добыть урановую руду" }
+			]
+			title: "Урановая жила"
+			x: 6d
+			y: 2d
+		},
+		{
+			description: [
+			"§8Опционально.§r IE Hammer — инструмент Immersive Engineering, если пойду в металл."
+			""
+			"§o§8«Старый молот бьёт по металлу иначе — IE помнит.»§r"
+			]
+			dependencies: ["5221A00000000002"]
+			icon: { count: 1, id: "immersiveengineering:hammer" }
+			id: "5221A00000000006"
+			disable_jei: true
+			rewards: [
+				{ id: "5221D000000000C6", item: "kubejs:reliquary_field", type: "item" }
+				{ id: "5221D000000000B6", type: "xp", xp: 12 }
+			]
+			shape: "circle"
+			size: 0.75d
+			tasks: [
+				{ id: "5221B00000000006", item: "immersiveengineering:hammer", type: "item", title: "Сковать молот IE" }
+			]
+			title: "Молот ковки"
+			x: -8d
+			y: 3.5d
+		},
+		{
+			description: [
+			"§8Опционально.§r Silent Gear — свой путь снаряжения, растущего вместе с экспедицией."
+			""
+			"§o§8«Шаблон на доске — начало клинка, что растёт с тобой.»§r"
+			]
+			dependencies: ["5221A00000000005"]
+			icon: { count: 1, id: "silentgear:template_board" }
+			id: "5221A00000000007"
+			disable_jei: true
+			rewards: [
+				{ id: "5221D000000000B7", type: "xp", xp: 12 }
+			]
+			shape: "circle"
+			size: 0.75d
+			tasks: [
+				{ id: "5221B00000000007", item: "silentgear:template_board", type: "item", title: "Вырезать шаблон ковки" }
+			]
+			title: "Шаблон ковки"
+			x: 8d
+			y: 3.5d
+		},
+		{
+			description: [
+			"§dРубеж.§r Первая волна Thermal и Powah позади. Рама стоит, руда идёт — записал рубеж."
+			""
+			"§7Нужны §eвсе 4§r ветки волны."
+			"§7Кооп: делите ветки между напарником."
+			]
+			dependencies: ["5221A00000000001", "5221A00000000002", "5221A00000000003", "5221A00000000004", "5221A00000000005"]
+			icon: { count: 1, id: "kubejs:quest_gate" }
+			id: "5221A00000000008"
+			disable_jei: true
+			rewards: [
+				{ id: "5221D0000000001D", item: "kubejs:journal_page_spark_01", type: "item" }
+				{ id: "5221D00000000009", type: "xp", xp: 45 }
+			]
+			shape: "diamond"
+			size: 1.2d
+			tasks: [
+				{ id: "5221B00000000008", title: "Контур запущен", type: "checkmark" }
+			]
+			title: "Контур запущен"
+			x: 0d
+			y: 4.5d
+		},
+		{
+			description: [
+			"Катушка передаёт энергию между машинами Thermal — свяжу печь и дробилку."
+			""
+			"§o§8«Ток по катушке — кровь контура.»§r"
+			]
+			dependencies: ["5221A00000000008", "5221A00000000002"]
+			icon: { count: 1, id: "thermal:rf_coil" }
+			id: "5221A00000000009"
+			disable_jei: true
+			rewards: [
+				{ id: "5221D000000000A9", item: "thermal:rf_coil", count: 3, type: "item" }
+				{ id: "5221D000000000C9", item: "kubejs:reliquary_field", type: "item" }
+				{ id: "5221D000000000B9", type: "xp", xp: 17 }
+			]
+			shape: "gear"
+			tags: ["branch_pool", "pool_t1_w2", "branch_craft"]
+			tasks: [
+				{ id: "5221B00000000009", item: "thermal:rf_coil", count: 4L, type: "item", title: "Собрать RF-катушки" }
+			]
+			title: "RF-катушка"
+			x: -6d
+			y: 6d
+		},
+		{
+			description: [
+			"Серво автоматизирует ввод и вывод — меньше ручной возни у машин."
+			""
+			"§o§8«Серво помнит ритм — машина работает без рук.»§r"
+			]
+			dependencies: ["5221A00000000008", "5221A00000000003"]
+			icon: { count: 1, id: "thermal:redstone_servo" }
+			id: "5221A0000000000A"
+			disable_jei: true
+			rewards: [
+				{ id: "5221D000000000AA", item: "thermal:redstone_servo", count: 3, type: "item" }
+				{ id: "5221D000000000BA", type: "xp", xp: 17 }
+			]
+			shape: "gear"
+			tags: ["branch_pool", "pool_t1_w2", "branch_craft", "branch_exclusive"]
+			tasks: [
+				{ id: "5221B0000000000A", item: "thermal:redstone_servo", count: 4L, type: "item", title: "Собрать сервоприводы" }
+			]
+			title: "Сервопривод"
+			x: -2d
+			y: 6d
+		},
+		{
+			description: [
+			"Корпус Powah — основа энергохранилища. Соберу, пока генератор не перегревается."
+			""
+			"§o§8«Кристалл в корпусе — батарея, что не боится скачков.»§r"
+			]
+			dependencies: ["5221A00000000008", "5221A00000000004"]
+			icon: { count: 1, id: "powah:dielectric_casing" }
+			id: "5221A0000000000B"
+			disable_jei: true
+			rewards: [
+				{ id: "5221D000000000AB", item: "powah:dielectric_casing", count: 3, type: "item" }
+				{ id: "5221D000000000BB", type: "xp", xp: 17 }
+			]
+			shape: "gear"
+			tags: ["branch_pool", "pool_t1_w2", "branch_craft"]
+			tasks: [
+				{ id: "5221B0000000000B", item: "powah:dielectric_casing", count: 4L, type: "item", title: "Собрать диэлектрические корпуса" }
+			]
+			title: "Диэлектрик Powah"
+			x: 2d
+			y: 6d
+		},
+		{
+			description: [
+			"Apotheosis — перековка и усиление снаряжения, если оружие снова должно расти."
+			""
+			"§o§8«Новый стол у костра — оружие снова может меняться.»§r"
+			]
+			dependencies: ["5221A00000000008", "5221A00000000005"]
+			icon: { count: 1, id: "apotheosis:simple_reforging_table" }
+			id: "5221A0000000000C"
+			disable_jei: true
+			rewards: [
+				{ id: "5221D000000000AC", item: "apotheosis:simple_reforging_table", type: "item" }
+				{ id: "5221D000000000BC", type: "xp", xp: 17 }
+			]
+			shape: "gear"
+			tags: ["branch_pool", "pool_t1_w2", "branch_craft", "branch_exclusive"]
+			tasks: [
+				{ id: "5221B0000000000C", item: "apotheosis:simple_reforging_table", type: "item", title: "Собрать стол перековки" }
+			]
+			title: "Стол перековки"
+			x: 6d
+			y: 6d
+		},
+		{
+			description: [
+			"§8Опционально.§r Динамо жжёт лаву и даёт стабильный RF — если добуду лаву у разлома."
+			""
+			"§o§8«Лава — дар и ловушка; динамо превращает её в силу.»§r"
+			]
+			dependencies: ["5221A0000000000B"]
+			icon: { count: 1, id: "thermal:dynamo_magmatic" }
+			id: "5221A0000000000D"
+			disable_jei: true
+			rewards: [
+				{ id: "5221D000000000BD", type: "xp", xp: 12 }
+			]
+			shape: "circle"
+			size: 0.75d
+			tasks: [
+				{ id: "5221B0000000000D", item: "thermal:dynamo_magmatic", type: "item", title: "Собрать магматическое динамо" }
+			]
+			title: "Магматический динамо"
+			x: 8d
+			y: 7.5d
+		},
+		{
+			description: [
+			"§8Опционально.§r Буфер RF на базе — подушка на пике нагрузки."
+			""
+			"§o§8«Запас энергии спасает, когда дробилка жрёт всё сразу.»§r"
+			]
+			dependencies: ["5221A0000000000A"]
+			icon: { count: 1, id: "thermal:energy_cell" }
+			id: "5221A0000000000E"
+			disable_jei: true
+			rewards: [
+				{ id: "5221D000000000CE", item: "kubejs:reliquary_field", type: "item" }
+				{ id: "5221D000000000BE", type: "xp", xp: 12 }
+			]
+			shape: "circle"
+			size: 0.75d
+			tasks: [
+				{ id: "5221B0000000000E", item: "thermal:energy_cell", type: "item", title: "Собрать энергоячейку Thermal" }
+			]
+			title: "Энергоячейка"
+			x: -4d
+			y: 7.5d
+		},
+		{
+			description: [
+			"§8Опционально.§r Проводка между машинами — без неё контур рассыпается."
+			""
+			"§o§8«Медь соединяет — я не хочу тянуть энергию вручную.»§r"
+			]
+			dependencies: ["5221A00000000009"]
+			icon: { count: 1, id: "thermal:energy_duct" }
+			id: "5221A0000000001C"
+			disable_jei: true
+			rewards: [
+				{ id: "5221D000000000DC", item: "kubejs:reliquary_field", type: "item" }
+				{ id: "5221D000000000CC", type: "xp", xp: 12 }
+			]
+			shape: "circle"
+			size: 0.75d
+			tasks: [
+				{ id: "5221B0000000001C", item: "thermal:energy_duct", count: 8L, type: "item", title: "Собрать энергоканалы" }
+			]
+			title: "Медный провод"
+			x: -8d
+			y: 7.5d
+		},
+		{
+			description: [
+			"§dРубеж.§r Дробилка, серво и энергия связаны — руда течёт сама. Второй рубеж закрыт."
+			""
+			"§7Нужны §eвсе 4§r ветки волны."
+			"§7Кооп: делите ветки между напарником."
+			]
+			dependencies: ["5221A00000000008", "5221A00000000009", "5221A0000000000A", "5221A0000000000B", "5221A0000000000C"]
+			icon: { count: 1, id: "kubejs:quest_gate" }
+			id: "5221A0000000000F"
+			disable_jei: true
+			rewards: [
+				{ id: "5221D0000000001E", item: "kubejs:journal_page_spark_02", type: "item" }
+				{ id: "5221D00000000011", type: "xp", xp: 45 }
+			]
+			shape: "diamond"
+			size: 1.2d
+			tasks: [
+				{ id: "5221B0000000000F", title: "Автоматизация руды", type: "checkmark" }
+			]
+			title: "Автоматизация руды"
+			x: 0d
+			y: 8.5d
+		},
+		{
+			description: [
+			"Сплавы Thermal — основа продвинутых машин. Медь и никель в один заход."
+			""
+			"§o§8«Никель редок у разлома — придётся копать глубже.»§r"
+			]
+			dependencies: ["5221A0000000000F", "5221A00000000009"]
+			icon: { count: 1, id: "minecraft:copper_ingot" }
+			id: "5221A00000000010"
+			disable_jei: true
+			rewards: [
+				{ id: "5221D000000000B0", item: "minecraft:copper_ingot", count: 21, type: "item" }
+				{ id: "5221D000000000C0", type: "xp", xp: 17 }
+			]
+			shape: "circle"
+			tags: ["branch_pool", "pool_t1_w3", "branch_mine"]
+			tasks: [
+				{ id: "5221B00000000010", item: "minecraft:copper_ingot", count: 32L, type: "item", title: "Накопать медь" }
+				{ id: "5221B00000000011", item: "thermal:nickel_ingot", count: 16L, type: "item", title: "Накопать никель" }
+			]
+			title: "Медь и никель"
+			x: -6d
+			y: 10d
+		},
+		{
+			description: [
+			"Благородные металлы для апгрейдов Thermal — запас на будущие рецепты."
+			""
+			"§o§8«Олово плавится быстро — удобно для первых улучшений.»§r"
+			]
+			dependencies: ["5221A0000000000F", "5221A0000000000A"]
+			icon: { count: 1, id: "thermal:silver_ingot" }
+			id: "5221A00000000011"
+			disable_jei: true
+			rewards: [
+				{ id: "5221D000000000B1", item: "thermal:silver_ingot", count: 10, type: "item" }
+				{ id: "5221D000000000C1", type: "xp", xp: 17 }
+			]
+			shape: "circle"
+			tags: ["branch_pool", "pool_t1_w3", "branch_mine", "branch_exclusive"]
+			tasks: [
+				{ id: "5221B00000000012", item: "thermal:silver_ingot", count: 16L, type: "item", title: "Накопать серебро" }
+				{ id: "5221B00000000013", item: "thermal:tin_ingot", count: 16L, type: "item", title: "Накопать олово" }
+			]
+			title: "Серебро и олово"
+			x: -2d
+			y: 10d
+		},
+		{
+			description: [
+			"Invar — сплав для машин, что выдерживают жар дробилки."
+			""
+			"§o§8«Сплав держит форму дольше чистого железа.»§r"
+			]
+			dependencies: ["5221A0000000000F", "5221A0000000000B"]
+			icon: { count: 1, id: "thermal:invar_ingot" }
+			id: "5221A00000000012"
+			disable_jei: true
+			rewards: [
+				{ id: "5221D000000000B2", item: "thermal:invar_ingot", count: 10, type: "item" }
+				{ id: "5221D000000000D2", item: "kubejs:reliquary_field", type: "item" }
+				{ id: "5221D000000000C2", type: "xp", xp: 17 }
+			]
+			shape: "circle"
+			tags: ["branch_pool", "pool_t1_w3", "branch_craft"]
+			tasks: [
+				{ id: "5221B00000000014", item: "thermal:invar_ingot", count: 16L, type: "item", title: "Выплавить инвар" }
+			]
+			title: "Усиленный слиток"
+			x: 2d
+			y: 10d
+		},
+		{
+			description: [
+			"Закалённое стекло и редстоун — стабильность контура перед рубежом."
+			""
+			"§o§8«Стекло держит искру внутри корпуса — я видел, как без него горит.»§r"
+			]
+			dependencies: ["5221A0000000000F", "5221A0000000000C"]
+			icon: { count: 1, id: "thermal:obsidian_glass" }
+			id: "5221A00000000013"
+			disable_jei: true
+			rewards: [
+				{ id: "5221D000000000B3", item: "thermal:obsidian_glass", count: 5, type: "item" }
+				{ id: "5221D000000000C3", type: "xp", xp: 17 }
+			]
+			shape: "circle"
+			tags: ["branch_pool", "pool_t1_w3", "branch_craft", "branch_exclusive"]
+			tasks: [
+				{ id: "5221B00000000015", item: "thermal:obsidian_glass", count: 8L, type: "item", title: "Собрать закалённое стекло" }
+			]
+			title: "Стабилизатор RF"
+			x: 6d
+			y: 10d
+		},
+		{
+			description: [
+			"§8Опционально.§r Первое усиленное оружие через Apotheosis."
+			""
+			"§o§8«Перекованный лук — страх хищников разлома на дистанции.»§r"
+			]
+			dependencies: ["5221A00000000013"]
+			icon: { count: 1, id: "minecraft:bow" }
+			id: "5221A0000000001B"
+			disable_jei: true
+			rewards: [
+				{ id: "5221D000000000CB", type: "xp", xp: 12 }
+			]
+			shape: "circle"
+			size: 0.75d
+			tasks: [
+				{ id: "5221B0000000001B", item: "minecraft:bow", type: "item", title: "Перековать лук" }
+			]
+			title: "Лук перековки"
+			x: -8d
+			y: 11.5d
+		},
+		{
+			description: [
+			"§8Опционально.§r Первая кирка Silent Gear — растёт с каждой жилой."
+			""
+			"§o§8«Клинок из шаблона помнит каждый удар.»§r"
+			]
+			dependencies: ["5221A00000000012"]
+			icon: { count: 1, id: "silentgear:pickaxe" }
+			id: "5221A00000000014"
+			disable_jei: true
+			rewards: [
+				{ id: "5221D000000000D4", item: "kubejs:reliquary_field", type: "item" }
+				{ id: "5221D000000000C4", type: "xp", xp: 12 }
+			]
+			shape: "circle"
+			size: 0.75d
+			tasks: [
+				{ id: "5221B00000000016", item: "silentgear:pickaxe", type: "item", title: "Собрать кирку Silent Gear" }
+			]
+			title: "Кирка Silent Gear"
+			x: 4d
+			y: 11.5d
+		},
+		{
+			description: [
+			"§8Опционально.§r Накопитель Powah — запас на ночную смену дробилки."
+			""
+			"§o§8«Батарея гудит тихо — это звук спокойствия.»§r"
+			]
+			dependencies: ["5221A00000000011"]
+			icon: { count: 1, id: "powah:battery_basic" }
+			id: "5221A00000000015"
+			disable_jei: true
+			rewards: [
+				{ id: "5221D000000000C5", type: "xp", xp: 12 }
+			]
+			shape: "circle"
+			size: 0.75d
+			tasks: [
+				{ id: "5221B00000000017", item: "powah:battery_basic", type: "item", title: "Собрать батарею Powah" }
+			]
+			title: "Базовая батарея Powah"
+			x: 8d
+			y: 11.5d
+		},
+		{
+			description: [
+			"§dРубеж.§r Сплавы, стабильность и запас энергии — в журнале. Осталось собрать ячейку."
+			""
+			"§7Нужны §eвсе 4§r ветки волны."
+			"§7Кооп: делите ветки между напарником."
+			]
+			dependencies: ["5221A0000000000F", "5221A00000000010", "5221A00000000011", "5221A00000000012", "5221A00000000013"]
+			icon: { count: 1, id: "kubejs:quest_gate" }
+			id: "5221A00000000016"
+			disable_jei: true
+			rewards: [
+				{ id: "5221D0000000001F", item: "kubejs:journal_page_spark_03", type: "item" }
+				{ id: "5221D00000000016", type: "xp", xp: 45 }
+			]
+			shape: "diamond"
+			size: 1.2d
+			tasks: [
+				{ id: "5221B00000000016", title: "Готовность к Mekanism", type: "checkmark" }
+			]
+			title: "Готовность к Mekanism"
+			x: 0d
+			y: 12.5d
+		},
+		{
+			description: [
+			"В блокноте — схема якорной ячейки. Соберу ещё две рамы под корпус."
+			""
+			"§o§8«Чертёж пульсирует — Mekanism ждёт за следующим порогом.»§r"
+			]
+			dependencies: ["5221A00000000016"]
+			icon: { count: 1, id: "thermal:machine_frame" }
+			id: "5221A00000000017"
+			disable_jei: true
+			rewards: [
+				{ id: "5221D000000000B7", item: "thermal:machine_frame", type: "item" }
+				{ id: "5221D000000000C7", type: "xp", xp: 17 }
+			]
+			shape: "hexagon"
+			tasks: [
+				{ id: "5221B00000000018", item: "thermal:machine_frame", count: 2L, type: "item", title: "Собрать рамы для ячейки" }
+			]
+			title: "Чертёж ячейки"
+			x: -2d
+			y: 14d
+		},
+		{
+			description: [
+			"RF-катушки, редстоун и рама — тело якорной ячейки, которую я собираю сам."
+			""
+			"§o§8«Три стихии в ячейке: ток, камень и искра T0.»§r"
+			]
+			dependencies: ["5221A00000000016"]
+			icon: { count: 1, id: "thermal:rf_coil" }
+			id: "5221A00000000018"
+			disable_jei: true
+			rewards: [
+				{ id: "5221D00000000018", type: "xp", xp: 28 }
+			]
+			shape: "gear"
+			tasks: [
+				{ id: "5221B00000000019", item: "thermal:rf_coil", count: 8L, type: "item", title: "RF-катушки для ячейки" }
+				{ id: "5221B0000000001A", item: "minecraft:redstone_block", count: 4L, type: "item", title: "Редстоун-блоки" }
+			]
+			title: "Сбор для ячейки"
+			x: 2d
+			y: 14d
+		},
+		{
+			description: [
+			"§8Опционально.§r Замер RF-контура перед финалом — график должен быть ровным."
+			""
+			"§o§8«Ровная линия на бумаге — ячейка примет резонанс.»§r"
+			]
+			dependencies: ["5221A00000000017"]
+			icon: { count: 1, id: "minecraft:redstone_torch" }
+			id: "5221A00000000019"
+			disable_jei: true
+			rewards: [
+				{ id: "5221D00000000018", type: "xp", xp: 15 }
+			]
+			shape: "circle"
+			size: 0.75d
+			tasks: [
+				{ id: "5221B0000000001E", item: "minecraft:redstone_torch", count: 8L, type: "item", title: "Установить факелы для замера" }
+			]
+			title: "Резонансный замер II"
+			x: 5d
+			y: 15.5d
+		},
+		{
+			description: [
+			"§l[ Финал тира T1 ]§r"
+			""
+			"§7Руда течёт через дробилку, RF стабилен, кузница молчит. Контур перестал глохнуть на каждом скачке."
+			""
+			"§7В журнале — новая отметка: §eЯкорная ячейка§r собрана. За ней откроется §dMekanism§r —"
+			"§7порог настоящей промышленности."
+			""
+			"§8Награда — Якорная ячейка (рубеж T1 → T2).§r"
+			]
+			dependencies: ["5221A00000000017", "5221A00000000018"]
+			min_required_dependencies: 2
+			icon: { count: 1, id: "kubejs:anchor_cell" }
+			id: "5221A0000000001A"
+			disable_jei: true
+			rewards: [
+				{ id: "5221D00000000019", item: "kubejs:anchor_cell", type: "item" }
+				{ id: "5221D00000000020", item: "kubejs:journal_page_spark_04", type: "item" }
+				{ id: "5221D0000000001B", type: "xp", xp: 130 }
+			]
+			shape: "pentagon"
+			size: 1.6d
+			tasks: [
+				{ id: "5221B0000000001D", title: "Зафиксировать ячейку в журнале", type: "checkmark" }
+			]
+			title: "Якорная ячейка"
+			x: 0d
+			y: 16.5d
+		},
+	]
+	subtitle: [
+		"T1 · ~45–60 мин"
+	]
+	title: "T1 · Искра"
+}

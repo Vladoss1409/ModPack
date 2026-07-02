@@ -1,0 +1,57 @@
+[
+  {
+    "quest": "5221A00000000008",
+    "adv": "t1_thermal",
+    "name": "Thermal — автоматизация"
+  },
+  {
+    "quest": "5221A00000000008",
+    "adv": "t1_powah",
+    "name": "Powah — генерация и батареи"
+  },
+  {
+    "quest": "5222A00000000001",
+    "adv": "t2_mek",
+    "name": "Mekanism — промышленный старт"
+  },
+  {
+    "quest": "5222A00000000008",
+    "adv": "t2_enderio",
+    "name": "Ender IO — сплавы и логистика"
+  },
+  {
+    "quest": "5222A00000000008",
+    "adv": "t2_flux",
+    "name": "Flux Networks — энергия без проводов"
+  },
+  {
+    "quest": "5223A00000000001",
+    "adv": "t3_ae2",
+    "name": "AE2 — ME-сеть"
+  },
+  {
+    "quest": "5223A00000000008",
+    "adv": "t3_emc",
+    "name": "ProjectE — EMC и трансмутация"
+  },
+  {
+    "quest": "5224A00000000001",
+    "adv": "t4_draconic",
+    "name": "Draconic Evolution — основы"
+  },
+  {
+    "quest": "5224A00000000008",
+    "adv": "t4_fusion",
+    "name": "Draconic — реактор и Chaos"
+  },
+  {
+    "quest": "5225A00000000001",
+    "adv": "t5_next_ae",
+    "name": "next_ae — ультра-крафт"
+  },
+  {
+    "quest": "5225A00000000008",
+    "adv": "t5_anchor",
+    "name": "Стабилизация Якоря"
+  }
+]

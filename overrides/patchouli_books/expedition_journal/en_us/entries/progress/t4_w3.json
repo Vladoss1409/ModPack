@@ -1,0 +1,14 @@
+{
+  "name": "T4: готовность к нексусу",
+  "icon": "kubejs:journal_page_singularity_03",
+  "category": "patchouli:progress",
+  "advancement": "cooptech:journal/t4_lore_w3",
+  "secret": true,
+  "sortnum": 43,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Chaos позади$()$(br2)Страж повержен, компоненты нексуса собраны. Чертёж сходится в одной точке."
+    }
+  ]
+}

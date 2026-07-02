@@ -1,0 +1,18 @@
+{
+  "name": "T1: якорная ячейка",
+  "icon": "kubejs:anchor_cell",
+  "category": "patchouli:progress",
+  "advancement": "cooptech:journal/t1_lore_finale",
+  "secret": true,
+  "sortnum": 14,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Контур стабилен$()$(br2)Руда течёт через дробилку, RF не скачет, кузница молчит — знак, что всё сходится. $(#FFAA00)Якорная ячейка$() собрана.$(br2)Порог T1→T2 пройден."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Глава Mekanism$()$(br2)Следующая запись — $(#DD55DD)Mekanism$(): стальные корпуса, обогащение, промышленный ритм.$(br2)$(italic)«Искра зажгла машины. Ячейка держит их вместе.»$()"
+    }
+  ]
+}

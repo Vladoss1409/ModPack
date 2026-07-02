@@ -6,10 +6,10 @@
 	hide_quest_details_until_startable: true
 	default_quest_shape: "circle"
 	filename: "side_enderio"
-	group: "B100000000000003"
+	group: "B100000000000002"
 	icon: { count: 1, id: "enderio:conductive_alloy_ingot" }
 	id: "A812000000000000"
-	order_index: 5
+	order_index: 32
 	quest_links: [ ]
 	quests: [
 		{
@@ -17,7 +17,7 @@
 			"§dПроводник Ender IO§r — ветка открыта основной линией."
 			"Следующие узлы появятся по цепочке зависимостей."
 			]
-			dependencies: ["A501000000000014"]
+			dependencies: ["5222A00000000005"]
 			icon: { count: 1, id: "enderio:grains_of_infinity" }
 			id: "A812000000000001"
 			disable_jei: true
@@ -108,13 +108,13 @@
 		{
 			dependencies: ["A812000000000006"]
 			hide_quest_until_deps_visible: true
-			icon: { count: 1, id: "enderio:wireless_antenna" }
+			icon: { count: 1, id: "enderio:vibrant_capacitor_bank" }
 			id: "A812000000000007"
 			disable_jei: true
 			shape: "diamond"
 			size: 1.2d
 			tasks: [
-				{ id: "T812000000000007", item: "enderio:wireless_antenna", title: "EnderIO Finale", type: "item" }
+				{ id: "T812000000000007", item: "enderio:vibrant_capacitor_bank", title: "EnderIO Finale", type: "item" }
 			]
 			title: "EnderIO Finale"
 			x: -2.5d

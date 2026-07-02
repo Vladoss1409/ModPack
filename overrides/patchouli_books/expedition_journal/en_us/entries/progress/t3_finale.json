@@ -1,0 +1,14 @@
+{
+  "name": "T3: якорная сингулярность",
+  "icon": "kubejs:anchor_singularity",
+  "category": "patchouli:progress",
+  "advancement": "cooptech:journal/t3_lore_finale",
+  "secret": true,
+  "sortnum": 34,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Сингулярность поймана$()$(br2)ME-сеть, EMC и матрица сжаты в $(#FFAA00)якорную сингулярность§r. Порог T3→T4 — за ним $(#DD55DD)Draconic§r.$(br2)$(italic)«Логистика стала силой.»$()"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "Фарм босів після фіналу",
+  "icon": "cataclysm:void_eye",
+  "category": "patchouli:codex_branches",
+  "advancement": "cooptech:journal/codex_side_post_bossfarm",
+  "secret": true,
+  "sortnum": 19,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Бос-фарм$()$(br2)Після стабілізації якоря — полювання на §eCataclysm§r і §eMowzie§r. Трофеї для двох: зірки Незера, void eye, Wroughtnaut."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "minecraft:nether_star",
+      "text": "$(#FFAA00)Зірки Незера$(): 2 шт. — кооп-рейд Withер/інших босів."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "cataclysm:the_annihilator",
+      "text": "$(#FFAA00)The Annihilator$() (фінал): ендгейм-зброя Cataclysm."
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "T4: якорный нексус",
+  "icon": "kubejs:journal_page_singularity_04",
+  "category": "patchouli:progress",
+  "advancement": "cooptech:journal/t4_lore_finale",
+  "secret": true,
+  "sortnum": 44,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Нексус собран$()$(br2)Все тиры сходятся в $(#FFAA00)якорном нексусе$(). Порог T4→T5 пройден — впереди $(#DD55DD)next_ae$()."
+    }
+  ]
+}

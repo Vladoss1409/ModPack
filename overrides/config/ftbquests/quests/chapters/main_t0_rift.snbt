@@ -1,0 +1,669 @@
+{
+	default_quest_disable_jei: true
+	default_hide_dependency_lines: false
+	progression_mode: "default"
+	hide_quest_until_deps_complete: false
+	hide_quest_details_until_startable: true
+	default_quest_shape: "circle"
+	filename: "main_t0_rift"
+	group: "B100000000000002"
+	icon: { count: 1, id: "minecraft:flint_and_steel" }
+	id: "5217C00000000000"
+	order_index: 10
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+			"§l[ T0 · Разлом ]§r"
+			""
+			"§7Проснулся под гулом земли. Сканер на поясе уже мигал — §dгеотермальный разлом Якоря§r"
+			"§7дышит паром и кислотой. Неба почти не видно, связи нет."
+			""
+			"§7Открыл блокнот. Первая строка: §eвыжить, обжить лагерь, поймать искру§r —"
+			"§7без неё машины останутся чертежом."
+			""
+			"§8Цель записи: дойти до §eЯкорной искры§r и открыть путь к первому тиру."
+			]
+			icon: { count: 1, id: "minecraft:compass" }
+			id: "5217A00000000001"
+			disable_jei: true
+			rewards: [
+				{ id: "5217D00000000001", item: "kubejs:expedition_journal", type: "item" }
+				{ id: "5217D00000000028", item: "kubejs:journal_page_rift", type: "item" }
+				{ id: "5217D00000000002", item: "minecraft:torch", count: 8, type: "item" }
+				{ id: "5217D00000000003", type: "xp", xp: 20 }
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+				{ id: "5217B00000000001", title: "Записать пробуждение и принять поручение", type: "checkmark" }
+			]
+			title: "Пробуждение у разлома"
+			x: 0d
+			y: 0d
+		},
+		{
+			description: [
+			"Первым делом — древесина. Без рукояти не собрать ни кирку, ни топор."
+			""
+			"§o§8«Древесина у разлома звенит сухо — лес помнит мир до трещины.»§r"
+			]
+			dependencies: ["5217A00000000001"]
+			icon: { count: 1, id: "minecraft:oak_log" }
+			id: "5217A00000000002"
+			disable_jei: true
+			rewards: [
+				{ id: "5217D00000000066", item: "minecraft:oak_log", type: "item" }
+				{ id: "5217D00000000082", type: "xp", xp: 12 }
+			]
+			shape: "circle"
+			tags: ["branch_pool", "pool_t0_w1", "branch_craft"]
+			tasks: [
+				{ id: "5217B00000000002", item: "minecraft:oak_log", title: "Срубить древесину у разлома", count: 16L, type: "item" }
+			]
+			title: "Древесина разлома"
+			x: -6d
+			y: 2d
+		},
+		{
+			description: [
+			"Камень держит первый инструмент. Набью породы — пригодится и на печь."
+			""
+			"§o§8«Камень тёплый от геотермы — Якорь греет даже породу.»§r"
+			]
+			dependencies: ["5217A00000000001"]
+			icon: { count: 1, id: "minecraft:cobblestone" }
+			id: "5217A00000000003"
+			disable_jei: true
+			rewards: [
+				{ id: "5217D00000000004", item: "minecraft:stone_pickaxe", type: "item" }
+			]
+			shape: "circle"
+			tags: ["branch_pool", "pool_t0_w1", "branch_mine", "branch_exclusive"]
+			tasks: [
+				{ id: "5217B00000000003", item: "minecraft:cobblestone", title: "Добыть булыжник", count: 32L, type: "item" }
+			]
+			title: "Каменный век"
+			x: -2d
+			y: 2d
+		},
+		{
+			description: [
+			"Голодным разлом не пройти. Сварю хоть простой паёк — силы уходят быстрее, чем кажется."
+			""
+			"§o§8«Голод обостряет слух: у разлома кажется, будто он шепчет ближе.»§r"
+			]
+			dependencies: ["5217A00000000001"]
+			icon: { count: 1, id: "minecraft:bread" }
+			id: "5217A00000000004"
+			disable_jei: true
+			rewards: [
+				{ id: "5217D00000000005", item: "minecraft:apple", count: 6, type: "item" }
+			]
+			shape: "circle"
+			tags: ["branch_pool", "pool_t0_w1", "branch_craft"]
+			tasks: [
+				{ id: "5217B00000000004", item: "minecraft:bread", title: "Приготовить хлеб", count: 3L, type: "item" }
+			]
+			title: "Полевой паёк"
+			x: 2d
+			y: 2d
+		},
+		{
+			description: [
+			"В породе — железо. С него, по записям предшественников, начинается всё остальное."
+			""
+			"§o§8«Руда фонит в руке — Якорь будто метит металл для будущих машин.»§r"
+			]
+			dependencies: ["5217A00000000001"]
+			icon: { count: 1, id: "minecraft:raw_iron" }
+			id: "5217A00000000005"
+			disable_jei: true
+			rewards: [
+				{ id: "5217D00000000006", type: "xp", xp: 15 }
+			]
+			shape: "circle"
+			tags: ["branch_pool", "pool_t0_w1", "branch_mine", "branch_exclusive"]
+			tasks: [
+				{ id: "5217B00000000005", item: "minecraft:raw_iron", title: "Добыть сырое железо", count: 8L, type: "item" }
+			]
+			title: "Железная жила"
+			x: 6d
+			y: 2d
+		},
+		{
+			description: [
+			"§8Опционально.§r Поставлю кровать у костра — чтобы ночь не отбросила к разлому без сил."
+			""
+			"§o§8«У огня ночь не отматывает назад — так писали те, кто успел оставить записку.»§r"
+			]
+			dependencies: ["5217A00000000002"]
+			icon: { count: 1, id: "minecraft:red_bed" }
+			id: "5217A00000000006"
+			disable_jei: true
+			rewards: [
+				{ id: "5217D00000000007", type: "xp", xp: 10 }
+			]
+			shape: "circle"
+			size: 0.75d
+			tasks: [
+				{ id: "5217B00000000006", item: "minecraft:red_bed", title: "Поставить кровать у лагеря", type: "item" }
+			]
+			title: "Ночлег у костра"
+			x: -8d
+			y: 3.5d
+		},
+		{
+			description: [
+			"§8Опционально.§r Переплавлю руду в слитки — запас на инструменты и первую раму."
+			""
+			"§o§8«Слитки лягут в основу всего, что мы построим здесь.»§r"
+			]
+			dependencies: ["5217A00000000005"]
+			icon: { count: 1, id: "minecraft:iron_ingot" }
+			id: "5217A00000000007"
+			disable_jei: true
+			rewards: [
+				{ id: "5217D00000000008", item: "minecraft:bucket", type: "item" }
+			]
+			shape: "circle"
+			size: 0.75d
+			tasks: [
+				{ id: "5217B00000000007", item: "minecraft:iron_ingot", title: "Переплавить железные слитки", count: 16L, type: "item" }
+			]
+			title: "Кузнечный запас"
+			x: 8d
+			y: 3.5d
+		},
+		{
+			description: [
+			"§dРубеж.§r Записал: первая волна позади. Лагерь дышит, руки помнят удар топора. Кодекс не пустит дальше, пока не закрою все четыре линии."
+			""
+			"§7Нужны §eвсе 4§r ветки волны."
+			"§7Кооп: делите ветки между напарником."
+			]
+			dependencies: ["5217A00000000001", "5217A00000000002", "5217A00000000003", "5217A00000000004", "5217A00000000005"]
+			icon: { count: 1, id: "kubejs:quest_gate" }
+			id: "5217A00000000008"
+			disable_jei: true
+			rewards: [
+				{ id: "5217D00000000029", item: "kubejs:journal_page_camp", type: "item" }
+				{ id: "5217D00000000216", item: "kubejs:reliquary_field", type: "item" }
+				{ id: "5217D00000000009", type: "xp", xp: 40 }
+			]
+			shape: "diamond"
+			size: 1.2d
+			tasks: [
+				{ id: "5217B00000000008", title: "Отметить рубеж в журнале", type: "checkmark" }
+			]
+			title: "Закрепиться у разлома"
+			x: 0d
+			y: 4.5d
+		},
+		{
+			description: [
+			"Железная печь плавит сама — первый шаг от костра к настоящему лагерю."
+			""
+			"§o§8«Печь, что не требует руки у дверцы, — роскошь, которую мы заслужили.»§r"
+			]
+			dependencies: ["5217A00000000008", "5217A00000000002"]
+			icon: { count: 1, id: "ironfurnaces:iron_furnace" }
+			id: "5217A00000000009"
+			disable_jei: true
+			rewards: [
+				{ id: "5217D00000000010", item: "minecraft:coal", count: 8, type: "item" }
+			]
+			shape: "gear"
+			tags: ["branch_pool", "pool_t0_w2", "branch_craft"]
+			tasks: [
+				{ id: "5217B00000000009", item: "ironfurnaces:iron_furnace", title: "Собрать железную печь", type: "item" }
+			]
+			title: "Железная печь"
+			x: -6d
+			y: 6d
+		},
+		{
+			description: [
+			"Котёл кухни превращает сырьё в сытные блюда — экспедиция держится на горячем."
+			""
+			"§o§8«Горячий котёл — сердце лагеря; на пустой похлёбке далеко не уйдёшь.»§r"
+			]
+			dependencies: ["5217A00000000008", "5217A00000000003"]
+			icon: { count: 1, id: "farmersdelight:cooking_pot" }
+			id: "5217A00000000010"
+			disable_jei: true
+			rewards: [
+				{ id: "5217D00000000011", item: "minecraft:bread", count: 4, type: "item" }
+			]
+			shape: "gear"
+			tags: ["branch_pool", "pool_t0_w2", "branch_craft", "branch_exclusive"]
+			tasks: [
+				{ id: "5217B00000000010", item: "farmersdelight:cooking_pot", title: "Собрать котёл Farmer's Delight", type: "item" }
+			]
+			title: "Полевая кухня"
+			x: -2d
+			y: 6d
+		},
+		{
+			description: [
+			"Контроллер ящиков связывает склад в сеть. Порядок в вещах — порядок в голове."
+			""
+			"§o§8«Хаос разлома любит беспорядок; я не дам ему зайти в сундуки.»§r"
+			]
+			dependencies: ["5217A00000000008", "5217A00000000004"]
+			icon: { count: 1, id: "storagedrawers:controller" }
+			id: "5217A00000000011"
+			disable_jei: true
+			rewards: [
+				{ id: "5217D00000000012", type: "xp", xp: 20 }
+			]
+			shape: "gear"
+			tags: ["branch_pool", "pool_t0_w2", "branch_craft"]
+			tasks: [
+				{ id: "5217B00000000011", item: "storagedrawers:controller", title: "Собрать контроллер ящиков", type: "item" }
+			]
+			title: "Склад экспедиции"
+			x: 2d
+			y: 6d
+		},
+		{
+			description: [
+			"Древесный уголь не кончится так быстро, как ветки у костра. Запас на печи и факелы."
+			""
+			"§o§8«Свет держит периметр — без огня трещины кажутся ближе.»§r"
+			]
+			dependencies: ["5217A00000000008", "5217A00000000005"]
+			icon: { count: 1, id: "minecraft:charcoal" }
+			id: "5217A00000000012"
+			disable_jei: true
+			rewards: [
+				{ id: "5217D00000000013", item: "minecraft:torch", count: 16, type: "item" }
+			]
+			shape: "circle"
+			tags: ["branch_pool", "pool_t0_w2", "branch_mine", "branch_exclusive"]
+			tasks: [
+				{ id: "5217B00000000012", item: "minecraft:charcoal", title: "Накопать древесный уголь", count: 32L, type: "item" }
+			]
+			title: "Угольный запас"
+			x: 6d
+			y: 6d
+		},
+		{
+			description: [
+			"§8Опционально.§r Воронки сбросят добычу прямо в ящики — меньше беготни между сундуками."
+			""
+			"§o§8«Пусть железо трудится за меня — руки нужны для разлома, не для перекладывания.»§r"
+			]
+			dependencies: ["5217A00000000011"]
+			icon: { count: 1, id: "minecraft:hopper" }
+			id: "5217A00000000013"
+			disable_jei: true
+			rewards: [
+				{ id: "5217D00000000014", type: "xp", xp: 15 }
+			]
+			shape: "circle"
+			size: 0.75d
+			tasks: [
+				{ id: "5217B00000000013", item: "minecraft:hopper", title: "Собрать воронки", count: 2L, type: "item" }
+			]
+			title: "Сортировка"
+			x: 8d
+			y: 7.5d
+		},
+		{
+			description: [
+			"§8Опционально.§r Горячий обед на кухне — больше сил на следующую вылазку."
+			""
+			"§o§8«Сытый разведчик уходит дальше и возвращается живым.»§r"
+			]
+			dependencies: ["5217A00000000010"]
+			icon: { count: 1, id: "minecraft:cooked_beef" }
+			id: "5217A00000000014"
+			disable_jei: true
+			rewards: [
+				{ id: "5217D00000000015", type: "xp", xp: 15 }
+			]
+			shape: "circle"
+			size: 0.75d
+			tasks: [
+				{ id: "5217B00000000014", item: "minecraft:cooked_beef", title: "Приготовить жареное мясо", count: 8L, type: "item" }
+			]
+			title: "Сытный обед"
+			x: -4d
+			y: 7.5d
+		},
+		{
+			description: [
+			"§8Опционально.§r Печёный картофель на железной печи — долгий запас в кармане."
+			""
+			"§o§8«Обратный путь всегда длиннее: разлом сдвигает тропы, пока спишь.»§r"
+			]
+			dependencies: ["5217A00000000009"]
+			icon: { count: 1, id: "minecraft:baked_potato" }
+			id: "5217A00000000028"
+			disable_jei: true
+			rewards: [
+				{ id: "5217D00000000016", type: "xp", xp: 15 }
+			]
+			shape: "circle"
+			size: 0.75d
+			tasks: [
+				{ id: "5217B00000000028", item: "minecraft:baked_potato", title: "Испечь картофель", count: 8L, type: "item" }
+			]
+			title: "Печёный провиант"
+			x: -8d
+			y: 7.5d
+		},
+		{
+			description: [
+			"§dРубеж.§r Печь гудит, котёл кипит, ящики помнят, что в них лежит. Лагерь перестал быть временным. Теперь — сырьё под первую энергию."
+			""
+			"§7Нужны §eвсе 4§r ветки волны."
+			"§7Кооп: делите ветки между напарником."
+			]
+			dependencies: ["5217A00000000008", "5217A00000000009", "5217A00000000010", "5217A00000000011", "5217A00000000012"]
+			icon: { count: 1, id: "kubejs:quest_gate" }
+			id: "5217A00000000015"
+			disable_jei: true
+			rewards: [
+				{ id: "5217D00000000030", item: "kubejs:journal_page_home", type: "item" }
+				{ id: "5217D00000000217", item: "kubejs:reliquary_field", type: "item" }
+				{ id: "5217D00000000017", type: "xp", xp: 40 }
+			]
+			shape: "diamond"
+			size: 1.2d
+			tasks: [
+				{ id: "5217B00000000015", title: "Отметить второй рубеж", type: "checkmark" }
+			]
+			title: "Обжитой лагерь"
+			x: 0d
+			y: 8.5d
+		},
+		{
+			description: [
+			"Медь пойдёт в проводку первых машин. Набью запас, пока руки ещё помнят кирку."
+			""
+			"§o§8«Медь тёплая на ощупь — будто Якорь уже тянет её в контур.»§r"
+			]
+			dependencies: ["5217A00000000015", "5217A00000000009"]
+			icon: { count: 1, id: "minecraft:copper_ingot" }
+			id: "5217A00000000016"
+			disable_jei: true
+			rewards: [
+				{ id: "5217D00000000080", item: "minecraft:copper_ingot", type: "item" }
+				{ id: "5217D00000000096", type: "xp", xp: 12 }
+			]
+			shape: "circle"
+			tags: ["branch_pool", "pool_t0_w3", "branch_mine"]
+			tasks: [
+				{ id: "5217B00000000016", item: "minecraft:copper_ingot", title: "Добыть медные слитки", count: 16L, type: "item" }
+			]
+			title: "Медь и сплавы"
+			x: -6d
+			y: 10d
+		},
+		{
+			description: [
+			"Редстоун — кровь механизмов. Без него искра так и останется идеей в блокноте."
+			""
+			"§o§8«Редстоун гудит в такт разлому — слушаю, как пульс меняется с глубиной.»§r"
+			]
+			dependencies: ["5217A00000000015", "5217A00000000010"]
+			icon: { count: 1, id: "minecraft:redstone" }
+			id: "5217A00000000017"
+			disable_jei: true
+			rewards: [
+				{ id: "5217D00000000081", item: "minecraft:redstone", type: "item" }
+				{ id: "5217D00000000097", type: "xp", xp: 12 }
+			]
+			shape: "circle"
+			tags: ["branch_pool", "pool_t0_w3", "branch_mine", "branch_exclusive"]
+			tasks: [
+				{ id: "5217B00000000017", item: "minecraft:redstone", title: "Добыть редстоун", count: 32L, type: "item" }
+			]
+			title: "Редстоун-разведка"
+			x: -2d
+			y: 10d
+		},
+		{
+			description: [
+			"Кремень из гравия — ударный элемент искры. Просею щебень у кислотных озёр."
+			""
+			"§o§8«Кремень высечет первую искру — древний приём против новой бездны.»§r"
+			]
+			dependencies: ["5217A00000000015", "5217A00000000011"]
+			icon: { count: 1, id: "minecraft:flint" }
+			id: "5217A00000000018"
+			disable_jei: true
+			rewards: [
+				{ id: "5217D00000000082", item: "minecraft:flint", type: "item" }
+				{ id: "5217D00000000114", item: "kubejs:reliquary_field", type: "item" }
+				{ id: "5217D00000000098", type: "xp", xp: 12 }
+			]
+			shape: "circle"
+			tags: ["branch_pool", "pool_t0_w3", "branch_explore"]
+			tasks: [
+				{ id: "5217B00000000018", item: "minecraft:flint", title: "Добыть кремень", count: 8L, type: "item" }
+			]
+			title: "Кремень и щебень"
+			x: 2d
+			y: 10d
+		},
+		{
+			description: [
+			"Кислотные пары не щадят. Железная кираса — минимум, прежде чем лезть глубже."
+			""
+			"§o§8«Металл на груди — цена ещё одного дня у разлома.»§r"
+			]
+			dependencies: ["5217A00000000015", "5217A00000000012"]
+			icon: { count: 1, id: "minecraft:iron_chestplate" }
+			id: "5217A00000000019"
+			disable_jei: true
+			rewards: [
+				{ id: "5217D00000000018", type: "xp", xp: 20 }
+			]
+			shape: "circle"
+			tags: ["branch_pool", "pool_t0_w3", "branch_craft", "branch_exclusive"]
+			tasks: [
+				{ id: "5217B00000000019", item: "minecraft:iron_chestplate", title: "Сковать железную кирасу", type: "item" }
+			]
+			title: "Железная броня"
+			x: 6d
+			y: 10d
+		},
+		{
+			description: [
+			"§8Опционально.§r Соберу лук — хищники разлома чуют слабость слишком рано."
+			""
+			"§o§8«Держу их на расстоянии стрелы — ближе не хочу.»§r"
+			]
+			dependencies: ["5217A00000000016"]
+			icon: { count: 1, id: "minecraft:bow" }
+			id: "5217A00000000027"
+			disable_jei: true
+			rewards: [
+				{ id: "5217D00000000019", item: "minecraft:arrow", count: 16, type: "item" }
+			]
+			shape: "circle"
+			size: 0.75d
+			tasks: [
+				{ id: "5217B00000000027", item: "minecraft:bow", title: "Собрать лук", type: "item" }
+			]
+			title: "Лук и стрелы"
+			x: -8d
+			y: 11.5d
+		},
+		{
+			description: [
+			"§8Опционально.§r Компас поможет не потерять лагерь в паре и тумане."
+			""
+			"§o§8«Игла тянет домой — разлом крутит стороны света, как ему вздумается.»§r"
+			]
+			dependencies: ["5217A00000000018"]
+			icon: { count: 1, id: "minecraft:compass" }
+			id: "5217A00000000020"
+			disable_jei: true
+			rewards: [
+				{ id: "5217D00000000020", type: "xp", xp: 10 }
+			]
+			shape: "circle"
+			size: 0.75d
+			tasks: [
+				{ id: "5217B00000000020", item: "minecraft:compass", title: "Собрать компас", type: "item" }
+			]
+			title: "Компас разведки"
+			x: 4d
+			y: 11.5d
+		},
+		{
+			description: [
+			"§8Опционально.§r Нанесу разлом на карту — измеренное пугает меньше неизвестного."
+			""
+			"§o§8«Линии на бумаге — единственная география, которой я сейчас доверяю.»§r"
+			]
+			dependencies: ["5217A00000000019"]
+			icon: { count: 1, id: "minecraft:map" }
+			id: "5217A00000000021"
+			disable_jei: true
+			rewards: [
+				{ id: "5217D00000000021", type: "xp", xp: 10 }
+			]
+			shape: "circle"
+			size: 0.75d
+			tasks: [
+				{ id: "5217B00000000021", item: "minecraft:map", title: "Составить карту лагеря", type: "item" }
+			]
+			title: "Карта лагеря"
+			x: 8d
+			y: 11.5d
+		},
+		{
+			description: [
+			"§dРубеж.§r Медь, редстоун, кремень — в ящиках; броня на плечах. В блокноте — чертёж рамы. Разлом, кажется, готов принять искру."
+			""
+			"§7Нужны §eвсе 4§r ветки волны."
+			"§7Кооп: делите ветки между напарником."
+			]
+			dependencies: ["5217A00000000015", "5217A00000000016", "5217A00000000017", "5217A00000000018", "5217A00000000019"]
+			icon: { count: 1, id: "kubejs:quest_gate" }
+			id: "5217A00000000022"
+			disable_jei: true
+			rewards: [
+				{ id: "5217D00000000031", item: "kubejs:journal_page_ready", type: "item" }
+				{ id: "5217D00000000218", item: "kubejs:reliquary_field", type: "item" }
+				{ id: "5217D00000000022", type: "xp", xp: 40 }
+			]
+			shape: "diamond"
+			size: 1.2d
+			tasks: [
+				{ id: "5217B00000000022", title: "Отметить готовность к энергии", type: "checkmark" }
+			]
+			title: "Готовность к энергии"
+			x: 0d
+			y: 12.5d
+		},
+		{
+			description: [
+			"На странице блокнота — схема опорных блоков. Отолью железо: на них ляжет первая энергия."
+			""
+			"§o§8«Чертёж дрожит от жара разлома — но линии читаются.»§r"
+			]
+			dependencies: ["5217A00000000022"]
+			icon: { count: 1, id: "minecraft:iron_block" }
+			id: "5217A00000000023"
+			disable_jei: true
+			rewards: [
+				{ id: "5217D00000000023", type: "xp", xp: 30 }
+			]
+			shape: "hexagon"
+			tasks: [
+				{ id: "5217B00000000023", item: "minecraft:iron_block", title: "Отлить опорные блоки", count: 2L, type: "item" }
+			]
+			title: "Чертёж машинной рамы"
+			x: -2d
+			y: 14d
+		},
+		{
+			description: [
+			"Соберу компоненты искры: железо, редстоун и кремень. Печь уже в лагере — осталось сложить."
+			""
+			"§o§8«Три стихии в одной искре: металл, ток и удар кремня.»§r"
+			]
+			dependencies: ["5217A00000000022"]
+			icon: { count: 1, id: "minecraft:flint_and_steel" }
+			id: "5217A00000000024"
+			disable_jei: true
+			rewards: [
+				{ id: "5217D00000000088", item: "minecraft:iron_ingot", type: "item" }
+				{ id: "5217D00000000104", type: "xp", xp: 12 }
+			]
+			shape: "gear"
+			tasks: [
+				{ id: "5217B00000000024", item: "minecraft:iron_ingot", title: "Железные слитки", count: 8L, type: "item" }
+				{ id: "5217B00000000025", item: "minecraft:redstone", title: "Редстоун", count: 8L, type: "item" }
+				{ id: "5217B00000000026", item: "minecraft:flint", title: "Кремень", count: 2L, type: "item" }
+			]
+			title: "Сбор для искры"
+			x: 2d
+			y: 14d
+		},
+		{
+			description: [
+			"§8Опционально.§r Сетка редстоун-факелов — первый замер пульса у края разлома."
+			""
+			"§o§8«График в блокноте ровнее — значит, искра примет контур.»§r"
+			]
+			dependencies: ["5217A00000000023"]
+			icon: { count: 1, id: "minecraft:redstone_torch" }
+			id: "5217A00000000025"
+			disable_jei: true
+			rewards: [
+				{ id: "5217D00000000024", type: "xp", xp: 15 }
+			]
+			shape: "circle"
+			size: 0.75d
+			tasks: [
+				{ id: "5217B00000000030", item: "minecraft:redstone_torch", title: "Установить редстоун-факелы", count: 4L, type: "item" }
+			]
+			title: "Резонансный замер"
+			x: 5d
+			y: 15.5d
+		},
+		{
+			description: [
+			"§l[ Финал тира T0 ]§r"
+			""
+			"§7Печь раскалена, редстоун поёт в ящиках, кремень бьёт по металлу. Разлом §dвздрогнул§r —"
+			"§7и впервые ответил не угрозой, а теплом в ладони."
+			""
+			"§7Записал: §eЯкорная искра§r поймана. С ней откроется §dМашинная рама§r —"
+			"§7порог первого тира, где выживание станет производством."
+			""
+			"§8Награда — Якорная искра (рубеж T0 → T1).§r"
+			]
+			dependencies: ["5217A00000000023", "5217A00000000024"]
+			min_required_dependencies: 2
+			icon: { count: 1, id: "kubejs:anchor_spark" }
+			id: "5217A00000000026"
+			disable_jei: true
+			rewards: [
+				{ id: "5217D00000000025", item: "kubejs:anchor_spark", type: "item" }
+				{ id: "5217D00000000032", item: "kubejs:journal_page_spark", type: "item" }
+				{ id: "5217D00000000026", item: "minecraft:torch", count: 32, type: "item" }
+				{ id: "5217D00000000027", type: "xp", xp: 120 }
+			]
+			shape: "pentagon"
+			size: 1.6d
+			tasks: [
+				{ id: "5217B00000000029", title: "Зафиксировать искру в журнале", type: "checkmark" }
+			]
+			title: "Якорная искра"
+			x: 0d
+			y: 16.5d
+		},
+	]
+	subtitle: [
+		"T0 · ~30–45 мин"
+	]
+	title: "T0 · Разлом"
+}

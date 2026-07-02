@@ -1,0 +1,29 @@
+{
+  "name": "Ender IO — кондуиты",
+  "icon": "enderio:conductive_alloy_ingot",
+  "category": "patchouli:codex_branches",
+  "advancement": "cooptech:journal/codex_side_enderio",
+  "secret": true,
+  "sortnum": 10,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Зачем$()$(br2)Полная ветка EIO: $(#FFAA00)сплавы, SAG, кондуиты$(), wireless."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "enderio:item_conduit",
+      "text": "$(#FFAA00)Item Conduit$(): предметы по цветовым каналам. Фильтры на каждом извлечении."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "enderio:basic_capacitor_bank",
+      "text": "$(#FFAA00)Capacitor Bank$(): RF-буфер для SAG и Smelter."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "enderio:vibrant_capacitor_bank",
+      "text": "$(#FFAA00)Vibrant Capacitor Bank$() (финал): крупный RF-буфер для сети EIO."
+    }
+  ]
+}

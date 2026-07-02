@@ -6,10 +6,10 @@
 	hide_quest_details_until_startable: true
 	default_quest_shape: "circle"
 	filename: "side_thermal"
-	group: "B100000000000003"
+	group: "B100000000000002"
 	icon: { count: 1, id: "thermal:machine_frame" }
 	id: "A801000000000000"
-	order_index: 0
+	order_index: 21
 	quest_links: [ ]
 	quests: [
 		{
@@ -17,7 +17,7 @@
 			"§dТепловой контур§r — ветка открыта основной линией."
 			"Следующие узлы появятся по цепочке зависимостей."
 			]
-			dependencies: ["A201000000000013"]
+			dependencies: ["5221A00000000002"]
 			icon: { count: 1, id: "thermal:machine_frame" }
 			id: "A801000000000001"
 			disable_jei: true
@@ -33,13 +33,13 @@
 		{
 			dependencies: ["A801000000000001"]
 			hide_quest_until_deps_visible: true
-			icon: { count: 1, id: "thermal:redstone_furnace" }
+			icon: { count: 1, id: "thermal:machine_furnace" }
 			id: "A801000000000002"
 			disable_jei: true
 			shape: "circle"
 			size: 1.0d
 			tasks: [
-				{ id: "T801000000000002", item: "thermal:redstone_furnace", title: "Redstone Furnace", type: "item" }
+				{ id: "T801000000000002", item: "thermal:machine_furnace", title: "Redstone Furnace", type: "item" }
 			]
 			title: "Redstone Furnace"
 			x: -1.0d
@@ -63,13 +63,13 @@
 		{
 			dependencies: ["A801000000000003"]
 			hide_quest_until_deps_visible: true
-			icon: { count: 1, id: "thermal:sawmill" }
+			icon: { count: 1, id: "thermal:machine_sawmill" }
 			id: "A801000000000004"
 			disable_jei: true
 			shape: "circle"
 			size: 1.0d
 			tasks: [
-				{ id: "T801000000000004", item: "thermal:sawmill", title: "Sawmill", type: "item" }
+				{ id: "T801000000000004", item: "thermal:machine_sawmill", title: "Sawmill", type: "item" }
 			]
 			title: "Sawmill"
 			x: 3.0d
@@ -138,13 +138,13 @@
 		{
 			dependencies: ["A801000000000008"]
 			hide_quest_until_deps_visible: true
-			icon: { count: 1, id: "thermal:upgrade_augment_1" }
+			icon: { count: 1, id: "thermal:slot_seal" }
 			id: "A801000000000009"
 			disable_jei: true
 			shape: "circle"
 			size: 1.0d
 			tasks: [
-				{ count: 4, id: "T801000000000009", item: "thermal:upgrade_augment_1", title: "Augment", type: "item" }
+				{ count: 4, id: "T801000000000009", item: "thermal:slot_seal", title: "Augment", type: "item" }
 			]
 			title: "Augment"
 			x: -3.0d
@@ -198,13 +198,13 @@
 		{
 			dependencies: ["A801000000000012"]
 			hide_quest_until_deps_visible: true
-			icon: { count: 1, id: "thermal:upgrade_augment_3" }
+			icon: { count: 1, id: "thermal:flux_capacitor" }
 			id: "A801000000000013"
 			disable_jei: true
 			shape: "diamond"
 			size: 1.2d
 			tasks: [
-				{ count: 4, id: "T801000000000013", item: "thermal:upgrade_augment_3", title: "Resonant Upgrade", type: "item" }
+				{ count: 4, id: "T801000000000013", item: "thermal:flux_capacitor", title: "Resonant Upgrade", type: "item" }
 			]
 			title: "Resonant Upgrade"
 			x: 0.0d

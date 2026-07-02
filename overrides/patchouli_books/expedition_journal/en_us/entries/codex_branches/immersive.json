@@ -1,0 +1,29 @@
+{
+  "name": "Immersive Engineering",
+  "icon": "immersiveengineering:hammer",
+  "category": "patchouli:codex_branches",
+  "advancement": "cooptech:journal/codex_side_immersive",
+  "secret": true,
+  "sortnum": 5,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Зачем$()$(br2)IE — $(#FFAA00)мультиблоки$(), кокс, провода. Дополняет Thermal, не заменяет."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "immersiveengineering:coke_oven",
+      "text": "$(#FFAA00)Коксовая печь$(): уголь → кокс + creosote. 27 кирпичей 3×3×3."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "immersiveengineering:metal_press",
+      "text": "$(#FFAA00)Metal Press$(): пластины, провода, шестерни по формам."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "immersiveengineering:light_engineering",
+      "text": "$(#FFAA00)Light Engineering$() (финал): компонент продвинутых мультиблоков."
+    }
+  ]
+}

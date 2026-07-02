@@ -1,0 +1,29 @@
+{
+  "name": "Разведка и бестиарий",
+  "icon": "alexsmobs:animal_dictionary",
+  "category": "patchouli:codex_branches",
+  "advancement": "cooptech:journal/codex_side_bestiary",
+  "secret": true,
+  "sortnum": 4,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Зачем$()$(br2)Компасы и бестиарий находят $(#DD55DD)структуры, биомы и мобов$(). Трофеи — ресурсы для других веток."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "explorerscompass:explorerscompass",
+      "text": "$(#FFAA00)Explorer's Compass$(): поиск данжей и структур. Кооп: один сканирует, второй строит базу у точки."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "naturescompass:naturescompass",
+      "text": "$(#FFAA00)Nature's Compass$(): нужный биом без блужданий — ускоряет фарм редких ресурсов."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "alexsmobs:animal_dictionary",
+      "text": "$(#FFAA00)Бестиарий$(): механики мобов Alex's Mobs — как приручить, что дропает."
+    }
+  ]
+}

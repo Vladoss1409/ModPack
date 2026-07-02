@@ -1,0 +1,29 @@
+{
+  "name": "Silent Gear — кастомные инструменты",
+  "icon": "silentgear:pickaxe",
+  "category": "patchouli:codex_branches",
+  "advancement": "cooptech:journal/codex_side_silent_gear",
+  "secret": true,
+  "sortnum": 15,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Зачем$()$(br2)Silent Gear — $(#FFAA00)модульные$() кирки и мечи. Материалы задают статы; инструмент растёт с использованием."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "silentgear:template_board",
+      "text": "$(#FFAA00)Шаблонная доска + чертёж$(): проектируешь форму инструмента."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "silentgear:pickaxe_head",
+      "text": "$(#FFAA00)Головка + связка + покрытие$(): три слота — три свойства."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "silentgear:pickaxe",
+      "text": "$(#FFAA00)Готовый инструмент$(): ремонт и апгрейд без полной перековки."
+    }
+  ]
+}

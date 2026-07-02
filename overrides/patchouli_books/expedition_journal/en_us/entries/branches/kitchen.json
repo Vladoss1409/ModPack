@@ -1,5 +1,5 @@
 {
-  "name": "Kitchen — полевая кухня",
+  "name": "Полевая кухня",
   "icon": "farmersdelight:cooking_pot",
   "category": "patchouli:branches",
   "advancement": "cooptech:journal/side_kitchen",
@@ -8,7 +8,11 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(bold)Ветка Kitchen$()$(br2)Farmer's Delight после Главы I. Готовьте пайки для рейдов — $(#FFAA00)золотая морковь$() спасает на боссах."
+      "text": "$(bold)Полевая кухня$()$(br2)Ветка открыта после обжития лагеря T0. $(#FFAA00)Farmer's Delight$() — длинные баффы и сытость для рейдов. Кооп: один держит кухню, второй копает."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Как проходить$()$(br2)Квесты идут цепочкой после рубежа главного тира. Описания — от первого лица, как записи в блокноте экспедиции.$(br2)$(italic)«Сайд не обязателен для якоря — но даёт силу и удобство.»$()"
     }
   ]
 }

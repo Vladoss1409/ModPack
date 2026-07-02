@@ -1,0 +1,24 @@
+{
+  "name": "Alex's Caves — глибина",
+  "icon": "kubejs:decrypted_cave_codex",
+  "category": "patchouli:codex_branches",
+  "advancement": "cooptech:journal/codex_side_post_caves",
+  "secret": true,
+  "sortnum": 18,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Після якоря$()$(br2)Ветка відкривається після §eЯдра реальності§r. Кодекс печер → таблички → ехо-осколки — повне кільце Alex's Caves."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "kubejs:decrypted_cave_codex",
+      "text": "$(#FFAA00)Розшифрований кодекс$(): старт ветки. JEI — рецепти табличок."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "alexscaves:cave_tablet",
+      "text": "$(#FFAA00)Таблички печер$(): відкривають біоми. Кооп: один копає, другий збирає."
+    }
+  ]
+}

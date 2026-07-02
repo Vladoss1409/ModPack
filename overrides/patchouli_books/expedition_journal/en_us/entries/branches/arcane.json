@@ -1,14 +1,18 @@
 {
-  "name": "Arcane — арканные ремёсла",
+  "name": "Арканум поля",
   "icon": "irons_spellbooks:arcane_essence",
   "category": "patchouli:branches",
   "advancement": "cooptech:journal/side_arcane",
   "secret": true,
-  "sortnum": 3,
+  "sortnum": 12,
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(bold)Ветка Arcane$()$(br2)Iron's Spellbooks — руны, чернила, книга заклинаний. Один маг, второй — танк с реликвариями."
+      "text": "$(bold)Арканум поля$()$(br2)Магия после эссенции T2. Стол надписей, руны стихий, легендарные чернила."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Как проходить$()$(br2)Квесты идут цепочкой после рубежа главного тира. Описания — от первого лица, как записи в блокноте экспедиции.$(br2)$(italic)«Сайд не обязателен для якоря — но даёт силу и удобство.»$()"
     }
   ]
 }

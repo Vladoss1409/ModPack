@@ -1,0 +1,29 @@
+{
+  "name": "Thermal — полный контур",
+  "icon": "thermal:machine_frame",
+  "category": "patchouli:codex_branches",
+  "advancement": "cooptech:journal/codex_side_thermal",
+  "secret": true,
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Зачем$()$(br2)Главная T1 знакомит с рамой. Сайд-ветка — $(#FFAA00)все ключевые машины$() Thermal и резонансные апгрейды."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "thermal:machine_smelter",
+      "text": "$(#FFAA00)Индукционная плавильня$(): сплавы (invar, electrum) в одном блоке."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "thermal:machine_sawmill",
+      "text": "$(#FFAA00)Лесопилка$(): дерево → доски + побочные продукты."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "thermal:machine_crafter",
+      "text": "$(#FFAA00)Machine Crafter$() (финал): автокрафт по шаблону — мост к AE2."
+    }
+  ]
+}

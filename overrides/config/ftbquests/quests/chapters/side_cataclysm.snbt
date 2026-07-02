@@ -6,10 +6,10 @@
 	hide_quest_details_until_startable: true
 	default_quest_shape: "circle"
 	filename: "side_cataclysm"
-	group: "B100000000000004"
+	group: "B100000000000002"
 	icon: { count: 1, id: "cataclysm:gauntlet_of_guard" }
 	id: "A817000000000000"
-	order_index: 3
+	order_index: 52
 	quest_links: [ ]
 	quests: [
 		{
@@ -17,7 +17,7 @@
 			"§dБездна Cataclysm§r — ветка открыта основной линией."
 			"Следующие узлы появятся по цепочке зависимостей."
 			]
-			dependencies: ["A701000000000013"]
+			dependencies: ["5224A00000000012"]
 			icon: { count: 1, id: "cataclysm:void_core" }
 			id: "A817000000000001"
 			disable_jei: true

@@ -1,0 +1,33 @@
+{
+  "name": "Draconic Evolution — основы",
+  "icon": "draconicevolution:draconium_core",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Порог T4$()$(br2)$(#FFAA00)Якорная сингулярность$() открывает Draconic. Draconium → Wyvern → Draconic → Chaotic — $(#DD55DD)ступени силы$()."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "draconicevolution:draconium_core",
+      "text": "$(#FFAA00)Ядро дракония$(): базовый компонент всех крафтов DE."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "draconicevolution:wyvern_crafting_injector",
+      "text": "$(#FFAA00)Crafting Injector$(): fusion-крафт — несколько пьедесталов вокруг ядра. Сложные рецепты требуют несколько injectors."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "draconicevolution:energy_core",
+      "text": "$(#FFAA00)Energy Core + Storage$(): ORB энергии DE — миллиарды RF. Строй многослойно по рецепту."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Порядок$()$(br2)Пыль → Core → Wyvern gear → Awakened draconium → Draconic tier.$(br2)Chaos Guardian — источник $(#FFAA00)chaos shards$() для awakened."
+    }
+  ],
+  "category": "patchouli:codex_energy",
+  "advancement": "cooptech:journal/t4_draconic",
+  "secret": true,
+  "sortnum": 8
+}

@@ -1,0 +1,33 @@
+{
+  "name": "ProjectE — EMC и трансмутация",
+  "icon": "projecte:philosophers_stone",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Зачем$()$(br2)EMC — $(#DD55DD)«стоимость» предмета$() в единой валюте. Не замена AE2, а $(#FFAA00)логистика и дубликатор$() редких ресурсов."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "projecte:philosophers_stone",
+      "text": "$(#FFAA00)Камень философов$(): инструмент трансмутации. Крафт — первый шаг в EMC."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "projecte:transmutation_table",
+      "text": "$(#FFAA00)Стол трансмутации$(): кладёшь предметы → получаешь EMC → крафтишь другое из «банка»."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "projecte:collector_mk1",
+      "text": "$(#FFAA00)Коллектор$(): генерирует EMC из света/fuel. MK1 → MK2 → MK3."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)С AE2$()$(br2)EMC дополняет сеть: дубликат редких слитков, топливо для крафта. Не ломай баланс — используй для логистики, не для «всё из алмазов»."
+    }
+  ],
+  "category": "patchouli:codex_network",
+  "advancement": "cooptech:journal/t3_emc",
+  "secret": true,
+  "sortnum": 7
+}

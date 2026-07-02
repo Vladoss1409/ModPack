@@ -1,0 +1,33 @@
+{
+  "name": "next_ae — ультра-крафт",
+  "icon": "next_ae:machine_core",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Порог T5$()$(br2)$(#FFAA00)Якорный нексус$() открывает next_ae — надстройка над AE2: $(#DD55DD)параллельный крафт$(), ultimate table, advanced machines."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "next_ae:machine_core",
+      "text": "$(#FFAA00)Machine Core$(): база всех машин next_ae. Требует нексус и компоненты T4."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "next_ae:ultimate_crafting_table",
+      "text": "$(#FFAA00)Ultimate Crafting Table$(): сетка 9×9 для эндгейм-рецептов."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "next_ae:advanced_inscriber",
+      "text": "$(#FFAA00)Advanced Inscriber$(): быстрее AE2 inscriber, нужен для процессоров next_ae."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)С AE2$()$(br2)next_ae не заменяет ME-сеть — $(#FFAA00)расширяет$() её. Подключай к существующему controller и terminal."
+    }
+  ],
+  "category": "patchouli:codex_network",
+  "advancement": "cooptech:journal/t5_next_ae",
+  "secret": true,
+  "sortnum": 10
+}

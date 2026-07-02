@@ -1,0 +1,33 @@
+{
+  "name": "Mekanism — промышленный старт",
+  "icon": "mekanism:steel_casing",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Порог T2$()$(br2)$(#FFAA00)Якорная ячейка$() открывает Mekanism. База — $(#DD55DD)стальной корпус$(); без него ни одна машина не встанет."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "mekanism:metallurgic_infuser",
+      "text": "$(#FFAA00)Металлургический инфузер$(): смешивает металлы и материалы для сплавов Mek. Первый крафт после корпусов."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "mekanism:enrichment_chamber",
+      "text": "$(#FFAA00)Обогатительная фабрика$(): удваивает руду (2 dust → 3 ingot в цепочке). Сердце рудной линии."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "mekanism:basic_energy_cube",
+      "text": "$(#FFAA00)Энергокуб$(): буфер FE для завода. Mek использует $(#DD55DD)FE$() — совместим с RF Thermal."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Цепочка$()$(br2)Руда → обогатитель → дробитель → плавильня → слиток.$(br2)Газы и жидкости — через $(#FFAA00)pressurized tubes$() (позже)."
+    }
+  ],
+  "category": "patchouli:codex_energy",
+  "advancement": "cooptech:journal/t2_mek",
+  "secret": true,
+  "sortnum": 3
+}

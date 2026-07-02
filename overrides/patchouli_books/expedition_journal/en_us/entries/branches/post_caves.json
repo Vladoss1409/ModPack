@@ -1,0 +1,18 @@
+{
+  "name": "Печери розлому",
+  "icon": "kubejs:decrypted_cave_codex",
+  "category": "patchouli:branches",
+  "advancement": "cooptech:journal/side_post_caves",
+  "secret": true,
+  "sortnum": 18,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Печери розлому$()$(br2)Пост-T5 ветка. Розшифрований кодекс, таблички печер, ехо-осколки — повне проходження підземного кільця."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Після якоря$()$(br2)Ветка открывается после финала T5 и выбора пути в хабе «Після якоря». Описания — от первого лица.$(br2)$(italic)«Эпилог — для тех, кто хочет закрыть всё до конца.»$()"
+    }
+  ]
+}

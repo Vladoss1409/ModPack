@@ -1,0 +1,243 @@
+{
+	default_quest_disable_jei: true
+	default_hide_dependency_lines: false
+	progression_mode: "default"
+	hide_quest_until_deps_complete: false
+	hide_quest_details_until_startable: true
+	default_quest_shape: "circle"
+	filename: "side_post_epilogue"
+	group: "B100000000000002"
+	icon: { count: 1, id: "kubejs:reality_anchor_core" }
+	id: "A903C00000000000"
+	order_index: 64
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+			"§c§lЗаблокировано.§r"
+			""
+			"§7Нужно:"
+			"§e1.§r Финал §lT5 · Схождение§r — §eЯкорь реальности§r"
+			"§e2.§r Ветка хаба §e«Епілог модів»§r"
+			""
+			"После этого откроется §dЕпілог модів§r."
+			]
+			dependencies: ["5225A0000000001A"]
+			icon: { count: 1, id: "kubejs:quest_side_lock" }
+			id: "A903000000000000"
+			disable_jei: true
+			disable_jei: true
+			shape: "hexagon"
+			size: 1.2d
+			tasks: [
+				{ id: "T903000000000000", title: "Финал T5 + «Епілог модів»", type: "checkmark" }
+			]
+			title: "Якір не стабілізовано"
+			x: 0.0d
+			y: 0.0d
+		},
+		{
+			description: [
+			"§l[ Епілог модів ]§r"
+			""
+			"§7Фінальний облік: §dAE2§r, §dProjectE§r, §dDraconic§r, §dnext_ae§r."
+			"§7Закрити всі лінії модпаку після якоря."
+			""
+			"Reality anchor core — центр епілогу."
+			""
+			"§o§8«Ядро тихе — світ слухає.»§r"
+			]
+			dependencies: ["A903000000000000"]
+			icon: { count: 1, id: "kubejs:reality_anchor_core" }
+			id: "A903000000000001"
+			disable_jei: true
+			disable_jei: true
+			rewards: [
+				{ id: "R903000000000801", item: "kubejs:reality_anchor_core", type: "item" }
+				{ id: "R903000000000901", type: "xp", xp: 29 }
+			]
+			shape: "circle"
+			tags: ["branch_explore"]
+			tasks: [
+				{ id: "T903000000000001", item: "kubejs:reality_anchor_core", title: "Тримати ядро якоря", type: "item" }
+			]
+			title: "Ядро якоря"
+			x: 0.0d
+			y: 2.5d
+		},
+		{
+			description: [
+			"ME 16k — пам'ять на все."
+			""
+			"§o§8«Сеть пам'ятає кожен блок лагеря.»§r"
+			]
+			dependencies: ["A903000000000000", "A903000000000001"]
+			icon: { count: 1, id: "ae2:item_storage_cell_16k" }
+			id: "A903000000000002"
+			disable_jei: true
+			disable_jei: true
+			rewards: [
+				{ id: "R903000000000802", item: "ae2:item_storage_cell_16k", type: "item" }
+				{ id: "R903000000000902", type: "xp", xp: 29 }
+			]
+			shape: "circle"
+			tags: ["branch_explore"]
+			tasks: [
+				{ id: "T903000000000002", item: "ae2:item_storage_cell_16k", title: "Сковати диск 16k", type: "item" }
+			]
+			title: "Диск 16k"
+			x: 0.0d
+			y: 4.5d
+		},
+		{
+			description: [
+			"Планшет ProjectE — трансмутація в долоні."
+			""
+			"§o§8«Матерія підкоряється думці.»§r"
+			]
+			dependencies: ["A903000000000000", "A903000000000002"]
+			icon: { count: 1, id: "projecte:transmutation_tablet" }
+			id: "A903000000000003"
+			disable_jei: true
+			disable_jei: true
+			rewards: [
+				{ id: "R903000000000803", item: "projecte:transmutation_tablet", type: "item" }
+				{ id: "R903000000000903", type: "xp", xp: 29 }
+			]
+			shape: "circle"
+			tags: ["branch_explore"]
+			tasks: [
+				{ id: "T903000000000003", item: "projecte:transmutation_tablet", title: "Сковати EMC-планшет", type: "item" }
+			]
+			title: "EMC-планшет"
+			x: 0.0d
+			y: 6.5d
+		},
+		{
+			description: [
+			"Chaotic pickaxe Draconic — межа сили."
+			""
+			"§o§8«Кирка ріже реальність.»§r"
+			]
+			dependencies: ["A903000000000000", "A903000000000003"]
+			icon: { count: 1, id: "draconicevolution:chaotic_pickaxe" }
+			id: "A903000000000004"
+			disable_jei: true
+			disable_jei: true
+			rewards: [
+				{ id: "R903000000000804", item: "draconicevolution:chaotic_pickaxe", type: "item" }
+				{ id: "R903000000000904", type: "xp", xp: 29 }
+			]
+			shape: "circle"
+			tags: ["branch_explore"]
+			tasks: [
+				{ id: "T903000000000004", item: "draconicevolution:chaotic_pickaxe", title: "Сковати chaotic-кирку", type: "item" }
+			]
+			title: "Chaotic-кирка"
+			x: 0.0d
+			y: 8.5d
+		},
+		{
+			description: [
+			"Machine core — вершина next_ae."
+			""
+			"§o§8«Машина думає швидше за нас.»§r"
+			]
+			dependencies: ["A903000000000000", "A903000000000004"]
+			icon: { count: 1, id: "next_ae:machine_core" }
+			id: "A903000000000005"
+			disable_jei: true
+			disable_jei: true
+			rewards: [
+				{ id: "R903000000000805", item: "next_ae:machine_core", type: "item" }
+				{ id: "R903000000000905", type: "xp", xp: 29 }
+			]
+			shape: "circle"
+			tags: ["branch_explore"]
+			tasks: [
+				{ id: "T903000000000005", item: "next_ae:machine_core", title: "Сковати ядро next_ae", type: "item" }
+			]
+			title: "Ядро next_ae"
+			x: 0.0d
+			y: 10.5d
+		},
+		{
+			description: [
+			"Anchor nexus — символ усіх тирів."
+			""
+			"§o§8«Нексус збирає іскри в одну точку.»§r"
+			]
+			dependencies: ["A903000000000000", "A903000000000005"]
+			icon: { count: 1, id: "kubejs:anchor_nexus" }
+			id: "A903000000000006"
+			disable_jei: true
+			disable_jei: true
+			rewards: [
+				{ id: "R903000000000806", item: "kubejs:anchor_nexus", type: "item" }
+				{ id: "R903000000000906", type: "xp", xp: 29 }
+			]
+			shape: "circle"
+			tags: ["branch_explore"]
+			tasks: [
+				{ id: "T903000000000006", item: "kubejs:anchor_nexus", title: "Сковати нексус якоря", type: "item" }
+			]
+			title: "Нексус якоря"
+			x: 0.0d
+			y: 12.5d
+		},
+		{
+			description: [
+			"Reliquary convergence — голоси тирів."
+			""
+			"§o§8«Реліктарія співає хором.»§r"
+			]
+			dependencies: ["A903000000000000", "A903000000000006"]
+			icon: { count: 1, id: "kubejs:reliquary_convergence" }
+			id: "A903000000000007"
+			disable_jei: true
+			disable_jei: true
+			rewards: [
+				{ id: "R903000000000807", item: "kubejs:reliquary_convergence", type: "item" }
+				{ id: "R903000000000907", type: "xp", xp: 29 }
+			]
+			shape: "circle"
+			tags: ["branch_explore"]
+			tasks: [
+				{ id: "T903000000000007", item: "kubejs:reliquary_convergence", title: "Сковати реліктарій схождення", type: "item" }
+			]
+			title: "Реліктарій схождення"
+			x: 0.0d
+			y: 14.5d
+		},
+		{
+			description: [
+			"Маяк над лагерем — світло після якоря."
+			""
+			"§o§8«Світло не гасне — ми залишились.»§r"
+			]
+			dependencies: ["A903000000000000", "A903000000000007"]
+			icon: { count: 1, id: "minecraft:beacon" }
+			id: "A903000000000008"
+			disable_jei: true
+			disable_jei: true
+			rewards: [
+				{ id: "R903000000000808", item: "minecraft:beacon", type: "item" }
+				{ id: "R903000000001508", item: "kubejs:reliquary_convergence", type: "item" }
+				{ id: "R903000000000908", type: "xp", xp: 49 }
+			]
+			shape: "pentagon"
+			size: 1.3d
+			tags: ["branch_explore"]
+			tasks: [
+				{ id: "T903000000000008", item: "minecraft:beacon", title: "Поставити маяк епілогу", type: "item" }
+			]
+			title: "Фінал епілогу"
+			x: 0.0d
+			y: 16.5d
+		},
+	]
+	subtitle: [
+		"Після якоря · CoopTech"
+	]
+	title: "Епілог модів"
+}

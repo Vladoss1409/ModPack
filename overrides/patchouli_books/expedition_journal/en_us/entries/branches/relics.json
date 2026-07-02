@@ -1,0 +1,18 @@
+{
+  "name": "Реликвии",
+  "icon": "relics:roller_skates",
+  "category": "patchouli:branches",
+  "advancement": "cooptech:journal/side_relics",
+  "secret": true,
+  "sortnum": 17,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Реликвии$()$(br2)Артефакты Relics после Chaos T4. Ролики, подкова, амфибийные ботинки — пассивная сила."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Как проходить$()$(br2)Квесты идут цепочкой после рубежа главного тира. Описания — от первого лица, как записи в блокноте экспедиции.$(br2)$(italic)«Сайд не обязателен для якоря — но даёт силу и удобство.»$()"
+    }
+  ]
+}

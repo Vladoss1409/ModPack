@@ -1,0 +1,14 @@
+{
+  "name": "T4: порог Draconic",
+  "icon": "kubejs:journal_page_singularity_00",
+  "category": "patchouli:progress",
+  "advancement": "cooptech:journal/t4_lore_intro",
+  "secret": true,
+  "sortnum": 40,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Сингулярность открыла дракона$()$(br2)Новая глава: $(#DD55DD)Draconic Evolution$(). Первый шаг — $(#FFAA00)ядро дракония$(). Chaos Guardian ждёт в конце тира.$(br2)$(italic)«Сеть помнила каждый болт. Дракон помнит каждую эпоху.»$()"
+    }
+  ]
+}

@@ -6,10 +6,10 @@
 	hide_quest_details_until_startable: true
 	default_quest_shape: "circle"
 	filename: "side_arcane"
-	group: "B100000000000004"
+	group: "B100000000000002"
 	icon: { count: 1, id: "irons_spellbooks:arcane_essence" }
 	id: "A803000000000000"
-	order_index: 1
+	order_index: 34
 	quest_links: [ ]
 	quests: [
 		{
@@ -17,7 +17,7 @@
 			"§dАрканум поля§r — ветка открыта основной линией."
 			"Следующие узлы появятся по цепочке зависимостей."
 			]
-			dependencies: ["A601000000000016"]
+			dependencies: ["5222A0000000001C"]
 			icon: { count: 1, id: "irons_spellbooks:arcane_essence" }
 			id: "A803000000000001"
 			disable_jei: true

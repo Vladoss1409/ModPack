@@ -6,10 +6,10 @@
 	hide_quest_details_until_startable: true
 	default_quest_shape: "circle"
 	filename: "side_draconic"
-	group: "B100000000000003"
+	group: "B100000000000002"
 	icon: { count: 1, id: "draconicevolution:wyvern_core" }
 	id: "A808000000000000"
-	order_index: 7
+	order_index: 51
 	quest_links: [ ]
 	quests: [
 		{
@@ -17,7 +17,7 @@
 			"§dДраконья эволюция§r — ветка открыта основной линией."
 			"Следующие узлы появятся по цепочке зависимостей."
 			]
-			dependencies: ["A701000000000001"]
+			dependencies: ["5224A00000000002"]
 			icon: { count: 1, id: "draconicevolution:draconium_dust" }
 			id: "A808000000000001"
 			disable_jei: true
@@ -108,13 +108,13 @@
 		{
 			dependencies: ["A808000000000006"]
 			hide_quest_until_deps_visible: true
-			icon: { count: 1, id: "draconicevolution:draconic_core" }
+			icon: { count: 1, id: "draconicevolution:awakened_core" }
 			id: "A808000000000007"
 			disable_jei: true
 			shape: "circle"
 			size: 1.0d
 			tasks: [
-				{ id: "T808000000000007", item: "draconicevolution:draconic_core", title: "Draconic Core", type: "item" }
+				{ id: "T808000000000007", item: "draconicevolution:awakened_core", title: "Draconic Core", type: "item" }
 			]
 			title: "Draconic Core"
 			x: 0.0d

@@ -6,10 +6,10 @@
 	hide_quest_details_until_startable: true
 	default_quest_shape: "circle"
 	filename: "side_apotheosis"
-	group: "B100000000000004"
+	group: "B100000000000002"
 	icon: { count: 1, id: "apotheosis:simple_reforging_table" }
 	id: "A806000000000000"
-	order_index: 0
+	order_index: 24
 	quest_links: [ ]
 	quests: [
 		{
@@ -17,7 +17,7 @@
 			"§dАпофеоз§r — ветка открыта основной линией."
 			"Следующие узлы появятся по цепочке зависимостей."
 			]
-			dependencies: ["A501000000000031"]
+			dependencies: ["5221A0000000000C"]
 			icon: { count: 1, id: "apotheosis:simple_reforging_table" }
 			id: "A806000000000001"
 			disable_jei: true
@@ -108,13 +108,13 @@
 		{
 			dependencies: ["A806000000000006"]
 			hide_quest_until_deps_visible: true
-			icon: { count: 1, id: "apotheosis:mythic_gem" }
+			icon: { count: 1, id: "apotheosis:mythic_material" }
 			id: "A806000000000007"
 			disable_jei: true
 			shape: "circle"
 			size: 1.0d
 			tasks: [
-				{ id: "T806000000000007", item: "apotheosis:mythic_gem", title: "Mythic Gem", type: "item" }
+				{ id: "T806000000000007", item: "apotheosis:mythic_material", title: "Mythic Gem", type: "item" }
 			]
 			title: "Mythic Gem"
 			x: -2.5d

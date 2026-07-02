@@ -1,0 +1,18 @@
+{
+  "name": "Индустриальная ковка",
+  "icon": "immersiveengineering:hammer",
+  "category": "patchouli:branches",
+  "advancement": "cooptech:journal/side_immersive",
+  "secret": true,
+  "sortnum": 6,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Индустриальная ковка$()$(br2)IE после автоматизации руды T1. Коксовая печь, провода, металлический пресс."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Как проходить$()$(br2)Квесты идут цепочкой после рубежа главного тира. Описания — от первого лица, как записи в блокноте экспедиции.$(br2)$(italic)«Сайд не обязателен для якоря — но даёт силу и удобство.»$()"
+    }
+  ]
+}

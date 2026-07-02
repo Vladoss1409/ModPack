@@ -6,10 +6,10 @@
 	hide_quest_details_until_startable: true
 	default_quest_shape: "circle"
 	filename: "side_silent_gear"
-	group: "B100000000000005"
+	group: "B100000000000002"
 	icon: { count: 1, id: "silentgear:pickaxe" }
 	id: "A807000000000000"
-	order_index: 4
+	order_index: 25
 	quest_links: [ ]
 	quests: [
 		{
@@ -17,7 +17,7 @@
 			"§dКовка Silent Gear§r — ветка открыта основной линией."
 			"Следующие узлы появятся по цепочке зависимостей."
 			]
-			dependencies: ["A601000000000004"]
+			dependencies: ["5221A00000000007"]
 			icon: { count: 1, id: "silentgear:template_board" }
 			id: "A807000000000001"
 			disable_jei: true

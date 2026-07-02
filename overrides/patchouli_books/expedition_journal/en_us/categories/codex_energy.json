@@ -1,0 +1,7 @@
+{
+  "name": "Энергия и машины",
+  "description": "Производство и передача энергии: Thermal, Immersive, Powah, Flux, Mekanism, Ender IO, Draconic.",
+  "icon": "thermal:machine_furnace",
+  "parent": "patchouli:codex",
+  "sortnum": 1
+}

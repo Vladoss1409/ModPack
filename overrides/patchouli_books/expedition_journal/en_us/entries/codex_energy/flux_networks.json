@@ -1,0 +1,33 @@
+{
+  "name": "Flux Networks — энергия без проводов",
+  "icon": "fluxnetworks:flux_controller",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Зачем$()$(br2)Flux передаёт $(#FFAA00)RF/FE по сети$() без физических кабелей. Один контроллер — энергия на всю базу."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "fluxnetworks:flux_dust",
+      "text": "$(#FFAA00)Flux-пыль$(): крафтится из редстоуна и обсидиана. Основа всей сети."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "fluxnetworks:flux_plug",
+      "text": "$(#FFAA00)Flux Plug$(): ввод энергии в сеть (от генератора)."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "fluxnetworks:flux_point",
+      "text": "$(#FFAA00)Flux Point$(): вывод энергии к машине. Поставь на стену рядом с потребителем."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Настройка$()$(br2)1) Скрафтить Flux Controller.$(br2)2) Plug на генератор, Points на машины.$(br2)3) Открыть GUI контроллера — назвать сеть, включить.$(br2)Беспроводно = меньше лагов от проводов."
+    }
+  ],
+  "category": "patchouli:codex_energy",
+  "advancement": "cooptech:journal/t2_flux",
+  "secret": true,
+  "sortnum": 5
+}

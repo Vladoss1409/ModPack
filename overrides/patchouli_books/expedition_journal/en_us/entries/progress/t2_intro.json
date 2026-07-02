@@ -1,0 +1,14 @@
+{
+  "name": "T2: порог Mekanism",
+  "icon": "kubejs:journal_page_cell_00",
+  "category": "patchouli:progress",
+  "advancement": "cooptech:journal/t2_lore_intro",
+  "secret": true,
+  "sortnum": 20,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Якорная ячейка открыла завод$()$(br2)Новая глава журнала: $(#DD55DD)Mekanism$(), Ender IO и Flux. Первый шаг — $(#FFAA00)стальной корпус$().$(br2)$(italic)«Thermal научил терпению. Mek требует масштаба.»$()"
+    }
+  ]
+}

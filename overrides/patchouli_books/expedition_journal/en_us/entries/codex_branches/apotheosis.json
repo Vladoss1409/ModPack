@@ -1,0 +1,29 @@
+{
+  "name": "Apotheosis — перековка",
+  "icon": "apotheosis:simple_reforging_table",
+  "category": "patchouli:codex_branches",
+  "advancement": "cooptech:journal/codex_side_apotheosis",
+  "secret": true,
+  "sortnum": 12,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Зачем$()$(br2)Apotheosis усиливает $(#DD55DD)оружие, броню и спавнеры$(). Редкость растёт через перековку и гемы."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "apotheosis:simple_reforging_table",
+      "text": "$(#FFAA00)Стол перековки$(): трать материалы — меняй аффиксы предмета."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "apotheosis:salvaging_table",
+      "text": "$(#FFAA00)Salvaging$(): разбор магического лута на пыль/гемы."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "apotheosis:reforging_table",
+      "text": "$(#FFAA00)Reforging Table$() (финал): высшие тиры перековки."
+    }
+  ]
+}

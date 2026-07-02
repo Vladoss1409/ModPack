@@ -1,0 +1,677 @@
+{
+	default_quest_disable_jei: true
+	default_hide_dependency_lines: false
+	progression_mode: "default"
+	hide_quest_until_deps_complete: false
+	hide_quest_details_until_startable: true
+	default_quest_shape: "circle"
+	filename: "main_t2_circuit"
+	group: "B100000000000002"
+	icon: { count: 1, id: "kubejs:anchor_cell" }
+	id: "5222C00000000000"
+	order_index: 30
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+			"§l[ T2 · Контур ]§r"
+			""
+			"§7§eЯкорная ячейка§r открыла новую главу: §dMekanism§r — заводы, что перемалывают руду в пыль"
+			"§7и выдают слитки втрое. Параллельно — Ender IO и Flux."
+			""
+			"§7Записал первый шаг: §eстальной корпус§r Mek. Без него ни одна машина не встанет."
+			""
+			"§8Цель тира: промышленная переработка и §eЯкорная матрица§r (рубеж T2→T3)."
+			]
+			dependencies: ["5221A0000000001A"]
+			icon: { count: 1, id: "kubejs:anchor_cell" }
+			id: "5222A00000000001"
+			disable_jei: true
+			rewards: [
+				{ id: "5222D00000000001", item: "kubejs:journal_page_cell_00", type: "item" }
+				{ id: "5222D00000000002", type: "xp", xp: 25 }
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+				{ id: "5222B00000000001", title: "Принять ячейку и открыть главу Mekanism", type: "checkmark" }
+			]
+			title: "Порог Mekanism"
+			x: 0d
+			y: 0d
+		},
+		{
+			description: [
+			"База Mekanism — без корпуса ни одна машина. Соберу первым делом."
+			""
+			"§o§8«Сталь держит давление — Mek требует больше, чем Thermal.»§r"
+			]
+			dependencies: ["5222A00000000001"]
+			icon: { count: 1, id: "mekanism:steel_casing" }
+			id: "5222A00000000002"
+			disable_jei: true
+			rewards: [
+				{ id: "5222D000000000A2", item: "mekanism:steel_casing", count: 3, type: "item" }
+				{ id: "5222D000000000B2", type: "xp", xp: 22 }
+			]
+			shape: "gear"
+			tags: ["branch_pool", "pool_t2_w1", "branch_craft"]
+			tasks: [
+				{ id: "5222B00000000002", item: "mekanism:steel_casing", count: 4L, type: "item", title: "Собрать стальные корпуса" }
+			]
+			title: "Стальной корпус"
+			x: -6d
+			y: 2d
+		},
+		{
+			description: [
+			"Инфузер Mek — первый шаг к сплавам, которые печь не смешает."
+			""
+			"§o§8«Инфузер смешивает то, что казалось несовместимым.»§r"
+			]
+			dependencies: ["5222A00000000001"]
+			icon: { count: 1, id: "mekanism:metallurgic_infuser" }
+			id: "5222A00000000003"
+			disable_jei: true
+			rewards: [
+				{ id: "5222D000000000A3", item: "mekanism:metallurgic_infuser", type: "item" }
+				{ id: "5222D000000000B3", type: "xp", xp: 22 }
+			]
+			shape: "gear"
+			tags: ["branch_pool", "pool_t2_w1", "branch_craft", "branch_exclusive"]
+			tasks: [
+				{ id: "5222B00000000003", item: "mekanism:metallurgic_infuser", type: "item", title: "Собрать металлургический инфузер" }
+			]
+			title: "Металлургический инфузер"
+			x: -2d
+			y: 2d
+		},
+		{
+			description: [
+			"Обогатитель удваивает руду — сердце промышленного Mek."
+			""
+			"§o§8«Три руды на входе — больше слитков на выходе; так и записал в план.»§r"
+			]
+			dependencies: ["5222A00000000001"]
+			icon: { count: 1, id: "mekanism:enrichment_chamber" }
+			id: "5222A00000000004"
+			disable_jei: true
+			rewards: [
+				{ id: "5222D000000000A4", item: "mekanism:enrichment_chamber", type: "item" }
+				{ id: "5222D000000000B4", type: "xp", xp: 22 }
+			]
+			shape: "gear"
+			tags: ["branch_pool", "pool_t2_w1", "branch_craft"]
+			tasks: [
+				{ id: "5222B00000000004", item: "mekanism:enrichment_chamber", type: "item", title: "Собрать обогатительную фабрику" }
+			]
+			title: "Обогатительная фабрика"
+			x: 2d
+			y: 2d
+		},
+		{
+			description: [
+			"Проводящий сплав Ender IO — первый мост в другую ветку техники."
+			""
+			"§o§8«Сплав слабо светится — будто помнит иной мир.»§r"
+			]
+			dependencies: ["5222A00000000001"]
+			icon: { count: 1, id: "enderio:conductive_alloy_ingot" }
+			id: "5222A00000000005"
+			disable_jei: true
+			rewards: [
+				{ id: "5222D000000000A5", item: "enderio:conductive_alloy_ingot", count: 10, type: "item" }
+				{ id: "5222D000000000B5", type: "xp", xp: 22 }
+			]
+			shape: "circle"
+			tags: ["branch_pool", "pool_t2_w1", "branch_craft", "branch_exclusive"]
+			tasks: [
+				{ id: "5222B00000000005", item: "enderio:conductive_alloy_ingot", count: 16L, type: "item", title: "Выплавить проводящий сплав" }
+			]
+			title: "Проводящий сплав"
+			x: 6d
+			y: 2d
+		},
+		{
+			description: [
+			"§8Опционально.§r Колба душ Ender IO — моб становится ресурсом."
+			""
+			"§o§8«Душа в стекле — спорная мораль, но эффективно.»§r"
+			]
+			dependencies: ["5222A00000000002"]
+			icon: { count: 1, id: "enderio:empty_soul_vial" }
+			id: "5222A00000000006"
+			disable_jei: true
+			rewards: [
+				{ id: "5222D000000000C6", item: "kubejs:reliquary_resonant", type: "item" }
+				{ id: "5222D000000000B6", type: "xp", xp: 14 }
+			]
+			shape: "circle"
+			size: 0.75d
+			tasks: [
+				{ id: "5222B00000000006", item: "enderio:empty_soul_vial", type: "item", title: "Собрать колбу душ" }
+			]
+			title: "Сплав душ"
+			x: -8d
+			y: 3.5d
+		},
+		{
+			description: [
+			"§8Опционально.§r Flux-пыль — начало сети без проводов."
+			""
+			"§o§8«Пыль тянет энергию сквозь воздух — странно, но работает.»§r"
+			]
+			dependencies: ["5222A00000000005"]
+			icon: { count: 1, id: "fluxnetworks:flux_dust" }
+			id: "5222A00000000007"
+			disable_jei: true
+			rewards: [
+				{ id: "5222D000000000B7", type: "xp", xp: 14 }
+			]
+			shape: "circle"
+			size: 0.75d
+			tasks: [
+				{ id: "5222B00000000007", item: "fluxnetworks:flux_dust", count: 8L, type: "item", title: "Собрать Flux-пыль" }
+			]
+			title: "Flux пыль"
+			x: 8d
+			y: 3.5d
+		},
+		{
+			description: [
+			"§dРубеж.§r Mek и Ender IO встали на базу. Записал: промышленный ритм начался."
+			""
+			"§7Нужны §eвсе 4§r ветки волны."
+			"§7Кооп: делите ветки между напарником."
+			]
+			dependencies: ["5222A00000000001", "5222A00000000002", "5222A00000000003", "5222A00000000004", "5222A00000000005"]
+			icon: { count: 1, id: "kubejs:quest_gate" }
+			id: "5222A00000000008"
+			disable_jei: true
+			rewards: [
+				{ id: "5222D0000000001D", item: "kubejs:journal_page_cell_01", type: "item" }
+				{ id: "5222D000000000D8", item: "kubejs:reliquary_resonant", type: "item" }
+				{ id: "5222D00000000009", type: "xp", xp: 50 }
+			]
+			shape: "diamond"
+			size: 1.2d
+			tasks: [
+				{ id: "5222B00000000008", title: "Промышленный старт", type: "checkmark" }
+			]
+			title: "Промышленный старт"
+			x: 0d
+			y: 4.5d
+		},
+		{
+			description: [
+			"Дробитель Mek — вторая ступень переработки, руда не застаивается."
+			""
+			"§o§8«Дробитель не спит — руда течёт рекой.»§r"
+			]
+			dependencies: ["5222A00000000008", "5222A00000000002"]
+			icon: { count: 1, id: "mekanism:crusher" }
+			id: "5222A00000000009"
+			disable_jei: true
+			rewards: [
+				{ id: "5222D000000000A9", item: "mekanism:crusher", type: "item" }
+				{ id: "5222D000000000C9", item: "kubejs:reliquary_resonant", type: "item" }
+				{ id: "5222D000000000B9", type: "xp", xp: 22 }
+			]
+			shape: "gear"
+			tags: ["branch_pool", "pool_t2_w2", "branch_craft"]
+			tasks: [
+				{ id: "5222B00000000009", item: "mekanism:crusher", type: "item", title: "Собрать дробитель" }
+			]
+			title: "Дробитель"
+			x: -6d
+			y: 6d
+		},
+		{
+			description: [
+			"Энергокуб Mek — буфер, чтобы завод не падал на пике."
+			""
+			"§o§8«Куб гудит — это звук стабильности.»§r"
+			]
+			dependencies: ["5222A00000000008", "5222A00000000003"]
+			icon: { count: 1, id: "mekanism:basic_energy_cube" }
+			id: "5222A0000000000A"
+			disable_jei: true
+			rewards: [
+				{ id: "5222D000000000AA", item: "mekanism:basic_energy_cube", type: "item" }
+				{ id: "5222D000000000BA", type: "xp", xp: 22 }
+			]
+			shape: "gear"
+			tags: ["branch_pool", "pool_t2_w2", "branch_craft", "branch_exclusive"]
+			tasks: [
+				{ id: "5222B0000000000A", item: "mekanism:basic_energy_cube", type: "item", title: "Собрать энергокуб" }
+			]
+			title: "Энергетический куб"
+			x: -2d
+			y: 6d
+		},
+		{
+			description: [
+			"Сплавная печь EIO — три металла в одном блоке."
+			""
+			"§o§8«Три слота — один сплав; экономия места и нервов.»§r"
+			]
+			dependencies: ["5222A00000000008", "5222A00000000004"]
+			icon: { count: 1, id: "enderio:alloy_smelter" }
+			id: "5222A0000000000B"
+			disable_jei: true
+			rewards: [
+				{ id: "5222D000000000AB", item: "enderio:alloy_smelter", type: "item" }
+				{ id: "5222D000000000BB", type: "xp", xp: 22 }
+			]
+			shape: "gear"
+			tags: ["branch_pool", "pool_t2_w2", "branch_craft"]
+			tasks: [
+				{ id: "5222B0000000000B", item: "enderio:alloy_smelter", type: "item", title: "Собрать сплавную печь" }
+			]
+			title: "Сплавная печь"
+			x: 2d
+			y: 6d
+		},
+		{
+			description: [
+			"Flux-контроллер — энергия по всей базе без паутины проводов."
+			""
+			"§o§8«Контроллер видит углы лагеря — я вижу меньше кабелей.»§r"
+			]
+			dependencies: ["5222A00000000008", "5222A00000000005"]
+			icon: { count: 1, id: "fluxnetworks:flux_controller" }
+			id: "5222A0000000000C"
+			disable_jei: true
+			rewards: [
+				{ id: "5222D000000000AC", item: "fluxnetworks:flux_controller", type: "item" }
+				{ id: "5222D000000000BC", type: "xp", xp: 22 }
+			]
+			shape: "gear"
+			tags: ["branch_pool", "pool_t2_w2", "branch_craft", "branch_exclusive"]
+			tasks: [
+				{ id: "5222B0000000000C", item: "fluxnetworks:flux_controller", type: "item", title: "Собрать Flux-контроллер" }
+			]
+			title: "Flux контроллер"
+			x: 6d
+			y: 6d
+		},
+		{
+			description: [
+			"§8Опционально.§r Газовый танк Mek — хранение под давлением."
+			""
+			"§o§8«С вентилем осторожнее — урок из разлома.»§r"
+			]
+			dependencies: ["5222A0000000000B"]
+			icon: { count: 1, id: "mekanism:basic_chemical_tank" }
+			id: "5222A0000000000D"
+			disable_jei: true
+			rewards: [
+				{ id: "5222D000000000BD", type: "xp", xp: 14 }
+			]
+			shape: "circle"
+			size: 0.75d
+			tasks: [
+				{ id: "5222B0000000000D", item: "mekanism:basic_chemical_tank", type: "item", title: "Собрать газовый танк" }
+			]
+			title: "Газовый танк"
+			x: 8d
+			y: 7.5d
+		},
+		{
+			description: [
+			"§8Опционально.§r Конденсатор EIO — запас для мощных ударов."
+			""
+			"§o§8«Копит тихо — бьёт громко.»§r"
+			]
+			dependencies: ["5222A0000000000A"]
+			icon: { count: 1, id: "enderio:basic_capacitor" }
+			id: "5222A0000000000E"
+			disable_jei: true
+			rewards: [
+				{ id: "5222D000000000CE", item: "kubejs:reliquary_resonant", type: "item" }
+				{ id: "5222D000000000BE", type: "xp", xp: 14 }
+			]
+			shape: "circle"
+			size: 0.75d
+			tasks: [
+				{ id: "5222B0000000000E", item: "enderio:basic_capacitor", count: 4L, type: "item", title: "Собрать конденсаторы" }
+			]
+			title: "Конденсатор"
+			x: -4d
+			y: 7.5d
+		},
+		{
+			description: [
+			"§8Опционально.§r Арканическая эссенция — зацепка к магии."
+			""
+			"§o§8«Эссенция в ладони — заклинание ждёт формулы.»§r"
+			]
+			dependencies: ["5222A00000000009"]
+			icon: { count: 1, id: "irons_spellbooks:arcane_essence" }
+			id: "5222A0000000001C"
+			disable_jei: true
+			rewards: [
+				{ id: "5222D000000000DC", item: "kubejs:reliquary_resonant", type: "item" }
+				{ id: "5222D000000000CC", type: "xp", xp: 14 }
+			]
+			shape: "circle"
+			size: 0.75d
+			tasks: [
+				{ id: "5222B0000000001C", item: "irons_spellbooks:arcane_essence", count: 16L, type: "item", title: "Собрать магическую эссенцию" }
+			]
+			title: "Магическая эссенция"
+			x: -8d
+			y: 7.5d
+		},
+		{
+			description: [
+			"§dРубеж.§r Энергия и переработка держатся. Второй рубеж T2 — в журнале."
+			""
+			"§7Нужны §eвсе 4§r ветки волны."
+			"§7Кооп: делите ветки между напарником."
+			]
+			dependencies: ["5222A00000000008", "5222A00000000009", "5222A0000000000A", "5222A0000000000B", "5222A0000000000C"]
+			icon: { count: 1, id: "kubejs:quest_gate" }
+			id: "5222A0000000000F"
+			disable_jei: true
+			rewards: [
+				{ id: "5222D0000000001E", item: "kubejs:journal_page_cell_02", type: "item" }
+				{ id: "5222D000000000D9", item: "kubejs:reliquary_resonant", type: "item" }
+				{ id: "5222D00000000011", type: "xp", xp: 50 }
+			]
+			shape: "diamond"
+			size: 1.2d
+			tasks: [
+				{ id: "5222B0000000000F", title: "Энергоузел", type: "checkmark" }
+			]
+			title: "Энергоузел"
+			x: 0d
+			y: 8.5d
+		},
+		{
+			description: [
+			"Осмий Mek — редкий металл для роста завода."
+			""
+			"§o§8«Синий слиток — Mek просит его всё громче.»§r"
+			]
+			dependencies: ["5222A0000000000F", "5222A00000000009"]
+			icon: { count: 1, id: "mekanism:ingot_osmium" }
+			id: "5222A00000000010"
+			disable_jei: true
+			rewards: [
+				{ id: "5222D000000000B0", item: "mekanism:ingot_osmium", count: 21, type: "item" }
+				{ id: "5222D000000000C0", type: "xp", xp: 22 }
+			]
+			shape: "circle"
+			tags: ["branch_pool", "pool_t2_w3", "branch_mine"]
+			tasks: [
+				{ id: "5222B00000000010", item: "mekanism:ingot_osmium", count: 32L, type: "item", title: "Накопать осмий" }
+			]
+			title: "Осмий"
+			x: -6d
+			y: 10d
+		},
+		{
+			description: [
+			"Вибрантный сплав — вершина линии Ender IO."
+			""
+			"§o§8«Сплав поёт на частоте, которую слышит только сеть.»§r"
+			]
+			dependencies: ["5222A0000000000F", "5222A0000000000A"]
+			icon: { count: 1, id: "enderio:vibrant_alloy_ingot" }
+			id: "5222A00000000011"
+			disable_jei: true
+			rewards: [
+				{ id: "5222D000000000B1", item: "enderio:vibrant_alloy_ingot", count: 10, type: "item" }
+				{ id: "5222D000000000C1", type: "xp", xp: 22 }
+			]
+			shape: "circle"
+			tags: ["branch_pool", "pool_t2_w3", "branch_craft", "branch_exclusive"]
+			tasks: [
+				{ id: "5222B00000000011", item: "enderio:vibrant_alloy_ingot", count: 16L, type: "item", title: "Выплавить вибрантный сплав" }
+			]
+			title: "Вибрантный сплав"
+			x: -2d
+			y: 10d
+		},
+		{
+			description: [
+			"Продвинутая схема — мозг машин Mek."
+			""
+			"§o§8«Схема помнит команды — я записываю свои.»§r"
+			]
+			dependencies: ["5222A0000000000F", "5222A0000000000B"]
+			icon: { count: 1, id: "mekanism:advanced_control_circuit" }
+			id: "5222A00000000012"
+			disable_jei: true
+			rewards: [
+				{ id: "5222D000000000B2", item: "mekanism:advanced_control_circuit", count: 3, type: "item" }
+				{ id: "5222D000000000D2", item: "kubejs:reliquary_resonant", type: "item" }
+				{ id: "5222D000000000C2", type: "xp", xp: 22 }
+			]
+			shape: "circle"
+			tags: ["branch_pool", "pool_t2_w3", "branch_craft"]
+			tasks: [
+				{ id: "5222B00000000012", item: "mekanism:advanced_control_circuit", count: 4L, type: "item", title: "Собрать продвинутые схемы" }
+			]
+			title: "Продвинутая схема"
+			x: 2d
+			y: 10d
+		},
+		{
+			description: [
+			"Flux-точка — энергия в угол базы без новых проводов."
+			""
+			"§o§8«Точка на стене — как розетка в пустоте.»§r"
+			]
+			dependencies: ["5222A0000000000F", "5222A0000000000C"]
+			icon: { count: 1, id: "fluxnetworks:flux_point" }
+			id: "5222A00000000013"
+			disable_jei: true
+			rewards: [
+				{ id: "5222D000000000B3", item: "fluxnetworks:flux_point", count: 3, type: "item" }
+				{ id: "5222D000000000C3", type: "xp", xp: 22 }
+			]
+			shape: "circle"
+			tags: ["branch_pool", "pool_t2_w3", "branch_craft", "branch_exclusive"]
+			tasks: [
+				{ id: "5222B00000000013", item: "fluxnetworks:flux_point", count: 4L, type: "item", title: "Установить Flux-точки" }
+			]
+			title: "Flux точка"
+			x: 6d
+			y: 10d
+		},
+		{
+			description: [
+			"§8Опционально.§r Медный том заклинаний — тяжёлый, но нужный."
+			""
+			"§o§8«Знание весит — я готов нести.»§r"
+			]
+			dependencies: ["5222A00000000013"]
+			icon: { count: 1, id: "irons_spellbooks:copper_spell_book" }
+			id: "5222A0000000001B"
+			disable_jei: true
+			rewards: [
+				{ id: "5222D000000000CB", type: "xp", xp: 14 }
+			]
+			shape: "circle"
+			size: 0.75d
+			tasks: [
+				{ id: "5222B0000000001B", item: "irons_spellbooks:copper_spell_book", type: "item", title: "Собрать том заклинаний" }
+			]
+			title: "Том заклинаний"
+			x: -8d
+			y: 11.5d
+		},
+		{
+			description: [
+			"§8Опционально.§r Тепловой генератор Mek — жар разлома в ток."
+			""
+			"§o§8«Тепло, что раньше пугало, теперь кормит завод.»§r"
+			]
+			dependencies: ["5222A00000000012"]
+			icon: { count: 1, id: "mekanismgenerators:heat_generator" }
+			id: "5222A00000000014"
+			disable_jei: true
+			rewards: [
+				{ id: "5222D000000000D4", item: "kubejs:reliquary_resonant", type: "item" }
+				{ id: "5222D000000000C4", type: "xp", xp: 14 }
+			]
+			shape: "circle"
+			size: 0.75d
+			tasks: [
+				{ id: "5222B00000000014", item: "mekanismgenerators:heat_generator", type: "item", title: "Собрать тепловой генератор" }
+			]
+			title: "Генератор"
+			x: 4d
+			y: 11.5d
+		},
+		{
+			description: [
+			"§8Опционально.§r SAG Mill — ещё один слой измельчения EIO."
+			""
+			"§o§8«Руда уходит пылью — возвращается богаче.»§r"
+			]
+			dependencies: ["5222A00000000011"]
+			icon: { count: 1, id: "enderio:sag_mill" }
+			id: "5222A00000000015"
+			disable_jei: true
+			rewards: [
+				{ id: "5222D000000000C5", type: "xp", xp: 14 }
+			]
+			shape: "circle"
+			size: 0.75d
+			tasks: [
+				{ id: "5222B00000000015", item: "enderio:sag_mill", type: "item", title: "Собрать SAG Mill" }
+			]
+			title: "SAG Mill"
+			x: 8d
+			y: 11.5d
+		},
+		{
+			description: [
+			"§dРубеж.§r Сырьё для матрицы собрано. Осталось сложить якорь T2."
+			""
+			"§7Нужны §eвсе 4§r ветки волны."
+			"§7Кооп: делите ветки между напарником."
+			]
+			dependencies: ["5222A0000000000F", "5222A00000000010", "5222A00000000011", "5222A00000000012", "5222A00000000013"]
+			icon: { count: 1, id: "kubejs:quest_gate" }
+			id: "5222A00000000016"
+			disable_jei: true
+			rewards: [
+				{ id: "5222D0000000001F", item: "kubejs:journal_page_cell_03", type: "item" }
+				{ id: "5222D000000000DA", item: "kubejs:reliquary_resonant", type: "item" }
+				{ id: "5222D00000000016", type: "xp", xp: 50 }
+			]
+			shape: "diamond"
+			size: 1.2d
+			tasks: [
+				{ id: "5222B00000000016", title: "Готовность к сети", type: "checkmark" }
+			]
+			title: "Готовность к сети"
+			x: 0d
+			y: 12.5d
+		},
+		{
+			description: [
+			"В блокноте — чертёж якорной матрицы. Ещё корпуса Mek под опору."
+			""
+			"§o§8«Чертёж пульсирует — AE2 ждёт за следующей дверью.»§r"
+			]
+			dependencies: ["5222A00000000016"]
+			icon: { count: 1, id: "mekanism:steel_casing" }
+			id: "5222A00000000017"
+			disable_jei: true
+			rewards: [
+				{ id: "5222D000000000B7", item: "mekanism:steel_casing", count: 3, type: "item" }
+				{ id: "5222D000000000C7", type: "xp", xp: 22 }
+			]
+			shape: "hexagon"
+			tasks: [
+				{ id: "5222B00000000018", item: "mekanism:steel_casing", count: 4L, type: "item", title: "Корпуса под матрицу" }
+			]
+			title: "Чертёж матрицы"
+			x: -2d
+			y: 14d
+		},
+		{
+			description: [
+			"Вибрантный сплав, схемы и сталь — тело матрицы своими руками."
+			""
+			"§o§8«Три силы в одном кристалле: Mek, EIO и Flux.»§r"
+			]
+			dependencies: ["5222A00000000016"]
+			icon: { count: 1, id: "enderio:vibrant_alloy_ingot" }
+			id: "5222A00000000018"
+			disable_jei: true
+			rewards: [
+				{ id: "5222D00000000018", type: "xp", xp: 31 }
+			]
+			shape: "gear"
+			tasks: [
+				{ id: "5222B00000000019", item: "enderio:vibrant_alloy_ingot", count: 8L, type: "item", title: "Сплав для матрицы" }
+				{ id: "5222B0000000001A", item: "mekanism:advanced_control_circuit", count: 4L, type: "item", title: "Схемы для матрицы" }
+			]
+			title: "Сбор для матрицы"
+			x: 2d
+			y: 14d
+		},
+		{
+			description: [
+			"§8Опционально.§r Замер промышленного контура перед финалом."
+			""
+			"§o§8«Все три мода в такт — матрица примет сигнал.»§r"
+			]
+			dependencies: ["5222A00000000017"]
+			icon: { count: 1, id: "minecraft:comparator" }
+			id: "5222A00000000019"
+			disable_jei: true
+			rewards: [
+				{ id: "5222D00000000018", type: "xp", xp: 15 }
+			]
+			shape: "circle"
+			size: 0.75d
+			tasks: [
+				{ id: "5222B0000000001E", item: "minecraft:comparator", count: 4L, type: "item", title: "Замерить контур" }
+			]
+			title: "Резонансный замер III"
+			x: 5d
+			y: 15.5d
+		},
+		{
+			description: [
+			"§l[ Финал тира T2 ]§r"
+			""
+			"§7Стальной корпус гудит, провода Ender IO светятся, Flux тянет энергию сквозь базу."
+			""
+			"§7§eЯкорная матрица§r собрана — в журнале отметка о пороге T2→T3. За ней §dAE2§r"
+			"§7и сеть, что помнит каждый предмет."
+			""
+			"§8Награда — Якорная матрица (рубеж T2 → T3).§r"
+			]
+			dependencies: ["5222A00000000017", "5222A00000000018"]
+			min_required_dependencies: 2
+			icon: { count: 1, id: "kubejs:anchor_matrix" }
+			id: "5222A0000000001A"
+			disable_jei: true
+			rewards: [
+				{ id: "5222D00000000019", item: "kubejs:anchor_matrix", type: "item" }
+				{ id: "5222D00000000020", item: "kubejs:journal_page_cell_04", type: "item" }
+				{ id: "5222D0000000001B", type: "xp", xp: 130 }
+			]
+			shape: "pentagon"
+			size: 1.6d
+			tasks: [
+				{ id: "5222B0000000001D", title: "Зафиксировать матрицу в журнале", type: "checkmark" }
+			]
+			title: "Якорная матрица"
+			x: 0d
+			y: 16.5d
+		},
+	]
+	subtitle: [
+		"T2 · ~60–75 мин"
+	]
+	title: "T2 · Контур"
+}

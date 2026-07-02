@@ -1,0 +1,7 @@
+{
+  "name": "Лагерь, еда и быт",
+  "description": "Фундамент T0–T1: автоплавка, кухня, хранение и бытовые блоки лагеря.",
+  "icon": "farmersdelight:cooking_pot",
+  "parent": "patchouli:codex",
+  "sortnum": 0
+}

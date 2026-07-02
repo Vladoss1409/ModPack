@@ -1,6 +1,6 @@
 {
   "name": "Запись диспетчера",
-  "icon": "kubejs:journal_page",
+  "icon": "kubejs:journal_page_00",
   "category": "patchouli:people",
   "sortnum": 0,
   "pages": [

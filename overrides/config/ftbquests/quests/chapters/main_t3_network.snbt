@@ -1,0 +1,674 @@
+{
+	default_quest_disable_jei: true
+	default_hide_dependency_lines: false
+	progression_mode: "default"
+	hide_quest_until_deps_complete: false
+	hide_quest_details_until_startable: true
+	default_quest_shape: "circle"
+	filename: "main_t3_network"
+	group: "B100000000000002"
+	icon: { count: 1, id: "kubejs:anchor_matrix" }
+	id: "5223C00000000000"
+	order_index: 40
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+			"§l[ T3 · Сеть ]§r"
+			""
+			"§7§eЯкорная матрица§r открыла §dApplied Energistics 2§r — сеть, что помнит"
+			"§7каждый предмет на базе. EMC придёт сюда же, но как инструмент логистики."
+			""
+			"§7Первый шаг в блокноте: §eгравёр§r — без процессоров сеть слепа."
+			""
+			"§8Цель тира: рабочая ME-сеть и §eЯкорная сингулярность§r (рубеж T3→T4)."
+			]
+			dependencies: ["5222A0000000001A"]
+			icon: { count: 1, id: "kubejs:anchor_matrix" }
+			id: "5223A00000000001"
+			disable_jei: true
+			rewards: [
+				{ id: "5223D00000000001", item: "kubejs:journal_page_matrix_00", type: "item" }
+				{ id: "5223D00000000002", type: "xp", xp: 25 }
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+				{ id: "5223B00000000001", title: "Принять матрицу и открыть главу AE2", type: "checkmark" }
+			]
+			title: "Порог AE2"
+			x: 0d
+			y: 0d
+		},
+		{
+			description: [
+			"Гравёр — сердце процессоров AE2. Без него сеть слепа."
+			""
+			"§o§8«Высечу мозг сети своими руками — так начинается T3.»§r"
+			]
+			dependencies: ["5223A00000000001"]
+			icon: { count: 1, id: "ae2:inscriber" }
+			id: "5223A00000000002"
+			disable_jei: true
+			rewards: [
+				{ id: "5223D000000000A2", item: "ae2:inscriber", type: "item" }
+				{ id: "5223D000000000B2", type: "xp", xp: 27 }
+			]
+			shape: "gear"
+			tags: ["branch_pool", "pool_t3_w1", "branch_craft"]
+			tasks: [
+				{ id: "5223B00000000002", item: "ae2:inscriber", type: "item", title: "Собрать гравёр AE2" }
+			]
+			title: "Гравёр AE2"
+			x: -6d
+			y: 2d
+		},
+		{
+			description: [
+			"Certus-кварц — кровь AE2. Наберу запас, пока жила не ушла глубже."
+			""
+			"§o§8«Кристалл поёт на частоте якоря — я уже привыкаю к звуку.»§r"
+			]
+			dependencies: ["5223A00000000001"]
+			icon: { count: 1, id: "ae2:certus_quartz_crystal" }
+			id: "5223A00000000003"
+			disable_jei: true
+			rewards: [
+				{ id: "5223D000000000A3", item: "ae2:certus_quartz_crystal", count: 21, type: "item" }
+				{ id: "5223D000000000B3", type: "xp", xp: 27 }
+			]
+			shape: "circle"
+			tags: ["branch_pool", "pool_t3_w1", "branch_mine", "branch_exclusive"]
+			tasks: [
+				{ id: "5223B00000000003", item: "ae2:certus_quartz_crystal", count: 32L, type: "item", title: "Добыть certus-кварц" }
+			]
+			title: "Кварц Certus"
+			x: -2d
+			y: 2d
+		},
+		{
+			description: [
+			"Fluix — мост между кварцем и редстоуном. Сеть оживёт здесь."
+			""
+			"§o§8«Сплав светится — первый пульс ME.»§r"
+			]
+			dependencies: ["5223A00000000001"]
+			icon: { count: 1, id: "ae2:fluix_crystal" }
+			id: "5223A00000000004"
+			disable_jei: true
+			rewards: [
+				{ id: "5223D000000000A4", item: "ae2:fluix_crystal", count: 10, type: "item" }
+				{ id: "5223D000000000B4", type: "xp", xp: 27 }
+			]
+			shape: "gear"
+			tags: ["branch_pool", "pool_t3_w1", "branch_craft"]
+			tasks: [
+				{ id: "5223B00000000004", item: "ae2:fluix_crystal", count: 16L, type: "item", title: "Синтезировать fluix" }
+			]
+			title: "Fluix"
+			x: 2d
+			y: 2d
+		},
+		{
+			description: [
+			"Камень философов ProjectE — EMC как логистика, не магия ради магии."
+			""
+			"§o§8«Камень тяжёл — в нём спят рецепты мира.»§r"
+			]
+			dependencies: ["5223A00000000001"]
+			icon: { count: 1, id: "projecte:philosophers_stone" }
+			id: "5223A00000000005"
+			disable_jei: true
+			rewards: [
+				{ id: "5223D000000000A5", item: "projecte:philosophers_stone", type: "item" }
+				{ id: "5223D000000000B5", type: "xp", xp: 27 }
+			]
+			shape: "gear"
+			tags: ["branch_pool", "pool_t3_w1", "branch_craft", "branch_exclusive"]
+			tasks: [
+				{ id: "5223B00000000005", item: "projecte:philosophers_stone", type: "item", title: "Создать камень философов" }
+			]
+			title: "Камень философов"
+			x: 6d
+			y: 2d
+		},
+		{
+			description: [
+			"§8Опционально.§r Первый стол трансмутации — EMC в действии."
+			""
+			"§o§8«Стол помнит всё, что я на него положу.»§r"
+			]
+			dependencies: ["5223A00000000002"]
+			icon: { count: 1, id: "projecte:transmutation_table" }
+			id: "5223A00000000006"
+			disable_jei: true
+			rewards: [
+				{ id: "5223D000000000C6", item: "kubejs:reliquary_arcane", type: "item" }
+				{ id: "5223D000000000B6", type: "xp", xp: 16 }
+			]
+			shape: "circle"
+			size: 0.75d
+			tasks: [
+				{ id: "5223B00000000006", item: "projecte:transmutation_table", type: "item", title: "Собрать стол трансмутации" }
+			]
+			title: "Трансмутационный стол"
+			x: -8d
+			y: 3.5d
+		},
+		{
+			description: [
+			"§8Опционально.§r Первые fluix-кабели — нервы сети."
+			""
+			"§o§8«Без кабеля терминал одинок.»§r"
+			]
+			dependencies: ["5223A00000000005"]
+			icon: { count: 1, id: "ae2:fluix_glass_cable" }
+			id: "5223A00000000007"
+			disable_jei: true
+			rewards: [
+				{ id: "5223D000000000B7", type: "xp", xp: 16 }
+			]
+			shape: "circle"
+			size: 0.75d
+			tasks: [
+				{ id: "5223B00000000007", item: "ae2:fluix_glass_cable", count: 16L, type: "item", title: "Собрать ME-кабели" }
+			]
+			title: "ME-кабель"
+			x: 8d
+			y: 3.5d
+		},
+		{
+			description: [
+			"§dРубеж.§r Гравёр, кварц, fluix и EMC — фундамент сети заложен."
+			""
+			"§7Нужны §eвсе 4§r ветки волны."
+			"§7Кооп: делите ветки между напарником."
+			]
+			dependencies: ["5223A00000000001", "5223A00000000002", "5223A00000000003", "5223A00000000004", "5223A00000000005"]
+			icon: { count: 1, id: "kubejs:quest_gate" }
+			id: "5223A00000000008"
+			disable_jei: true
+			rewards: [
+				{ id: "5223D0000000001D", item: "kubejs:journal_page_matrix_01", type: "item" }
+				{ id: "5223D00000000009", type: "xp", xp: 55 }
+			]
+			shape: "diamond"
+			size: 1.2d
+			tasks: [
+				{ id: "5223B00000000008", title: "Сеть зарождается", type: "checkmark" }
+			]
+			title: "Сеть зарождается"
+			x: 0d
+			y: 4.5d
+		},
+		{
+			description: [
+			"Процессор расчёта — мозг автокрафта, который я наконец соберу."
+			""
+			"§o§8«Считает быстрее, чем я успеваю записывать.»§r"
+			]
+			dependencies: ["5223A00000000008", "5223A00000000002"]
+			icon: { count: 1, id: "ae2:calculation_processor" }
+			id: "5223A00000000009"
+			disable_jei: true
+			rewards: [
+				{ id: "5223D000000000A9", item: "ae2:calculation_processor", count: 3, type: "item" }
+				{ id: "5223D000000000C9", item: "kubejs:reliquary_arcane", type: "item" }
+				{ id: "5223D000000000B9", type: "xp", xp: 27 }
+			]
+			shape: "gear"
+			tags: ["branch_pool", "pool_t3_w2", "branch_craft"]
+			tasks: [
+				{ id: "5223B00000000009", item: "ae2:calculation_processor", count: 4L, type: "item", title: "Собрать процессоры расчёта" }
+			]
+			title: "Процессор расчёта"
+			x: -6d
+			y: 6d
+		},
+		{
+			description: [
+			"Инженерный процессор — для тяжёлой техники AE2."
+			""
+			"§o§8«Чип для машин, что не прощают ошибок.»§r"
+			]
+			dependencies: ["5223A00000000008", "5223A00000000003"]
+			icon: { count: 1, id: "ae2:engineering_processor" }
+			id: "5223A0000000000A"
+			disable_jei: true
+			rewards: [
+				{ id: "5223D000000000AA", item: "ae2:engineering_processor", count: 3, type: "item" }
+				{ id: "5223D000000000BA", type: "xp", xp: 27 }
+			]
+			shape: "gear"
+			tags: ["branch_pool", "pool_t3_w2", "branch_craft", "branch_exclusive"]
+			tasks: [
+				{ id: "5223B0000000000A", item: "ae2:engineering_processor", count: 4L, type: "item", title: "Собрать инженерные процессоры" }
+			]
+			title: "Инженерный процессор"
+			x: -2d
+			y: 6d
+		},
+		{
+			description: [
+			"Контроллер — сердце ME-сети. Без него всё рассыпется."
+			""
+			"§o§8«Пульс контроллера — пульс всего лагеря.»§r"
+			]
+			dependencies: ["5223A00000000008", "5223A00000000004"]
+			icon: { count: 1, id: "ae2:controller" }
+			id: "5223A0000000000B"
+			disable_jei: true
+			rewards: [
+				{ id: "5223D000000000AB", item: "ae2:controller", type: "item" }
+				{ id: "5223D000000000BB", type: "xp", xp: 27 }
+			]
+			shape: "gear"
+			tags: ["branch_pool", "pool_t3_w2", "branch_craft"]
+			tasks: [
+				{ id: "5223B0000000000B", item: "ae2:controller", type: "item", title: "Собрать ME-контроллер" }
+			]
+			title: "ME-контроллер"
+			x: 2d
+			y: 6d
+		},
+		{
+			description: [
+			"ME-терминал — окно в склад, который помнит всё."
+			""
+			"§o§8«Один экран — тысячи стаков в ладони.»§r"
+			]
+			dependencies: ["5223A00000000008", "5223A00000000005"]
+			icon: { count: 1, id: "ae2:terminal" }
+			id: "5223A0000000000C"
+			disable_jei: true
+			rewards: [
+				{ id: "5223D000000000AC", item: "ae2:terminal", type: "item" }
+				{ id: "5223D000000000BC", type: "xp", xp: 27 }
+			]
+			shape: "gear"
+			tags: ["branch_pool", "pool_t3_w2", "branch_craft", "branch_exclusive"]
+			tasks: [
+				{ id: "5223B0000000000C", item: "ae2:terminal", type: "item", title: "Собрать ME-терминал" }
+			]
+			title: "Терминал"
+			x: 6d
+			y: 6d
+		},
+		{
+			description: [
+			"§8Опционально.§r Алхимический сундук — накопление EMC."
+			""
+			"§o§8«Жрёт предметы — отдаёт силу трансмутации.»§r"
+			]
+			dependencies: ["5223A0000000000B"]
+			icon: { count: 1, id: "projecte:alchemical_chest" }
+			id: "5223A0000000000D"
+			disable_jei: true
+			rewards: [
+				{ id: "5223D000000000BD", type: "xp", xp: 16 }
+			]
+			shape: "circle"
+			size: 0.75d
+			tasks: [
+				{ id: "5223B0000000000D", item: "projecte:alchemical_chest", type: "item", title: "Собрать алхимический сундук" }
+			]
+			title: "EMC конденсатор"
+			x: 8d
+			y: 7.5d
+		},
+		{
+			description: [
+			"§8Опционально.§r Первый диск 1k — память сети."
+			""
+			"§o§8«Диск помнит больше, чем я могу унести.»§r"
+			]
+			dependencies: ["5223A0000000000A"]
+			icon: { count: 1, id: "ae2:item_storage_cell_1k" }
+			id: "5223A0000000000E"
+			disable_jei: true
+			rewards: [
+				{ id: "5223D000000000CE", item: "kubejs:reliquary_arcane", type: "item" }
+				{ id: "5223D000000000BE", type: "xp", xp: 16 }
+			]
+			shape: "circle"
+			size: 0.75d
+			tasks: [
+				{ id: "5223B0000000000E", item: "ae2:item_storage_cell_1k", type: "item", title: "Собрать диск 1k" }
+			]
+			title: "ME-диск"
+			x: -4d
+			y: 7.5d
+		},
+		{
+			description: [
+			"§8Опционально.§r Заряженный certus для продвинутых рецептов."
+			""
+			"§o§8«Заряд в кристалле — сеть просит больше.»§r"
+			]
+			dependencies: ["5223A00000000009"]
+			icon: { count: 1, id: "ae2:charged_certus_quartz_crystal" }
+			id: "5223A0000000001C"
+			disable_jei: true
+			rewards: [
+				{ id: "5223D000000000DC", item: "kubejs:reliquary_arcane", type: "item" }
+				{ id: "5223D000000000CC", type: "xp", xp: 16 }
+			]
+			shape: "circle"
+			size: 0.75d
+			tasks: [
+				{ id: "5223B0000000001C", item: "ae2:charged_certus_quartz_crystal", count: 16L, type: "item", title: "Зарядить certus-кварц" }
+			]
+			title: "Заряженный кварц"
+			x: -8d
+			y: 7.5d
+		},
+		{
+			description: [
+			"§dРубеж.§r Контроллер, терминал и процессоры — сеть жива. Записал второй рубеж T3."
+			""
+			"§7Нужны §eвсе 4§r ветки волны."
+			"§7Кооп: делите ветки между напарником."
+			]
+			dependencies: ["5223A00000000008", "5223A00000000009", "5223A0000000000A", "5223A0000000000B", "5223A0000000000C"]
+			icon: { count: 1, id: "kubejs:quest_gate" }
+			id: "5223A0000000000F"
+			disable_jei: true
+			rewards: [
+				{ id: "5223D0000000001E", item: "kubejs:journal_page_matrix_02", type: "item" }
+				{ id: "5223D00000000011", type: "xp", xp: 55 }
+			]
+			shape: "diamond"
+			size: 1.2d
+			tasks: [
+				{ id: "5223B0000000000F", title: "ME-сеть работает", type: "checkmark" }
+			]
+			title: "ME-сеть работает"
+			x: 0d
+			y: 8.5d
+		},
+		{
+			description: [
+			"Crafting CPU — сеть сама крафтит, я только заказываю."
+			""
+			"§o§8«Автокрафт — конец эры беготни по сундукам.»§r"
+			]
+			dependencies: ["5223A0000000000F", "5223A00000000009"]
+			icon: { count: 1, id: "ae2:crafting_unit" }
+			id: "5223A00000000010"
+			disable_jei: true
+			rewards: [
+				{ id: "5223D000000000B0", item: "ae2:crafting_unit", count: 3, type: "item" }
+				{ id: "5223D000000000C0", type: "xp", xp: 27 }
+			]
+			shape: "gear"
+			tags: ["branch_pool", "pool_t3_w3", "branch_craft"]
+			tasks: [
+				{ id: "5223B00000000010", item: "ae2:crafting_unit", count: 4L, type: "item", title: "Собрать блоки автокрафта" }
+			]
+			title: "Автокрафт"
+			x: -6d
+			y: 10d
+		},
+		{
+			description: [
+			"Пустые шаблоны — рецепты, записанные в кристалл."
+			""
+			"§o§8«Каждый шаблон — один ритуал, что повторится сам.»§r"
+			]
+			dependencies: ["5223A0000000000F", "5223A0000000000A"]
+			icon: { count: 1, id: "ae2:blank_pattern" }
+			id: "5223A00000000011"
+			disable_jei: true
+			rewards: [
+				{ id: "5223D000000000B1", item: "ae2:blank_pattern", count: 10, type: "item" }
+				{ id: "5223D000000000C1", type: "xp", xp: 27 }
+			]
+			shape: "circle"
+			tags: ["branch_pool", "pool_t3_w3", "branch_craft", "branch_exclusive"]
+			tasks: [
+				{ id: "5223B00000000011", item: "ae2:blank_pattern", count: 16L, type: "item", title: "Собрать шаблоны" }
+			]
+			title: "Шаблоны"
+			x: -2d
+			y: 10d
+		},
+		{
+			description: [
+			"Импорт-шина тянет предметы в сеть без моих рук."
+			""
+			"§o§8«Шина питается — склад растёт сам.»§r"
+			]
+			dependencies: ["5223A0000000000F", "5223A0000000000B"]
+			icon: { count: 1, id: "ae2:import_bus" }
+			id: "5223A00000000012"
+			disable_jei: true
+			rewards: [
+				{ id: "5223D000000000B2", item: "ae2:import_bus", count: 3, type: "item" }
+				{ id: "5223D000000000D2", item: "kubejs:reliquary_arcane", type: "item" }
+				{ id: "5223D000000000C2", type: "xp", xp: 27 }
+			]
+			shape: "gear"
+			tags: ["branch_pool", "pool_t3_w3", "branch_craft"]
+			tasks: [
+				{ id: "5223B00000000012", item: "ae2:import_bus", count: 4L, type: "item", title: "Установить импорт-шины" }
+			]
+			title: "Импорт шина"
+			x: 2d
+			y: 10d
+		},
+		{
+			description: [
+			"Экспорт-шина отдаёт из сети машинам."
+			""
+			"§o§8«Машины снабжаются — я смотрю в журнал.»§r"
+			]
+			dependencies: ["5223A0000000000F", "5223A0000000000C"]
+			icon: { count: 1, id: "ae2:export_bus" }
+			id: "5223A00000000013"
+			disable_jei: true
+			rewards: [
+				{ id: "5223D000000000B3", item: "ae2:export_bus", count: 3, type: "item" }
+				{ id: "5223D000000000C3", type: "xp", xp: 27 }
+			]
+			shape: "gear"
+			tags: ["branch_pool", "pool_t3_w3", "branch_craft", "branch_exclusive"]
+			tasks: [
+				{ id: "5223B00000000013", item: "ae2:export_bus", count: 4L, type: "item", title: "Установить экспорт-шины" }
+			]
+			title: "Экспорт шина"
+			x: 6d
+			y: 10d
+		},
+		{
+			description: [
+			"§8Опционально.§r Коллектор MK1 — EMC из мира вокруг."
+			""
+			"§o§8«Тянет ценность — спорно, но эффективно.»§r"
+			]
+			dependencies: ["5223A00000000013"]
+			icon: { count: 1, id: "projecte:collector_mk1" }
+			id: "5223A0000000001B"
+			disable_jei: true
+			rewards: [
+				{ id: "5223D000000000CB", type: "xp", xp: 16 }
+			]
+			shape: "circle"
+			size: 0.75d
+			tasks: [
+				{ id: "5223B0000000001B", item: "projecte:collector_mk1", type: "item", title: "Собрать коллектор EMC" }
+			]
+			title: "Коллектор EMC"
+			x: -8d
+			y: 11.5d
+		},
+		{
+			description: [
+			"§8Опционально.§r Беспроводной терминал — склад в кармане."
+			""
+			"§o§8«Терминал следует за мной, как тень.»§r"
+			]
+			dependencies: ["5223A00000000012"]
+			icon: { count: 1, id: "ae2wtlib:wireless_universal_terminal" }
+			id: "5223A00000000014"
+			disable_jei: true
+			rewards: [
+				{ id: "5223D000000000D4", item: "kubejs:reliquary_arcane", type: "item" }
+				{ id: "5223D000000000C4", type: "xp", xp: 16 }
+			]
+			shape: "circle"
+			size: 0.75d
+			tasks: [
+				{ id: "5223B00000000014", item: "ae2wtlib:wireless_universal_terminal", type: "item", title: "Собрать беспроводной терминал" }
+			]
+			title: "Беспроводной терминал"
+			x: 4d
+			y: 11.5d
+		},
+		{
+			description: [
+			"§8Опционально.§r Диск 4k — память сети растёт."
+			""
+			"§o§8«Четыре тысячи типов — база не захлебнётся.»§r"
+			]
+			dependencies: ["5223A00000000011"]
+			icon: { count: 1, id: "ae2:item_storage_cell_4k" }
+			id: "5223A00000000015"
+			disable_jei: true
+			rewards: [
+				{ id: "5223D000000000C5", type: "xp", xp: 16 }
+			]
+			shape: "circle"
+			size: 0.75d
+			tasks: [
+				{ id: "5223B00000000015", item: "ae2:item_storage_cell_4k", type: "item", title: "Собрать диск 4k" }
+			]
+			title: "4k диск"
+			x: 8d
+			y: 11.5d
+		},
+		{
+			description: [
+			"§dРубеж.§r Автокрафт и шины замкнули логистику. Готовлю сингулярность."
+			""
+			"§7Нужны §eвсе 4§r ветки волны."
+			"§7Кооп: делите ветки между напарником."
+			]
+			dependencies: ["5223A0000000000F", "5223A00000000010", "5223A00000000011", "5223A00000000012", "5223A00000000013"]
+			icon: { count: 1, id: "kubejs:quest_gate" }
+			id: "5223A00000000016"
+			disable_jei: true
+			rewards: [
+				{ id: "5223D0000000001F", item: "kubejs:journal_page_matrix_03", type: "item" }
+				{ id: "5223D00000000016", type: "xp", xp: 55 }
+			]
+			shape: "diamond"
+			size: 1.2d
+			tasks: [
+				{ id: "5223B00000000016", title: "Готовность к Draconic", type: "checkmark" }
+			]
+			title: "Готовность к Draconic"
+			x: 0d
+			y: 12.5d
+		},
+		{
+			description: [
+			"Чертёж якорной сингулярности — сжать сеть в точку силы."
+			""
+			"§o§8«Линии сходятся — Draconic ждёт за горизонтом.»§r"
+			]
+			dependencies: ["5223A00000000016"]
+			icon: { count: 1, id: "ae2:engineering_processor" }
+			id: "5223A00000000017"
+			disable_jei: true
+			rewards: [
+				{ id: "5223D000000000B7", item: "ae2:engineering_processor", count: 5, type: "item" }
+				{ id: "5223D000000000C7", type: "xp", xp: 27 }
+			]
+			shape: "hexagon"
+			tasks: [
+				{ id: "5223B00000000018", item: "ae2:engineering_processor", count: 8L, type: "item", title: "Процессоры под сингулярность" }
+			]
+			title: "Чертёж сингулярности"
+			x: -2d
+			y: 14d
+		},
+		{
+			description: [
+			"Fluix, процессоры и стол EMC — тело сингулярности."
+			""
+			"§o§8«Три силы в одной точке: сеть, EMC и матрица.»§r"
+			]
+			dependencies: ["5223A00000000016"]
+			icon: { count: 1, id: "ae2:fluix_crystal" }
+			id: "5223A00000000018"
+			disable_jei: true
+			rewards: [
+				{ id: "5223D00000000018", type: "xp", xp: 34 }
+			]
+			shape: "gear"
+			tasks: [
+				{ id: "5223B00000000019", item: "ae2:fluix_crystal", count: 32L, type: "item", title: "Fluix для сингулярности" }
+				{ id: "5223B0000000001A", item: "projecte:transmutation_table", type: "item", title: "Стол EMC для сингулярности" }
+			]
+			title: "Сбор для сингулярности"
+			x: 2d
+			y: 14d
+		},
+		{
+			description: [
+			"§8Опционально.§r Замер ME-контура перед финалом T3."
+			""
+			"§o§8«Пульс ровный — сингулярность примет сеть.»§r"
+			]
+			dependencies: ["5223A00000000017"]
+			icon: { count: 1, id: "minecraft:repeater" }
+			id: "5223A00000000019"
+			disable_jei: true
+			rewards: [
+				{ id: "5223D00000000018", type: "xp", xp: 15 }
+			]
+			shape: "circle"
+			size: 0.75d
+			tasks: [
+				{ id: "5223B0000000001E", item: "minecraft:repeater", count: 8L, type: "item", title: "Замерить ME-контур" }
+			]
+			title: "Резонансный замер IV"
+			x: 5d
+			y: 15.5d
+		},
+		{
+			description: [
+			"§l[ Финал тира T3 ]§r"
+			""
+			"§7ME-контроллер пульсирует, автокрафт срабатывает, EMC слушается матрицы."
+			""
+			"§7§eЯкорная сингулярность§r собрана — порог T3→T4. В следующей главе §dDraconic§r"
+			"§7и сила, что помнит древних драконов."
+			""
+			"§8Награда — Якорная сингулярность (рубеж T3 → T4).§r"
+			]
+			dependencies: ["5223A00000000017", "5223A00000000018"]
+			min_required_dependencies: 2
+			icon: { count: 1, id: "kubejs:anchor_singularity" }
+			id: "5223A0000000001A"
+			disable_jei: true
+			rewards: [
+				{ id: "5223D00000000019", item: "kubejs:anchor_singularity", type: "item" }
+				{ id: "5223D00000000020", item: "kubejs:journal_page_matrix_04", type: "item" }
+				{ id: "5223D0000000001B", type: "xp", xp: 130 }
+			]
+			shape: "pentagon"
+			size: 1.6d
+			tasks: [
+				{ id: "5223B0000000001D", title: "Зафиксировать сингулярность в журнале", type: "checkmark" }
+			]
+			title: "Якорная сингулярность"
+			x: 0d
+			y: 16.5d
+		},
+	]
+	subtitle: [
+		"T3 · ~75–90 мин"
+	]
+	title: "T3 · Сеть"
+}

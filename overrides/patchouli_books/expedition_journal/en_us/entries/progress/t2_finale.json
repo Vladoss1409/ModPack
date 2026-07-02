@@ -1,0 +1,14 @@
+{
+  "name": "T2: якорная матрица",
+  "icon": "kubejs:anchor_matrix",
+  "category": "patchouli:progress",
+  "advancement": "cooptech:journal/t2_lore_finale",
+  "secret": true,
+  "sortnum": 24,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Матрица собрана$()$(br2)$(#FFAA00)Якорная матрица§r связывает Mek, EIO и Flux. Порог T2→T3 пройден — впереди $(#DD55DD)AE2§r.$(br2)$(italic)«Три мода — один пульс.»$()"
+    }
+  ]
+}

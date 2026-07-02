@@ -1,0 +1,18 @@
+{
+  "name": "Полевой бестиарий",
+  "icon": "alexsmobs:animal_dictionary",
+  "category": "patchouli:branches",
+  "advancement": "cooptech:journal/side_bestiary",
+  "secret": true,
+  "sortnum": 4,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Полевой бестиарий$()$(br2)Компасы и трофеи после рубежа T0. Ищите структуры, биомы и боссов — кооп делит маршруты."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Как проходить$()$(br2)Квесты идут цепочкой после рубежа главного тира. Описания — от первого лица, как записи в блокноте экспедиции.$(br2)$(italic)«Сайд не обязателен для якоря — но даёт силу и удобство.»$()"
+    }
+  ]
+}

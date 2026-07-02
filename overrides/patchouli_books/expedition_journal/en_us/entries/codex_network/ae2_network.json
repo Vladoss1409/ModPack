@@ -1,0 +1,33 @@
+{
+  "name": "AE2 — ME-сеть",
+  "icon": "ae2:controller",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Порог T3$()$(br2)$(#FFAA00)Якорная матрица$() открывает Applied Energistics 2. ME-сеть $(#DD55DD)помнит каждый предмет$() на базе."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "ae2:inscriber",
+      "text": "$(#FFAA00)Гравёр (Inscriber)$(): вычитает процессоры из пластин и кристаллов. Без него сеть слепа."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "ae2:controller",
+      "text": "$(#FFAA00)ME-контроллер$(): сердце сети. Максимум 7×7×7, но на старте хватит одного блока."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "ae2:drive",
+      "text": "$(#FFAA00)ME Drive + ячейки$(): хранение. Диск 1k → 4k → 16k. Fluix-кабели соединяют всё."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Стартовый набор$()$(br2)Controller → Drive с ячейкой → Terminal → fluix cables.$(br2)$(#FFAA00)Import/Export bus$() — автоматизация: шина тянет руду в сеть, отдаёт слитки машинам."
+    }
+  ],
+  "category": "patchouli:codex_network",
+  "advancement": "cooptech:journal/t3_ae2",
+  "secret": true,
+  "sortnum": 6
+}

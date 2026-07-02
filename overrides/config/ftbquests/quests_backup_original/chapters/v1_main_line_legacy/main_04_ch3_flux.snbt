@@ -1,0 +1,281 @@
+{
+	default_quest_disable_jei: true
+	default_hide_dependency_lines: false
+	progression_mode: "linear"
+	hide_quest_until_deps_complete: false
+	hide_quest_details_until_startable: true
+	default_quest_shape: "circle"
+	filename: "main_04_ch3_flux"
+	group: "B100000000000002"
+	icon: { count: 1, id: "thermal:energy_cell" }
+	id: "A400000000000000"
+	order_index: 3
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["A401000000000007"]
+			icon: { count: 1, id: "thermal:machine_furnace" }
+			id: "A401000000000001"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T401000000000001", item: "thermal:machine_furnace", title: "Thermal машина", type: "item" }
+			]
+			title: "Thermal машина"
+			x: -3d
+			y: 0d
+		},
+		{
+			dependencies: ["A401000000000007"]
+			icon: { count: 1, id: "powah:furnator_basic" }
+			id: "A401000000000002"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T401000000000002", item: "powah:furnator_basic", title: "Базовая энергия", type: "item" }
+			]
+			title: "Базовая энергия"
+			x: -1d
+			y: 0d
+		},
+		{
+			dependencies: ["A401000000000007"]
+			icon: { count: 1, id: "immersiveengineering:cokebrick" }
+			id: "A401000000000003"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 27, id: "T401000000000003", item: "immersiveengineering:cokebrick", title: "Coke Oven", type: "item" }
+			]
+			title: "Coke Oven"
+			x: 1d
+			y: 0d
+		},
+		{
+			dependencies: ["A401000000000007"]
+			icon: { count: 1, id: "minecraft:iron_ingot" }
+			id: "A401000000000004"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 256, id: "T401000000000004", item: "minecraft:iron_ingot", title: "Поток слитков", type: "item" }
+			]
+			title: "Поток слитков"
+			x: 3d
+			y: 0d
+		},
+		{
+			dependencies: ["A401000000000001", "A401000000000002", "A401000000000003", "A401000000000004"]
+			min_required_dependencies: 2
+			icon: { count: 1, id: "kubejs:quest_gate" }
+			id: "A401000000000005"
+			disable_jei: true
+			shape: "diamond"
+			subtitle: "Gate"
+			tasks: [
+				{ id: "T401000000000005", title: "Рубеж пройден", type: "checkmark" }
+			]
+			title: "Энергоконтур"
+			x: 0d
+			y: 2d
+		},
+		{
+			dependencies: ["A401000000000018"]
+			icon: { count: 1, id: "thermal:energy_cell" }
+			id: "A401000000000006"
+			disable_jei: true
+			rewards: [
+				{ id: "R401000000000006", item: "kubejs:journal_page_05", type: "item" }
+				{ id: "R401000000000007", type: "xp", xp: 100 }
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [
+				{ count: 4, id: "T401000000000006", item: "thermal:energy_cell", title: "Фрагмент: Поток", type: "item" }
+				{ count: 16, id: "T401000000002006", item: "thermal:rf_coil", title: "16 RF катушек", type: "item" }
+			]
+			title: "Фрагмент: Поток"
+			x: 0d
+			y: 14d
+		},
+		{
+			dependencies: ["A301000000000006"]
+			icon: { count: 1, id: "minecraft:redstone_block" }
+			id: "A401000000000007"
+			disable_jei: true
+			shape: "gear"
+			size: 1.3d
+			tasks: [
+				{ id: "T401000000000007", item: "minecraft:redstone_block", title: "Энергетический старт", type: "item" }
+			]
+			title: "Энергетический старт"
+			x: 0d
+			y: -2d
+		},
+		{
+			dependencies: ["A401000000000005"]
+			icon: { count: 1, id: "powah:capacitor_basic" }
+			id: "A401000000000008"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T401000000000008", item: "powah:capacitor_basic", title: "Powah Capacitor", type: "item" }
+			]
+			title: "Powah Capacitor"
+			x: -3d
+			y: 4d
+		},
+		{
+			dependencies: ["A401000000000005"]
+			icon: { count: 1, id: "immersiveengineering:capacitor_lv" }
+			id: "A401000000000009"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T401000000000009", item: "immersiveengineering:capacitor_lv", title: "IE Capacitor", type: "item" }
+			]
+			title: "IE Capacitor"
+			x: -1d
+			y: 4d
+		},
+		{
+			dependencies: ["A401000000000005"]
+			icon: { count: 1, id: "thermal:dynamo_stirling" }
+			id: "A401000000000010"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T401000000000010", item: "thermal:dynamo_stirling", title: "Dynamo", type: "item" }
+			]
+			title: "Dynamo"
+			x: 1d
+			y: 4d
+		},
+		{
+			dependencies: ["A401000000000005"]
+			icon: { count: 1, id: "thermal:fluid_cell" }
+			id: "A401000000000011"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T401000000000011", item: "thermal:fluid_cell", title: "Fluid Cell", type: "item" }
+			]
+			title: "Fluid Cell"
+			x: 3d
+			y: 4d
+		},
+		{
+			dependencies: ["A401000000000008", "A401000000000009", "A401000000000010", "A401000000000011"]
+			min_required_dependencies: 2
+			icon: { count: 1, id: "kubejs:quest_gate" }
+			id: "A401000000000012"
+			disable_jei: true
+			shape: "diamond"
+			subtitle: "Gate"
+			tasks: [
+				{ id: "T401000000000012", title: "Рубеж пройден", type: "checkmark" }
+			]
+			title: "Генерация I"
+			x: 0d
+			y: 6d
+		},
+		{
+			dependencies: ["A401000000000012"]
+			icon: { count: 1, id: "powah:capacitor_hardened" }
+			id: "A401000000000013"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T401000000000013", item: "powah:capacitor_hardened", title: "Powah Tier 2", type: "item" }
+			]
+			title: "Powah Tier 2"
+			x: -3d
+			y: 8d
+		},
+		{
+			dependencies: ["A401000000000012"]
+			icon: { count: 1, id: "immersiveengineering:wirecoil_copper" }
+			id: "A401000000000014"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 16, id: "T401000000000014", item: "immersiveengineering:wirecoil_copper", title: "IE Wire", type: "item" }
+			]
+			title: "IE Wire"
+			x: -1d
+			y: 8d
+		},
+		{
+			dependencies: ["A401000000000012"]
+			icon: { count: 1, id: "thermal:slot_seal" }
+			id: "A401000000000015"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 4, id: "T401000000000015", item: "thermal:slot_seal", title: "Thermal Upgrade", type: "item" }
+			]
+			title: "Thermal Upgrade"
+			x: 1d
+			y: 8d
+		},
+		{
+			dependencies: ["A401000000000012"]
+			icon: { count: 1, id: "enderio:basic_capacitor" }
+			id: "A401000000000016"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ count: 4, id: "T401000000000016", item: "enderio:basic_capacitor", title: "EnderIO Cap", type: "item" }
+			]
+			title: "EnderIO Cap"
+			x: 3d
+			y: 8d
+		},
+		{
+			dependencies: ["A401000000000013", "A401000000000014", "A401000000000015", "A401000000000016"]
+			min_required_dependencies: 2
+			icon: { count: 1, id: "kubejs:quest_gate" }
+			id: "A401000000000017"
+			disable_jei: true
+			shape: "diamond"
+			subtitle: "Gate"
+			tasks: [
+				{ id: "T401000000000017", title: "Рубеж пройден", type: "checkmark" }
+			]
+			title: "Стабильный поток"
+			x: 0d
+			y: 11d
+		},
+		{
+			dependencies: ["A401000000000017"]
+			icon: { count: 1, id: "thermal:crescent_hammer" }
+			id: "A401000000000018"
+			disable_jei: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{ id: "T401000000000018", item: "thermal:crescent_hammer", title: "Crescent Hammer", type: "item" }
+				{ count: 8, id: "T401000000002018", item: "fluxnetworks:flux_dust", title: "Flux Dust", type: "item" }
+			]
+			title: "Crescent Hammer"
+			x: 0d
+			y: 13d
+		}
+	]
+	subtitle: [
+		"~14 ч"
+	]
+	title: "Глава 3: Энергетический поток"
+}

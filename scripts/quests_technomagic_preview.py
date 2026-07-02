@@ -315,7 +315,7 @@ def build_chapters() -> dict[str, str]:
             "Redstone Furnace",
             -3,
             -2,
-            "thermal:redstone_furnace",
+            "thermal:machine_furnace",
             ["A910000000000002"],
             theme="branch_craft",
         ),

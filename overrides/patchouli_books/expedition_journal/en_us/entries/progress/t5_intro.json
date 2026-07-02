@@ -1,0 +1,14 @@
+{
+  "name": "T5: порог next_ae",
+  "icon": "kubejs:journal_page_nexus_00",
+  "category": "patchouli:progress",
+  "advancement": "cooptech:journal/t5_lore_intro",
+  "secret": true,
+  "sortnum": 50,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Финальная глава$()$(br2)$(#FFAA00)Якорный нексус$() открыл $(#DD55DD)next_ae$() и путь к $(#DD55DD)Ядру реальности$().$(br2)$(italic)«Последний чертёж. После — тишина или конец разлома.»$()"
+    }
+  ]
+}

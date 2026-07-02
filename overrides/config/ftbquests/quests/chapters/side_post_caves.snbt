@@ -1,0 +1,219 @@
+{
+	default_quest_disable_jei: true
+	default_hide_dependency_lines: false
+	progression_mode: "default"
+	hide_quest_until_deps_complete: false
+	hide_quest_details_until_startable: true
+	default_quest_shape: "circle"
+	filename: "side_post_caves"
+	group: "B100000000000002"
+	icon: { count: 1, id: "kubejs:decrypted_cave_codex" }
+	id: "A901C00000000000"
+	order_index: 62
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+			"§c§lЗаблокировано.§r"
+			""
+			"§7Нужно:"
+			"§e1.§r Финал §lT5 · Схождение§r — §eЯкорь реальности§r"
+			"§e2.§r Ветка хаба §e«Печери розлому»§r"
+			""
+			"После этого откроется §dПечери розлому§r."
+			]
+			dependencies: ["5225A0000000001A"]
+			icon: { count: 1, id: "kubejs:quest_side_lock" }
+			id: "A901000000000000"
+			disable_jei: true
+			disable_jei: true
+			shape: "hexagon"
+			size: 1.2d
+			tasks: [
+				{ id: "T901000000000000", title: "Финал T5 + «Печери розлому»", type: "checkmark" }
+			]
+			title: "Якір не стабілізовано"
+			x: 0.0d
+			y: 0.0d
+		},
+		{
+			description: [
+			"§l[ Печери розлому ]§r"
+			""
+			"§7Після стабілізації якоря кодекс печер ожив. §dAlex's Caves§r —"
+			"§7глибина під лагерем, куди розлом тягне ехо."
+			""
+			"Розшифрований кодекс — карта глибини."
+			""
+			"§o§8«Рядки світяться — печери чекають.»§r"
+			]
+			dependencies: ["A901000000000000"]
+			icon: { count: 1, id: "kubejs:decrypted_cave_codex" }
+			id: "A901000000000001"
+			disable_jei: true
+			disable_jei: true
+			rewards: [
+				{ id: "R901000000000801", item: "kubejs:decrypted_cave_codex", type: "item" }
+				{ id: "R901000000000901", type: "xp", xp: 29 }
+			]
+			shape: "circle"
+			tags: ["branch_explore"]
+			tasks: [
+				{ id: "T901000000000001", item: "kubejs:decrypted_cave_codex", title: "Розшифрувати кодекс печер", type: "item" }
+			]
+			title: "Кодекс печер"
+			x: 0.0d
+			y: 2.5d
+		},
+		{
+			description: [
+			"Таблички відкривають біоми Alex's Caves."
+			""
+			"§o§8«Камінь пам'ятає шлях.»§r"
+			]
+			dependencies: ["A901000000000000", "A901000000000001"]
+			icon: { count: 1, id: "alexscaves:cave_tablet" }
+			id: "A901000000000002"
+			disable_jei: true
+			disable_jei: true
+			rewards: [
+				{ id: "R901000000000802", item: "alexscaves:cave_tablet", type: "item" }
+				{ id: "R901000000000902", type: "xp", xp: 29 }
+			]
+			shape: "circle"
+			tags: ["branch_explore"]
+			tasks: [
+				{ count: 2, id: "T901000000000002", item: "alexscaves:cave_tablet", title: "Зібрати таблички печер", type: "item" }
+			]
+			title: "Табличка печери"
+			x: 0.0d
+			y: 4.5d
+		},
+		{
+			description: [
+			"Ехо — сліди звуків розлому в глибині."
+			""
+			"§o§8«Осколки дзвенять у кишені.»§r"
+			]
+			dependencies: ["A901000000000000", "A901000000000002"]
+			icon: { count: 1, id: "minecraft:echo_shard" }
+			id: "A901000000000003"
+			disable_jei: true
+			disable_jei: true
+			rewards: [
+				{ id: "R901000000000803", item: "minecraft:echo_shard", count: 5, type: "item" }
+				{ id: "R901000000000903", type: "xp", xp: 29 }
+			]
+			shape: "circle"
+			tags: ["branch_explore"]
+			tasks: [
+				{ count: 8, id: "T901000000000003", item: "minecraft:echo_shard", title: "Зібрати ехо-осколки", type: "item" }
+			]
+			title: "Ехо-осколки"
+			x: 0.0d
+			y: 6.5d
+		},
+		{
+			description: [
+			"Вапняк — будівельний блок печер."
+			""
+			"§o§8«Стіна тримає тиск глибини.»§r"
+			]
+			dependencies: ["A901000000000000", "A901000000000003"]
+			icon: { count: 1, id: "alexscaves:limestone" }
+			id: "A901000000000004"
+			disable_jei: true
+			disable_jei: true
+			rewards: [
+				{ id: "R901000000000804", item: "alexscaves:limestone", count: 21, type: "item" }
+				{ id: "R901000000000904", type: "xp", xp: 29 }
+			]
+			shape: "circle"
+			tags: ["branch_explore"]
+			tasks: [
+				{ count: 32, id: "T901000000000004", item: "alexscaves:limestone", title: "Добути вапняк", type: "item" }
+			]
+			title: "Вапняк"
+			x: 0.0d
+			y: 8.5d
+		},
+		{
+			description: [
+			"Сірка — небезпечний ресурс токсичних печер."
+			""
+			"§o§8«Запах попереджає — не ігнорую.»§r"
+			]
+			dependencies: ["A901000000000000", "A901000000000004"]
+			icon: { count: 1, id: "alexscaves:sulfur" }
+			id: "A901000000000005"
+			disable_jei: true
+			disable_jei: true
+			rewards: [
+				{ id: "R901000000000805", item: "alexscaves:sulfur", count: 10, type: "item" }
+				{ id: "R901000000000905", type: "xp", xp: 29 }
+			]
+			shape: "circle"
+			tags: ["branch_explore"]
+			tasks: [
+				{ count: 16, id: "T901000000000005", item: "alexscaves:sulfur", title: "Добути сірку", type: "item" }
+			]
+			title: "Сірка"
+			x: 0.0d
+			y: 10.5d
+		},
+		{
+			description: [
+			"Струження з магнітних шарів."
+			""
+			"§o§8«Метал тягнеться до якоря.»§r"
+			]
+			dependencies: ["A901000000000000", "A901000000000005"]
+			icon: { count: 1, id: "alexscaves:metal_swarf" }
+			id: "A901000000000006"
+			disable_jei: true
+			disable_jei: true
+			rewards: [
+				{ id: "R901000000000806", item: "alexscaves:metal_swarf", count: 10, type: "item" }
+				{ id: "R901000000000906", type: "xp", xp: 29 }
+			]
+			shape: "circle"
+			tags: ["branch_explore"]
+			tasks: [
+				{ count: 16, id: "T901000000000006", item: "alexscaves:metal_swarf", title: "Зібрати металеве струження", type: "item" }
+			]
+			title: "Металеве струження"
+			x: 0.0d
+			y: 12.5d
+		},
+		{
+			description: [
+			"Чотири таблички — печери відкриті повністю."
+			""
+			"§o§8«Глибина відповіла — запис закрито.»§r"
+			]
+			dependencies: ["A901000000000000", "A901000000000006"]
+			icon: { count: 1, id: "alexscaves:cave_tablet" }
+			id: "A901000000000007"
+			disable_jei: true
+			disable_jei: true
+			rewards: [
+				{ id: "R901000000000807", item: "alexscaves:cave_tablet", count: 3, type: "item" }
+				{ id: "R901000000001507", item: "kubejs:reliquary_convergence", type: "item" }
+				{ id: "R901000000000907", type: "xp", xp: 49 }
+			]
+			shape: "pentagon"
+			size: 1.3d
+			tags: ["branch_explore"]
+			tasks: [
+				{ count: 4, id: "T901000000000007", item: "alexscaves:cave_tablet", title: "Зібрати таблички печер", type: "item" }
+			]
+			title: "Фінал печер"
+			x: 0.0d
+			y: 14.5d
+		},
+	]
+	subtitle: [
+		"Після якоря · CoopTech"
+	]
+	title: "Печери розлому"
+}

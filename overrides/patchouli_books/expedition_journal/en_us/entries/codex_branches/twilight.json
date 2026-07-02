@@ -1,0 +1,29 @@
+{
+  "name": "Twilight Forest",
+  "icon": "twilightforest:liveroot",
+  "category": "patchouli:codex_branches",
+  "advancement": "cooptech:journal/codex_side_twilight",
+  "secret": true,
+  "sortnum": 6,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Зачем$()$(br2)Twilight — $(#DD55DD)отдельное измерение$() с боссами и уникальными материалами."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "twilightforest:liveroot",
+      "text": "$(#FFAA00)Liveroot$(): входной ресурс — инструменты и блоки леса."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "twilightforest:naga_scale",
+      "text": "$(#FFAA00)Naga Scale$(): первый босс — броня и мечи."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "twilightforest:phantom_helmet",
+      "text": "$(#FFAA00)Phantom Helmet$() (финал): броня из Phantom Plate."
+    }
+  ]
+}

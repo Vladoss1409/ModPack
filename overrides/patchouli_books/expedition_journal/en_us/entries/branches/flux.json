@@ -4,11 +4,15 @@
   "category": "patchouli:branches",
   "advancement": "cooptech:journal/side_flux",
   "secret": true,
-  "sortnum": 4,
+  "sortnum": 11,
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(bold)Беспроводная RF$()$(br2)Открывается после Главы II. Flux Dust → ядро → точки и хранилища без проводов между базами."
+      "text": "$(bold)Flux Networks$()$(br2)Беспроводная энергия после Flux T2. Пыль, точки, хранилища, контроллер."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Как проходить$()$(br2)Квесты идут цепочкой после рубежа главного тира. Описания — от первого лица, как записи в блокноте экспедиции.$(br2)$(italic)«Сайд не обязателен для якоря — но даёт силу и удобство.»$()"
     }
   ]
 }

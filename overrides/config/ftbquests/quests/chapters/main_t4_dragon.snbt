@@ -1,0 +1,677 @@
+{
+	default_quest_disable_jei: true
+	default_hide_dependency_lines: false
+	progression_mode: "default"
+	hide_quest_until_deps_complete: false
+	hide_quest_details_until_startable: true
+	default_quest_shape: "circle"
+	filename: "main_t4_dragon"
+	group: "B100000000000002"
+	icon: { count: 1, id: "kubejs:anchor_singularity" }
+	id: "5224C00000000000"
+	order_index: 50
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+			"§l[ T4 · Дракон ]§r"
+			""
+			"§7§eЯкорная сингулярность§r сжала логистику в одну точку — и открыла §dDraconic Evolution§r."
+			"§7Сила, что помнит древних драконов. В блокноте первый шаг: §eядро дракония§r."
+			""
+			"§7Дальше — fusion-крафт, реактор, Chaos Guardian. Я записал: без ядра вся ветка молчит."
+			""
+			"§8Цель тира: awakened-технологии и §eЯкорный нексус§r (рубеж T4→T5)."
+			]
+			dependencies: ["5223A0000000001A"]
+			icon: { count: 1, id: "kubejs:anchor_singularity" }
+			id: "5224A00000000001"
+			disable_jei: true
+			rewards: [
+				{ id: "5224D00000000001", item: "kubejs:journal_page_singularity_00", type: "item" }
+				{ id: "5224D00000000002", type: "xp", xp: 25 }
+			]
+			shape: "hexagon"
+			size: 1.5d
+			tasks: [
+				{ id: "5224B00000000001", title: "Принять сингулярность и открыть главу Draconic", type: "checkmark" }
+			]
+			title: "Порог Draconic"
+			x: 0d
+			y: 0d
+		},
+		{
+			description: [
+			"Draconium Core — база всей Draconic. Соберу первым, пока сингулярность ещё тёплая."
+			""
+			"§o§8«Ядро в ладони — дракон ещё не ушёл из металла.»§r"
+			]
+			dependencies: ["5224A00000000001"]
+			icon: { count: 1, id: "draconicevolution:draconium_core" }
+			id: "5224A00000000002"
+			disable_jei: true
+			rewards: [
+				{ id: "5224D000000000A2", item: "draconicevolution:draconium_core", type: "item" }
+				{ id: "5224D000000000B2", type: "xp", xp: 32 }
+			]
+			shape: "gear"
+			tags: ["branch_pool", "pool_t4_w1", "branch_craft"]
+			tasks: [
+				{ id: "5224B00000000002", item: "draconicevolution:draconium_core", type: "item", title: "Собрать ядро дракония" }
+			]
+			title: "Ядро дракония"
+			x: -6d
+			y: 2d
+		},
+		{
+			description: [
+			"Draconium dust — первый контакт с модом. Наберу запас из глубинных жил."
+			""
+			"§o§8«Пыль фиолетовая — разлом и дракон оказались родней, чем думал.»§r"
+			]
+			dependencies: ["5224A00000000001"]
+			icon: { count: 1, id: "draconicevolution:draconium_dust" }
+			id: "5224A00000000003"
+			disable_jei: true
+			rewards: [
+				{ id: "5224D000000000A3", item: "draconicevolution:draconium_dust", count: 21, type: "item" }
+				{ id: "5224D000000000B3", type: "xp", xp: 32 }
+			]
+			shape: "circle"
+			tags: ["branch_pool", "pool_t4_w1", "branch_mine", "branch_exclusive"]
+			tasks: [
+				{ id: "5224B00000000003", item: "draconicevolution:draconium_dust", count: 32L, type: "item", title: "Добыть дракониевую пыль" }
+			]
+			title: "Дракониевая пыль"
+			x: -2d
+			y: 2d
+		},
+		{
+			description: [
+			"Energy Core — сердце энергосистемы Draconic. Без него реактор — мечта."
+			""
+			"§o§8«Ядро пульсирует — энергия дракона в корпусе.»§r"
+			]
+			dependencies: ["5224A00000000001"]
+			icon: { count: 1, id: "draconicevolution:energy_core" }
+			id: "5224A00000000004"
+			disable_jei: true
+			rewards: [
+				{ id: "5224D000000000A4", item: "draconicevolution:energy_core", type: "item" }
+				{ id: "5224D000000000B4", type: "xp", xp: 32 }
+			]
+			shape: "gear"
+			tags: ["branch_pool", "pool_t4_w1", "branch_craft"]
+			tasks: [
+				{ id: "5224B00000000004", item: "draconicevolution:energy_core", type: "item", title: "Собрать энергоядро DE" }
+			]
+			title: "Энергоядро DE"
+			x: 2d
+			y: 2d
+		},
+		{
+			description: [
+			"Awakened draconium — вершина металла DE. Первый шаг к awakened-технологиям."
+			""
+			"§o§8«Пробуждённый металл помнит Chaos — беру осторожно.»§r"
+			]
+			dependencies: ["5224A00000000001"]
+			icon: { count: 1, id: "draconicevolution:awakened_draconium_ingot" }
+			id: "5224A00000000005"
+			disable_jei: true
+			rewards: [
+				{ id: "5224D000000000A5", item: "draconicevolution:awakened_draconium_ingot", count: 5, type: "item" }
+				{ id: "5224D000000000B5", type: "xp", xp: 32 }
+			]
+			shape: "gear"
+			tags: ["branch_pool", "pool_t4_w1", "branch_craft", "branch_exclusive"]
+			tasks: [
+				{ id: "5224B00000000005", item: "draconicevolution:awakened_draconium_ingot", count: 8L, type: "item", title: "Выплавить пробуждённый слиток" }
+			]
+			title: "Пробуждённый слиток"
+			x: 6d
+			y: 2d
+		},
+		{
+			description: [
+			"§8Опционально.§r Первое оружие Cataclysm — пригодится до Chaos Guardian."
+			""
+			"§o§8«Меч из руин — босс дрожит на расстоянии.»§r"
+			]
+			dependencies: ["5224A00000000002"]
+			icon: { count: 1, id: "cataclysm:black_steel_sword" }
+			id: "5224A00000000006"
+			disable_jei: true
+			rewards: [
+				{ id: "5224D000000000C6", item: "kubejs:reliquary_primordial", type: "item" }
+				{ id: "5224D000000000B6", type: "xp", xp: 18 }
+			]
+			shape: "circle"
+			size: 0.75d
+			tasks: [
+				{ id: "5224B00000000006", item: "cataclysm:black_steel_sword", type: "item", title: "Сковать меч Cataclysm" }
+			]
+			title: "Меч Cataclysm"
+			x: -8d
+			y: 3.5d
+		},
+		{
+			description: [
+			"§8Опционально.§r Редкий компонент для ритуалов и финальных крафтов."
+			""
+			"§o§8«Звезда холодная — Chaos любит контраст.»§r"
+			]
+			dependencies: ["5224A00000000005"]
+			icon: { count: 1, id: "minecraft:nether_star" }
+			id: "5224A00000000007"
+			disable_jei: true
+			rewards: [
+				{ id: "5224D000000000B7", type: "xp", xp: 18 }
+			]
+			shape: "circle"
+			size: 0.75d
+			tasks: [
+				{ id: "5224B00000000007", item: "minecraft:nether_star", type: "item", title: "Добыть звезду Незера" }
+			]
+			title: "Звезда Незера"
+			x: 8d
+			y: 3.5d
+		},
+		{
+			description: [
+			"§dРубеж.§r Draconic встал на базу — ядро, пыль, энергия. Записал первый рубеж T4."
+			""
+			"§7Нужны §eвсе 4§r ветки волны."
+			"§7Кооп: делите ветки между напарником."
+			]
+			dependencies: ["5224A00000000001", "5224A00000000002", "5224A00000000003", "5224A00000000004", "5224A00000000005"]
+			icon: { count: 1, id: "kubejs:quest_gate" }
+			id: "5224A00000000008"
+			disable_jei: true
+			rewards: [
+				{ id: "5224D0000000001D", item: "kubejs:journal_page_singularity_01", type: "item" }
+				{ id: "5224D000000000D8", item: "kubejs:reliquary_primordial", type: "item" }
+				{ id: "5224D00000000009", type: "xp", xp: 60 }
+			]
+			shape: "diamond"
+			size: 1.2d
+			tasks: [
+				{ id: "5224B00000000008", title: "Драконий старт", type: "checkmark" }
+			]
+			title: "Драконий старт"
+			x: 0d
+			y: 4.5d
+		},
+		{
+			description: [
+			"Fusion crafting — сердце DE. Здесь сливаются миры в один предмет."
+			""
+			"§o§8«Инфузор гудит — я слышу дракона в металле.»§r"
+			]
+			dependencies: ["5224A00000000008", "5224A00000000002"]
+			icon: { count: 1, id: "draconicevolution:wyvern_crafting_injector" }
+			id: "5224A00000000009"
+			disable_jei: true
+			rewards: [
+				{ id: "5224D000000000A9", item: "draconicevolution:wyvern_crafting_injector", count: 3, type: "item" }
+				{ id: "5224D000000000C9", item: "kubejs:reliquary_primordial", type: "item" }
+				{ id: "5224D000000000B9", type: "xp", xp: 32 }
+			]
+			shape: "gear"
+			tags: ["branch_pool", "pool_t4_w2", "branch_craft"]
+			tasks: [
+				{ id: "5224B00000000009", item: "draconicevolution:wyvern_crafting_injector", count: 4L, type: "item", title: "Установить инфузоры fusion" }
+			]
+			title: "Дракониевый инфузор"
+			x: -6d
+			y: 6d
+		},
+		{
+			description: [
+			"Draconic Reactor — вершина генерации. Ставлю с осторожностью — ошибок не прощает."
+			""
+			"§o§8«Реактор не спит — я тоже не буду, пока контур стабилен.»§r"
+			]
+			dependencies: ["5224A00000000008", "5224A00000000003"]
+			icon: { count: 1, id: "draconicevolution:reactor_core" }
+			id: "5224A0000000000A"
+			disable_jei: true
+			rewards: [
+				{ id: "5224D000000000AA", item: "draconicevolution:reactor_core", type: "item" }
+				{ id: "5224D000000000BA", type: "xp", xp: 32 }
+			]
+			shape: "gear"
+			tags: ["branch_pool", "pool_t4_w2", "branch_craft", "branch_exclusive"]
+			tasks: [
+				{ id: "5224B0000000000A", item: "draconicevolution:reactor_core", type: "item", title: "Собрать ядро реактора DE" }
+			]
+			title: "Реактор DE"
+			x: -2d
+			y: 6d
+		},
+		{
+			description: [
+			"Трансмутационный планшет — пик ProjectE. EMC теперь в кармане."
+			""
+			"§o§8«Материя светится — всё может стать всем.»§r"
+			]
+			dependencies: ["5224A00000000008", "5224A00000000004"]
+			icon: { count: 1, id: "projecte:transmutation_tablet" }
+			id: "5224A0000000000B"
+			disable_jei: true
+			rewards: [
+				{ id: "5224D000000000AB", item: "projecte:transmutation_tablet", type: "item" }
+				{ id: "5224D000000000BB", type: "xp", xp: 32 }
+			]
+			shape: "gear"
+			tags: ["branch_pool", "pool_t4_w2", "branch_craft"]
+			tasks: [
+				{ id: "5224B0000000000B", item: "projecte:transmutation_tablet", type: "item", title: "Собрать планшет трансмутации" }
+			]
+			title: "Полная EMC"
+			x: 2d
+			y: 6d
+		},
+		{
+			description: [
+			"Chaos shard — ключ к awakened. Добыча у Chaos Island не для слабых."
+			""
+			"§o§8«Осколок режет реальность — рукавицы обязательны.»§r"
+			]
+			dependencies: ["5224A00000000008", "5224A00000000005"]
+			icon: { count: 1, id: "draconicevolution:chaos_shard" }
+			id: "5224A0000000000C"
+			disable_jei: true
+			rewards: [
+				{ id: "5224D000000000AC", item: "draconicevolution:chaos_shard", count: 3, type: "item" }
+				{ id: "5224D000000000BC", type: "xp", xp: 32 }
+			]
+			shape: "circle"
+			tags: ["branch_pool", "pool_t4_w2", "branch_mine", "branch_exclusive"]
+			tasks: [
+				{ id: "5224B0000000000C", item: "draconicevolution:chaos_shard", count: 4L, type: "item", title: "Добыть хаос-осколки" }
+			]
+			title: "Хаос-осколок"
+			x: 6d
+			y: 6d
+		},
+		{
+			description: [
+			"§8Опционально.§r Dragon heart для ритуалов нексуса."
+			""
+			"§o§8«Сердце ещё бьётся — уважаю добычу.»§r"
+			]
+			dependencies: ["5224A0000000000B"]
+			icon: { count: 1, id: "draconicevolution:dragon_heart" }
+			id: "5224A0000000000D"
+			disable_jei: true
+			rewards: [
+				{ id: "5224D000000000BD", type: "xp", xp: 18 }
+			]
+			shape: "circle"
+			size: 0.75d
+			tasks: [
+				{ id: "5224B0000000000D", item: "draconicevolution:dragon_heart", type: "item", title: "Добыть драконье сердце" }
+			]
+			title: "Драконье сердце"
+			x: 8d
+			y: 7.5d
+		},
+		{
+			description: [
+			"§8Опционально.§r Первая кирка DE — руда сдаётся без боя."
+			""
+			"§o§8«Кирка поёт на частоте дракона.»§r"
+			]
+			dependencies: ["5224A0000000000A"]
+			icon: { count: 1, id: "draconicevolution:wyvern_pickaxe" }
+			id: "5224A0000000000E"
+			disable_jei: true
+			rewards: [
+				{ id: "5224D000000000CE", item: "kubejs:reliquary_primordial", type: "item" }
+				{ id: "5224D000000000BE", type: "xp", xp: 18 }
+			]
+			shape: "circle"
+			size: 0.75d
+			tasks: [
+				{ id: "5224B0000000000E", item: "draconicevolution:wyvern_pickaxe", type: "item", title: "Сковать wyvern-кирку" }
+			]
+			title: "Wyvern кирка"
+			x: -4d
+			y: 7.5d
+		},
+		{
+			description: [
+			"§8Опционально.§r Wyvern chestplate — живая броня."
+			""
+			"§o§8«Броня растёт с носителем — как Silent Gear, но драконья.»§r"
+			]
+			dependencies: ["5224A00000000009"]
+			icon: { count: 1, id: "draconicevolution:wyvern_chestpiece" }
+			id: "5224A0000000001C"
+			disable_jei: true
+			rewards: [
+				{ id: "5224D000000000DC", item: "kubejs:reliquary_primordial", type: "item" }
+				{ id: "5224D000000000CC", type: "xp", xp: 18 }
+			]
+			shape: "circle"
+			size: 0.75d
+			tasks: [
+				{ id: "5224B0000000001C", item: "draconicevolution:wyvern_chestpiece", type: "item", title: "Сковать wyvern-нагрудник" }
+			]
+			title: "Броня DE"
+			x: -8d
+			y: 7.5d
+		},
+		{
+			description: [
+			"§dРубеж.§r Реактор, инфузор и EMC — сила на пике. Второй рубеж T4 в журнале."
+			""
+			"§7Нужны §eвсе 4§r ветки волны."
+			"§7Кооп: делите ветки между напарником."
+			]
+			dependencies: ["5224A00000000008", "5224A00000000009", "5224A0000000000A", "5224A0000000000B", "5224A0000000000C"]
+			icon: { count: 1, id: "kubejs:quest_gate" }
+			id: "5224A0000000000F"
+			disable_jei: true
+			rewards: [
+				{ id: "5224D0000000001E", item: "kubejs:journal_page_singularity_02", type: "item" }
+				{ id: "5224D000000000D9", item: "kubejs:reliquary_primordial", type: "item" }
+				{ id: "5224D00000000011", type: "xp", xp: 60 }
+			]
+			shape: "diamond"
+			size: 1.2d
+			tasks: [
+				{ id: "5224B0000000000F", title: "Энергия дракона", type: "checkmark" }
+			]
+			title: "Энергия дракона"
+			x: 0d
+			y: 8.5d
+		},
+		{
+			description: [
+			"Chaos Guardian — страж Draconic. Финальный бой перед нексусом."
+			""
+			"§o§8«Страж Chaos — последний страж, которого я записал в план.»§r"
+			]
+			dependencies: ["5224A0000000000F", "5224A00000000009"]
+			icon: { count: 1, id: "draconicevolution:chaos_shard" }
+			id: "5224A00000000010"
+			disable_jei: true
+			rewards: [
+				{ id: "5224D000000000B0", item: "draconicevolution:chaos_shard", count: 10, type: "item" }
+				{ id: "5224D000000000C0", type: "xp", xp: 32 }
+			]
+			shape: "circle"
+			tags: ["branch_pool", "pool_t4_w3", "branch_explore"]
+			tasks: [
+				{ id: "5224B00000000010", item: "draconicevolution:chaos_shard", count: 16L, type: "item", title: "Победить Chaos Guardian" }
+			]
+			title: "Chaos Guardian"
+			x: -6d
+			y: 10d
+		},
+		{
+			description: [
+			"Awakened draconium block — для финальных крафтов нексуса."
+			""
+			"§o§8«Блок тяжелее якоря — несём вдвоём.»§r"
+			]
+			dependencies: ["5224A0000000000F", "5224A0000000000A"]
+			icon: { count: 1, id: "draconicevolution:awakened_draconium_block" }
+			id: "5224A00000000011"
+			disable_jei: true
+			rewards: [
+				{ id: "5224D000000000B1", item: "draconicevolution:awakened_draconium_block", count: 3, type: "item" }
+				{ id: "5224D000000000C1", type: "xp", xp: 32 }
+			]
+			shape: "circle"
+			tags: ["branch_pool", "pool_t4_w3", "branch_craft", "branch_exclusive"]
+			tasks: [
+				{ id: "5224B00000000011", item: "draconicevolution:awakened_draconium_block", count: 4L, type: "item", title: "Собрать awakened-блоки" }
+			]
+			title: "Awakened блок"
+			x: -2d
+			y: 10d
+		},
+		{
+			description: [
+			"Трофей Cataclysm — знак победы над боссом ветки."
+			""
+			"§o§8«Череп шепчет — следующий босс уже ближе.»§r"
+			]
+			dependencies: ["5224A0000000000F", "5224A0000000000B"]
+			icon: { count: 1, id: "cataclysm:remnant_skull" }
+			id: "5224A00000000012"
+			disable_jei: true
+			rewards: [
+				{ id: "5224D000000000B2", item: "cataclysm:remnant_skull", type: "item" }
+				{ id: "5224D000000000D2", item: "kubejs:reliquary_primordial", type: "item" }
+				{ id: "5224D000000000C2", type: "xp", xp: 32 }
+			]
+			shape: "circle"
+			tags: ["branch_pool", "pool_t4_w3", "branch_explore"]
+			tasks: [
+				{ id: "5224B00000000012", item: "cataclysm:remnant_skull", type: "item", title: "Добыть реликварию Cataclysm" }
+			]
+			title: "Реликвария Cataclysm"
+			x: 2d
+			y: 10d
+		},
+		{
+			description: [
+			"Grains of Infinity — мост к next_ae. Соберу запас заранее."
+			""
+			"§o§8«Зёрна бесконечны — как аппетит разлома.»§r"
+			]
+			dependencies: ["5224A0000000000F", "5224A0000000000C"]
+			icon: { count: 1, id: "enderio:grains_of_infinity" }
+			id: "5224A00000000013"
+			disable_jei: true
+			rewards: [
+				{ id: "5224D000000000B3", item: "enderio:grains_of_infinity", count: 21, type: "item" }
+				{ id: "5224D000000000C3", type: "xp", xp: 32 }
+			]
+			shape: "circle"
+			tags: ["branch_pool", "pool_t4_w3", "branch_mine", "branch_exclusive"]
+			tasks: [
+				{ id: "5224B00000000013", item: "enderio:grains_of_infinity", count: 32L, type: "item", title: "Собрать зёрна бесконечности" }
+			]
+			title: "Зерна бесконечности"
+			x: 6d
+			y: 10d
+		},
+		{
+			description: [
+			"§8Опционально.§r Staff of power — сила дракона в руке."
+			""
+			"§o§8«Посох гудит — я привыкаю к этому звуку.»§r"
+			]
+			dependencies: ["5224A00000000013"]
+			icon: { count: 1, id: "draconicevolution:draconic_staff" }
+			id: "5224A0000000001B"
+			disable_jei: true
+			rewards: [
+				{ id: "5224D000000000CB", type: "xp", xp: 18 }
+			]
+			shape: "circle"
+			size: 0.75d
+			tasks: [
+				{ id: "5224B0000000001B", item: "draconicevolution:draconic_staff", type: "item", title: "Сковать draconic-посох" }
+			]
+			title: "Draconic посох"
+			x: -8d
+			y: 11.5d
+		},
+		{
+			description: [
+			"§8Опционально.§r Red matter — предел трансмутации ProjectE."
+			""
+			"§o§8«Материя красная — граница, за которой EMC молчит.»§r"
+			]
+			dependencies: ["5224A00000000012"]
+			icon: { count: 1, id: "projecte:red_matter" }
+			id: "5224A00000000014"
+			disable_jei: true
+			rewards: [
+				{ id: "5224D000000000D4", item: "kubejs:reliquary_primordial", type: "item" }
+				{ id: "5224D000000000C4", type: "xp", xp: 18 }
+			]
+			shape: "circle"
+			size: 0.75d
+			tasks: [
+				{ id: "5224B00000000014", item: "projecte:red_matter", type: "item", title: "Создать red matter" }
+			]
+			title: "Red matter"
+			x: 4d
+			y: 11.5d
+		},
+		{
+			description: [
+			"§8Опционально.§r Крупный chaotic shard — редкая добыча."
+			""
+			"§o§8«Осколок режет воздух — храню в ME-ячейке.»§r"
+			]
+			dependencies: ["5224A00000000011"]
+			icon: { count: 1, id: "draconicevolution:chaos_shard" }
+			id: "5224A00000000015"
+			disable_jei: true
+			rewards: [
+				{ id: "5224D000000000C5", type: "xp", xp: 18 }
+			]
+			shape: "circle"
+			size: 0.75d
+			tasks: [
+				{ id: "5224B00000000015", item: "draconicevolution:chaos_shard", type: "item", title: "Добыть chaotic shard" }
+			]
+			title: "Chaos шард большой"
+			x: 8d
+			y: 11.5d
+		},
+		{
+			description: [
+			"§dРубеж.§r Chaos побеждён, компоненты на месте. Осталось собрать нексус."
+			""
+			"§7Нужны §eвсе 4§r ветки волны."
+			"§7Кооп: делите ветки между напарником."
+			]
+			dependencies: ["5224A0000000000F", "5224A00000000010", "5224A00000000011", "5224A00000000012", "5224A00000000013"]
+			icon: { count: 1, id: "kubejs:quest_gate" }
+			id: "5224A00000000016"
+			disable_jei: true
+			rewards: [
+				{ id: "5224D0000000001F", item: "kubejs:journal_page_singularity_03", type: "item" }
+				{ id: "5224D000000000DA", item: "kubejs:reliquary_primordial", type: "item" }
+				{ id: "5224D00000000016", type: "xp", xp: 60 }
+			]
+			shape: "diamond"
+			size: 1.2d
+			tasks: [
+				{ id: "5224B00000000016", title: "Готовность к нексусу", type: "checkmark" }
+			]
+			title: "Готовность к нексусу"
+			x: 0d
+			y: 12.5d
+		},
+		{
+			description: [
+			"В блокноте — чертёж якорного нексуса. Все тиры сойдутся в одной точке."
+			""
+			"§o§8«Чертёж светится всеми цветами якоря — красиво и страшно.»§r"
+			]
+			dependencies: ["5224A00000000016"]
+			icon: { count: 1, id: "draconicevolution:awakened_draconium_block" }
+			id: "5224A00000000017"
+			disable_jei: true
+			rewards: [
+				{ id: "5224D000000000B7", item: "draconicevolution:awakened_draconium_block", type: "item" }
+				{ id: "5224D000000000C7", type: "xp", xp: 32 }
+			]
+			shape: "hexagon"
+			tasks: [
+				{ id: "5224B00000000018", item: "draconicevolution:awakened_draconium_block", count: 2L, type: "item", title: "Awakened-блоки под нексус" }
+			]
+			title: "Чертёж нексуса"
+			x: -2d
+			y: 14d
+		},
+		{
+			description: [
+			"Chaos, сердце и зёрна — тело нексуса своими руками."
+			""
+			"§o§8«Три силы в одном кристалле: дракон, хаос и бесконечность.»§r"
+			]
+			dependencies: ["5224A00000000016"]
+			icon: { count: 1, id: "draconicevolution:dragon_heart" }
+			id: "5224A00000000018"
+			disable_jei: true
+			rewards: [
+				{ id: "5224D00000000018", type: "xp", xp: 37 }
+			]
+			shape: "gear"
+			tasks: [
+				{ id: "5224B00000000019", item: "draconicevolution:dragon_heart", type: "item", title: "Драконье сердце для нексуса" }
+				{ id: "5224B0000000001A", item: "enderio:grains_of_infinity", count: 16L, type: "item", title: "Зёрна для нексуса" }
+			]
+			title: "Сбор для нексуса"
+			x: 2d
+			y: 14d
+		},
+		{
+			description: [
+			"§8Опционально.§r Замер драконьего контура перед финалом T4."
+			""
+			"§o§8«Пульс Chaos затих — нексус готов принять сигнал.»§r"
+			]
+			dependencies: ["5224A00000000017"]
+			icon: { count: 1, id: "minecraft:beacon" }
+			id: "5224A00000000019"
+			disable_jei: true
+			rewards: [
+				{ id: "5224D00000000018", type: "xp", xp: 15 }
+			]
+			shape: "circle"
+			size: 0.75d
+			tasks: [
+				{ id: "5224B0000000001E", item: "minecraft:beacon", type: "item", title: "Замерить драконий контур" }
+			]
+			title: "Резонансный замер V"
+			x: 5d
+			y: 15.5d
+		},
+		{
+			description: [
+			"§l[ Финал тира T4 ]§r"
+			""
+			"§7Драконий реактор гудит ровно. Awakened-металл течёт по инфузору, Chaos отступил."
+			""
+			"§7§eЯкорный нексус§r собран — в журнале отметка о пороге T4→T5. За ней §dnext_ae§r"
+			"§7и финальная схватка со стабилизацией Якоря."
+			""
+			"§8Награда — Якорный нексус (рубеж T4 → T5).§r"
+			]
+			dependencies: ["5224A00000000017", "5224A00000000018"]
+			min_required_dependencies: 2
+			icon: { count: 1, id: "kubejs:anchor_nexus" }
+			id: "5224A0000000001A"
+			disable_jei: true
+			rewards: [
+				{ id: "5224D00000000019", item: "kubejs:anchor_nexus", type: "item" }
+				{ id: "5224D00000000020", item: "kubejs:journal_page_singularity_04", type: "item" }
+				{ id: "5224D0000000001B", type: "xp", xp: 130 }
+			]
+			shape: "pentagon"
+			size: 1.6d
+			tasks: [
+				{ id: "5224B0000000001D", title: "Зафиксировать нексус в журнале", type: "checkmark" }
+			]
+			title: "Якорный нексус"
+			x: 0d
+			y: 16.5d
+		},
+	]
+	subtitle: [
+		"T4 · ~90–120 мин"
+	]
+	title: "T4 · Дракон"
+}

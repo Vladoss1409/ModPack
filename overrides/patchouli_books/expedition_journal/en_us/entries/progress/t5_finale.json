@@ -1,0 +1,14 @@
+{
+  "name": "T5: ядро якоря",
+  "icon": "kubejs:journal_page_nexus_04",
+  "category": "patchouli:progress",
+  "advancement": "cooptech:journal/t5_lore_finale",
+  "secret": true,
+  "sortnum": 54,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Экспедиция завершена$()$(br2)$(#DD55DD)Ядро Якоря реальности$() стабилизировано. Разлом затих. Мы выстояли."
+    }
+  ]
+}

@@ -6,10 +6,10 @@
 	hide_quest_details_until_startable: true
 	default_quest_shape: "circle"
 	filename: "side_flux"
-	group: "B100000000000003"
+	group: "B100000000000002"
 	icon: { count: 1, id: "fluxnetworks:flux_dust" }
 	id: "A804000000000000"
-	order_index: 3
+	order_index: 33
 	quest_links: [ ]
 	quests: [
 		{
@@ -17,7 +17,7 @@
 			"§dFlux Networks§r — ветка открыта основной линией."
 			"Следующие узлы появятся по цепочке зависимостей."
 			]
-			dependencies: ["A401000000000018"]
+			dependencies: ["5222A0000000000C"]
 			icon: { count: 1, id: "fluxnetworks:flux_dust" }
 			id: "A804000000000001"
 			disable_jei: true

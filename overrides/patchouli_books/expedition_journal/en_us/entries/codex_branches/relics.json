@@ -1,0 +1,29 @@
+{
+  "name": "Relics — артефакты",
+  "icon": "relics:roller_skates",
+  "category": "patchouli:codex_branches",
+  "advancement": "cooptech:journal/codex_side_relics",
+  "secret": true,
+  "sortnum": 14,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Зачем$()$(br2)Relics даёт $(#FFAA00)пассивные артефакты$() — скорость, вода, удача. Носи в слотах curios/accessory."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "relics:roller_skates",
+      "text": "$(#FFAA00)Roller Skates$(): скорость на ровной поверхности."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "relics:aqua_walker",
+      "text": "$(#FFAA00)Aqua Walker$(): ходьба по воде."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "relics:amphibian_boot",
+      "text": "$(#FFAA00)Amphibian Boots$() (финал): вода + скорость."
+    }
+  ]
+}
