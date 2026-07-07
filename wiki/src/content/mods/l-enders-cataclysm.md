@@ -1,31 +1,52 @@
 ---
-name: "L Enders Cataclysm"
-modId: "l_enders_cataclysm"
-version: "3.31.jar"
+name: "L_Ender's Cataclysm"
+modId: "cataclysm"
+version: "3.16"
 category: combat
 tags:
-  []
+  - bosses
+  - structures
+  - endgame
 links:
-  curseforge: "https://www.curseforge.com/minecraft/search?class=mc-mods&search=L%20Enders%20Cataclysm"
-  modrinth: "https://modrinth.com/mods?q=L%20Enders%20Cataclysm"
+  curseforge: "https://www.curseforge.com/minecraft/mc-mods/l_enders-cataclysm"
+  modrinth: "https://modrinth.com/mod/l_enders-cataclysm"
 draft: false
 ---
 
-<!-- scaffold -->
-
 ## Обзор
 
-**L Enders Cataclysm** (`l_enders_cataclysm`, v3.31.jar) — Бой и снаряжение: мобы, боссы, оружие и броня.
+**L_Ender's Cataclysm** — мод про **эпических боссов** в уникальных структурах. Каждый босс — отдельное испытание с фазами, механиками и мощным лутом. Один из самых сложных боевых модов в сборке.
 
-Часть кооп-сборки MyModPack (Forge 1.20.1). Кнопки CurseForge и Modrinth выше ведут на поиск мода — там официальное описание, скриншоты и вики.
+## Ключевые боссы
+
+| Босс | Структура | Особенности |
+|------|-----------|-------------|
+| **Ignis** | Burning Arena | Огненный рыцарь; фазы, огненные волны |
+| **The Harbinger** | Ancient Factory | Механический босс; лазеры, дроны |
+| **The Leviathan** | Sunken City | Подводный босс; давление, тентакли |
+| **The Monstrosity** | Netherite Monstrosity | Огромный голем |
+| **The Ender Guardian** | Ruined Citadel (Край) | Страж Края; эндгейм |
+| **Maledictus** | Cursed Pyramid | Проклятый фараон |
+| **Scylla** | Abyssal Ruins | Морской босс |
+
+## Лут
+
+Победа даёт **уникальное оружие и броню** с активными способностями:
+- **Ignitium Armor / Weapons** — огненный сет.
+- **Monstrous Helm, Void Forge** и др. — у каждого босса свой арсенал.
+
+## Как готовиться
+
+1. Найдите структуру ([Explorer's Compass](../explorerscompass/) или исследование).
+2. Изучите паттерны босса (фазы, уклонения, блоки).
+3. Возьмите: еду, зелья, броню T3+, заклинания ([Iron's Spellbooks](../irons-spellbooks/)) или сильное оружие ([Silent Gear](../silent-gear/)).
+4. Боссы рассчитаны на **кооператив** — вдвоём/вчетвером проще.
 
 ## Роль в сборке
 
-- Добавляет мобов, боссов и/или боевое снаряжение.
-- Влияет на сложность и лут сборки.
+Вершина PvE-контента: сайд-ветка «Cataclysm» в квестах. Лут — топовое снаряжение для поздней игры.
 
 ## Где узнать больше
 
-- Рецепты и предметы — в **JEI/EMI** в игре.
-- Официальное описание и скриншоты — по ссылкам CurseForge/Modrinth выше.
-- Мультиблоки сборки — в разделе [Механизмы](../../machines/).
+- Поиск структур — [Explorer's Compass](../explorerscompass/).
+- Другие боссы — [Mowzie's Mobs](../mowziesmobs/), [Bosses of Mass Destruction](../bomd-forge/).
