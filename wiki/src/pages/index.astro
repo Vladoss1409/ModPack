@@ -6,37 +6,70 @@ import { getCollection } from 'astro:content';
 
 const base = import.meta.env.BASE_URL;
 const allMods = (await getCollection('mods')).filter((m) => !m.data.draft);
-const categoryParam = Astro.url.searchParams.get('category');
 const categories = [...new Set(allMods.map((m) => m.data.category))].sort();
-
-const mods = categoryParam
-  ? allMods.filter((m) => m.data.category === categoryParam)
-  : allMods;
-
-mods.sort((a, b) => a.data.name.localeCompare(b.data.name, 'ru'));
+const mods = [...allMods].sort((a, b) => a.data.name.localeCompare(b.data.name, 'ru'));
 ---
 
 <BaseLayout title="Моды" description="Справочник по всем модам сборки MyModPack">
   <section class="mb-8">
     <h1 class="mb-2 text-3xl font-bold text-white">Справочник модов</h1>
     <p class="text-slate-400">
-      {mods.length} модов · Forge 1.20.1 · Поиск по ключевым словам в шапке · В игре: <code>/wiki</code>
+      {mods.length} модов · Forge 1.20.1 · Поиск в шапке · В игре: <code>/wiki</code>
     </p>
   </section>
 
-  <CategoryFilter categories={categories} active={categoryParam ?? 'all'} />
+  <CategoryFilter categories={categories} />
 
-  <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+  <div id="mod-grid" class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
     {
       mods.map((mod) => (
-        <ModCard
-          name={mod.data.name}
-          modId={mod.data.modId}
-          category={mod.data.category}
-          href={`${base}mods/${mod.slug}/`}
-          tags={mod.data.tags}
-        />
+        <div class="filter-item" data-category={mod.data.category}>
+          <ModCard
+            name={mod.data.name}
+            modId={mod.data.modId}
+            category={mod.data.category}
+            href={`${base}mods/${mod.slug}/`}
+            tags={mod.data.tags}
+          />
+        </div>
       ))
     }
   </div>
+
+  <p id="empty-msg" class="mt-6 hidden text-slate-500">Нет модов в этой категории.</p>
 </BaseLayout>
+
+<script is:inline>
+  (function () {
+    const filter = document.getElementById('cat-filter');
+    const grid = document.getElementById('mod-grid');
+    const empty = document.getElementById('empty-msg');
+    if (!filter || !grid) return;
+
+    const items = Array.from(grid.querySelectorAll('.filter-item'));
+    const btns = Array.from(filter.querySelectorAll('.cat-btn'));
+
+    function apply(cat) {
+      let visible = 0;
+      items.forEach((el) => {
+        const show = cat === 'all' || el.dataset.category === cat;
+        el.style.display = show ? '' : 'none';
+        if (show) visible++;
+      });
+      btns.forEach((b) => b.classList.toggle('is-active', b.dataset.cat === cat));
+      if (empty) empty.classList.toggle('hidden', visible !== 0);
+    }
+
+    filter.addEventListener('click', (e) => {
+      const btn = e.target.closest('.cat-btn');
+      if (!btn) return;
+      const cat = btn.dataset.cat;
+      apply(cat);
+      const url = cat === 'all' ? location.pathname : location.pathname + '?category=' + cat;
+      history.replaceState(null, '', url);
+    });
+
+    const params = new URLSearchParams(location.search);
+    apply(params.get('category') || 'all');
+  })();
+</script>

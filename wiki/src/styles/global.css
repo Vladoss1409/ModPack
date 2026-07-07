@@ -28,6 +28,14 @@
     @apply inline-flex items-center rounded-full border border-wiki-border bg-wiki-bg/60 px-2.5 py-0.5 text-xs font-medium text-slate-300;
   }
 
+  .cat-btn {
+    @apply cursor-pointer transition hover:border-wiki-accent/60 hover:text-slate-100;
+  }
+
+  .cat-btn.is-active {
+    @apply border-wiki-accent bg-wiki-accent/10 text-wiki-glow;
+  }
+
   .wiki-prose h2 {
     @apply mb-3 mt-8 text-xl font-semibold text-wiki-glow;
   }
@@ -68,14 +76,4 @@
   .wiki-prose a {
     @apply text-wiki-accent underline;
   }
-}
-
-/* Pagefind UI overrides */
-.pagefind-ui {
-  --pagefind-ui-scale: 0.95;
-  --pagefind-ui-primary: #5b9fd4;
-  --pagefind-ui-text: #e2e8f0;
-  --pagefind-ui-background: #1a2332;
-  --pagefind-ui-border: #2d3a4f;
-  --pagefind-ui-tag: #2d3a4f;
 }

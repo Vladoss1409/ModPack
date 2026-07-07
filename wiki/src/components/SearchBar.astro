@@ -2,76 +2,126 @@
 const base = import.meta.env.BASE_URL;
 ---
 
-<link rel="stylesheet" href={`${base}pagefind/pagefind-ui.css`} />
+<div id="wiki-search" class="relative">
+  <input
+    type="search"
+    autocomplete="off"
+    placeholder="Поиск: mekanism, реактор…"
+    aria-label="Поиск по вики"
+    class="w-full rounded-lg border border-wiki-border bg-wiki-panel px-3 py-2 text-sm text-slate-100 placeholder:text-slate-500 focus:border-wiki-accent focus:outline-none"
+  />
+  <div
+    class="results absolute right-0 z-[60] mt-1 hidden max-h-[70vh] w-full min-w-[18rem] overflow-y-auto rounded-lg border border-wiki-border bg-wiki-panel shadow-2xl"
+  >
+  </div>
+</div>
 
-<div id="search" class="pagefind-ui"></div>
-
-<script is:inline src={`${base}pagefind/pagefind-ui.js`}></script>
 <script is:inline define:vars={{ base }}>
-  function initPagefind() {
-    if (!window.PagefindUI) {
-      // pagefind assets exist only after a full build (npm run build).
-      return;
-    }
-    new window.PagefindUI({
-      element: '#search',
-      baseUrl: base,
-      bundlePath: base + 'pagefind/',
-      showSubResults: true,
-      showImages: false,
-      resetStyles: false,
-    });
+  (function () {
+    const root = document.getElementById('wiki-search');
+    if (!root) return;
+    const input = root.querySelector('input');
+    const box = root.querySelector('.results');
+    let index = [];
+    let loaded = false;
 
-    const params = new URLSearchParams(window.location.search);
-    const q = params.get('q');
-    if (q) {
-      const input = document.querySelector('#search input[type="search"], #search input[type="text"]');
-      if (input) {
-        input.value = q;
-        input.dispatchEvent(new Event('input', { bubbles: true }));
+    const norm = (s) => (s || '').toString().toLowerCase().replace(/ё/g, 'е');
+
+    async function ensure() {
+      if (loaded) return;
+      loaded = true;
+      try {
+        const res = await fetch(base + 'search-index.json');
+        index = await res.json();
+      } catch (e) {
+        loaded = false;
       }
     }
-  }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initPagefind);
-  } else {
-    initPagefind();
-  }
+    function search(q) {
+      const terms = norm(q).split(/\s+/).filter(Boolean);
+      if (!terms.length) return [];
+      const scored = [];
+      for (const it of index) {
+        const title = norm(it.title);
+        const modId = norm(it.modId);
+        const tags = norm((it.tags || []).join(' '));
+        const hay = title + ' ' + modId + ' ' + norm(it.category) + ' ' + tags + ' ' + norm(it.excerpt);
+        let score = 0;
+        let ok = true;
+        for (const t of terms) {
+          if (hay.indexOf(t) === -1) { ok = false; break; }
+          if (title.startsWith(t)) score += 20;
+          else if (title.indexOf(t) !== -1) score += 10;
+          else if (modId.indexOf(t) !== -1) score += 6;
+          else if (tags.indexOf(t) !== -1) score += 4;
+          else score += 1;
+        }
+        if (ok) scored.push({ it, score });
+      }
+      return scored.sort((a, b) => b.score - a.score).slice(0, 12).map((s) => s.it);
+    }
+
+    function esc(s) {
+      return s.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+    }
+
+    function highlight(text, q) {
+      const terms = norm(q).split(/\s+/).filter(Boolean).sort((a, b) => b.length - a.length);
+      let out = esc(text);
+      for (const t of terms) {
+        const re = new RegExp('(' + t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'ig');
+        out = out.replace(re, '<mark class="rounded bg-wiki-accent/30 px-0.5 text-wiki-glow">$1</mark>');
+      }
+      return out;
+    }
+
+    function render(items, q) {
+      if (!items.length) {
+        box.innerHTML = '<div class="p-3 text-sm text-slate-500">Ничего не найдено</div>';
+        box.classList.remove('hidden');
+        return;
+      }
+      box.innerHTML = items
+        .map(
+          (it) =>
+            '<a href="' + it.url + '" class="block border-b border-wiki-border/40 px-3 py-2 no-underline last:border-0 hover:bg-wiki-bg">' +
+            '<div class="flex items-center justify-between gap-2">' +
+            '<span class="text-slate-100">' + highlight(it.title, q) + '</span>' +
+            '<span class="shrink-0 text-xs capitalize text-wiki-accent">' + esc(it.category) + '</span>' +
+            '</div>' +
+            '<div class="font-mono text-xs text-slate-500">' + highlight(it.modId, q) + '</div>' +
+            '</a>',
+        )
+        .join('');
+      box.classList.remove('hidden');
+    }
+
+    async function onInput() {
+      await ensure();
+      const q = input.value.trim();
+      if (!q) {
+        box.classList.add('hidden');
+        box.innerHTML = '';
+        return;
+      }
+      render(search(q), q);
+    }
+
+    input.addEventListener('focus', ensure);
+    input.addEventListener('input', onInput);
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') { box.classList.add('hidden'); input.blur(); }
+    });
+    document.addEventListener('click', (e) => {
+      if (!root.contains(e.target)) box.classList.add('hidden');
+    });
+
+    const params = new URLSearchParams(location.search);
+    const q0 = params.get('q');
+    if (q0) {
+      input.value = q0;
+      ensure().then(onInput);
+    }
+  })();
 </script>
-
-<style>
-  #search {
-    --pagefind-ui-scale: 0.9;
-    --pagefind-ui-primary: #7ec8e3;
-    --pagefind-ui-text: #e2e8f0;
-    --pagefind-ui-background: #1a2332;
-    --pagefind-ui-border: #2d3a4f;
-    --pagefind-ui-tag: #2d3a4f;
-    --pagefind-ui-border-width: 1px;
-    --pagefind-ui-border-radius: 0.5rem;
-    --pagefind-ui-font: inherit;
-  }
-
-  #search :global(.pagefind-ui__search-input) {
-    width: 100%;
-    background: #1a2332;
-    color: #e2e8f0;
-    font-size: 0.875rem;
-  }
-
-  #search :global(.pagefind-ui__drawer) {
-    position: absolute;
-    z-index: 60;
-    margin-top: 0.5rem;
-    width: 100%;
-    max-width: 30rem;
-    max-height: 70vh;
-    overflow-y: auto;
-    border-radius: 0.5rem;
-    border: 1px solid #2d3a4f;
-    background: #1a2332;
-    padding: 0.75rem;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-  }
-</style>
