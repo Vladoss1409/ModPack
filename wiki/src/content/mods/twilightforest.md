@@ -1,32 +1,55 @@
 ---
-name: "Twilightforest"
+name: "The Twilight Forest"
 modId: "twilightforest"
-version: "1.20.1-4.3.2508"
+version: "4.3.2508"
 category: worldgen
 tags:
-  - twilight
   - dimension
+  - bosses
+  - progression
 links:
-  curseforge: "https://www.curseforge.com/minecraft/search?class=mc-mods&search=Twilightforest"
-  modrinth: "https://modrinth.com/mods?q=Twilightforest"
+  curseforge: "https://www.curseforge.com/minecraft/mc-mods/the-twilight-forest"
+  modrinth: "https://modrinth.com/mod/twilight-forest"
 draft: false
 ---
 
-<!-- scaffold -->
-
 ## Обзор
 
-**Twilightforest** (`twilightforest`, v1.20.1-4.3.2508) — Генерация мира: биомы, измерения и структуры.
+**The Twilight Forest** — легендарное **измерение-приключение** с сумеречным лесом, десятками структур и цепочкой **боссов**. Имеет собственную **линейную прогрессию**: победа над одним боссом открывает доступ к следующим зонам.
 
-Часть кооп-сборки MyModPack (Forge 1.20.1). Кнопки CurseForge и Modrinth выше ведут на поиск мода — там официальное описание, скриншоты и вики.
+## Как попасть
+
+1. Выкопайте яму **2×2**, заполните водой.
+2. По периметру посадите **цветы/грибы** (любые растения).
+3. Бросьте в воду **алмаз** — появится портал (как молния).
+4. Прыгайте в портал.
+
+## Прогрессия боссов (порядок)
+
+| Босс | Структура | Что открывает |
+|------|-----------|---------------|
+| **Naga** | Naga Court | Чешуя нага → доступ дальше |
+| **Lich** | Lich Tower | Побеждать только после Naga |
+| **Minoshroom** | Labyrinth | Подземный лабиринт |
+| **Hydra** | Hydra Lair | Огненная гидра |
+| **Knight Phantoms** | Goblin Knight Stronghold | Рыцари-призраки |
+| **Ur-Ghast** | Dark Tower | Башня тьмы |
+| **Alpha Yeti** | Yeti Cave | Снежная зона |
+| **Snow Queen** | Aurora Palace | Финальный доступный босс |
+
+> Прогресс **защищён**: без победы над предыдущим боссом следующие зоны наносят проклятия/не пускают.
+
+## Ресурсы и лут
+
+- **Ironwood, Steeleaf, Knightmetal, Fiery Ingot** — уникальные материалы для брони/оружия.
+- **Charm of Life / Keeping** — амулеты (лечение, сохранение инвентаря).
+- Множество декоративных блоков и растений.
 
 ## Роль в сборке
 
-- Меняет генерацию мира: биомы, измерения, структуры.
-- Влияет на исследование и добычу ресурсов.
+Крупная приключенческая ветка с ярко выраженной прогрессией боссов. Отдельная «кампания» для кооператива. Сайд-ветка «Twilight» в квестах.
 
 ## Где узнать больше
 
-- Рецепты и предметы — в **JEI/EMI** в игре.
-- Официальное описание и скриншоты — по ссылкам CurseForge/Modrinth выше.
-- Мультиблоки сборки — в разделе [Механизмы](../../machines/).
+- Поиск структур внутри измерения — [Explorer's Compass](../explorerscompass/).
+- Рецепты материалов — **JEI/EMI**.

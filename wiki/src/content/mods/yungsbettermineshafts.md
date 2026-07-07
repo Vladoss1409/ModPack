@@ -1,30 +1,41 @@
 ---
-name: "Yungsbettermineshafts"
-modId: "yungsbettermineshafts"
+name: "YUNG's Better Mineshafts"
+modId: "bettermineshafts"
 version: "1.20-Forge"
-category: other
+category: worldgen
 tags:
-  []
+  - structures
+  - mineshaft
+  - caves
 links:
-  curseforge: "https://www.curseforge.com/minecraft/search?class=mc-mods&search=Yungsbettermineshafts"
-  modrinth: "https://modrinth.com/mods?q=Yungsbettermineshafts"
+  curseforge: "https://www.curseforge.com/minecraft/mc-mods/yungs-better-mineshafts"
+  modrinth: "https://modrinth.com/mod/yungs-better-mineshafts"
 draft: false
 ---
 
-<!-- scaffold -->
-
 ## Обзор
 
-**Yungsbettermineshafts** (`yungsbettermineshafts`, v1.20-Forge) — Дополнение к сборке.
+**YUNG's Better Mineshafts** — полная переработка **заброшенных шахт**: вместо хаотичных деревянных туннелей — атмосферные, разнообразные комплексы с новыми материалами, комнатами и лутом.
 
-Часть кооп-сборки MyModPack (Forge 1.20.1). Кнопки CurseForge и Modrinth выше ведут на поиск мода — там официальное описание, скриншоты и вики.
+## Что добавляет
+
+- Расширенные шахты с разными «биомными» стилями (по окружающему биому).
+- Новые комнаты: склады, лагеря шахтёров, обвалы, минералы в стенах.
+- Улучшенный лут и больше поводов исследовать под землёй.
+- Паутина, ловушки и опасности для баланса.
+
+## Как использовать
+
+- Генерируются автоматически в **новом мире** под землёй.
+- Находите вход при копании/через пещеры; исследуйте ради лута и руд.
+- Настраивается датапаком.
 
 ## Роль в сборке
 
-- Дополняет сборку вспомогательным контентом.
+Делает подземное исследование живее — особенно в связке с vein-mining ([Ore Excavation](../oreexcavation/)) для быстрой добычи руд из стен шахт.
 
 ## Где узнать больше
 
-- Рецепты и предметы — в **JEI/EMI** в игре.
-- Официальное описание и скриншоты — по ссылкам CurseForge/Modrinth выше.
-- Мультиблоки сборки — в разделе [Механизмы](../../machines/).
+- Быстрая добыча руд — [Ore Excavation](../oreexcavation/).
+- Остальная YUNG's-серия — [Better Dungeons](../yungsbetterdungeons/), [Better Strongholds](../yungsbetterstrongholds/).
+- Зависимость: [YUNG's API](../yungsapi/).
