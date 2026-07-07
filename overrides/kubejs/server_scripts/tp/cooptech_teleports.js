@@ -12,12 +12,6 @@
 //   варпы -> overworld persistentData ключ 'cooptech_warps' (JSON-объект {имя: запись})
 
 ;(function () {
-var Component = Java.loadClass('net.minecraft.network.chat.Component')
-var Style = Java.loadClass('net.minecraft.network.chat.Style')
-var ClickEvent = Java.loadClass('net.minecraft.network.chat.ClickEvent')
-var HoverEvent = Java.loadClass('net.minecraft.network.chat.HoverEvent')
-var ClickAction = Java.loadClass('net.minecraft.network.chat.ClickEvent$Action')
-var HoverAction = Java.loadClass('net.minecraft.network.chat.HoverEvent$Action')
 var ResourceLocation = Java.loadClass('net.minecraft.resources.ResourceLocation')
 var ResourceKey = Java.loadClass('net.minecraft.resources.ResourceKey')
 var Registries = Java.loadClass('net.minecraft.core.registries.Registries')
@@ -239,14 +233,6 @@ function deleteWarp(ctx, name) {
   return 1
 }
 
-function warpClickable(name, ownerName) {
-  return Component.literal('§b' + name).withStyle(
-    Style.EMPTY
-      .withClickEvent(new ClickEvent(ClickAction.RUN_COMMAND, '/warp ' + name))
-      .withHoverEvent(new HoverEvent(HoverAction.SHOW_TEXT, Component.literal('§7Телепорт на §f' + name + '\n§7Владелец: §f' + ownerName)))
-  )
-}
-
 function listWarps(ctx) {
   var server = ctx.source.getServer()
   var warps = getWarps(server)
@@ -262,10 +248,9 @@ function listWarps(ctx) {
   ctx.source.sendSystemMessage(Component.literal('§6[TP]§f Варпы сервера (§e' + names.length + '§f):'))
   for (var i = 0; i < names.length; i++) {
     var rec = warps[names[i]]
-    var line = Component.literal('§7 • ')
-      .append(warpClickable(names[i], rec.ownerName))
-      .append(Component.literal('§7 — ' + rec.ownerName))
-    ctx.source.sendSystemMessage(line)
+    ctx.source.sendSystemMessage(Component.literal(
+      '§7 • §b' + names[i] + '§7 — ' + rec.ownerName + ' §8(/warp ' + names[i] + ')'
+    ))
   }
   return 1
 }

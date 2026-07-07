@@ -4,36 +4,18 @@
 ;(function () {
 var WIKI_URL = 'https://vladoss1409.github.io/ModPack/'
 
-var Style = Java.loadClass('net.minecraft.network.chat.Style')
-var ClickEvent = Java.loadClass('net.minecraft.network.chat.ClickEvent')
-var HoverEvent = Java.loadClass('net.minecraft.network.chat.HoverEvent')
-var ClickAction = Java.loadClass('net.minecraft.network.chat.ClickEvent$Action')
-var HoverAction = Java.loadClass('net.minecraft.network.chat.HoverEvent$Action')
-
 function wikiUrl(query) {
   if (!query || query.length === 0) return WIKI_URL
   return WIKI_URL + '?q=' + encodeURIComponent(query)
 }
 
-function wikiClickable(url, label) {
-  return Component.literal('§b§n' + label).withStyle(
-    Style.EMPTY
-      .withClickEvent(new ClickEvent(ClickAction.OPEN_URL, url))
-      .withHoverEvent(
-        new HoverEvent(HoverAction.SHOW_TEXT, Component.literal('§7Открыть в браузере'))
-      )
-  )
-}
-
 function sendWikiLink(source, query) {
   var url = wikiUrl(query)
-  var prefix = Component.literal('§5§l[Вики]§r §f')
-  var link = wikiClickable(url, query ? 'Поиск: «' + query + '»' : 'Открыть справочник модов')
-  source.sendSystemMessage(prefix.append(link))
+  var label = query ? 'Поиск: «' + query + '»' : 'Открыть справочник модов'
+  source.sendSystemMessage(Component.literal('§5§l[Вики]§r §f' + label))
+  source.sendSystemMessage(Component.literal('§b§n' + url))
   if (!query) {
-    source.sendSystemMessage(
-      Component.literal('§7Или: §e/wiki <запрос>§7 — поиск по ключевым словам')
-    )
+    source.sendSystemMessage(Component.literal('§7Или: §e/wiki <запрос>§7 — поиск по ключевым словам'))
   }
 }
 
@@ -63,9 +45,7 @@ PlayerEvents.loggedIn(function (event) {
   player.persistentData.wiki_hint_shown = true
 
   player.tell('§5§l[Вики]§r §fСправочник по модам доступен в браузере.')
-  if (player.sendSystemMessage) {
-    player.sendSystemMessage(wikiClickable(WIKI_URL, 'Открыть MyModPack Wiki'))
-  }
+  player.tell('§b§n' + WIKI_URL)
   player.tell('§7Команда: §e/wiki§7 или §e/wiki mekanism')
 })
 
