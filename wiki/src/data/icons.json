@@ -1,0 +1,8 @@
+{
+  "mekanism/configurator": "textures/icons/mekanism/configurator.png",
+  "mekanism/digital_miner": "textures/icons/mekanism/digital_miner.png",
+  "mekanism/enrichment_chamber": "textures/icons/mekanism/enrichment_chamber.png",
+  "mekanism/metallurgic_infuser": "textures/icons/mekanism/metallurgic_infuser.png",
+  "mekanism/network_reader": "textures/icons/mekanism/network_reader.png",
+  "mekanism/purification_chamber": "textures/icons/mekanism/purification_chamber.png"
+}

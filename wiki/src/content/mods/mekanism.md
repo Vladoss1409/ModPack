@@ -23,8 +23,8 @@ draft: false
 
 Чем длиннее цепочка, тем больше слитков с одной руды:
 
-1. **2x** — Enrichment Chamber
-2. **3x** — + Purification Chamber (нужен кислород)
+1. **2x** — {{icon mekanism/enrichment_chamber}} Enrichment Chamber
+2. **3x** — + {{icon mekanism/purification_chamber}} Purification Chamber (нужен кислород)
 3. **4x** — + Chemical Injection Chamber (нужна кислота)
 4. **5x** — + Chemical Dissolution/Crystallizer (полная химия)
 
@@ -37,8 +37,8 @@ draft: false
 
 | Машина | Назначение |
 |--------|-----------|
-| Metallurgic Infuser | Сталь, обогащение |
-| Digital Miner | Автодобыча по фильтру (см. мультиблок) |
+| {{icon mekanism/metallurgic_infuser}} **Metallurgic Infuser** | Сталь, обогащение |
+| {{icon mekanism/digital_miner}} **Digital Miner** | Автодобыча по фильтру (см. мультиблок) |
 | Fusion/Fission | Эндгейм-энергетика |
 | QIO | Альтернатива AE2 для хранения |
 
@@ -52,6 +52,6 @@ T2 «Контур» — справочник «Mekanism — промышленн
 
 ## Советы
 
-- Соберите **Configurator** и **Network Reader** для отладки труб/кабелей.
+- Соберите {{icon mekanism/configurator}} **Configurator** и {{icon mekanism/network_reader}} **Network Reader** для отладки труб/кабелей.
 - Universal Cable, Mechanical Pipe, Pressurized Tube, Logistical Transporter — разные среды (энергия/жидкость/газ/предметы).
 - Официальная вики: [wiki.aidancbrady.com](https://wiki.aidancbrady.com/wiki/Mekanism).

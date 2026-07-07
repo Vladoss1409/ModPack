@@ -2,6 +2,7 @@
 import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 import tailwind from '@astrojs/tailwind';
+import { remarkWikiIcons } from './src/plugins/remark-wiki-icons.ts';
 
 // Project site (repo Vladoss1409/ModPack): https://vladoss1409.github.io/ModPack/
 // In CI GITHUB_REPOSITORY is set automatically, so base becomes /ModPack/.
@@ -14,6 +15,9 @@ export default defineConfig({
   base,
   output: 'static',
   integrations: [react(), tailwind({ applyBaseStyles: false })],
+  markdown: {
+    remarkPlugins: [[remarkWikiIcons, { base }]],
+  },
   build: {
     format: 'directory',
   },
