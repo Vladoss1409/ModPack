@@ -1,31 +1,48 @@
 ---
-name: "Bomd Forge"
-modId: "bomd_forge"
-version: "1.20.1-1.1.2.jar"
+name: "Bosses of Mass Destruction"
+modId: "bosses_of_mass_destruction"
+version: "1.7.5"
 category: combat
 tags:
-  []
+  - bosses
+  - nether
+  - end
 links:
-  curseforge: "https://www.curseforge.com/minecraft/search?class=mc-mods&search=Bomd%20Forge"
-  modrinth: "https://modrinth.com/mods?q=Bomd%20Forge"
+  curseforge: "https://www.curseforge.com/minecraft/mc-mods/bosses-of-mass-destruction"
+  modrinth: "https://modrinth.com/mod/bosses-of-mass-destruction"
 draft: false
 ---
 
-<!-- scaffold -->
-
 ## Обзор
 
-**Bomd Forge** (`bomd_forge`, v1.20.1-1.1.2.jar) — Бой и снаряжение: мобы, боссы, оружие и броня.
+**Bosses of Mass Destruction** (BOMD) — четыре **крупных босса** в ванильных измерениях с уникальными механиками и лутом. Компактный мод: мало боссов, но каждый запоминается.
 
-Часть кооп-сборки MyModPack (Forge 1.20.1). Кнопки CurseForge и Modrinth выше ведут на поиск мода — там официальное описание, скриншоты и вики.
+## Боссы
+
+| Босс | Где | Механика |
+|------|-----|----------|
+| **Gauntlet** | Незер (структура) | Огромная рука; удары по площади, захват |
+| **Obsidilith** | Энд (арена) | Каменный голем; кристаллы, волны |
+| **Lich** | Верхний мир (башня) | Некромант; призыв нежити, фазы |
+| **Void Blossom** | Энд (цветок) | Растительный босс; споры, корни |
+
+## Лут
+
+- Уникальное **оружие и предметы** с активными способностями (например, кулак Gauntlet, посох Lich).
+- Материалы для крафта и декора.
+
+## Как сражаться
+
+1. Найдите **структуру босса** (башня Lich в мире, арены в Незере/Крае).
+2. Подготовьтесь: броня, еда, дистанция/блоки для укрытия.
+3. У каждого босса **2–3 фазы** — следите за сменой атак.
+4. Рекомендуется **кооператив** на первом прохождении.
 
 ## Роль в сборке
 
-- Добавляет мобов, боссов и/или боевое снаряжение.
-- Влияет на сложность и лут сборки.
+Средний слой босс-контента между [Mowzie's Mobs](../mowziesmobs/) и [L_Ender's Cataclysm](../l-enders-cataclysm/). Хорошие тренировочные бои перед эндгеймом.
 
 ## Где узнать больше
 
-- Рецепты и предметы — в **JEI/EMI** в игре.
-- Официальное описание и скриншоты — по ссылкам CurseForge/Modrinth выше.
-- Мультиблоки сборки — в разделе [Механизмы](../../machines/).
+- Поиск структур — [Explorer's Compass](../explorerscompass/).
+- Эндгейм-боссы — [L_Ender's Cataclysm](../l-enders-cataclysm/).

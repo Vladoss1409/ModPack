@@ -1,31 +1,44 @@
 ---
-name: "Mowziesmobs"
+name: "Mowzie's Mobs"
 modId: "mowziesmobs"
-version: "1.8.2.jar"
+version: "1.7.3"
 category: combat
 tags:
-  []
+  - bosses
+  - mobs
+  - abilities
 links:
-  curseforge: "https://www.curseforge.com/minecraft/search?class=mc-mods&search=Mowziesmobs"
-  modrinth: "https://modrinth.com/mods?q=Mowziesmobs"
+  curseforge: "https://www.curseforge.com/minecraft/mc-mods/mowzies-mobs"
+  modrinth: "https://modrinth.com/mod/mowzies-mobs"
 draft: false
 ---
 
-<!-- scaffold -->
-
 ## Обзор
 
-**Mowziesmobs** (`mowziesmobs`, v1.8.2.jar) — Бой и снаряжение: мобы, боссы, оружие и броня.
+**Mowzie's Mobs** — мод с **уникальными мобами и боссами**, у каждого свои анимации, атаки и лут. Добавляет вызов в исследовании и мощные предметы за победу.
 
-Часть кооп-сборки MyModPack (Forge 1.20.1). Кнопки CurseForge и Modrinth выше ведут на поиск мода — там официальное описание, скриншоты и вики.
+## Ключевые мобы и боссы
+
+| Моб | Где найти | Лут / механика |
+|-----|-----------|----------------|
+| **Ferrous Wroughtnaut** | Подземелья | Тяжёлый босс в броне; даёт **Wrought Helm** и **Axe of a Thousand Metals** |
+| **Frostmaw** | Снежные биомы | Ледяной босс; **Ice Crystal** → ледяные способности |
+| **Grottol** | Пещеры | Мирный моб; даёт **Diamond** при дружбе |
+| **Barako, the Sun Chief** | Саванна | Босс-племенной вождь; **Barako Mask** + посох призыва солнечных существ |
+| **Naga** | Джунгли | Змееподобный босс; **Naga Fang Dagger** |
+| **Umvuthi, the Sunbird** | Пустыня | Птица-солнце; **Sol Visage** (маска с лучами) |
+
+## Как сражаться
+
+- У каждого босса **свой паттерн атак** — изучите анимации (уклонение, блок, дистанция).
+- Лут часто даёт **активные способности** (маски, посохи) — настраиваются клавишей.
+- Боссы рассчитаны на подготовку: еда, зелья, броня среднего+ тира.
 
 ## Роль в сборке
 
-- Добавляет мобов, боссов и/или боевое снаряжение.
-- Влияет на сложность и лут сборки.
+Контент для боевой/исследовательской ветки: сильные боссы в обычном мире, уникальный лут для прокачки. Часть квестов сайд-ветки «Бестиарий».
 
 ## Где узнать больше
 
-- Рецепты и предметы — в **JEI/EMI** в игре.
-- Официальное описание и скриншоты — по ссылкам CurseForge/Modrinth выше.
-- Мультиблоки сборки — в разделе [Механизмы](../../machines/).
+- Другие босс-моды — [L_Ender's Cataclysm](../l-enders-cataclysm/), [Bosses of Mass Destruction](../bomd-forge/).
+- Расположение и лут — **JEI/EMI** + [Explorer's Compass](../explorerscompass/).

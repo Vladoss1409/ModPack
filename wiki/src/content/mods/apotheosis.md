@@ -1,32 +1,58 @@
 ---
 name: "Apotheosis"
 modId: "apotheosis"
-version: "1.20.1-7.4.8.jar"
+version: "2.5.0"
 category: combat
 tags:
-  - apotheosis
+  - enchantments
+  - bosses
   - gear
 links:
-  curseforge: "https://www.curseforge.com/minecraft/search?class=mc-mods&search=Apotheosis"
-  modrinth: "https://modrinth.com/mods?q=Apotheosis"
+  curseforge: "https://www.curseforge.com/minecraft/mc-mods/apotheosis"
+  modrinth: "https://modrinth.com/mod/apotheosis"
 draft: false
 ---
 
-<!-- scaffold -->
-
 ## Обзор
 
-**Apotheosis** (`apotheosis`, v1.20.1-7.4.8.jar) — Бой и снаряжение: мобы, боссы, оружие и броня.
+**Apotheosis** — глубокая переработка **зачарований, спавнеров и лута**. Делает зачарования сильнее (выше ванильных лимитов), добавляет редкость предметов, усиленных мобов и особые структуры.
 
-Часть кооп-сборки MyModPack (Forge 1.20.1). Кнопки CurseForge и Modrinth выше ведут на поиск мода — там официальное описание, скриншоты и вики.
+## Ключевые системы
+
+### Зачарования (Enchanting)
+
+| Блок / предмет | Назначение |
+|----------------|-----------|
+| **Enchanting Table** (улучшенный) | Зачарование с **силой выше ваниллы** (до уровня XX+); нужны **книжные полки** особых типов (Hell/Soul/Ends/…) |
+| **Library of Alexandria / others** | Хранение/передача зачарований |
+| **Tome of Scrapping / Extraction** | Снятие зачарований с предметов |
+| **Anvil Penalties** | Снижен штраф «Too Expensive» |
+
+Механика: чем больше **Eterna / Quanta / Arcana** (статы с полок), тем мощнее стол.
+
+### Редкость и лут
+
+- Предметы имеют **редкость** (Common → Uncommon → Rare → Epic → Mythic) с бонусными статами.
+- **Affix Items** — предметы со случайными аффиксами (+урон, +HP и т.д.).
+
+### Мир и боссы
+
+- **Apothic Spawners** — настраиваемые спавнеры (моб, задержка, условия).
+- **World Tier** — усиление мира по мере прогресса.
+- **Rogue Spawners** в данжах — усиленные мобы с лучшим лутом.
+
+## Как использовать
+
+1. Постройте **улучшенный стол зачарований** с правильными полками (смотрите JEI — нужные уровни Eterna/Quanta/Arcana).
+2. Зачаровывайте инструменты/броню на уровни выше ванильного максимума.
+3. Ищите **аффикс-лут** в данжах; используйте **Tomes** для переноса чар.
+4. Настройте **спавнеры** для фарма конкретных мобов.
 
 ## Роль в сборке
 
-- Добавляет мобов, боссов и/или боевое снаряжение.
-- Влияет на сложность и лут сборки.
+Прокачка снаряжения «вглубь»: топовые чары, редкий лут, контролируемый фарм. Сайд-ветка «Apotheosis» в квестах. Отлично с [Silent Gear](../silent-gear/) и [Iron's Spellbooks](../irons-spellbooks/).
 
 ## Где узнать больше
 
-- Рецепты и предметы — в **JEI/EMI** в игре.
-- Официальное описание и скриншоты — по ссылкам CurseForge/Modrinth выше.
-- Мультиблоки сборки — в разделе [Механизмы](../../machines/).
+- Требования к полкам и статам стола — **JEI/EMI** (вкладка Apotheosis).
+- Атрибуты — [Apothic Attributes](../apothicattributes/) (библиотека).
