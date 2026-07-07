@@ -24,9 +24,8 @@ draft: false
 - Меняет генерацию мира: биомы, измерения, структуры.
 - Влияет на исследование и добычу ресурсов.
 
-## Ссылки
+## Где узнать больше
 
-- [Найти на CurseForge](https://www.curseforge.com/minecraft/search?class=mc-mods&search=Incendium)
-- [Найти на Modrinth](https://modrinth.com/mods?q=Incendium)
-
-> Детальное описание на русском добавляется постепенно. Как дополнять — см. `docs/wiki.md`.
+- Рецепты и предметы — в **JEI/EMI** в игре.
+- Официальное описание и скриншоты — по ссылкам CurseForge/Modrinth выше.
+- Мультиблоки сборки — в разделе [Механизмы](../../machines/).

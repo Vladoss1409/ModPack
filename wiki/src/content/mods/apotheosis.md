@@ -25,9 +25,8 @@ draft: false
 - Добавляет мобов, боссов и/или боевое снаряжение.
 - Влияет на сложность и лут сборки.
 
-## Ссылки
+## Где узнать больше
 
-- [Найти на CurseForge](https://www.curseforge.com/minecraft/search?class=mc-mods&search=Apotheosis)
-- [Найти на Modrinth](https://modrinth.com/mods?q=Apotheosis)
-
-> Детальное описание на русском добавляется постепенно. Как дополнять — см. `docs/wiki.md`.
+- Рецепты и предметы — в **JEI/EMI** в игре.
+- Официальное описание и скриншоты — по ссылкам CurseForge/Modrinth выше.
+- Мультиблоки сборки — в разделе [Механизмы](../../machines/).

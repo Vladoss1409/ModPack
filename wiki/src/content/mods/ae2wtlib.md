@@ -1,35 +1,52 @@
 ---
-name: "Ae2wtlib"
+name: "AE2 Wireless Terminals (WTLib)"
 modId: "ae2wtlib"
-version: "15.3.3-forge.jar"
+version: "15.3.3"
 category: tech
 tags:
   - ae2
   - storage
-  - automation
+  - wireless
+  - terminal
 links:
-  curseforge: "https://www.curseforge.com/minecraft/search?class=mc-mods&search=Ae2wtlib"
-  modrinth: "https://modrinth.com/mods?q=Ae2wtlib"
+  curseforge: "https://www.curseforge.com/minecraft/mc-mods/ae2wtlib"
+  modrinth: "https://modrinth.com/mod/ae2wtlib"
 draft: false
 ---
 
-<!-- scaffold -->
-
 ## Обзор
 
-**Ae2wtlib** (`ae2wtlib`, v15.3.3-forge.jar) — Технический мод: машины, автоматизация и энергетика.
+**AE2 Wireless Terminals** (библиотека **AE2WTLib**) — дополнение к [Applied Energistics 2](../appliedenergistics2-forge/), которое добавляет **беспроводные терминалы**: доступ к ME-сети без подхода к физической панели. Главная фишка — **Универсальный беспроводной терминал**, который объединяет несколько типов терминалов в одном предмете.
 
-Часть кооп-сборки MyModPack (Forge 1.20.1). Кнопки CurseForge и Modrinth выше ведут на поиск мода — там официальное описание, скриншоты и вики.
+Требует, чтобы в сети стояла **точка беспроводного доступа** (Wireless Access Point) с энергией — она задаёт радиус связи.
+
+## Ключевые предметы
+
+| Предмет | Назначение |
+|---------|-----------|
+| Wireless Crafting Terminal | Беспроводной крафт-терминал: обычный + сетка крафта 3×3 |
+| Wireless Pattern Access Terminal | Управление шаблонами автокрафта на расстоянии |
+| Wireless Pattern Encoding Terminal | Кодирование шаблонов без похода к сети |
+| **Universal Wireless Terminal** | Совмещает все терминалы выше — переключение режимов в одном предмете |
+
+## Как использовать
+
+1. Соберите терминал и **привяжите** его к сети: положите в **точку доступа** (правый клик по Wireless Access Point) или используйте её меню.
+2. Заряжайте терминал энергией сети (он тратит заряд при использовании).
+3. Держите терминал в руке и открывайте — увидите содержимое ME-сети как с обычной панели.
+4. Дальность = радиус точки доступа. Для увеличения ставьте **Boost-карты** в точку доступа.
+
+## Улучшения (карты)
+
+- **Magnet Card** — притягивает предметы прямо в ME-сеть/инвентарь.
+- **Infinity Booster Card** — снимает лимит дальности (даётся модом [AE Infinity Booster](../aeinfinitybooster/)).
+- Стандартные карты энергии — увеличивают запас заряда терминала.
 
 ## Роль в сборке
 
-- Добавляет блоки и машины для автоматизации и переработки.
-- Обычно работает на энергии (RF/FE) — подключается к общей энергосети.
-- Связан с технической прогрессией сборки (тиры T1–T5).
+Базовое QoL-дополнение к AE2: избавляет от беготни к терминалу. Особенно полезно на этапе, когда ME-сеть становится центром базы (T2–T3).
 
-## Ссылки
+## Где узнать больше
 
-- [Найти на CurseForge](https://www.curseforge.com/minecraft/search?class=mc-mods&search=Ae2wtlib)
-- [Найти на Modrinth](https://modrinth.com/mods?q=Ae2wtlib)
-
-> Детальное описание на русском добавляется постепенно. Как дополнять — см. `docs/wiki.md`.
+- Рецепты — в **JEI/EMI** (введите «терминал»).
+- Механика точек доступа — во встроенном гайде AE2 (предмет **AE2 Guide**).

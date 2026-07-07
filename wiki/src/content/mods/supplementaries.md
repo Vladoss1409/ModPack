@@ -25,9 +25,8 @@ draft: false
 - Обычно работает на энергии (RF/FE) — подключается к общей энергосети.
 - Связан с технической прогрессией сборки (тиры T1–T5).
 
-## Ссылки
+## Где узнать больше
 
-- [Найти на CurseForge](https://www.curseforge.com/minecraft/search?class=mc-mods&search=Supplementaries)
-- [Найти на Modrinth](https://modrinth.com/mods?q=Supplementaries)
-
-> Детальное описание на русском добавляется постепенно. Как дополнять — см. `docs/wiki.md`.
+- Рецепты и предметы — в **JEI/EMI** в игре.
+- Официальное описание и скриншоты — по ссылкам CurseForge/Modrinth выше.
+- Мультиблоки сборки — в разделе [Механизмы](../../machines/).

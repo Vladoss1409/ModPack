@@ -1,31 +1,47 @@
 ---
-name: "Advancedae"
-modId: "advancedae"
-version: "1.3.5-1.20.1.jar"
-category: other
+name: "AdvancedAE"
+modId: "advanced_ae"
+version: "1.3.5"
+category: tech
 tags:
-  []
+  - ae2
+  - autocraft
+  - multiblock
+  - automation
 links:
-  curseforge: "https://www.curseforge.com/minecraft/search?class=mc-mods&search=Advancedae"
-  modrinth: "https://modrinth.com/mods?q=Advancedae"
+  curseforge: "https://www.curseforge.com/minecraft/mc-mods/advancedae"
+  modrinth: "https://modrinth.com/mod/advancedae"
 draft: false
 ---
 
-<!-- scaffold -->
-
 ## Обзор
 
-**Advancedae** (`advancedae`, v1.3.5-1.20.1.jar) — Дополнение к сборке.
+**AdvancedAE** — крупное дополнение к [Applied Energistics 2](../appliedenergistics2-forge/) с упором на **мощный автокрафт** и удобство. Добавляет продвинутые провайдеры шаблонов, сверхбыстрый крафтер и многоблочный «квантовый компьютер».
 
-Часть кооп-сборки MyModPack (Forge 1.20.1). Кнопки CurseForge и Modrinth выше ведут на поиск мода — там официальное описание, скриншоты и вики.
+## Ключевые блоки и предметы
+
+| Блок / предмет | Назначение |
+|----------------|-----------|
+| **Advanced Pattern Provider** + **Advanced Pattern Encoder** | Указывает, на какую грань машины идёт каждый ингредиент — убирает лишние трубы |
+| **Quantum Crafter** | Очень быстрый крафтер: серия операций каждый тик прямо из ME-сети; умеет рекурсивный крафт и «несъедаемые» ингредиенты (напр. эссенции) |
+| **Quantum Computer** (многоблок) | Крафт-юнит с неограниченным числом задач; все задачи делят общие co-processor'ы |
+| **Quantum Core** | Одиночный блок: 256M хранилища + 8 co-processor'ов; основа многоблока |
+| **Reaction Chamber** | Машина для рецептов мода |
+| **Stock / Import-Export / Advanced IO Bus** | Шины «под запас», совмещённый импорт-экспорт; Advanced IO в 8× быстрее |
+| **ME Throughput Monitor** | Мониторит скорость расхода предметов/жидкостей/энергии (в тик/сек/мин) |
+| Броня AAE | Комплект, подключённый к ME: полёт, ночное зрение, магнит, автокормёжка из хранилища |
+
+## Как использовать
+
+- **Advanced Pattern Provider**: закодируйте обрабатывающий шаблон в Advanced Pattern Encoder, задав грань для каждого ингредиента — одна машина получает всё с нужных сторон без хитрой разводки труб.
+- **Quantum Crafter**: настройте параллельные операции; включите «держать запас», чтобы не съедало весь ингредиент. Отлично для апгрейда эссенций (Mystical-подобные) и шаблонов ковки.
+- **Quantum Computer**: соберите многоблок вокруг Quantum Core — все задачи делят co-processor'ы, что даёт огромную параллельность.
 
 ## Роль в сборке
 
-- Дополняет сборку вспомогательным контентом.
+Эндгейм-автокрафт: снимает лимиты обычных CPU AE2 и упрощает разводку к машинам. Advanced IO Bus + карты скорости дают «взрывную» пропускную способность.
 
-## Ссылки
+## Где узнать больше
 
-- [Найти на CurseForge](https://www.curseforge.com/minecraft/search?class=mc-mods&search=Advancedae)
-- [Найти на Modrinth](https://modrinth.com/mods?q=Advancedae)
-
-> Детальное описание на русском добавляется постепенно. Как дополнять — см. `docs/wiki.md`.
+- Основы автокрафта, CPU и шаблонов — [Applied Energistics 2](../appliedenergistics2-forge/) и **AE2 Guide**.
+- Точные рецепты — **JEI/EMI**.

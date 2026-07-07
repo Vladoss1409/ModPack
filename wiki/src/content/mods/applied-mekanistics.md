@@ -1,35 +1,43 @@
 ---
 name: "Applied Mekanistics"
-modId: "applied_mekanistics"
-version: "1.4.3.jar"
+modId: "appmek"
+version: "1.4.3"
 category: tech
 tags:
   - ae2
-  - storage
-  - automation
+  - mekanism
+  - chemicals
+  - integration
 links:
-  curseforge: "https://www.curseforge.com/minecraft/search?class=mc-mods&search=Applied%20Mekanistics"
-  modrinth: "https://modrinth.com/mods?q=Applied%20Mekanistics"
+  curseforge: "https://www.curseforge.com/minecraft/mc-mods/applied-mekanistics"
+  modrinth: "https://modrinth.com/mod/applied-mekanistics"
 draft: false
 ---
 
-<!-- scaffold -->
-
 ## Обзор
 
-**Applied Mekanistics** (`applied_mekanistics`, v1.4.3.jar) — Технический мод: машины, автоматизация и энергетика.
+**Applied Mekanistics** — официальный мост между [Applied Energistics 2](../appliedenergistics2-forge/) и [Mekanism](../mekanism/). Он позволяет хранить и автокрафтить **химические вещества Mekanism** (газы, жидкости, слизь, пар) прямо в ME-сети — как обычные предметы.
 
-Часть кооп-сборки MyModPack (Forge 1.20.1). Кнопки CurseForge и Modrinth выше ведут на поиск мода — там официальное описание, скриншоты и вики.
+## Ключевые предметы
+
+| Предмет | Назначение |
+|---------|-----------|
+| **Chemical Storage Cell (1k–256k)** | Ячейки для хранения газов/химикатов в ME-сети |
+| **Chemical Portable Cell** | Переносная ячейка под химикаты |
+| **Chemical Storage Bus** | Читает содержимое химических баков Mekanism в сеть |
+| **Chemical P2P Tunnel** | Передача химикатов через P2P-туннели AE2 |
+
+## Как использовать
+
+1. Соберите **Chemical Storage Cell** и вставьте в обычный **ME Drive** — теперь сеть хранит газы (кислород, водород, хлор и т.д.).
+2. Подключайте баки/машины Mekanism через **Chemical Storage Bus** — их содержимое станет видно в терминале.
+3. Настраивайте **автокрафт** химии: паттерны с газами работают как обычные рецепты AE2 (например, автопроизводство кислорода/кислот для 3x–5x переработки руды).
 
 ## Роль в сборке
 
-- Добавляет блоки и машины для автоматизации и переработки.
-- Обычно работает на энергии (RF/FE) — подключается к общей энергосети.
-- Связан с технической прогрессией сборки (тиры T1–T5).
+Ключевой элемент связки **Mekanism + AE2**: убирает ручное управление газами. Позволяет автоматизировать переработку руды 5x, где нужны кислород и кислоты, без десятков баков.
 
-## Ссылки
+## Где узнать больше
 
-- [Найти на CurseForge](https://www.curseforge.com/minecraft/search?class=mc-mods&search=Applied%20Mekanistics)
-- [Найти на Modrinth](https://modrinth.com/mods?q=Applied%20Mekanistics)
-
-> Детальное описание на русском добавляется постепенно. Как дополнять — см. `docs/wiki.md`.
+- Про газы и переработку — [Mekanism](../mekanism/).
+- Про ячейки и хранилища — [Applied Energistics 2](../appliedenergistics2-forge/).
