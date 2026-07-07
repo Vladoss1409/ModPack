@@ -1,34 +1,44 @@
 ---
-name: "Mekanismtools"
+name: "Mekanism Tools"
 modId: "mekanismtools"
-version: "1.20.1-10.4.16.80.jar"
-category: tech
+version: "10.4.16"
+category: combat
 tags:
   - mekanism
-  - processing
-  - energy
+  - tools
+  - armor
 links:
-  curseforge: "https://www.curseforge.com/minecraft/search?class=mc-mods&search=Mekanismtools"
-  modrinth: "https://modrinth.com/mods?q=Mekanismtools"
+  curseforge: "https://www.curseforge.com/minecraft/mc-mods/mekanism-tools"
+  modrinth: "https://modrinth.com/mod/mekanism-tools"
 draft: false
 ---
 
-<!-- scaffold -->
-
 ## Обзор
 
-**Mekanismtools** (`mekanismtools`, v1.20.1-10.4.16.80.jar) — Технический мод: машины, автоматизация и энергетика.
+**Mekanism Tools** — официальное дополнение к [Mekanism](../mekanism/), добавляющее **инструменты и броню** из сплавов мода. Заполняет пробел между алмазом/незеритом и продвинутыми материалами.
 
-Часть кооп-сборки MyModPack (Forge 1.20.1). Кнопки CurseForge и Modrinth выше ведут на поиск мода — там официальное описание, скриншоты и вики.
+## Материалы (примеры)
+
+| Материал | Особенность |
+|----------|-------------|
+| **Bronze / Steel** | Ранние наборы из базовых сплавов Mekanism |
+| **Osmium** | Прочный ранний материал |
+| **Lapis Lazuli / Refined Glowstone** | Средние наборы с бонусами |
+| **Refined Obsidian** | Топовый набор: высокий урон/защита, часто с зачарованиями |
+
+Каждый материал даёт полный набор: меч, кирка, топор, лопата, мотыга + шлем/нагрудник/поножи/ботинки (в некоторых случаях — «пейв»/палица).
+
+## Как использовать
+
+1. Наплавьте сплавы в машинах [Mekanism](../mekanism/) (Metallurgic Infuser, Enrichment Chamber и т.д.).
+2. Скрафтите инструменты/броню нужного тира.
+3. **Refined Obsidian** — один из сильнейших доступных наборов; хорошо зачаровывается.
 
 ## Роль в сборке
 
-- Добавляет блоки и машины для автоматизации и переработки.
-- Обычно работает на энергии (RF/FE) — подключается к общей энергосети.
-- Связан с технической прогрессией сборки (тиры T1–T5).
+Боевая/добывающая экипировка на пути прогрессии Mekanism: закрывает нужду в снаряжении, пока не открыты магические/эндгейм-сеты ([Draconic Evolution](../draconic-evolution/), [Silent Gear](../silent-gear/)).
 
 ## Где узнать больше
 
-- Рецепты и предметы — в **JEI/EMI** в игре.
-- Официальное описание и скриншоты — по ссылкам CurseForge/Modrinth выше.
-- Мультиблоки сборки — в разделе [Механизмы](../../machines/).
+- Производство сплавов — [Mekanism](../mekanism/).
+- Точные характеристики — **JEI/EMI**.
