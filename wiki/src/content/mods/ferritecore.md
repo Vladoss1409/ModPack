@@ -5,6 +5,9 @@ version: "6.0.1-forge.jar"
 category: library
 tags:
   []
+links:
+  curseforge: "https://www.curseforge.com/minecraft/search?class=mc-mods&search=Ferritecore"
+  modrinth: "https://modrinth.com/mods?q=Ferritecore"
 draft: false
 ---
 
@@ -12,13 +15,18 @@ draft: false
 
 ## Обзор
 
-Страница в разработке. Здесь будет описание мода **Ferritecore** в контексте сборки MyModPack.
+**Ferritecore** (`ferritecore`, v6.0.1-forge.jar) — Библиотека: зависимость для других модов, сама по себе почти не добавляет контента.
 
-## Ключевые механики
+Часть кооп-сборки MyModPack (Forge 1.20.1). Кнопки CurseForge и Modrinth выше ведут на поиск мода — там официальное описание, скриншоты и вики.
 
-- TODO: основные блоки и предметы
-- TODO: прогрессия и связь с квестами
+## Роль в сборке
 
-## Советы по сборке
+- Устанавливается как зависимость других модов.
+- Отдельного игрового контента, как правило, не добавляет.
 
-- TODO: типичные ошибки и решения
+## Ссылки
+
+- [Найти на CurseForge](https://www.curseforge.com/minecraft/search?class=mc-mods&search=Ferritecore)
+- [Найти на Modrinth](https://modrinth.com/mods?q=Ferritecore)
+
+> Детальное описание на русском добавляется постепенно. Как дополнять — см. `docs/wiki.md`.

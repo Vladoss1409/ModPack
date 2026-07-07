@@ -5,6 +5,9 @@ version: "1.20.1-23.1.9.jar"
 category: client
 tags:
   []
+links:
+  curseforge: "https://www.curseforge.com/minecraft/search?class=mc-mods&search=Inventorysorter"
+  modrinth: "https://modrinth.com/mods?q=Inventorysorter"
 draft: false
 ---
 
@@ -12,13 +15,18 @@ draft: false
 
 ## Обзор
 
-Страница в разработке. Здесь будет описание мода **Inventorysorter** в контексте сборки MyModPack.
+**Inventorysorter** (`inventorysorter`, v1.20.1-23.1.9.jar) — Клиентский мод: интерфейс, отображение и оптимизация (на сервере не требуется).
 
-## Ключевые механики
+Часть кооп-сборки MyModPack (Forge 1.20.1). Кнопки CurseForge и Modrinth выше ведут на поиск мода — там официальное описание, скриншоты и вики.
 
-- TODO: основные блоки и предметы
-- TODO: прогрессия и связь с квестами
+## Роль в сборке
 
-## Советы по сборке
+- Работает на стороне клиента (интерфейс/оптимизация).
+- В серверную сборку не входит.
 
-- TODO: типичные ошибки и решения
+## Ссылки
+
+- [Найти на CurseForge](https://www.curseforge.com/minecraft/search?class=mc-mods&search=Inventorysorter)
+- [Найти на Modrinth](https://modrinth.com/mods?q=Inventorysorter)
+
+> Детальное описание на русском добавляется постепенно. Как дополнять — см. `docs/wiki.md`.

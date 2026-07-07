@@ -2,50 +2,76 @@
 const base = import.meta.env.BASE_URL;
 ---
 
-<div id="search" class="pagefind-ui" data-pagefind-ui data-pagefind-primary={base}></div>
+<link rel="stylesheet" href={`${base}pagefind/pagefind-ui.css`} />
 
-<script>
-  import.meta.env.DEV
-    ? null
-    : import(`${import.meta.env.BASE_URL}pagefind/pagefind-ui.js`).then((pf) => {
-        new pf.PagefindUI({
-          element: '#search',
-          showSubResults: true,
-          resetStyles: false,
-        });
+<div id="search" class="pagefind-ui"></div>
 
-        const params = new URLSearchParams(window.location.search);
-        const q = params.get('q');
-        if (q) {
-          const input = document.querySelector<HTMLInputElement>('#search input[type="search"]');
-          if (input) {
-            input.value = q;
-            input.dispatchEvent(new Event('input', { bubbles: true }));
-          }
-        }
-      });
+<script is:inline src={`${base}pagefind/pagefind-ui.js`}></script>
+<script is:inline define:vars={{ base }}>
+  function initPagefind() {
+    if (!window.PagefindUI) {
+      // pagefind assets exist only after a full build (npm run build).
+      return;
+    }
+    new window.PagefindUI({
+      element: '#search',
+      baseUrl: base,
+      bundlePath: base + 'pagefind/',
+      showSubResults: true,
+      showImages: false,
+      resetStyles: false,
+    });
+
+    const params = new URLSearchParams(window.location.search);
+    const q = params.get('q');
+    if (q) {
+      const input = document.querySelector('#search input[type="search"], #search input[type="text"]');
+      if (input) {
+        input.value = q;
+        input.dispatchEvent(new Event('input', { bubbles: true }));
+      }
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initPagefind);
+  } else {
+    initPagefind();
+  }
 </script>
 
 <style>
-  #search :global(input[type='search']) {
+  #search {
+    --pagefind-ui-scale: 0.9;
+    --pagefind-ui-primary: #7ec8e3;
+    --pagefind-ui-text: #e2e8f0;
+    --pagefind-ui-background: #1a2332;
+    --pagefind-ui-border: #2d3a4f;
+    --pagefind-ui-tag: #2d3a4f;
+    --pagefind-ui-border-width: 1px;
+    --pagefind-ui-border-radius: 0.5rem;
+    --pagefind-ui-font: inherit;
+  }
+
+  #search :global(.pagefind-ui__search-input) {
     width: 100%;
-    border-radius: 0.5rem;
-    border: 1px solid #2d3a4f;
     background: #1a2332;
-    padding: 0.5rem 0.75rem;
     color: #e2e8f0;
     font-size: 0.875rem;
   }
 
-  #search :global(.pagefind-ui__results-area) {
+  #search :global(.pagefind-ui__drawer) {
     position: absolute;
     z-index: 60;
-    margin-top: 0.25rem;
+    margin-top: 0.5rem;
     width: 100%;
-    max-width: 28rem;
+    max-width: 30rem;
+    max-height: 70vh;
+    overflow-y: auto;
     border-radius: 0.5rem;
     border: 1px solid #2d3a4f;
     background: #1a2332;
+    padding: 0.75rem;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
   }
 </style>

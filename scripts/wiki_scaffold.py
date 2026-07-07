@@ -1,9 +1,16 @@
 #!/usr/bin/env python3
-"""Generate idempotent mod stub pages for the wiki from modlist.txt."""
+"""Generate idempotent mod pages for the wiki from modlist.txt.
+
+Auto-fills every page with a category-based description and clickable
+CurseForge/Modrinth search links, so no page is empty. Pages with the
+"<!-- scaffold -->" marker are regenerated; hand-written pages (without the
+marker) are preserved.
+"""
 from __future__ import annotations
 
 import re
 from pathlib import Path
+from urllib.parse import quote
 
 ROOT = Path(__file__).resolve().parent.parent
 MODLIST = ROOT / "modlist.txt"
@@ -34,6 +41,58 @@ TAG_RULES: list[tuple[str, list[str]]] = [
     (r"ftb-quests", ["quests"]),
     (r"kubejs", ["scripting"]),
 ]
+
+
+CATEGORY_DESC: dict[str, str] = {
+    "tech": "Технический мод: машины, автоматизация и энергетика.",
+    "magic": "Магический мод: заклинания, ритуалы и артефакты.",
+    "exploration": "Исследование мира: структуры, биомы и навигация.",
+    "combat": "Бой и снаряжение: мобы, боссы, оружие и броня.",
+    "utility": "Утилита: улучшает игровой процесс, интерфейс и управление.",
+    "worldgen": "Генерация мира: биомы, измерения и структуры.",
+    "library": "Библиотека: зависимость для других модов, сама по себе почти не добавляет контента.",
+    "client": "Клиентский мод: интерфейс, отображение и оптимизация (на сервере не требуется).",
+    "other": "Дополнение к сборке.",
+}
+
+CATEGORY_ROLE: dict[str, list[str]] = {
+    "tech": [
+        "Добавляет блоки и машины для автоматизации и переработки.",
+        "Обычно работает на энергии (RF/FE) — подключается к общей энергосети.",
+        "Связан с технической прогрессией сборки (тиры T1–T5).",
+    ],
+    "magic": [
+        "Добавляет магические механики: заклинания, ритуалы или артефакты.",
+        "Часто требует особых ресурсов и прокачки.",
+    ],
+    "exploration": [
+        "Расширяет исследование: новые структуры, биомы или инструменты навигации.",
+        "Полезен для поиска ресурсов и точек интереса.",
+    ],
+    "combat": [
+        "Добавляет мобов, боссов и/или боевое снаряжение.",
+        "Влияет на сложность и лут сборки.",
+    ],
+    "utility": [
+        "Улучшает удобство игры: интерфейс, сортировка, информация.",
+        "Не меняет прогрессию напрямую, но экономит время.",
+    ],
+    "worldgen": [
+        "Меняет генерацию мира: биомы, измерения, структуры.",
+        "Влияет на исследование и добычу ресурсов.",
+    ],
+    "library": [
+        "Устанавливается как зависимость других модов.",
+        "Отдельного игрового контента, как правило, не добавляет.",
+    ],
+    "client": [
+        "Работает на стороне клиента (интерфейс/оптимизация).",
+        "В серверную сборку не входит.",
+    ],
+    "other": [
+        "Дополняет сборку вспомогательным контентом.",
+    ],
+}
 
 
 def slugify(name: str) -> str:
@@ -89,6 +148,14 @@ def is_stub_content(body: str) -> bool:
     return any(m in body for m in markers)
 
 
+def curseforge_search(name: str) -> str:
+    return f"https://www.curseforge.com/minecraft/search?class=mc-mods&search={quote(name)}"
+
+
+def modrinth_search(name: str) -> str:
+    return f"https://modrinth.com/mods?q={quote(name)}"
+
+
 def build_frontmatter(jar: str) -> str:
     name = jar_to_name(jar)
     mod_id = jar_to_mod_id(jar)
@@ -97,6 +164,11 @@ def build_frontmatter(jar: str) -> str:
     tags = guess_tags(jar)
     tags_yaml = "\n".join(f"  - {t}" for t in tags) if tags else "  []"
 
+    desc = CATEGORY_DESC.get(category, CATEGORY_DESC["other"])
+    role_lines = "\n".join(f"- {line}" for line in CATEGORY_ROLE.get(category, CATEGORY_ROLE["other"]))
+    cf = curseforge_search(name)
+    mr = modrinth_search(name)
+
     return f"""---
 name: "{name}"
 modId: "{mod_id}"
@@ -104,6 +176,9 @@ version: "{version}"
 category: {category}
 tags:
 {tags_yaml}
+links:
+  curseforge: "{cf}"
+  modrinth: "{mr}"
 draft: false
 ---
 
@@ -111,16 +186,20 @@ draft: false
 
 ## Обзор
 
-Страница в разработке. Здесь будет описание мода **{name}** в контексте сборки MyModPack.
+**{name}** (`{mod_id}`, v{version}) — {desc}
 
-## Ключевые механики
+Часть кооп-сборки MyModPack (Forge 1.20.1). Кнопки CurseForge и Modrinth выше ведут на поиск мода — там официальное описание, скриншоты и вики.
 
-- TODO: основные блоки и предметы
-- TODO: прогрессия и связь с квестами
+## Роль в сборке
 
-## Советы по сборке
+{role_lines}
 
-- TODO: типичные ошибки и решения
+## Ссылки
+
+- [Найти на CurseForge]({cf})
+- [Найти на Modrinth]({mr})
+
+> Детальное описание на русском добавляется постепенно. Как дополнять — см. `docs/wiki.md`.
 """
 
 

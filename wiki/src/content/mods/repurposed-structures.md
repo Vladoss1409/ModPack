@@ -5,6 +5,9 @@ version: "7.1.24+1.20.1"
 category: worldgen
 tags:
   []
+links:
+  curseforge: "https://www.curseforge.com/minecraft/search?class=mc-mods&search=Repurposed%20Structures"
+  modrinth: "https://modrinth.com/mods?q=Repurposed%20Structures"
 draft: false
 ---
 
@@ -12,13 +15,18 @@ draft: false
 
 ## Обзор
 
-Страница в разработке. Здесь будет описание мода **Repurposed Structures** в контексте сборки MyModPack.
+**Repurposed Structures** (`repurposed_structures`, v7.1.24+1.20.1) — Генерация мира: биомы, измерения и структуры.
 
-## Ключевые механики
+Часть кооп-сборки MyModPack (Forge 1.20.1). Кнопки CurseForge и Modrinth выше ведут на поиск мода — там официальное описание, скриншоты и вики.
 
-- TODO: основные блоки и предметы
-- TODO: прогрессия и связь с квестами
+## Роль в сборке
 
-## Советы по сборке
+- Меняет генерацию мира: биомы, измерения, структуры.
+- Влияет на исследование и добычу ресурсов.
 
-- TODO: типичные ошибки и решения
+## Ссылки
+
+- [Найти на CurseForge](https://www.curseforge.com/minecraft/search?class=mc-mods&search=Repurposed%20Structures)
+- [Найти на Modrinth](https://modrinth.com/mods?q=Repurposed%20Structures)
+
+> Детальное описание на русском добавляется постепенно. Как дополнять — см. `docs/wiki.md`.
