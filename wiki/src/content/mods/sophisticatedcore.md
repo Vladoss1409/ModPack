@@ -1,32 +1,26 @@
 ---
-name: "Sophisticatedcore"
+name: "Sophisticated Core"
 modId: "sophisticatedcore"
-version: "1.20.1-1.3.59.2086.jar"
-category: tech
+version: "1.3.59"
+category: library
 tags:
-  []
+  - library
+  - storage
 links:
-  curseforge: "https://www.curseforge.com/minecraft/search?class=mc-mods&search=Sophisticatedcore"
-  modrinth: "https://modrinth.com/mods?q=Sophisticatedcore"
+  curseforge: "https://www.curseforge.com/minecraft/mc-mods/sophisticated-core"
+  modrinth: "https://modrinth.com/mod/sophisticated-core"
 draft: false
 ---
 
-<!-- scaffold -->
-
 ## Обзор
 
-**Sophisticatedcore** (`sophisticatedcore`, v1.20.1-1.3.59.2086.jar) — Технический мод: машины, автоматизация и энергетика.
-
-Часть кооп-сборки MyModPack (Forge 1.20.1). Кнопки CurseForge и Modrinth выше ведут на поиск мода — там официальное описание, скриншоты и вики.
+**Sophisticated Core** — общая библиотека для [Sophisticated Backpacks](../sophisticatedbackpacks/) и [Sophisticated Storage](../sophisticatedstorage/). Содержит систему **улучшений (upgrades)**, настроек и общий код. Сама по себе игрового контента не добавляет.
 
 ## Роль в сборке
 
-- Добавляет блоки и машины для автоматизации и переработки.
-- Обычно работает на энергии (RF/FE) — подключается к общей энергосети.
-- Связан с технической прогрессией сборки (тиры T1–T5).
+- Обязательная зависимость обоих модов Sophisticated.
+- Отдельно с ней взаимодействовать не нужно.
 
 ## Где узнать больше
 
-- Рецепты и предметы — в **JEI/EMI** в игре.
-- Официальное описание и скриншоты — по ссылкам CurseForge/Modrinth выше.
-- Мультиблоки сборки — в разделе [Механизмы](../../machines/).
+- Игровой контент — [Sophisticated Backpacks](../sophisticatedbackpacks/) и [Sophisticated Storage](../sophisticatedstorage/).

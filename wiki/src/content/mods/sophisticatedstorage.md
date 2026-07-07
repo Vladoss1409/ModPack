@@ -1,32 +1,55 @@
 ---
-name: "Sophisticatedstorage"
+name: "Sophisticated Storage"
 modId: "sophisticatedstorage"
-version: "1.20.1-1.4.62.1908.jar"
+version: "1.4.62"
 category: tech
 tags:
-  []
+  - storage
+  - barrel
+  - chest
+  - qol
 links:
-  curseforge: "https://www.curseforge.com/minecraft/search?class=mc-mods&search=Sophisticatedstorage"
-  modrinth: "https://modrinth.com/mods?q=Sophisticatedstorage"
+  curseforge: "https://www.curseforge.com/minecraft/mc-mods/sophisticated-storage"
+  modrinth: "https://modrinth.com/mod/sophisticated-storage"
 draft: false
 ---
 
-<!-- scaffold -->
-
 ## Обзор
 
-**Sophisticatedstorage** (`sophisticatedstorage`, v1.20.1-1.4.62.1908.jar) — Технический мод: машины, автоматизация и энергетика.
+**Sophisticated Storage** — стационарные сундуки и бочки с той же системой **улучшений**, что и [Sophisticated Backpacks](../sophisticatedbackpacks/). По сути — «умные» контейнеры с автоматикой без отдельных машин. База — [Sophisticated Core](../sophisticatedcore/).
 
-Часть кооп-сборки MyModPack (Forge 1.20.1). Кнопки CurseForge и Modrinth выше ведут на поиск мода — там официальное описание, скриншоты и вики.
+## Блоки
+
+| Блок | Особенность |
+|------|-------------|
+| **Barrel** (бочка) | Показывает содержимое на лицевой грани |
+| **Chest** | Классический сундук с апгрейдами |
+| **Limited Barrel** | Барабан на ограниченное число типов, но с огромным стаком |
+| **Shulker Box** | Улучшенный шалкер |
+| **Controller + Storage Link** | Объединяет много контейнеров в **один интерфейс доступа** |
+
+Тиры корпуса: дерево → железо → золото → алмаз → незерит (растёт число слотов и слотов апгрейдов).
+
+## Улучшения (Upgrades)
+
+Те же семейства, что и у рюкзаков: **Magnet, Pickup, Filter, Compacting, Stack, Crafting, Smelting, Auto-Deposit, Void (удаление лишнего), XP-сбор** и др. Работают на самом блоке.
+
+## Ключевая механика: Storage Controller
+
+- Поставьте **Storage Controller** и подключите к нему сундуки/бочки (напрямую или через **Storage Link**).
+- Контроллер даёт **единый доступ** ко всем подключённым контейнерам — дешёвый «мини-склад» до полноценной ME-сети AE2.
+
+## Как использовать
+
+1. Соберите бочку/сундук, при желании прокачайте корпус.
+2. Вставьте апгрейды (например, **Void + Filter** — авто-удаление мусора; **Compacting** — авто-сжатие).
+3. Для крупного склада поставьте Controller и подключите массив контейнеров.
 
 ## Роль в сборке
 
-- Добавляет блоки и машины для автоматизации и переработки.
-- Обычно работает на энергии (RF/FE) — подключается к общей энергосети.
-- Связан с технической прогрессией сборки (тиры T1–T5).
+Ранний и средний склад с автоматикой: сортировка, сжатие, авто-выброс мусора без машин. Плавный мостик к AE2.
 
 ## Где узнать больше
 
-- Рецепты и предметы — в **JEI/EMI** в игре.
-- Официальное описание и скриншоты — по ссылкам CurseForge/Modrinth выше.
-- Мультиблоки сборки — в разделе [Механизмы](../../machines/).
+- Ядро и апгрейды — [Sophisticated Core](../sophisticatedcore/).
+- Мобильный вариант — [Sophisticated Backpacks](../sophisticatedbackpacks/).

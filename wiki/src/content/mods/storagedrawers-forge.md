@@ -1,32 +1,46 @@
 ---
-name: "Storagedrawers Forge"
-modId: "storagedrawers_forge"
-version: "1.20.1-12.14.3.jar"
+name: "Storage Drawers"
+modId: "storagedrawers"
+version: "12.14.3"
 category: tech
 tags:
-  []
+  - storage
+  - drawers
+  - qol
 links:
-  curseforge: "https://www.curseforge.com/minecraft/search?class=mc-mods&search=Storagedrawers%20Forge"
-  modrinth: "https://modrinth.com/mods?q=Storagedrawers%20Forge"
+  curseforge: "https://www.curseforge.com/minecraft/mc-mods/storage-drawers"
+  modrinth: "https://modrinth.com/mod/storage-drawers"
 draft: false
 ---
 
-<!-- scaffold -->
-
 ## Обзор
 
-**Storagedrawers Forge** (`storagedrawers_forge`, v1.20.1-12.14.3.jar) — Технический мод: машины, автоматизация и энергетика.
+**Storage Drawers** — «выдвижные ящики» для массового хранения **однотипных** предметов. Каждый ящик держит один вид предмета, но в огромном количестве, и показывает его иконку и счётчик прямо на блоке.
 
-Часть кооп-сборки MyModPack (Forge 1.20.1). Кнопки CurseForge и Modrinth выше ведут на поиск мода — там официальное описание, скриншоты и вики.
+## Блоки и предметы
+
+| Блок / предмет | Назначение |
+|----------------|-----------|
+| **Drawer 1×1 / 1×2 / 2×2** | Ящики на 1, 2 или 4 отделения |
+| **Half Drawers** | Меньшая ёмкость, но компактнее |
+| **Drawer Controller** | Объединяет все ящики рядом в единую сеть |
+| **Controller Slave** | Расширяет зону контроллера |
+| **Upgrades (Storage Upgrade)** | Повышают ёмкость (×2 … ×32 и выше) |
+| **Void Upgrade** | Уничтожает излишки сверх лимита |
+| **Compacting Drawer** | Хранит слиток/блок/самородок как одно целое с авто-конвертацией |
+| **Key / Quantify / Lock** | Ключи настройки: блокировка типа, показ количества |
+
+## Как использовать
+
+1. Поставьте ящик, **ПКМ предметом** — положить (двойной ПКМ — весь стак), **ЛКМ** — забрать один, **Shift+ЛКМ** — целый стак.
+2. Вставьте **Storage Upgrade** для роста ёмкости; **Lock** фиксирует тип, даже когда ящик пуст.
+3. Для авто-доступа: поставьте **Drawer Controller** — теперь трубы/AE2 Storage Bus видят все ящики как одно хранилище.
 
 ## Роль в сборке
 
-- Добавляет блоки и машины для автоматизации и переработки.
-- Обычно работает на энергии (RF/FE) — подключается к общей энергосети.
-- Связан с технической прогрессией сборки (тиры T1–T5).
+Дешёвое массовое хранение ресурсов (булыжник, слитки, пыль) с наглядным счётчиком. Отлично работает под **AE2 Storage Bus** как «внешний склад» до перехода на ячейки.
 
 ## Где узнать больше
 
-- Рецепты и предметы — в **JEI/EMI** в игре.
-- Официальное описание и скриншоты — по ссылкам CurseForge/Modrinth выше.
-- Мультиблоки сборки — в разделе [Механизмы](../../machines/).
+- Подключение к ME-сети — [Applied Energistics 2](../appliedenergistics2-forge/).
+- Рецепты и апгрейды — **JEI/EMI**.
