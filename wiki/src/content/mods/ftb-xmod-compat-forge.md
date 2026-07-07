@@ -24,9 +24,8 @@ draft: false
 - Улучшает удобство игры: интерфейс, сортировка, информация.
 - Не меняет прогрессию напрямую, но экономит время.
 
-## Ссылки
+## Где узнать больше
 
-- [Найти на CurseForge](https://www.curseforge.com/minecraft/search?class=mc-mods&search=Ftb%20Xmod%20Compat%20Forge)
-- [Найти на Modrinth](https://modrinth.com/mods?q=Ftb%20Xmod%20Compat%20Forge)
-
-> Детальное описание на русском добавляется постепенно. Как дополнять — см. `docs/wiki.md`.
+- Рецепты и предметы — в **JEI/EMI** в игре.
+- Официальное описание и скриншоты — по ссылкам CurseForge/Modrinth выше.
+- Мультиблоки сборки — в разделе [Механизмы](../../machines/).

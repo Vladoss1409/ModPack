@@ -1,31 +1,42 @@
 ---
-name: "Merequester Forge"
-modId: "merequester_forge"
-version: "1.20.1-1.2.1.jar"
-category: other
+name: "ME Requester"
+modId: "merequester"
+version: "1.2.1"
+category: tech
 tags:
-  []
+  - ae2
+  - autocraft
+  - automation
 links:
-  curseforge: "https://www.curseforge.com/minecraft/search?class=mc-mods&search=Merequester%20Forge"
-  modrinth: "https://modrinth.com/mods?q=Merequester%20Forge"
+  curseforge: "https://www.curseforge.com/minecraft/mc-mods/me-requester"
+  modrinth: "https://modrinth.com/mod/merequester"
 draft: false
 ---
 
-<!-- scaffold -->
-
 ## Обзор
 
-**Merequester Forge** (`merequester_forge`, v1.20.1-1.2.1.jar) — Дополнение к сборке.
+**ME Requester** — дополнение к [Applied Energistics 2](../appliedenergistics2-forge/), которое автоматически **держит заданный запас** предметов и жидкостей в ME-сети. Если чего-то стало меньше нормы — система докрафчивает недостающее.
 
-Часть кооп-сборки MyModPack (Forge 1.20.1). Кнопки CurseForge и Modrinth выше ведут на поиск мода — там официальное описание, скриншоты и вики.
+## Ключевые блоки и предметы
+
+| Блок / предмет | Назначение |
+|----------------|-----------|
+| **ME Requester** | Блок-«заказчик»: по умолчанию до 5 запросов на поддержание запаса |
+| **ME Requester Terminal** | Терминал для удалённой настройки и мониторинга всех запросов |
+
+## Как использовать
+
+1. Разместите блок **ME Requester** в сети (потребляет канал и немного энергии).
+2. Задайте предмет/жидкость и **целевое количество** (например, «всегда 1000 стальных слитков»).
+3. Как только запас падает ниже цели — сеть автоматически запускает автокрафт.
+4. Через **ME Requester Terminal** удобно управлять всеми заказами из одного места и видеть их статус.
+
+Число слотов, канал и энергопотребление настраиваются в конфиге.
 
 ## Роль в сборке
 
-- Дополняет сборку вспомогательным контентом.
+Автоснабжение: базовые ресурсы (слитки, платы, компоненты) всегда «на складе» без ручного контроля. Идеально для кооперативной базы, где расход непредсказуем.
 
-## Ссылки
+## Где узнать больше
 
-- [Найти на CurseForge](https://www.curseforge.com/minecraft/search?class=mc-mods&search=Merequester%20Forge)
-- [Найти на Modrinth](https://modrinth.com/mods?q=Merequester%20Forge)
-
-> Детальное описание на русском добавляется постепенно. Как дополнять — см. `docs/wiki.md`.
+- Как работает автокрафт и шаблоны — [Applied Energistics 2](../appliedenergistics2-forge/).

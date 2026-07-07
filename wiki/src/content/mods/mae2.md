@@ -1,35 +1,44 @@
 ---
-name: "Mae2"
+name: "Modern AE2 Additions (MAE2)"
 modId: "mae2"
-version: "1.6.1.jar"
+version: "1.6.1"
 category: tech
 tags:
   - ae2
-  - storage
+  - p2p
   - automation
 links:
-  curseforge: "https://www.curseforge.com/minecraft/search?class=mc-mods&search=Mae2"
-  modrinth: "https://modrinth.com/mods?q=Mae2"
+  curseforge: "https://www.curseforge.com/minecraft/mc-mods/modern-ae2-additions"
+  modrinth: "https://modrinth.com/mod/modern-ae2-additions"
 draft: false
 ---
 
-<!-- scaffold -->
-
 ## Обзор
 
-**Mae2** (`mae2`, v1.6.1.jar) — Технический мод: машины, автоматизация и энергетика.
+**Modern AE2 Additions** (MAE2) — набор дополнений к [Applied Energistics 2](../appliedenergistics2-forge/), портирующий популярные фишки старого мода NAE2 на современный AE2. Основной упор — **улучшенные P2P-туннели** и ускорение автокрафта.
 
-Часть кооп-сборки MyModPack (Forge 1.20.1). Кнопки CurseForge и Modrinth выше ведут на поиск мода — там официальное описание, скриншоты и вики.
+## Ключевые предметы
+
+| Предмет | Назначение |
+|---------|-----------|
+| **Pattern P2P Tunnel** | Один Pattern Provider обслуживает много машин; выход тоже связывается обратно |
+| **Multi-input P2P Tunnels** | P2P с несколькими входами — компактнее и мощнее обычных |
+| **Energy P2P (RF/EU)** | Эффективная передача энергии через туннели (в т.ч. EU) |
+| **Dense Co-Processing Units** | Ускорители автокрафта на 4/16/64 потока вместо 1 |
+| **Faulty Memory Card** | Копирование настроек сразу на много устройств, шины с растущим приоритетом |
+
+## Как использовать
+
+- **Pattern P2P**: подключите один провайдер шаблонов к пучку машин через туннель — не нужно тянуть отдельный провайдер к каждой машине.
+- **Dense Co-Processing Units**: замените стопку обычных ускорителей крафта одним блоком — экономия места в CPU автокрафта.
+- **Faulty Memory Card**: настройте одну шину экспорта/хранилища и «размножьте» настройку на десятки блоков.
 
 ## Роль в сборке
 
-- Добавляет блоки и машины для автоматизации и переработки.
-- Обычно работает на энергии (RF/FE) — подключается к общей энергосети.
-- Связан с технической прогрессией сборки (тиры T1–T5).
+QoL и оптимизация больших ME-сетей: меньше кабелей, компактнее автокрафт, проще массовая настройка. Пригодится, когда сеть разрастается до промышленных масштабов (T3+).
 
-## Ссылки
+> Примечание: мод активно использует миксины, поэтому иногда может конфликтовать с другими AE2-аддонами, лезущими в ту же механику.
 
-- [Найти на CurseForge](https://www.curseforge.com/minecraft/search?class=mc-mods&search=Mae2)
-- [Найти на Modrinth](https://modrinth.com/mods?q=Mae2)
+## Где узнать больше
 
-> Детальное описание на русском добавляется постепенно. Как дополнять — см. `docs/wiki.md`.
+- Что такое P2P-туннели и как их связывать — встроенный **AE2 Guide** и [Applied Energistics 2](../appliedenergistics2-forge/).

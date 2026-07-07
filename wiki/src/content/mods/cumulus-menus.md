@@ -23,9 +23,8 @@ draft: false
 
 - Дополняет сборку вспомогательным контентом.
 
-## Ссылки
+## Где узнать больше
 
-- [Найти на CurseForge](https://www.curseforge.com/minecraft/search?class=mc-mods&search=Cumulus%20Menus)
-- [Найти на Modrinth](https://modrinth.com/mods?q=Cumulus%20Menus)
-
-> Детальное описание на русском добавляется постепенно. Как дополнять — см. `docs/wiki.md`.
+- Рецепты и предметы — в **JEI/EMI** в игре.
+- Официальное описание и скриншоты — по ссылкам CurseForge/Modrinth выше.
+- Мультиблоки сборки — в разделе [Механизмы](../../machines/).

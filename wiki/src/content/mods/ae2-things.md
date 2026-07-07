@@ -1,35 +1,41 @@
 ---
-name: "Ae2 Things"
-modId: "ae2_things"
-version: "1.2.1.jar"
+name: "AE2 Things"
+modId: "ae2things"
+version: "1.2.1"
 category: tech
 tags:
   - ae2
   - storage
   - automation
 links:
-  curseforge: "https://www.curseforge.com/minecraft/search?class=mc-mods&search=Ae2%20Things"
-  modrinth: "https://modrinth.com/mods?q=Ae2%20Things"
+  curseforge: "https://www.curseforge.com/minecraft/mc-mods/ae2things"
+  modrinth: "https://modrinth.com/mod/ae2things"
 draft: false
 ---
 
-<!-- scaffold -->
-
 ## Обзор
 
-**Ae2 Things** (`ae2_things`, v1.2.1.jar) — Технический мод: машины, автоматизация и энергетика.
+**AE2 Things** — небольшое дополнение к [Applied Energistics 2](../appliedenergistics2-forge/), добавляющее две вещи для позднего этапа: **огромный накопитель DISK** и **ускоренный инскрайбер**.
 
-Часть кооп-сборки MyModPack (Forge 1.20.1). Кнопки CurseForge и Modrinth выше ведут на поиск мода — там официальное описание, скриншоты и вики.
+## Ключевые блоки и предметы
+
+| Предмет | Назначение |
+|---------|-----------|
+| **DISK Drive** | Отдельный блок-накопитель под одну ячейку **DISK** |
+| **DISK (Deep Item Storage disK)** | Ячейка с гигантской ёмкостью по объёму (но ограничена числом типов) |
+| **DISK Housing / компоненты** | Крафт ячейки DISK |
+| **Advanced Inscriber** | Инскрайбер, работающий быстрее и удобнее обычного |
+
+## Как использовать
+
+- **DISK** ставится в собственный привод **DISK Drive** (не в обычный ME Drive). Одна ячейка хранит колоссальный объём предметов, но количество *разных типов* ограничено — идеально под массовое хранение ресурсов (пыль, слитки, камень).
+- **Advanced Inscriber** заменяет цепочку из нескольких обычных инскрайберов: делает печатные платы и процессоры быстрее, экономит место и каналы.
 
 ## Роль в сборке
 
-- Добавляет блоки и машины для автоматизации и переработки.
-- Обычно работает на энергии (RF/FE) — подключается к общей энергосети.
-- Связан с технической прогрессией сборки (тиры T1–T5).
+Разгружает ME-сеть: вместо десятков обычных ячеек одна DISK хранит «горы» однотипных ресурсов. Advanced Inscriber ускоряет узкое место AE2 — производство процессоров.
 
-## Ссылки
+## Где узнать больше
 
-- [Найти на CurseForge](https://www.curseforge.com/minecraft/search?class=mc-mods&search=Ae2%20Things)
-- [Найти на Modrinth](https://modrinth.com/mods?q=Ae2%20Things)
-
-> Детальное описание на русском добавляется постепенно. Как дополнять — см. `docs/wiki.md`.
+- Рецепты и точные ёмкости — в **JEI/EMI**.
+- Основы AE2 (приводы, ячейки, каналы) — в статье [Applied Energistics 2](../appliedenergistics2-forge/).

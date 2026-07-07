@@ -24,9 +24,8 @@ draft: false
 - Расширяет исследование: новые структуры, биомы или инструменты навигации.
 - Полезен для поиска ресурсов и точек интереса.
 
-## Ссылки
+## Где узнать больше
 
-- [Найти на CurseForge](https://www.curseforge.com/minecraft/search?class=mc-mods&search=Naturescompass)
-- [Найти на Modrinth](https://modrinth.com/mods?q=Naturescompass)
-
-> Детальное описание на русском добавляется постепенно. Как дополнять — см. `docs/wiki.md`.
+- Рецепты и предметы — в **JEI/EMI** в игре.
+- Официальное описание и скриншоты — по ссылкам CurseForge/Modrinth выше.
+- Мультиблоки сборки — в разделе [Механизмы](../../machines/).

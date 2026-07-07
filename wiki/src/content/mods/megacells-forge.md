@@ -1,31 +1,45 @@
 ---
-name: "Megacells Forge"
-modId: "megacells_forge"
-version: "2.4.6-1.20.1.jar"
-category: other
+name: "MEGA Cells"
+modId: "megacells"
+version: "2.4.6"
+category: tech
 tags:
-  []
+  - ae2
+  - storage
+  - bulk
+  - endgame
 links:
-  curseforge: "https://www.curseforge.com/minecraft/search?class=mc-mods&search=Megacells%20Forge"
-  modrinth: "https://modrinth.com/mods?q=Megacells%20Forge"
+  curseforge: "https://www.curseforge.com/minecraft/mc-mods/mega-cells"
+  modrinth: "https://modrinth.com/mod/megacells"
 draft: false
 ---
 
-<!-- scaffold -->
-
 ## Обзор
 
-**Megacells Forge** (`megacells_forge`, v2.4.6-1.20.1.jar) — Дополнение к сборке.
+**MEGA Cells** — дополнение к [Applied Energistics 2](../appliedenergistics2-forge/) с **хранилищами высших ярусов** (от 1M до 256M) и собственной прогрессией в узнаваемом чёрном стиле. Плюс уникальная **балк-ячейка** для бесконечного хранения одного предмета.
 
-Часть кооп-сборки MyModPack (Forge 1.20.1). Кнопки CurseForge и Modrinth выше ведут на поиск мода — там официальное описание, скриншоты и вики.
+## Ключевые предметы
+
+| Предмет | Назначение |
+|---------|-----------|
+| **MEGA Item / Fluid Cells (1M–256M)** | Ячейки предметов и жидкостей огромной ёмкости (обычные и переносные) |
+| **MEGA Crafting CPU** | Крафт-юниты 1M–256M с 4-поточным co-processor'ом и монитором |
+| **MEGA Bulk Item Storage Cell** | Практически **бесконечное** хранение одного типа предмета |
+| **Decompression Module** | Автосжатие/разжатие слитков↔блоков↔самородков для балк-ячейки, с поддержкой автокрафта |
+| **MEGA Pattern Provider** | Двойная ёмкость под шаблоны |
+| **Superdense Energy Cell** + **Greater Energy Card** | Огромный запас энергии сети и переносных устройств |
+
+## Как использовать
+
+- **Обычные MEGA-ячейки** ставятся в стандартные приводы ME — просто больше байт и типов.
+- **Bulk Cell** хранит **один** предмет почти без предела. Требует отдельного **незеритового корпуса**, партиционируется через **Cell Workbench** (задаётся фильтр-предмет). Установите **Compression Card**, чтобы ячейка авто-сжимала предметы; добавьте **Decompression Module** в сеть — и автокрафт сможет доставать нужную форму (слиток/блок/самородок).
+- **Superdense Energy Cell** — когда сети/устройствам не хватает буфера энергии.
 
 ## Роль в сборке
 
-- Дополняет сборку вспомогательным контентом.
+Эндгейм-хранилище: одна Bulk-ячейка заменяет горы обычных ячеек под массовые ресурсы. Интегрируется с [Applied Mekanistics](../applied-mekanistics/) — химические ячейки 1–256M.
 
-## Ссылки
+## Где узнать больше
 
-- [Найти на CurseForge](https://www.curseforge.com/minecraft/search?class=mc-mods&search=Megacells%20Forge)
-- [Найти на Modrinth](https://modrinth.com/mods?q=Megacells%20Forge)
-
-> Детальное описание на русском добавляется постепенно. Как дополнять — см. `docs/wiki.md`.
+- База ячеек и приводов — [Applied Energistics 2](../appliedenergistics2-forge/).
+- Точные ёмкости и рецепты — **JEI/EMI**.

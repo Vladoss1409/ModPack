@@ -2,32 +2,25 @@
 name: "Next Core"
 modId: "next_core"
 version: "1.51.1+1.20.1"
-category: tech
+category: library
 tags:
-  []
+  - library
+  - ae2
 links:
-  curseforge: "https://www.curseforge.com/minecraft/search?class=mc-mods&search=Next%20Core"
-  modrinth: "https://modrinth.com/mods?q=Next%20Core"
+  curseforge: "https://www.curseforge.com/minecraft/search?class=mc-mods&search=next_core"
+  modrinth: "https://modrinth.com/mods?q=next_core"
 draft: false
 ---
 
-<!-- scaffold -->
-
 ## Обзор
 
-**Next Core** (`next_core`, v1.51.1+1.20.1) — Технический мод: машины, автоматизация и энергетика.
-
-Часть кооп-сборки MyModPack (Forge 1.20.1). Кнопки CurseForge и Modrinth выше ведут на поиск мода — там официальное описание, скриншоты и вики.
+**Next Core** — библиотека-зависимость для мода [Next AE](../next-ae/). Сама по себе игрового контента почти не добавляет: содержит общий код, регистрацию и API, на которые опирается Massive Crafter и связанные механизмы.
 
 ## Роль в сборке
 
-- Добавляет блоки и машины для автоматизации и переработки.
-- Обычно работает на энергии (RF/FE) — подключается к общей энергосети.
-- Связан с технической прогрессией сборки (тиры T1–T5).
+- Устанавливается как обязательная зависимость [Next AE](../next-ae/).
+- Отдельно взаимодействовать с ней не нужно.
 
-## Ссылки
+## Где узнать больше
 
-- [Найти на CurseForge](https://www.curseforge.com/minecraft/search?class=mc-mods&search=Next%20Core)
-- [Найти на Modrinth](https://modrinth.com/mods?q=Next%20Core)
-
-> Детальное описание на русском добавляется постепенно. Как дополнять — см. `docs/wiki.md`.
+- Игровой контент — в статье [Next AE](../next-ae/).

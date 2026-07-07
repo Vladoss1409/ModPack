@@ -1,33 +1,44 @@
 ---
-name: "Next Ae"
+name: "Next AE"
 modId: "next_ae"
 version: "1.0.0+1.20.1"
 category: tech
 tags:
-  []
+  - ae2
+  - autocraft
+  - multiblock
+  - endgame
 links:
-  curseforge: "https://www.curseforge.com/minecraft/search?class=mc-mods&search=Next%20Ae"
-  modrinth: "https://modrinth.com/mods?q=Next%20Ae"
+  curseforge: "https://www.curseforge.com/minecraft/search?class=mc-mods&search=next_ae"
+  modrinth: "https://modrinth.com/mods?q=next_ae"
 draft: false
 ---
 
-<!-- scaffold -->
-
 ## Обзор
 
-**Next Ae** (`next_ae`, v1.0.0+1.20.1) — Технический мод: машины, автоматизация и энергетика.
+**Next AE** — дополнение к [Applied Energistics 2](../appliedenergistics2-forge/), добавляющее **эндгейм-мультиблок для массового автокрафта** — «Massive Crafter». Работает поверх [Next Core](../next-core/).
 
-Часть кооп-сборки MyModPack (Forge 1.20.1). Кнопки CurseForge и Modrinth выше ведут на поиск мода — там официальное описание, скриншоты и вики.
+> Мод нишевый; официальная документация ограничена. Ниже — как он используется в этой сборке. Точные рецепты и ёмкости смотрите в **JEI/EMI** и в квесте Patchouli.
+
+## Массивный сборщик (Massive Crafter)
+
+Это большой многоблочный аналог **Crafting CPU** из AE2 — рассчитан на параллельный крафт огромных объёмов.
+
+Схема сборки, размещение и порядок блоков подробно разобраны в разделе [Механизмы → Massive Crafter](../../machines/next-ae-massive-crafter/).
+
+Кратко:
+
+1. Постройте замкнутый корпус: **каркас + стены + стекло**.
+2. Внутри разместите **ядро (контроллер)**, **pattern provider** и **accelerator**.
+3. Подключите к **ME-сети** и подайте **энергию**.
+4. Загрузите шаблоны — крафт идёт параллельно в большом объёме.
 
 ## Роль в сборке
 
-- Добавляет блоки и машины для автоматизации и переработки.
-- Обычно работает на энергии (RF/FE) — подключается к общей энергосети.
-- Связан с технической прогрессией сборки (тиры T1–T5).
+Финальная ступень автокрафта (T5 «Схождение»): когда обычных CPU AE2 уже мало, Massive Crafter обрабатывает массовые заказы.
 
-## Ссылки
+## Где узнать больше
 
-- [Найти на CurseForge](https://www.curseforge.com/minecraft/search?class=mc-mods&search=Next%20Ae)
-- [Найти на Modrinth](https://modrinth.com/mods?q=Next%20Ae)
-
-> Детальное описание на русском добавляется постепенно. Как дополнять — см. `docs/wiki.md`.
+- Пошаговая сборка мультиблока — [Механизмы → Massive Crafter](../../machines/next-ae-massive-crafter/).
+- Базовая библиотека — [Next Core](../next-core/).
+- Основы автокрафта — [Applied Energistics 2](../appliedenergistics2-forge/).
