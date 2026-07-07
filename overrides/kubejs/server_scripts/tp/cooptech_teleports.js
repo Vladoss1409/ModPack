@@ -99,13 +99,28 @@ function locationRecord(player) {
   }
 }
 
+function mcPlayer(player) {
+  return player.minecraftPlayer ? player.minecraftPlayer : player
+}
+
+function mcLevel(level) {
+  return level.minecraftLevel ? level.minecraftLevel : level
+}
+
 function teleportTo(player, server, rec, label) {
   var lvl = levelByDim(server, rec.dim)
   if (!lvl) {
     player.tell('§c[TP] Измерение недоступно: §f' + rec.dim)
     return 0
   }
-  player.teleportTo(lvl, rec.x, rec.y, rec.z, rec.yaw, rec.pitch)
+  mcPlayer(player).teleportTo(
+    mcLevel(lvl),
+    Java.to(Number(rec.x), 'double'),
+    Java.to(Number(rec.y), 'double'),
+    Java.to(Number(rec.z), 'double'),
+    Java.to(Number(rec.yaw), 'float'),
+    Java.to(Number(rec.pitch), 'float')
+  )
   markTp(player)
   player.tell('§a[TP] §fТелепорт: §e' + label)
   return 1
