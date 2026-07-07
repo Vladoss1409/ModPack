@@ -1,0 +1,51 @@
+---
+const base = import.meta.env.BASE_URL;
+---
+
+<div id="search" class="pagefind-ui" data-pagefind-ui data-pagefind-primary={base}></div>
+
+<script>
+  import.meta.env.DEV
+    ? null
+    : import(`${import.meta.env.BASE_URL}pagefind/pagefind-ui.js`).then((pf) => {
+        new pf.PagefindUI({
+          element: '#search',
+          showSubResults: true,
+          resetStyles: false,
+        });
+
+        const params = new URLSearchParams(window.location.search);
+        const q = params.get('q');
+        if (q) {
+          const input = document.querySelector<HTMLInputElement>('#search input[type="search"]');
+          if (input) {
+            input.value = q;
+            input.dispatchEvent(new Event('input', { bubbles: true }));
+          }
+        }
+      });
+</script>
+
+<style>
+  #search :global(input[type='search']) {
+    width: 100%;
+    border-radius: 0.5rem;
+    border: 1px solid #2d3a4f;
+    background: #1a2332;
+    padding: 0.5rem 0.75rem;
+    color: #e2e8f0;
+    font-size: 0.875rem;
+  }
+
+  #search :global(.pagefind-ui__results-area) {
+    position: absolute;
+    z-index: 60;
+    margin-top: 0.25rem;
+    width: 100%;
+    max-width: 28rem;
+    border-radius: 0.5rem;
+    border: 1px solid #2d3a4f;
+    background: #1a2332;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  }
+</style>

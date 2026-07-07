@@ -1,0 +1,22 @@
+{
+  "id": "powah_reactor",
+  "size": [3, 3, 3],
+  "palette": {
+    "U": { "name": "Uraninite Block", "color": "#2ecc71" },
+    "C": { "name": "Reactor Core (контроллер)", "color": "#e74c3c", "controller": true },
+    ".": { "name": "пусто", "empty": true }
+  },
+  "layers": [
+    ["UUU", "UUU", "UUU"],
+    ["U.U", ".C.", "U.U"],
+    ["UUU", "UUU", "UUU"]
+  ],
+  "placement": [
+    "Ставится на твёрдое основание",
+    "Между двумя реакторами — минимум 4 блока по горизонтали",
+    "Внутри — только воздух, кроме ядра"
+  ],
+  "notes": [
+    { "pos": [1, 1, 1], "text": "Reactor Core — контроллер. ПКМ для GUI. Сюда подаётся вода/стим." }
+  ]
+}

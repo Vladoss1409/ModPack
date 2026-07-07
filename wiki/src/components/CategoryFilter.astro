@@ -1,0 +1,29 @@
+---
+interface Props {
+  categories: string[];
+  active?: string;
+  basePath?: string;
+}
+
+const { categories, active = 'all', basePath = '' } = Astro.props;
+const base = import.meta.env.BASE_URL;
+---
+
+<div class="mb-6 flex flex-wrap gap-2">
+  <a
+    href={`${base}${basePath}`}
+    class:list={['wiki-badge no-underline', active === 'all' && 'border-wiki-accent text-wiki-glow']}
+  >
+    Все
+  </a>
+  {
+    categories.map((cat) => (
+      <a
+        href={`${base}${basePath}?category=${cat}`}
+        class:list={['wiki-badge no-underline capitalize', active === cat && 'border-wiki-accent text-wiki-glow']}
+      >
+        {cat}
+      </a>
+    ))
+  }
+</div>

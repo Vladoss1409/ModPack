@@ -1,0 +1,22 @@
+{
+  "id": "immersive_coke_oven",
+  "size": [3, 3, 3],
+  "palette": {
+    "B": { "name": "Coke Brick", "color": "#5d4037" },
+    "D": { "name": "Coke Oven Door", "color": "#795548", "controller": true },
+    ".": { "name": "пусто", "empty": true }
+  },
+  "layers": [
+    ["BBB", "B.B", "BBB"],
+    ["B.B", ".D.", "B.B"],
+    ["BBB", "B.B", "BBB"]
+  ],
+  "placement": [
+    "Полностью замкнутая коробка из Coke Brick",
+    "Дверь — единственный проём (контроллер)",
+    "Внутри — 3×3×3 пустое пространство для угля"
+  ],
+  "notes": [
+    { "pos": [1, 1, 1], "text": "Coke Oven Door — загрузка угля, выгрузка кокса и creosote." }
+  ]
+}

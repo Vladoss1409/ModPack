@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CategoryFilter from '../../components/CategoryFilter.astro';
+import { getCollection } from 'astro:content';
+
+const base = import.meta.env.BASE_URL;
+const allMachines = (await getCollection('machines')).filter((m) => !m.data.draft);
+const categoryParam = Astro.url.searchParams.get('category');
+const categories = [...new Set(allMachines.map((m) => m.data.category))].sort();
+
+const machines = categoryParam
+  ? allMachines.filter((m) => m.data.category === categoryParam)
+  : allMachines;
+
+machines.sort((a, b) => a.data.name.localeCompare(b.data.name, 'ru'));
+---
+
+<BaseLayout title="Механизмы" description="Мультиблоки и механизмы сборки">
+  <section class="mb-8">
+    <h1 class="mb-2 text-3xl font-bold text-white">Механизмы и мультиблоки</h1>
+    <p class="text-slate-400">
+      Интерактивные 3D-схемы · правила размещения · {machines.length} записей
+    </p>
+  </section>
+
+  <CategoryFilter categories={categories} active={categoryParam ?? 'all'} basePath="machines/" />
+
+  <div class="grid gap-4 sm:grid-cols-2">
+    {
+      machines.map((machine) => (
+        <a href={`${base}machines/${machine.slug}/`} class="wiki-card block no-underline">
+          <div class="mb-2 flex items-start justify-between gap-2">
+            <h3 class="font-semibold text-white">{machine.data.name}</h3>
+            <span class="wiki-badge capitalize">{machine.data.category}</span>
+          </div>
+          <p class="font-mono text-xs text-slate-500">{machine.data.modId}</p>
+          {
+            machine.data.placement.length > 0 && (
+              <p class="mt-2 text-sm text-slate-400 line-clamp-2">{machine.data.placement[0]}</p>
+            )
+          }
+        </a>
+      ))
+    }
+  </div>
+</BaseLayout>
