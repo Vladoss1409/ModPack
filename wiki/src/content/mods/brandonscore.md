@@ -1,33 +1,28 @@
 ---
-name: "Brandonscore"
+name: "Brandon's Core"
 modId: "brandonscore"
-version: "1.20.1-3.2.1.302"
-category: tech
+version: "3.2.1.302"
+category: library
 tags:
+  - library
   - draconic
-  - endgame
 links:
-  curseforge: "https://www.curseforge.com/minecraft/search?class=mc-mods&search=Brandonscore"
-  modrinth: "https://modrinth.com/mods?q=Brandonscore"
+  curseforge: "https://www.curseforge.com/minecraft/mc-mods/brandons-core"
+  modrinth: "https://modrinth.com/mod/brandons-core"
 draft: false
 ---
 
-<!-- scaffold -->
-
 ## Обзор
 
-**Brandonscore** (`brandonscore`, v1.20.1-3.2.1.302) — Технический мод: машины, автоматизация и энергетика.
+**Brandon's Core** — библиотека-зависимость для модов Брэндона (в первую очередь [Draconic Evolution](../draconic-evolution/)). Содержит общий код, интерфейсы, систему энергии и вспомогательные функции.
 
-Часть кооп-сборки MyModPack (Forge 1.20.1). Кнопки CurseForge и Modrinth выше ведут на поиск мода — там официальное описание, скриншоты и вики.
+Игрового контента почти не добавляет (несколько служебных предметов вроде переносимого сундука/утилит).
 
 ## Роль в сборке
 
-- Добавляет блоки и машины для автоматизации и переработки.
-- Обычно работает на энергии (RF/FE) — подключается к общей энергосети.
-- Связан с технической прогрессией сборки (тиры T1–T5).
+- Обязательная зависимость [Draconic Evolution](../draconic-evolution/).
+- Отдельно с ней взаимодействовать не нужно.
 
 ## Где узнать больше
 
-- Рецепты и предметы — в **JEI/EMI** в игре.
-- Официальное описание и скриншоты — по ссылкам CurseForge/Modrinth выше.
-- Мультиблоки сборки — в разделе [Механизмы](../../machines/).
+- Игровой контент — [Draconic Evolution](../draconic-evolution/).
