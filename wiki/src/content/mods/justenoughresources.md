@@ -1,30 +1,42 @@
 ---
-name: "Justenoughresources"
+name: "Just Enough Resources (JER)"
 modId: "justenoughresources"
-version: "1.20.1-1.4.0.247.jar"
-category: other
+version: "1.4.0.247"
+category: utility
 tags:
-  []
+  - recipes
+  - info
+  - jei
 links:
-  curseforge: "https://www.curseforge.com/minecraft/search?class=mc-mods&search=Justenoughresources"
-  modrinth: "https://modrinth.com/mods?q=Justenoughresources"
+  curseforge: "https://www.curseforge.com/minecraft/mc-mods/just-enough-resources-jer"
+  modrinth: "https://modrinth.com/mod/just-enough-resources-jer"
 draft: false
 ---
 
-<!-- scaffold -->
-
 ## Обзор
 
-**Justenoughresources** (`justenoughresources`, v1.20.1-1.4.0.247.jar) — Дополнение к сборке.
+**Just Enough Resources (JER)** — расширение для [JEI](../jei/), добавляющее вкладки с **игровой информацией**: дроп мобов, генерация руд по высоте, содержимое лута, растения биомов и т.д.
 
-Часть кооп-сборки MyModPack (Forge 1.20.1). Кнопки CurseForge и Modrinth выше ведут на поиск мода — там официальное описание, скриншоты и вики.
+## Что показывает
+
+| Вкладка | Информация |
+|---------|-----------|
+| **Mob drops** | Что и с каким шансом выпадает с моба |
+| **World gen (Ore)** | На каких высотах и в каких измерениях встречается руда |
+| **Dungeon loot** | Содержимое сундуков структур |
+| **Plant / Villager / Biome** | Дроп растений, обмен с жителями, особенности биомов |
+
+## Как использовать
+
+1. Откройте JEI, найдите предмет/моба.
+2. Листайте вкладки — помимо крафта появятся **дроп, генерация, лут**.
+3. Для руд: смотрите оптимальную высоту добычи прямо на графике.
 
 ## Роль в сборке
 
-- Дополняет сборку вспомогательным контентом.
+Отвечает на вопросы «где копать эту руду» и «что выбьется с этого моба» без внешних вики. Особенно полезно с worldgen-модами ([Terralith](../terralith-1-20-x-v2-5-4/) и др.), меняющими генерацию.
 
 ## Где узнать больше
 
-- Рецепты и предметы — в **JEI/EMI** в игре.
-- Официальное описание и скриншоты — по ссылкам CurseForge/Modrinth выше.
-- Мультиблоки сборки — в разделе [Механизмы](../../machines/).
+- Основной просмотрщик рецептов — [JEI](../jei/).
+- Поиск биомов для добычи — [Nature's Compass](../naturescompass/).

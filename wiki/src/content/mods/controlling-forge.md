@@ -1,31 +1,39 @@
 ---
-name: "Controlling Forge"
-modId: "controlling_forge"
-version: "1.20.1-12.0.2.jar"
-category: client
+name: "Controlling"
+modId: "controlling"
+version: "12.0.2"
+category: utility
 tags:
-  []
+  - keybinds
+  - controls
+  - qol
 links:
-  curseforge: "https://www.curseforge.com/minecraft/search?class=mc-mods&search=Controlling%20Forge"
-  modrinth: "https://modrinth.com/mods?q=Controlling%20Forge"
+  curseforge: "https://www.curseforge.com/minecraft/mc-mods/controlling"
+  modrinth: "https://modrinth.com/mod/controlling"
 draft: false
 ---
 
-<!-- scaffold -->
-
 ## Обзор
 
-**Controlling Forge** (`controlling_forge`, v1.20.1-12.0.2.jar) — Клиентский мод: интерфейс, отображение и оптимизация (на сервере не требуется).
+**Controlling** — улучшает экран **настройки управления**. Со множеством модов список клавиш становится огромным; Controlling добавляет **поиск и фильтры**, чтобы быстро находить и решать конфликты назначений.
 
-Часть кооп-сборки MyModPack (Forge 1.20.1). Кнопки CurseForge и Modrinth выше ведут на поиск мода — там официальное описание, скриншоты и вики.
+## Ключевые функции
+
+- **Поиск** по названию действия в списке клавиш.
+- Фильтр **«показать только конфликтующие»** — сразу видно дубли назначений.
+- Поиск **по клавише**: нажмите кнопку и увидите, что на неё назначено.
+- Быстрый сброс отдельных биндов.
+
+## Как использовать
+
+1. Настройки → Управление.
+2. Через строку поиска найдите нужное действие (например, «карта» или «квесты»).
+3. Включите фильтр конфликтов, чтобы устранить пересечения клавиш модов.
 
 ## Роль в сборке
 
-- Работает на стороне клиента (интерфейс/оптимизация).
-- В серверную сборку не входит.
+С десятками модов ([JourneyMap](../journeymap/), [FTB Quests](../ftb-quests-forge/), [Iron's Spellbooks](../irons-spellbooks/) и др.) добавляются сотни биндов — Controlling делает их управляемыми.
 
 ## Где узнать больше
 
-- Рецепты и предметы — в **JEI/EMI** в игре.
-- Официальное описание и скриншоты — по ссылкам CurseForge/Modrinth выше.
-- Мультиблоки сборки — в разделе [Механизмы](../../machines/).
+- Клиентское QoL, серверу не требуется.
