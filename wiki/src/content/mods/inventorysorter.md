@@ -1,31 +1,32 @@
 ---
-name: "Inventorysorter"
+name: "Inventory Sorter"
 modId: "inventorysorter"
-version: "1.20.1-23.1.9.jar"
-category: client
+version: "23.1.9"
+category: utility
 tags:
-  []
+  - inventory
+  - sorting
+  - qol
 links:
-  curseforge: "https://www.curseforge.com/minecraft/search?class=mc-mods&search=Inventorysorter"
-  modrinth: "https://modrinth.com/mods?q=Inventorysorter"
+  curseforge: "https://www.curseforge.com/minecraft/mc-mods/simple-inventory-sorter"
+  modrinth: "https://modrinth.com/mod/simple-inventory-sorter"
 draft: false
 ---
 
-<!-- scaffold -->
-
 ## Обзор
 
-**Inventorysorter** (`inventorysorter`, v1.20.1-23.1.9.jar) — Клиентский мод: интерфейс, отображение и оптимизация (на сервере не требуется).
+**Inventory Sorter** — простая **сортировка инвентаря** одним действием. Наведите на любой контейнер/инвентарь и отсортируйте содержимое, не перетаскивая предметы вручную.
 
-Часть кооп-сборки MyModPack (Forge 1.20.1). Кнопки CurseForge и Modrinth выше ведут на поиск мода — там официальное описание, скриншоты и вики.
+## Как использовать
+
+- **Средний клик (колёсико)** по слоту инвентаря/сундука — сортировка содержимого.
+- **Прокрутка колёсиком** над стопкой — добавить/убрать по одному предмету (в зависимости от настроек).
+- Работает с ванильными контейнерами и большинством модовых.
 
 ## Роль в сборке
 
-- Работает на стороне клиента (интерфейс/оптимизация).
-- В серверную сборку не входит.
+Мелкое, но заметное удобство: быстрое наведение порядка в сундуках, рюкзаках ([Sophisticated Backpacks](../sophisticatedbackpacks/)) и хранилищах. Клиентское QoL — на геймплей не влияет.
 
 ## Где узнать больше
 
-- Рецепты и предметы — в **JEI/EMI** в игре.
-- Официальное описание и скриншоты — по ссылкам CurseForge/Modrinth выше.
-- Мультиблоки сборки — в разделе [Механизмы](../../machines/).
+- Хранилища сборки — [Sophisticated Storage](../sophisticatedstorage/), [Storage Drawers](../storagedrawers-forge/).

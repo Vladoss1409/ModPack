@@ -1,31 +1,36 @@
 ---
-name: "Mousetweaks Forge"
-modId: "mousetweaks_forge_mc1.20.1"
-version: "1.20.1-2.25.1.jar"
-category: client
+name: "Mouse Tweaks"
+modId: "mousetweaks"
+version: "2.25.1"
+category: utility
 tags:
-  []
+  - inventory
+  - mouse
+  - qol
 links:
-  curseforge: "https://www.curseforge.com/minecraft/search?class=mc-mods&search=Mousetweaks%20Forge"
-  modrinth: "https://modrinth.com/mods?q=Mousetweaks%20Forge"
+  curseforge: "https://www.curseforge.com/minecraft/mc-mods/mouse-tweaks"
+  modrinth: "https://modrinth.com/mod/mouse-tweaks"
 draft: false
 ---
 
-<!-- scaffold -->
-
 ## Обзор
 
-**Mousetweaks Forge** (`mousetweaks_forge_mc1.20.1`, v1.20.1-2.25.1.jar) — Клиентский мод: интерфейс, отображение и оптимизация (на сервере не требуется).
+**Mouse Tweaks** — улучшает работу с **мышью в инвентарях**: перетаскивание, быстрое перемещение и распределение предметов зажатием кнопки. Ускоряет любые операции с контейнерами.
 
-Часть кооп-сборки MyModPack (Forge 1.20.1). Кнопки CurseForge и Modrinth выше ведут на поиск мода — там официальное описание, скриншоты и вики.
+## Ключевые функции
+
+| Действие | Результат |
+|----------|-----------|
+| **Зажать ЛКМ и вести** | Перетащить/переместить стопку предметов |
+| **Зажать ПКМ и вести** | Распределить/разложить по одному |
+| **Зажать Shift + ЛКМ и вести** | Быстрый перенос множества предметов между инвентарём и контейнером |
+| **Прокрутка колёсиком** | Перенос предметов (настраивается) |
 
 ## Роль в сборке
 
-- Работает на стороне клиента (интерфейс/оптимизация).
-- В серверную сборку не входит.
+Массовая работа с предметами (заполнение хранилищ, ввод в машины, крафт) становится намного быстрее. Клиентское QoL — на геймплей не влияет.
 
 ## Где узнать больше
 
-- Рецепты и предметы — в **JEI/EMI** в игре.
-- Официальное описание и скриншоты — по ссылкам CurseForge/Modrinth выше.
-- Мультиблоки сборки — в разделе [Механизмы](../../machines/).
+- Сортировка — [Inventory Sorter](../inventorysorter/).
+- Хранилища — [Sophisticated Storage](../sophisticatedstorage/).

@@ -1,31 +1,31 @@
 ---
-name: "Trashslot Forge"
-modId: "trashslot_forge"
-version: "1.20.1-15.1.5.jar"
-category: client
+name: "TrashSlot"
+modId: "trashslot"
+version: "15.1.5"
+category: utility
 tags:
-  []
+  - inventory
+  - qol
 links:
-  curseforge: "https://www.curseforge.com/minecraft/search?class=mc-mods&search=Trashslot%20Forge"
-  modrinth: "https://modrinth.com/mods?q=Trashslot%20Forge"
+  curseforge: "https://www.curseforge.com/minecraft/mc-mods/trashslot"
+  modrinth: "https://modrinth.com/mod/trashslot"
 draft: false
 ---
 
-<!-- scaffold -->
-
 ## Обзор
 
-**Trashslot Forge** (`trashslot_forge`, v1.20.1-15.1.5.jar) — Клиентский мод: интерфейс, отображение и оптимизация (на сервере не требуется).
+**TrashSlot** — добавляет **слот-корзину** в интерфейс инвентаря для безопасного удаления ненужных предметов. Без риска «выбросить и подобрать обратно» или засорять мир дропом.
 
-Часть кооп-сборки MyModPack (Forge 1.20.1). Кнопки CurseForge и Modrinth выше ведут на поиск мода — там официальное описание, скриншоты и вики.
+## Как использовать
+
+1. Откройте инвентарь — появится **слот корзины** (можно включить/скрыть кнопкой).
+2. Перетащите в него ненужный предмет — он удалится.
+3. Есть защита от случайного удаления (подтверждение/блокировка — по настройке).
 
 ## Роль в сборке
 
-- Работает на стороне клиента (интерфейс/оптимизация).
-- В серверную сборку не входит.
+Удобная утилизация мусора (лишние булыжники, дубли лута) без замусоривания базы и мира. Клиентское QoL.
 
 ## Где узнать больше
 
-- Рецепты и предметы — в **JEI/EMI** в игре.
-- Официальное описание и скриншоты — по ссылкам CurseForge/Modrinth выше.
-- Мультиблоки сборки — в разделе [Механизмы](../../machines/).
+- Работа с инвентарём — [Mouse Tweaks](../mousetweaks-forge-mc1-20-1/), [Inventory Sorter](../inventorysorter/).
