@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "extract-logos": "python ../scripts/wiki_extract_logos.py",
     "preview": "astro preview",
     "scaffold": "python ../scripts/wiki_scaffold.py"
   },

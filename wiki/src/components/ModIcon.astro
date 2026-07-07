@@ -1,0 +1,65 @@
+---
+interface Props {
+  slug: string;
+  name: string;
+  category?: string;
+  size?: 'sm' | 'md' | 'lg';
+  logoSrc?: string | null;
+}
+
+const { slug, name, category = 'other', size = 'md', logoSrc = null } = Astro.props;
+
+const sizeClass = {
+  sm: 'h-8 w-8',
+  md: 'h-10 w-10',
+  lg: 'h-16 w-16',
+}[size];
+
+const textClass = {
+  sm: 'text-xs',
+  md: 'text-sm',
+  lg: 'text-xl',
+}[size];
+
+const initial = (name.replace(/^[^A-Za-zА-Яа-я0-9]*/, '').charAt(0) || slug.charAt(0) || '?').toUpperCase();
+
+const catColor: Record<string, string> = {
+  tech: 'from-sky-600/40 to-blue-800/40',
+  magic: 'from-purple-600/40 to-violet-800/40',
+  combat: 'from-red-600/40 to-rose-800/40',
+  exploration: 'from-emerald-600/40 to-green-800/40',
+  worldgen: 'from-amber-600/40 to-orange-800/40',
+  utility: 'from-cyan-600/40 to-teal-800/40',
+  library: 'from-slate-600/40 to-slate-800/40',
+  client: 'from-indigo-600/40 to-indigo-800/40',
+  other: 'from-slate-600/40 to-slate-800/40',
+};
+const gradient = catColor[category] ?? catColor.other;
+---
+
+<div
+  class:list={['mod-icon shrink-0 overflow-hidden rounded-lg border border-wiki-border bg-wiki-bg', sizeClass]}
+  title={name}
+>
+  {
+    logoSrc ? (
+      <img
+        src={logoSrc}
+        alt=""
+        class="h-full w-full object-cover"
+        loading="lazy"
+        decoding="async"
+      />
+    ) : (
+      <div
+        class:list={[
+          'flex h-full w-full items-center justify-center bg-gradient-to-br font-bold text-white/90',
+          gradient,
+          textClass,
+        ]}
+      >
+        {initial}
+      </div>
+    )
+  }
+</div>
