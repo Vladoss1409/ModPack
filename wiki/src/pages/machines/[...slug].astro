@@ -33,7 +33,7 @@ const structure = structureModule.default as MultiblockStructure;
 
     <section class="mb-8">
       <h2 class="mb-4 text-xl font-semibold text-wiki-glow">3D-схема</h2>
-      <MultiblockViewer client:load structure={structure} placement={machine.data.placement} />
+      <MultiblockViewer client:load structure={structure} placement={machine.data.placement} baseUrl={base} />
     </section>
 
     <div class="wiki-prose">

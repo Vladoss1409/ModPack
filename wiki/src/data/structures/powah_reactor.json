@@ -2,8 +2,8 @@
   "id": "powah_reactor",
   "size": [3, 3, 3],
   "palette": {
-    "U": { "name": "Uraninite Block", "color": "#2ecc71" },
-    "C": { "name": "Reactor Core (контроллер)", "color": "#e74c3c", "controller": true },
+    "U": { "name": "Uraninite Block", "color": "#2ecc71", "texture": "powah/uraninite_block" },
+    "C": { "name": "Reactor Core (контроллер)", "color": "#e74c3c", "texture": "powah/reactor_core", "controller": true },
     ".": { "name": "пусто", "empty": true }
   },
   "layers": [
@@ -17,6 +17,6 @@
     "Внутри — только воздух, кроме ядра"
   ],
   "notes": [
-    { "pos": [1, 1, 1], "text": "Reactor Core — контроллер. ПКМ для GUI. Сюда подаётся вода/стим." }
+    { "pos": [1, 1, 1], "text": "Reactor Core — контроллер. ПКМ для GUI. Подайте воду/пар." }
   ]
 }

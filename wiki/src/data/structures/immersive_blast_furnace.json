@@ -1,0 +1,23 @@
+{
+  "id": "immersive_blast_furnace",
+  "size": [3, 3, 3],
+  "palette": {
+    "B": { "name": "Blast Brick", "color": "#4e342e", "texture": "immersiveengineering/blastbrick" },
+    "R": { "name": "Reinforced Blast Brick", "color": "#3e2723", "texture": "immersiveengineering/blastbrick_reinforced" },
+    "D": { "name": "Blast Furnace (контроллер)", "color": "#ff6f00", "texture": "immersiveengineering/blast_furnace", "controller": true },
+    ".": { "name": "пусто", "empty": true }
+  },
+  "layers": [
+    ["BRB", "B.B", "BRB"],
+    ["B.B", ".D.", "B.B"],
+    ["BRB", "B.B", "BRB"]
+  ],
+  "placement": [
+    "Коробка 3×3×3 из Blast Brick, углы — Reinforced",
+    "Blast Furnace — блок-контроллер на одной грани",
+    "Внутри пусто; для стали нужен кокс (из Coke Oven)"
+  ],
+  "notes": [
+    { "pos": [1, 1, 1], "text": "Blast Furnace — загрузка железа и кокса, выход стали." }
+  ]
+}

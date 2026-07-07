@@ -26,6 +26,16 @@ npm run preview
 1. Отредактируйте `wiki/src/content/mods/<slug>.md` (или сгенерируйте стабы: `python scripts/wiki_scaffold.py`).
 2. Frontmatter: `name`, `modId`, `version`, `category`, `tags`, `links`.
 
+### Текстуры блоков в 3D-схемах
+
+Текстуры извлекаются из jar-файлов модов (локально):
+
+```bash
+python scripts/wiki_extract_textures.py
+```
+
+Файлы сохраняются в `wiki/public/textures/blocks/` и коммитятся в репозиторий (на CI jar-ов нет).
+
 ### Механизм / мультиблок
 
 1. Создайте JSON-схему в `wiki/src/data/structures/<id>.json`.

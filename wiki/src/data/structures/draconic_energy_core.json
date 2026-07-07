@@ -1,0 +1,22 @@
+{
+  "id": "draconic_energy_core",
+  "size": [3, 3, 3],
+  "palette": {
+    "D": { "name": "Draconium Block", "color": "#8e44ad", "texture": "draconicevolution/draconium_block" },
+    "E": { "name": "Energy Core (контроллер)", "color": "#f39c12", "texture": "draconicevolution/energy_core", "controller": true },
+    ".": { "name": "пусто", "empty": true }
+  },
+  "layers": [
+    ["DDD", "D.D", "DDD"],
+    ["D.D", ".E.", "D.D"],
+    ["DDD", "D.D", "DDD"]
+  ],
+  "placement": [
+    "Минимальная схема ядра 3×3×3 — в игре размер растёт по тиру",
+    "Energy Core — центр, корпус из Draconium",
+    "Подключите питание и Stabilizers для больших ORB"
+  ],
+  "notes": [
+    { "pos": [1, 1, 1], "text": "Energy Core — хранилище RF DE. Апгрейд слоями увеличивает ёмкость." }
+  ]
+}
