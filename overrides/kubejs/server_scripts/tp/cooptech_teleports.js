@@ -2,9 +2,9 @@
 // Команды:
 //   /set home            — записать точку дома (перезапись, 1 дом на игрока)
 //   /home                — телепорт на дом
-//   /set warp <имя>      — создать варп (имена глобально уникальны, лимит 3 на игрока)
+//   /warp set <имя>      — создать варп (имена глобально уникальны, лимит 3 на игрока)
 //   /warp <имя>          — телепорт на варп (можно на чужой)
-//   /delete warp <имя>   — удалить свой варп (админ уровня 2 может удалить любой)
+//   /warp delete <имя>   — удалить свой варп (админ уровня 2 может удалить любой)
 //   /warp list           — список всех варпов сервера
 //
 // Хранение:
@@ -32,13 +32,36 @@ var lastTp = {}
 
 // ---------- утилиты ----------
 
+function dimKeyString(level) {
+  if (!level) return null
+  var mc = level.minecraftLevel ? level.minecraftLevel : level
+  var key = mc.dimension ? (typeof mc.dimension === 'function' ? mc.dimension() : mc.dimension) : null
+  if (!key) return null
+  var loc = key.location ? (typeof key.location === 'function' ? key.location() : key.location) : key
+  if (loc && loc.getNamespace && loc.getPath) {
+    return loc.getNamespace() + ':' + loc.getPath()
+  }
+  return String(key)
+}
+
 function dimOf(entity) {
-  return String(entity.level.dimension().location())
+  return dimKeyString(entity.level)
 }
 
 function levelByDim(server, dimStr) {
+  if (!dimStr) return null
+
+  var it = server.getAllLevels().iterator()
+  while (it.hasNext()) {
+    var lvl = it.next()
+    if (dimKeyString(lvl) === dimStr) return lvl
+  }
+
   try {
-    var key = ResourceKey.create(Registries.DIMENSION, new ResourceLocation(dimStr))
+    var colon = dimStr.indexOf(':')
+    if (colon <= 0) return null
+    var loc = new ResourceLocation(dimStr.substring(0, colon), dimStr.substring(colon + 1))
+    var key = ResourceKey.create(Registries.DIMENSION, loc)
     return server.getLevel(key)
   } catch (e) {
     return null
@@ -68,11 +91,11 @@ function markTp(player) {
 function locationRecord(player) {
   return {
     dim: dimOf(player),
-    x: player.getX(),
-    y: player.getY(),
-    z: player.getZ(),
-    yaw: player.getYRot(),
-    pitch: player.getXRot()
+    x: player.x,
+    y: player.y,
+    z: player.z,
+    yaw: player.yaw,
+    pitch: player.pitch
   }
 }
 
@@ -161,7 +184,7 @@ function setWarp(ctx, name) {
   }
   // Новый варп -> проверяем лимит. Перезапись своего варпа лимит не тратит.
   if (!existing && countOwned(warps, uuid) >= WARP_LIMIT) {
-    player.tell('§c[TP] Достигнут лимит варпов (§e' + WARP_LIMIT + '§c). Удалите ненужный: §e/delete warp <имя>§c.')
+    player.tell('§c[TP] Достигнут лимит варпов (§e' + WARP_LIMIT + '§c). Удалите ненужный: §e/warp delete <имя>§c.')
     return 0
   }
 
@@ -231,7 +254,7 @@ function listWarps(ctx) {
   }
   names.sort()
   if (names.length === 0) {
-    ctx.source.sendSystemMessage(Component.literal('§6[TP]§7 Варпов пока нет. Создайте: §e/set warp <имя>'))
+    ctx.source.sendSystemMessage(Component.literal('§6[TP]§7 Варпов пока нет. Создайте: §e/warp set <имя>'))
     return 1
   }
   ctx.source.sendSystemMessage(Component.literal('§6[TP]§f Варпы сервера (§e' + names.length + '§f):'))
@@ -256,14 +279,28 @@ ServerEvents.commandRegistry(function (event) {
     Commands.literal('home').executes(function (ctx) { return goHome(ctx) })
   )
 
-  // /warp <имя> | /warp list
+  // /warp <имя> | /warp list | /warp set <имя>
   event.register(
     Commands.literal('warp')
       .executes(function (ctx) {
-        ctx.source.sendSystemMessage(Component.literal('§6[TP]§7 Использование: §e/warp <имя>§7 или §e/warp list'))
+        ctx.source.sendSystemMessage(Component.literal('§6[TP]§7 Использование: §e/warp <имя>§7, §e/warp list§7, §e/warp set <имя>§7 или §e/warp delete <имя>'))
         return 1
       })
       .then(Commands.literal('list').executes(function (ctx) { return listWarps(ctx) }))
+      .then(
+        Commands.literal('set').then(
+          Commands.argument('name', Arguments.STRING.create(event)).executes(function (ctx) {
+            return setWarp(ctx, Arguments.STRING.getResult(ctx, 'name'))
+          })
+        )
+      )
+      .then(
+        Commands.literal('delete').then(
+          Commands.argument('name', Arguments.STRING.create(event)).executes(function (ctx) {
+            return deleteWarp(ctx, Arguments.STRING.getResult(ctx, 'name'))
+          })
+        )
+      )
       .then(
         Commands.argument('name', Arguments.STRING.create(event)).executes(function (ctx) {
           return goWarp(ctx, Arguments.STRING.getResult(ctx, 'name'))
@@ -271,31 +308,12 @@ ServerEvents.commandRegistry(function (event) {
       )
   )
 
-  // /set home | /set warp <имя>
+  // /set home
   event.register(
     Commands.literal('set')
       .then(Commands.literal('home').executes(function (ctx) { return setHome(ctx) }))
-      .then(
-        Commands.literal('warp').then(
-          Commands.argument('name', Arguments.STRING.create(event)).executes(function (ctx) {
-            return setWarp(ctx, Arguments.STRING.getResult(ctx, 'name'))
-          })
-        )
-      )
-  )
-
-  // /delete warp <имя>
-  event.register(
-    Commands.literal('delete')
-      .then(
-        Commands.literal('warp').then(
-          Commands.argument('name', Arguments.STRING.create(event)).executes(function (ctx) {
-            return deleteWarp(ctx, Arguments.STRING.getResult(ctx, 'name'))
-          })
-        )
-      )
   )
 })
 
-console.info('[CoopTech] Teleports loaded: /set home, /home, /set warp <name>, /warp <name>, /delete warp <name>, /warp list')
+console.info('[CoopTech] Teleports loaded: /set home, /home, /warp set <name>, /warp <name>, /warp delete <name>, /warp list')
 })()
