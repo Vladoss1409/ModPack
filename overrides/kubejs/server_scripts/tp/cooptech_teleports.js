@@ -99,34 +99,16 @@ function locationRecord(player) {
   }
 }
 
-function mcPlayer(player) {
-  return player.minecraftPlayer ? player.minecraftPlayer : player
-}
-
-function dimLocation(dimStr) {
-  var colon = dimStr.indexOf(':')
-  if (colon <= 0) return null
-  return new ResourceLocation(dimStr.substring(0, colon), dimStr.substring(colon + 1))
-}
-
 function teleportTo(player, server, rec, label) {
   if (!levelByDim(server, rec.dim)) {
     player.tell('§c[TP] Измерение недоступно: §f' + rec.dim)
     return 0
   }
-  var loc = dimLocation(rec.dim)
-  if (!loc) {
-    player.tell('§c[TP] Измерение недоступно: §f' + rec.dim)
-    return 0
-  }
-  mcPlayer(player)['kjs$teleportTo'](
-    loc,
-    Number(rec.x),
-    Number(rec.y),
-    Number(rec.z),
-    Number(rec.yaw),
-    Number(rec.pitch)
-  )
+  var name = String(player.username)
+  var cmd = 'execute in ' + rec.dim + ' run tp ' + name + ' ' +
+    Number(rec.x) + ' ' + Number(rec.y) + ' ' + Number(rec.z) + ' ' +
+    Number(rec.yaw) + ' ' + Number(rec.pitch)
+  server.runCommandSilent(cmd)
   markTp(player)
   player.tell('§a[TP] §fТелепорт: §e' + label)
   return 1

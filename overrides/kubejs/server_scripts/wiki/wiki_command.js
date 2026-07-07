@@ -1,9 +1,9 @@
 // Серверная команда /wiki — ссылка на веб-справочник (без клиентских модов).
 // URL вики: GitHub Pages репозитория Vladoss1409/ModPack
 
+;(function () {
 var WIKI_URL = 'https://vladoss1409.github.io/ModPack/'
 
-var Component = Java.loadClass('net.minecraft.network.chat.Component')
 var Style = Java.loadClass('net.minecraft.network.chat.Style')
 var ClickEvent = Java.loadClass('net.minecraft.network.chat.ClickEvent')
 var HoverEvent = Java.loadClass('net.minecraft.network.chat.HoverEvent')
@@ -72,3 +72,4 @@ PlayerEvents.loggedIn(function (event) {
 })
 
 console.info('[CoopTech] Wiki command: /wiki [query] -> ' + WIKI_URL)
+})()
