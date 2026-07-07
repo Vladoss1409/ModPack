@@ -103,23 +103,29 @@ function mcPlayer(player) {
   return player.minecraftPlayer ? player.minecraftPlayer : player
 }
 
-function mcLevel(level) {
-  return level.minecraftLevel ? level.minecraftLevel : level
+function dimLocation(dimStr) {
+  var colon = dimStr.indexOf(':')
+  if (colon <= 0) return null
+  return new ResourceLocation(dimStr.substring(0, colon), dimStr.substring(colon + 1))
 }
 
 function teleportTo(player, server, rec, label) {
-  var lvl = levelByDim(server, rec.dim)
-  if (!lvl) {
+  if (!levelByDim(server, rec.dim)) {
     player.tell('§c[TP] Измерение недоступно: §f' + rec.dim)
     return 0
   }
-  mcPlayer(player).teleportTo(
-    mcLevel(lvl),
-    Java.to(Number(rec.x), 'double'),
-    Java.to(Number(rec.y), 'double'),
-    Java.to(Number(rec.z), 'double'),
-    Java.to(Number(rec.yaw), 'float'),
-    Java.to(Number(rec.pitch), 'float')
+  var loc = dimLocation(rec.dim)
+  if (!loc) {
+    player.tell('§c[TP] Измерение недоступно: §f' + rec.dim)
+    return 0
+  }
+  mcPlayer(player)['kjs$teleportTo'](
+    loc,
+    Number(rec.x),
+    Number(rec.y),
+    Number(rec.z),
+    Number(rec.yaw),
+    Number(rec.pitch)
   )
   markTp(player)
   player.tell('§a[TP] §fТелепорт: §e' + label)
