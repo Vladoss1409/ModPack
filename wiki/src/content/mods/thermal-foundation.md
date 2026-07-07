@@ -1,25 +1,50 @@
 ---
-name: "Thermal Foundation"
+name: "Thermal Series"
 modId: "thermal_foundation"
-version: "1.20.1-11.0.6.70.jar"
+version: "11.0.6.70"
 category: tech
 tags:
   - thermal
   - machines
+  - energy
+  - rf
+links:
+  curseforge: "https://www.curseforge.com/minecraft/mc-mods/thermal-foundation"
+  modrinth: "https://modrinth.com/mod/thermal-foundation"
+  wiki: "https://teamcofh.com/docs/"
 draft: false
 ---
 
-<!-- scaffold -->
-
 ## Обзор
 
-Страница в разработке. Здесь будет описание мода **Thermal Foundation** в контексте сборки MyModPack.
+**Thermal Series** (Foundation, Expansion, Dynamics, Cultivation, Innovation) — дружелюбная RF-энергетика и машины. Идеальный старт технического дерева в T1.
 
-## Ключевые механики
+## Из чего состоит
 
-- TODO: основные блоки и предметы
-- TODO: прогрессия и связь с квестами
+| Модуль | Что даёт |
+|--------|----------|
+| Foundation | Руды, слитки, сплавы, базовые ресурсы |
+| Expansion | Машины (печь, дробилка, индукция и т.д.) |
+| Dynamics | Дукты: энергия, предметы, жидкости |
+| Cultivation | Фермерство и биотопливо |
+| Innovation | Инструменты и гаджеты на RF |
 
-## Советы по сборке
+## Быстрый старт
 
-- TODO: типичные ошибки и решения
+1. **Foundation** → добудьте медь/олово/серебро/свинец.
+2. **Expansion** → соберите Redstone Furnace и Pulverizer (дробилка даёт 2x руды).
+3. Питание: Dynamo (Stirling на топливе) → апгрейды позже.
+4. **Dynamics** → Energy Duct соединяет генераторы и машины.
+
+## Апгрейды машин
+
+Каждая машина принимает **Augments** (модификаторы: скорость, КПД, вторичный выход). Не забывайте про них — сильно меняют экономику.
+
+## Связь с квестами
+
+T1 «Искра» — «Thermal — первая машина» и сайд-ветка «Тепловой контур».
+
+## Советы
+
+- Дукты Thermal дешёвые — хороши для ранней логистики до AE2/Mekanism.
+- Документация: [teamcofh.com/docs](https://teamcofh.com/docs/).

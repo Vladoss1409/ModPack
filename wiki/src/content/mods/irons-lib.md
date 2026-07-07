@@ -5,6 +5,9 @@ version: "1.20.1-1.1.0.jar"
 category: other
 tags:
   []
+links:
+  curseforge: "https://www.curseforge.com/minecraft/search?class=mc-mods&search=Irons%20Lib"
+  modrinth: "https://modrinth.com/mods?q=Irons%20Lib"
 draft: false
 ---
 
@@ -12,13 +15,17 @@ draft: false
 
 ## Обзор
 
-Страница в разработке. Здесь будет описание мода **Irons Lib** в контексте сборки MyModPack.
+**Irons Lib** (`irons_lib`, v1.20.1-1.1.0.jar) — Дополнение к сборке.
 
-## Ключевые механики
+Часть кооп-сборки MyModPack (Forge 1.20.1). Кнопки CurseForge и Modrinth выше ведут на поиск мода — там официальное описание, скриншоты и вики.
 
-- TODO: основные блоки и предметы
-- TODO: прогрессия и связь с квестами
+## Роль в сборке
 
-## Советы по сборке
+- Дополняет сборку вспомогательным контентом.
 
-- TODO: типичные ошибки и решения
+## Ссылки
+
+- [Найти на CurseForge](https://www.curseforge.com/minecraft/search?class=mc-mods&search=Irons%20Lib)
+- [Найти на Modrinth](https://modrinth.com/mods?q=Irons%20Lib)
+
+> Детальное описание на русском добавляется постепенно. Как дополнять — см. `docs/wiki.md`.

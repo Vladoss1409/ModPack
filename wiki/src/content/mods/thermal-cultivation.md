@@ -6,6 +6,9 @@ category: tech
 tags:
   - thermal
   - machines
+links:
+  curseforge: "https://www.curseforge.com/minecraft/search?class=mc-mods&search=Thermal%20Cultivation"
+  modrinth: "https://modrinth.com/mods?q=Thermal%20Cultivation"
 draft: false
 ---
 
@@ -13,13 +16,19 @@ draft: false
 
 ## Обзор
 
-Страница в разработке. Здесь будет описание мода **Thermal Cultivation** в контексте сборки MyModPack.
+**Thermal Cultivation** (`thermal_cultivation`, v1.20.1-11.0.1.24.jar) — Технический мод: машины, автоматизация и энергетика.
 
-## Ключевые механики
+Часть кооп-сборки MyModPack (Forge 1.20.1). Кнопки CurseForge и Modrinth выше ведут на поиск мода — там официальное описание, скриншоты и вики.
 
-- TODO: основные блоки и предметы
-- TODO: прогрессия и связь с квестами
+## Роль в сборке
 
-## Советы по сборке
+- Добавляет блоки и машины для автоматизации и переработки.
+- Обычно работает на энергии (RF/FE) — подключается к общей энергосети.
+- Связан с технической прогрессией сборки (тиры T1–T5).
 
-- TODO: типичные ошибки и решения
+## Ссылки
+
+- [Найти на CurseForge](https://www.curseforge.com/minecraft/search?class=mc-mods&search=Thermal%20Cultivation)
+- [Найти на Modrinth](https://modrinth.com/mods?q=Thermal%20Cultivation)
+
+> Детальное описание на русском добавляется постепенно. Как дополнять — см. `docs/wiki.md`.

@@ -5,6 +5,9 @@ version: "1.20.1-0.8.14.jar"
 category: worldgen
 tags:
   []
+links:
+  curseforge: "https://www.curseforge.com/minecraft/search?class=mc-mods&search=The%20Undergarden"
+  modrinth: "https://modrinth.com/mods?q=The%20Undergarden"
 draft: false
 ---
 
@@ -12,13 +15,18 @@ draft: false
 
 ## Обзор
 
-Страница в разработке. Здесь будет описание мода **The Undergarden** в контексте сборки MyModPack.
+**The Undergarden** (`the_undergarden`, v1.20.1-0.8.14.jar) — Генерация мира: биомы, измерения и структуры.
 
-## Ключевые механики
+Часть кооп-сборки MyModPack (Forge 1.20.1). Кнопки CurseForge и Modrinth выше ведут на поиск мода — там официальное описание, скриншоты и вики.
 
-- TODO: основные блоки и предметы
-- TODO: прогрессия и связь с квестами
+## Роль в сборке
 
-## Советы по сборке
+- Меняет генерацию мира: биомы, измерения, структуры.
+- Влияет на исследование и добычу ресурсов.
 
-- TODO: типичные ошибки и решения
+## Ссылки
+
+- [Найти на CurseForge](https://www.curseforge.com/minecraft/search?class=mc-mods&search=The%20Undergarden)
+- [Найти на Modrinth](https://modrinth.com/mods?q=The%20Undergarden)
+
+> Детальное описание на русском добавляется постепенно. Как дополнять — см. `docs/wiki.md`.

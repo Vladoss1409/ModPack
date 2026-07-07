@@ -7,6 +7,9 @@ tags:
   - ae2
   - storage
   - automation
+links:
+  curseforge: "https://www.curseforge.com/minecraft/search?class=mc-mods&search=Ae2%20Things"
+  modrinth: "https://modrinth.com/mods?q=Ae2%20Things"
 draft: false
 ---
 
@@ -14,13 +17,19 @@ draft: false
 
 ## Обзор
 
-Страница в разработке. Здесь будет описание мода **Ae2 Things** в контексте сборки MyModPack.
+**Ae2 Things** (`ae2_things`, v1.2.1.jar) — Технический мод: машины, автоматизация и энергетика.
 
-## Ключевые механики
+Часть кооп-сборки MyModPack (Forge 1.20.1). Кнопки CurseForge и Modrinth выше ведут на поиск мода — там официальное описание, скриншоты и вики.
 
-- TODO: основные блоки и предметы
-- TODO: прогрессия и связь с квестами
+## Роль в сборке
 
-## Советы по сборке
+- Добавляет блоки и машины для автоматизации и переработки.
+- Обычно работает на энергии (RF/FE) — подключается к общей энергосети.
+- Связан с технической прогрессией сборки (тиры T1–T5).
 
-- TODO: типичные ошибки и решения
+## Ссылки
+
+- [Найти на CurseForge](https://www.curseforge.com/minecraft/search?class=mc-mods&search=Ae2%20Things)
+- [Найти на Modrinth](https://modrinth.com/mods?q=Ae2%20Things)
+
+> Детальное описание на русском добавляется постепенно. Как дополнять — см. `docs/wiki.md`.

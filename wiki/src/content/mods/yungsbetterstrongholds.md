@@ -5,6 +5,9 @@ version: "1.20-Forge"
 category: other
 tags:
   []
+links:
+  curseforge: "https://www.curseforge.com/minecraft/search?class=mc-mods&search=Yungsbetterstrongholds"
+  modrinth: "https://modrinth.com/mods?q=Yungsbetterstrongholds"
 draft: false
 ---
 
@@ -12,13 +15,17 @@ draft: false
 
 ## Обзор
 
-Страница в разработке. Здесь будет описание мода **Yungsbetterstrongholds** в контексте сборки MyModPack.
+**Yungsbetterstrongholds** (`yungsbetterstrongholds`, v1.20-Forge) — Дополнение к сборке.
 
-## Ключевые механики
+Часть кооп-сборки MyModPack (Forge 1.20.1). Кнопки CurseForge и Modrinth выше ведут на поиск мода — там официальное описание, скриншоты и вики.
 
-- TODO: основные блоки и предметы
-- TODO: прогрессия и связь с квестами
+## Роль в сборке
 
-## Советы по сборке
+- Дополняет сборку вспомогательным контентом.
 
-- TODO: типичные ошибки и решения
+## Ссылки
+
+- [Найти на CurseForge](https://www.curseforge.com/minecraft/search?class=mc-mods&search=Yungsbetterstrongholds)
+- [Найти на Modrinth](https://modrinth.com/mods?q=Yungsbetterstrongholds)
+
+> Детальное описание на русском добавляется постепенно. Как дополнять — см. `docs/wiki.md`.

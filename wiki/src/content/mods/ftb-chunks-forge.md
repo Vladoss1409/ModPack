@@ -5,6 +5,9 @@ version: "2001.3.8.jar"
 category: utility
 tags:
   []
+links:
+  curseforge: "https://www.curseforge.com/minecraft/search?class=mc-mods&search=Ftb%20Chunks%20Forge"
+  modrinth: "https://modrinth.com/mods?q=Ftb%20Chunks%20Forge"
 draft: false
 ---
 
@@ -12,13 +15,18 @@ draft: false
 
 ## Обзор
 
-Страница в разработке. Здесь будет описание мода **Ftb Chunks Forge** в контексте сборки MyModPack.
+**Ftb Chunks Forge** (`ftb_chunks_forge`, v2001.3.8.jar) — Утилита: улучшает игровой процесс, интерфейс и управление.
 
-## Ключевые механики
+Часть кооп-сборки MyModPack (Forge 1.20.1). Кнопки CurseForge и Modrinth выше ведут на поиск мода — там официальное описание, скриншоты и вики.
 
-- TODO: основные блоки и предметы
-- TODO: прогрессия и связь с квестами
+## Роль в сборке
 
-## Советы по сборке
+- Улучшает удобство игры: интерфейс, сортировка, информация.
+- Не меняет прогрессию напрямую, но экономит время.
 
-- TODO: типичные ошибки и решения
+## Ссылки
+
+- [Найти на CurseForge](https://www.curseforge.com/minecraft/search?class=mc-mods&search=Ftb%20Chunks%20Forge)
+- [Найти на Modrinth](https://modrinth.com/mods?q=Ftb%20Chunks%20Forge)
+
+> Детальное описание на русском добавляется постепенно. Как дополнять — см. `docs/wiki.md`.
