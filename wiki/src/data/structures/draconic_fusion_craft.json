@@ -2,10 +2,10 @@
   "id": "draconic_fusion_craft",
   "size": [5, 3, 5],
   "palette": {
-    "C": { "name": "Crafting Injector (контроллер)", "color": "#9b59b6", "controller": true },
-    "P": { "name": "Draconium Block", "color": "#8e44ad" },
-    "A": { "name": "Awakened Draconium Block", "color": "#e67e22" },
-    "I": { "name": "Energy I/O", "color": "#3498db" },
+    "C": { "name": "Crafting Injector (контроллер)", "color": "#9b59b6", "texture": "draconicevolution/crafting_injector", "controller": true },
+    "P": { "name": "Draconium Block", "color": "#8e44ad", "texture": "draconicevolution/draconium_block" },
+    "A": { "name": "Awakened Draconium Block", "color": "#e67e22", "texture": "draconicevolution/awakened_draconium_block" },
+    "I": { "name": "Energy Transfuser", "color": "#3498db", "texture": "draconicevolution/energy_io" },
     ".": { "name": "пусто", "empty": true }
   },
   "layers": [
@@ -19,7 +19,7 @@
     "Верхний слой — Draconium, нижний — Awakened Draconium по углам"
   ],
   "notes": [
-    { "pos": [2, 2, 2], "text": "Crafting Injector — сюда кладутся компоненты для крафта. Требует огромную энергию." },
-    { "pos": [2, 1, 1], "text": "Energy I/O — вход/выход энергии. Подключите к энергосети." }
+    { "pos": [2, 2, 2], "text": "Crafting Injector — сюда кладутся компоненты. Требует огромную энергию." },
+    { "pos": [2, 1, 1], "text": "Energy Transfuser — вход/выход энергии." }
   ]
 }

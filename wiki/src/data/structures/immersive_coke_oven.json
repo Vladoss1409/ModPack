@@ -2,8 +2,8 @@
   "id": "immersive_coke_oven",
   "size": [3, 3, 3],
   "palette": {
-    "B": { "name": "Coke Brick", "color": "#5d4037" },
-    "D": { "name": "Coke Oven Door", "color": "#795548", "controller": true },
+    "B": { "name": "Coke Brick", "color": "#5d4037", "texture": "immersiveengineering/cokebrick" },
+    "D": { "name": "Coke Oven Door (контроллер)", "color": "#795548", "texture": "immersiveengineering/coke_oven", "controller": true },
     ".": { "name": "пусто", "empty": true }
   },
   "layers": [

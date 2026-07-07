@@ -1,0 +1,27 @@
+{
+  "id": "next_ae_massive_crafter",
+  "size": [5, 3, 5],
+  "palette": {
+    "F": { "name": "Каркас", "color": "#37474f", "texture": "next_ae/massive_crafter_frame" },
+    "W": { "name": "Стена", "color": "#546e7a", "texture": "next_ae/massive_crafter_wall" },
+    "G": { "name": "Стекло", "color": "#80deea", "texture": "next_ae/massive_crafter_glass" },
+    "C": { "name": "Ядро (контроллер)", "color": "#00bcd4", "texture": "next_ae/massive_crafter_core", "controller": true },
+    "P": { "name": "Поставщик шаблонов", "color": "#4dd0e1", "texture": "next_ae/massive_crafter_pattern" },
+    "A": { "name": "Ускоритель", "color": "#26c6da", "texture": "next_ae/massive_crafter_speed" },
+    ".": { "name": "пусто", "empty": true }
+  },
+  "layers": [
+    ["FFFFF", "FWWWF", "FWGWF", "FWWWF", "FFFFF"],
+    ["FWWWF", "W...W", "W.P.W", "W...W", "FWWWF"],
+    ["FFFFF", "FWAWF", "FWCWF", "FWAWF", "FFFFF"]
+  ],
+  "placement": [
+    "Замкнутая коробка: каркас, стены, стекло",
+    "Ядро + Pattern Provider + Accelerator внутри",
+    "Подключите к ME-сети и подайте энергию"
+  ],
+  "notes": [
+    { "pos": [2, 2, 2], "text": "Ядро Massive Crafter — управление массовым автокрафтом." },
+    { "pos": [2, 1, 2], "text": "Pattern Provider — приём шаблонов крафта." }
+  ]
+}

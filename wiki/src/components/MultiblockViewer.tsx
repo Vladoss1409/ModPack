@@ -1,10 +1,12 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import * as THREE from 'three';
 import type { MultiblockStructure } from '../lib/structures';
+import { textureUrl } from '../lib/structures';
 
 interface Props {
   structure: MultiblockStructure;
   placement?: string[];
+  baseUrl?: string;
 }
 
 interface Voxel {
@@ -14,6 +16,22 @@ interface Voxel {
   key: string;
   entry: MultiblockStructure['palette'][string];
   note?: string;
+}
+
+const textureCache = new Map<string, THREE.Texture>();
+const loader = new THREE.TextureLoader();
+
+function getTexture(base: string, rel?: string): THREE.Texture | null {
+  const url = textureUrl(base, rel);
+  if (!url) return null;
+  const cached = textureCache.get(url);
+  if (cached) return cached;
+  const tex = loader.load(url);
+  tex.magFilter = THREE.NearestFilter;
+  tex.minFilter = THREE.NearestFilter;
+  tex.colorSpace = THREE.SRGBColorSpace;
+  textureCache.set(url, tex);
+  return tex;
 }
 
 function parseVoxels(structure: MultiblockStructure): Voxel[] {
@@ -36,7 +54,8 @@ function parseVoxels(structure: MultiblockStructure): Voxel[] {
   return voxels;
 }
 
-export default function MultiblockViewer({ structure, placement = [] }: Props) {
+export default function MultiblockViewer({ structure, placement = [], baseUrl }: Props) {
+  const base = baseUrl ?? (typeof document !== 'undefined' ? document.querySelector('base')?.href ?? '/' : '/');
   const mountRef = useRef<HTMLDivElement>(null);
   const rendererRef = useRef<THREE.WebGLRenderer | null>(null);
   const sceneRef = useRef<THREE.Scene | null>(null);
@@ -61,33 +80,41 @@ export default function MultiblockViewer({ structure, placement = [] }: Props) {
         group.remove(child);
         if (child instanceof THREE.Mesh) {
           child.geometry.dispose();
+          const mats = Array.isArray(child.material) ? child.material : [child.material];
+          mats.forEach((m) => m.dispose());
+        }
+        if (child instanceof THREE.LineSegments) {
+          child.geometry.dispose();
           (child.material as THREE.Material).dispose();
         }
       }
       map.clear();
 
       const geo = new THREE.BoxGeometry(0.92, 0.92, 0.92);
+      const cx = structure.size[0] / 2 - 0.5;
+      const cz = structure.size[2] / 2 - 0.5;
+
       voxels.forEach((v) => {
         if (v.y > activeLayer) return;
         const color = new THREE.Color(v.entry.color);
+        const tex = getTexture(base, v.entry.texture);
         const mat = new THREE.MeshStandardMaterial({
-          color,
-          emissive: v.entry.controller ? color.clone().multiplyScalar(0.35) : new THREE.Color(0x000000),
-          metalness: 0.15,
-          roughness: 0.65,
+          color: tex ? 0xffffff : color,
+          map: tex ?? undefined,
+          emissive: v.entry.controller ? new THREE.Color(0xfff176).multiplyScalar(0.15) : new THREE.Color(0x000000),
+          metalness: tex ? 0.05 : 0.15,
+          roughness: tex ? 0.9 : 0.65,
           transparent: v.y < activeLayer,
           opacity: v.y < activeLayer ? 0.35 : 1,
         });
         const mesh = new THREE.Mesh(geo.clone(), mat);
-        const cx = structure.size[0] / 2 - 0.5;
-        const cz = structure.size[2] / 2 - 0.5;
         mesh.position.set(v.x - cx, v.y, v.z - cz);
         mesh.userData = { voxel: v };
         if (v.entry.controller) {
           const edges = new THREE.EdgesGeometry(geo.clone());
           const line = new THREE.LineSegments(
             edges,
-            new THREE.LineBasicMaterial({ color: 0xfff176, linewidth: 2 }),
+            new THREE.LineBasicMaterial({ color: 0xfff176 }),
           );
           line.position.copy(mesh.position);
           group.add(line);
@@ -96,7 +123,7 @@ export default function MultiblockViewer({ structure, placement = [] }: Props) {
         map.set(v.key, mesh);
       });
     },
-    [structure.size, voxels],
+    [base, structure.size, voxels],
   );
 
   useEffect(() => {
@@ -117,10 +144,10 @@ export default function MultiblockViewer({ structure, placement = [] }: Props) {
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     mount.appendChild(renderer.domElement);
 
-    const ambient = new THREE.AmbientLight(0xffffff, 0.55);
-    const dir = new THREE.DirectionalLight(0xffffff, 0.85);
+    scene.add(new THREE.AmbientLight(0xffffff, 0.65));
+    const dir = new THREE.DirectionalLight(0xffffff, 0.9);
     dir.position.set(5, 10, 7);
-    scene.add(ambient, dir);
+    scene.add(dir);
 
     const grid = new THREE.GridHelper(Math.max(structure.size[0], structure.size[2]) + 2, 12, 0x2d3a4f, 0x1a2332);
     scene.add(grid);
@@ -183,14 +210,6 @@ export default function MultiblockViewer({ structure, placement = [] }: Props) {
     return null;
   };
 
-  const handlePointerMove = (e: React.PointerEvent) => {
-    setHovered(pickVoxel(e.clientX, e.clientY));
-  };
-
-  const handleClick = (e: React.PointerEvent) => {
-    setSelected(pickVoxel(e.clientX, e.clientY));
-  };
-
   const active = selected ?? hovered;
 
   return (
@@ -199,8 +218,8 @@ export default function MultiblockViewer({ structure, placement = [] }: Props) {
         ref={mountRef}
         className="w-full cursor-grab active:cursor-grabbing"
         style={{ height: 360 }}
-        onPointerMove={handlePointerMove}
-        onClick={handleClick}
+        onPointerMove={(e) => setHovered(pickVoxel(e.clientX, e.clientY))}
+        onClick={(e) => setSelected(pickVoxel(e.clientX, e.clientY))}
         role="presentation"
       />
       <div className="border-t border-wiki-border p-4 space-y-4">
@@ -218,7 +237,7 @@ export default function MultiblockViewer({ structure, placement = [] }: Props) {
             className="w-full accent-wiki-accent"
           />
           <p className="mt-1 text-xs text-slate-500">
-            Нижние слои полупрозрачны. Контроллер подсвечен жёлтым контуром.
+            Текстуры блоков из модов. Нижние слои полупрозрачны. Контроллер — жёлтый контур.
           </p>
         </div>
 

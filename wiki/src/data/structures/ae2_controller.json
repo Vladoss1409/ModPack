@@ -2,24 +2,24 @@
   "id": "ae2_controller",
   "size": [3, 3, 3],
   "palette": {
-    "C": { "name": "ME Controller (контроллер)", "color": "#00bcd4", "controller": true },
-    "D": { "name": "ME Drive", "color": "#0097a7" },
-    "A": { "name": "ME Cable", "color": "#4dd0e1" },
-    "T": { "name": "ME Terminal", "color": "#26c6da" },
+    "C": { "name": "ME Controller (контроллер)", "color": "#00bcd4", "texture": "appliedenergistics2/controller", "controller": true },
+    "D": { "name": "ME Drive", "color": "#0097a7", "texture": "appliedenergistics2/drive" },
+    "G": { "name": "ME Cable / Quartz Glass", "color": "#4dd0e1", "texture": "appliedenergistics2/quartz_glass" },
+    "T": { "name": "ME Terminal", "color": "#26c6da", "texture": "appliedenergistics2/chest" },
     ".": { "name": "пусто", "empty": true }
   },
   "layers": [
-    [".A.", "A.A", ".A."],
-    ["ADA", "DCD", "ADA"],
-    [".T.", "A.A", ".A."]
+    [".G.", "G.G", ".G."],
+    ["GDG", "DCD", "GDG"],
+    [".T.", "G.G", ".G."]
   ],
   "placement": [
     "Контроллер — не более 7 блоков в одной сети (без P2P)",
-    "Кабели соединяют все устройства",
-    "Drive и Terminal должны быть в пределах 8 блоков от контроллера"
+    "Устройства — в пределах 8 блоков от контроллера",
+    "Кабели соединяют все компоненты"
   ],
   "notes": [
-    { "pos": [1, 1, 1], "text": "ME Controller — сердце сети. Без него сеть не заработает." },
-    { "pos": [1, 0, 1], "text": "ME Terminal — точка доступа к хранилищу." }
+    { "pos": [1, 1, 1], "text": "ME Controller — сердце сети." },
+    { "pos": [1, 0, 1], "text": "ME Terminal — доступ к хранилищу." }
   ]
 }

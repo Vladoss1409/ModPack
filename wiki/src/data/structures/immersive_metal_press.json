@@ -1,0 +1,21 @@
+{
+  "id": "immersive_metal_press",
+  "size": [3, 3, 1],
+  "palette": {
+    "L": { "name": "Light Engineering", "color": "#9e9e9e", "texture": "immersiveengineering/light_engineering" },
+    "S": { "name": "Sheetmetal Steel", "color": "#607d8b", "texture": "immersiveengineering/sheetmetal_steel" },
+    "M": { "name": "Metal Press (контроллер)", "color": "#455a64", "texture": "immersiveengineering/metal_press", "controller": true },
+    ".": { "name": "пусто", "empty": true }
+  },
+  "layers": [
+    ["LSL", "SMS", "LSL"]
+  ],
+  "placement": [
+    "Мультиблок 3×3 в один слой",
+    "Light Engineering по углам, Sheetmetal по сторонам",
+    "Metal Press — центральный контроллер"
+  ],
+  "notes": [
+    { "pos": [1, 0, 1], "text": "Metal Press — вставьте Mold (форма) и подайте энергию IF/RF." }
+  ]
+}

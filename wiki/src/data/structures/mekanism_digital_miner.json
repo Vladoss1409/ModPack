@@ -2,9 +2,9 @@
   "id": "mekanism_digital_miner",
   "size": [3, 4, 3],
   "palette": {
-    "C": { "name": "Digital Miner (контроллер)", "color": "#1abc9c", "controller": true },
-    "F": { "name": "Frame", "color": "#7f8c8d" },
-    "V": { "name": "Valve", "color": "#2980b9" },
+    "C": { "name": "Digital Miner (контроллер)", "color": "#1abc9c", "texture": "mekanism/digital_miner", "controller": true },
+    "F": { "name": "Steel Casing", "color": "#7f8c8d", "texture": "mekanism/steel_casing" },
+    "V": { "name": "Structural Glass (порт)", "color": "#2980b9", "texture": "mekanism/structural_glass" },
     ".": { "name": "пусто", "empty": true }
   },
   "layers": [
@@ -16,10 +16,10 @@
   "placement": [
     "Контроллер снизу по центру",
     "Valve — для подачи энергии и вывода руды",
-    "Рабочая зона — столб воздуха над рамой (автоматически)"
+    "Рабочая зона — столб воздуха над рамой"
   ],
   "notes": [
     { "pos": [1, 3, 1], "text": "Digital Miner — контроллер. Настройте радиус и фильтры в GUI." },
-    { "pos": [1, 1, 0], "text": "Valve — подключите Universal Cable и Logistical Transporter." }
+    { "pos": [1, 1, 0], "text": "Порты — подключите Universal Cable и Logistical Transporter." }
   ]
 }

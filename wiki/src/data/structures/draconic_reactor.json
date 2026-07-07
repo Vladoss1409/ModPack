@@ -1,0 +1,24 @@
+{
+  "id": "draconic_reactor",
+  "size": [5, 3, 5],
+  "palette": {
+    "C": { "name": "Reactor Core (контроллер)", "color": "#e74c3c", "texture": "draconicevolution/reactor_core", "controller": true },
+    "S": { "name": "Stabilizer", "color": "#3498db", "texture": "draconicevolution/reactor_stabilizer" },
+    "D": { "name": "Draconium Block", "color": "#8e44ad", "texture": "draconicevolution/draconium_block" },
+    ".": { "name": "пусто", "empty": true }
+  },
+  "layers": [
+    [".....", ".DDD.", ".D.D.", ".DDD.", "....."],
+    [".....", ".S.S.", "..C..", ".S.S.", "....."],
+    [".....", ".DDD.", ".D.D.", ".DDD.", "....."]
+  ],
+  "placement": [
+    "Упрощённая схема: ядро + стабилизаторы по сторонам",
+    "Ошибка баланса энергии = взрыв с огромным радиусом",
+    "Сначала постройте Energy Core для буфера RF"
+  ],
+  "notes": [
+    { "pos": [2, 1, 2], "text": "Reactor Core — настройка в GUI. Следите за полем сдерживания." },
+    { "pos": [1, 1, 2], "text": "Stabilizer — обязателен для стабильной работы." }
+  ]
+}
