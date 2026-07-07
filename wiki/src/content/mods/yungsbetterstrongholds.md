@@ -1,30 +1,41 @@
 ---
-name: "Yungsbetterstrongholds"
-modId: "yungsbetterstrongholds"
+name: "YUNG's Better Strongholds"
+modId: "betterstrongholds"
 version: "1.20-Forge"
-category: other
+category: worldgen
 tags:
-  []
+  - structures
+  - stronghold
+  - loot
 links:
-  curseforge: "https://www.curseforge.com/minecraft/search?class=mc-mods&search=Yungsbetterstrongholds"
-  modrinth: "https://modrinth.com/mods?q=Yungsbetterstrongholds"
+  curseforge: "https://www.curseforge.com/minecraft/mc-mods/yungs-better-strongholds"
+  modrinth: "https://modrinth.com/mod/yungs-better-strongholds"
 draft: false
 ---
 
-<!-- scaffold -->
-
 ## Обзор
 
-**Yungsbetterstrongholds** (`yungsbetterstrongholds`, v1.20-Forge) — Дополнение к сборке.
+**YUNG's Better Strongholds** — переработка **крепостей** (strongholds), где находится портал в Энд. Вместо однообразных коридоров — большие, разнообразные комплексы с библиотеками, тюрьмами, тайниками и лутом.
 
-Часть кооп-сборки MyModPack (Forge 1.20.1). Кнопки CurseForge и Modrinth выше ведут на поиск мода — там официальное описание, скриншоты и вики.
+## Что добавляет
+
+- Значительно расширенные крепости: новые типы комнат и коридоров.
+- Секретные проходы, ловушки, дополнительные сундуки с лутом.
+- Атмосферные детали и декор.
+- Портал в Энд по-прежнему внутри — но добраться до него интереснее.
+
+## Как использовать
+
+- Генерируются автоматически в **новом мире**.
+- Ищите крепость (Око Эндера или [Explorer's Compass](../explorerscompass/)).
+- Исследуйте ради лута перед походом в Энд.
 
 ## Роль в сборке
 
-- Дополняет сборку вспомогательным контентом.
+Обновляет важный этап ванильной прогрессии (путь к Дракону): крепости становятся полноценным приключением, а не лабиринтом.
 
 ## Где узнать больше
 
-- Рецепты и предметы — в **JEI/EMI** в игре.
-- Официальное описание и скриншоты — по ссылкам CurseForge/Modrinth выше.
-- Мультиблоки сборки — в разделе [Механизмы](../../machines/).
+- Поиск структур — [Explorer's Compass](../explorerscompass/).
+- Остальная YUNG's-серия — [Better Dungeons](../yungsbetterdungeons/), [Better Mineshafts](../yungsbettermineshafts/).
+- Зависимость: [YUNG's API](../yungsapi/).

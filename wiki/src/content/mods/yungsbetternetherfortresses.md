@@ -1,30 +1,44 @@
 ---
-name: "Yungsbetternetherfortresses"
-modId: "yungsbetternetherfortresses"
+name: "YUNG's Better Nether Fortresses"
+modId: "betterfortresses"
 version: "1.20-Forge"
-category: other
+category: worldgen
 tags:
-  []
+  - structures
+  - nether
+  - loot
 links:
-  curseforge: "https://www.curseforge.com/minecraft/search?class=mc-mods&search=Yungsbetternetherfortresses"
-  modrinth: "https://modrinth.com/mods?q=Yungsbetternetherfortresses"
+  curseforge: "https://www.curseforge.com/minecraft/mc-mods/yungs-better-nether-fortresses"
+  modrinth: "https://modrinth.com/mod/yungs-better-nether-fortresses"
 draft: false
 ---
 
-<!-- scaffold -->
-
 ## Обзор
 
-**Yungsbetternetherfortresses** (`yungsbetternetherfortresses`, v1.20-Forge) — Дополнение к сборке.
+**YUNG's Better Nether Fortresses** — переработка **адских крепостей**: вместо простых мостов-коридоров — огромные, опасные комплексы с новыми залами, ловушками, мини-боссами и богатым лутом.
 
-Часть кооп-сборки MyModPack (Forge 1.20.1). Кнопки CurseForge и Modrinth выше ведут на поиск мода — там официальное описание, скриншоты и вики.
+## Что добавляет
+
+- Масштабные крепости с разнообразной архитектурой.
+- Новые комнаты, секции и секретные зоны.
+- Усиленные опасности (больше блейзов/визер-скелетов, ловушки) — как награда, так и риск.
+- Улучшенный лут, полезный для средней/поздней прогрессии.
+
+## Как использовать
+
+- Генерируются автоматически в **новом мире** в Незере.
+- Ищите крепость (визер-скелеты для голов, блейзы для стержней).
+- Берите припасы: крепости стали опаснее ванильных.
+
+## Совместимость
+
+- Хорошо сочетается с [Incendium](../incendium-1-20-x-v5-3-5/) и [Amplified Nether](../amplified-nether-26-1-v1-2-14/) — полноценно преображённый Незер.
 
 ## Роль в сборке
 
-- Дополняет сборку вспомогательным контентом.
+Делает ключевой источник блейз-стержней и визер-голов настоящим приключением, а не рутиной.
 
 ## Где узнать больше
 
-- Рецепты и предметы — в **JEI/EMI** в игре.
-- Официальное описание и скриншоты — по ссылкам CurseForge/Modrinth выше.
-- Мультиблоки сборки — в разделе [Механизмы](../../machines/).
+- Биомы/вертикальность Незера — [Incendium](../incendium-1-20-x-v5-3-5/), [Amplified Nether](../amplified-nether-26-1-v1-2-14/).
+- Зависимость: [YUNG's API](../yungsapi/).

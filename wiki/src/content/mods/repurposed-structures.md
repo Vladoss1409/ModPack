@@ -1,31 +1,42 @@
 ---
 name: "Repurposed Structures"
 modId: "repurposed_structures"
-version: "7.1.24+1.20.1"
+version: "7.1.24"
 category: worldgen
 tags:
-  []
+  - structures
+  - variants
 links:
-  curseforge: "https://www.curseforge.com/minecraft/search?class=mc-mods&search=Repurposed%20Structures"
-  modrinth: "https://modrinth.com/mods?q=Repurposed%20Structures"
+  curseforge: "https://www.curseforge.com/minecraft/mc-mods/repurposed-structures-forge"
+  modrinth: "https://modrinth.com/mod/repurposed-structures"
 draft: false
 ---
 
-<!-- scaffold -->
-
 ## Обзор
 
-**Repurposed Structures** (`repurposed_structures`, v7.1.24+1.20.1) — Генерация мира: биомы, измерения и структуры.
+**Repurposed Structures** — добавляет **варианты ванильных структур** в новых местах и биомах: деревни в необычных биомах, крепости и данжи в новых измерениях, шахты, храмы и т.д. Расширяет исследование без принципиально новых механик.
 
-Часть кооп-сборки MyModPack (Forge 1.20.1). Кнопки CurseForge и Modrinth выше ведут на поиск мода — там официальное описание, скриншоты и вики.
+## Что добавляет (примеры)
+
+| Тип | Варианты |
+|-----|----------|
+| **Villages** | Деревни в пустыне-мезе, джунглях, снегу, Незере, Энде и др. |
+| **Dungeons** | Данжи в новых биомах и измерениях |
+| **Mineshafts** | Шахты в Энде, Незере, специальных биомах |
+| **Temples / Outposts** | Варианты храмов и аванпостов |
+| **Strongholds / Fortresses** | Дополнительные варианты крепостей |
+
+## Как использовать
+
+- Работает автоматически при генерации **нового мира**.
+- Просто исследуйте — вы будете чаще натыкаться на знакомые структуры в неожиданных местах.
+- Всё **настраивается датапаком/конфигом** (можно включать/выключать типы).
 
 ## Роль в сборке
 
-- Меняет генерацию мира: биомы, измерения, структуры.
-- Влияет на исследование и добычу ресурсов.
+Больше поводов исследовать: привычные структуры появляются шире и разнообразнее, что даёт лут и точки интереса по всему миру.
 
 ## Где узнать больше
 
-- Рецепты и предметы — в **JEI/EMI** в игре.
-- Официальное описание и скриншоты — по ссылкам CurseForge/Modrinth выше.
-- Мультиблоки сборки — в разделе [Механизмы](../../machines/).
+- Поиск структур — [Explorer's Compass](../explorerscompass/).
+- Прочие структурные моды — [When Dungeons Arise](../dungeonsarise/), YUNG's Better-серия.
