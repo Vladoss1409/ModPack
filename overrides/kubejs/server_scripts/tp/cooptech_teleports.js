@@ -14,6 +14,7 @@
 ;(function () {
 var Component = Java.loadClass('net.minecraft.network.chat.Component')
 var Style = Java.loadClass('net.minecraft.network.chat.Style')
+var TextColor = Java.loadClass('net.minecraft.network.chat.TextColor')
 var ClickEvent = Java.loadClass('net.minecraft.network.chat.ClickEvent')
 var HoverEvent = Java.loadClass('net.minecraft.network.chat.HoverEvent')
 var ClickAction = Java.loadClass('net.minecraft.network.chat.ClickEvent$Action')
@@ -242,7 +243,7 @@ function deleteWarp(ctx, name) {
 function warpClickable(name, ownerName) {
   return Component.literal('§b' + name).withStyle(
     Style.EMPTY
-      .withColor(0x55FFFF)
+      .withColor(TextColor.fromRgb(0x55FFFF))
       .withClickEvent(new ClickEvent(ClickAction.RUN_COMMAND, '/warp ' + name))
       .withHoverEvent(new HoverEvent(HoverAction.SHOW_TEXT, Component.literal('§7Телепорт на §f' + name + '\n§7Владелец: §f' + ownerName)))
   )
