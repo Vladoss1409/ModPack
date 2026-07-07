@@ -1,32 +1,27 @@
 ---
-name: "Data Anchor Forge"
-modId: "data_anchor_forge"
-version: "1.20.1-1.0.0.20.jar"
-category: tech
+name: "Data Anchor"
+modId: "data_anchor"
+version: "1.0.0.20"
+category: library
 tags:
-  []
+  - library
 links:
-  curseforge: "https://www.curseforge.com/minecraft/search?class=mc-mods&search=Data%20Anchor%20Forge"
-  modrinth: "https://modrinth.com/mods?q=Data%20Anchor%20Forge"
+  curseforge: "https://www.curseforge.com/minecraft/mc-mods/data-anchor"
+  modrinth: "https://modrinth.com/mod/data-anchor"
 draft: false
 ---
 
-<!-- scaffold -->
-
 ## Обзор
 
-**Data Anchor Forge** (`data_anchor_forge`, v1.20.1-1.0.0.20.jar) — Технический мод: машины, автоматизация и энергетика.
+**Data Anchor** — библиотека для разработчиков: даёт удобные утилиты для «привязки» данных к сущностям, чанкам, игрокам и мирам, а также кроссплатформенную работу с сетевыми пакетами (Forge/Fabric/NeoForge).
 
-Часть кооп-сборки MyModPack (Forge 1.20.1). Кнопки CurseForge и Modrinth выше ведут на поиск мода — там официальное описание, скриншоты и вики.
+Игрового контента не добавляет — устанавливается как зависимость других модов.
 
 ## Роль в сборке
 
-- Добавляет блоки и машины для автоматизации и переработки.
-- Обычно работает на энергии (RF/FE) — подключается к общей энергосети.
-- Связан с технической прогрессией сборки (тиры T1–T5).
+- Обязательная зависимость (например, для модов от Corgi_Taco).
+- Отдельного взаимодействия не требует.
 
 ## Где узнать больше
 
-- Рецепты и предметы — в **JEI/EMI** в игре.
-- Официальное описание и скриншоты — по ссылкам CurseForge/Modrinth выше.
-- Мультиблоки сборки — в разделе [Механизмы](../../machines/).
+- Техническая документация — на CurseForge/GitHub мода.

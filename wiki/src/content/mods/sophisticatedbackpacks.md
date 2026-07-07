@@ -1,32 +1,62 @@
 ---
-name: "Sophisticatedbackpacks"
+name: "Sophisticated Backpacks"
 modId: "sophisticatedbackpacks"
-version: "1.20.1-3.24.58.1934.jar"
+version: "3.24.58"
 category: tech
 tags:
-  []
+  - storage
+  - backpack
+  - qol
 links:
-  curseforge: "https://www.curseforge.com/minecraft/search?class=mc-mods&search=Sophisticatedbackpacks"
-  modrinth: "https://modrinth.com/mods?q=Sophisticatedbackpacks"
+  curseforge: "https://www.curseforge.com/minecraft/mc-mods/sophisticated-backpacks"
+  modrinth: "https://modrinth.com/mod/sophisticated-backpacks"
 draft: false
 ---
 
-<!-- scaffold -->
-
 ## Обзор
 
-**Sophisticatedbackpacks** (`sophisticatedbackpacks`, v1.20.1-3.24.58.1934.jar) — Технический мод: машины, автоматизация и энергетика.
+**Sophisticated Backpacks** — продвинутые рюкзаки с прокачкой и слотами под **улучшения (upgrades)**, которые превращают рюкзак в почти автоматический «карманный склад». Работает на базе [Sophisticated Core](../sophisticatedcore/).
 
-Часть кооп-сборки MyModPack (Forge 1.20.1). Кнопки CurseForge и Modrinth выше ведут на поиск мода — там официальное описание, скриншоты и вики.
+## Тиры рюкзаков
+
+| Тир | Ёмкость (примерно) |
+|-----|--------------------|
+| Backpack (кожа) | базовый |
+| Iron | больше слотов + слоты апгрейдов |
+| Gold | ещё больше |
+| Diamond | много |
+| Netherite | максимум, огнестойкий |
+
+Прокачка последовательная: кожаный → железный → … → незеритовый (через крафт).
+
+## Улучшения (Upgrades)
+
+Ставятся в слоты рюкзака и работают, пока рюкзак в инвентаре:
+
+| Улучшение | Что делает |
+|-----------|-----------|
+| **Magnet** | Притягивает предметы/опыт |
+| **Pickup / Advanced Pickup** | Автоподбор с фильтром |
+| **Filter** | Фильтрация содержимого |
+| **Compacting** | Автосжатие в блоки |
+| **Feeding** | Автокормёжка едой из рюкзака |
+| **Stack Upgrade** | Увеличивает размер стаков внутри |
+| **Crafting** | Крафт-сетка прямо в рюкзаке |
+| **Smelting / Auto-Smelting** | Плавка предметов внутри |
+| **Deposit / Refill** | Автосдача в сундуки / пополнение хотбара |
+| **Tank / Battery** | Хранение жидкости / энергии |
+
+## Как использовать
+
+1. Скрафтите рюкзак, ПКМ — открыть; **Shift+ПКМ** держа в руке — надеть на спину.
+2. Вставьте улучшения в верхние слоты и настройте (кнопка-шестерёнка у каждого).
+3. Покрасьте рюкзак красителями, повесьте табличку/значок для различения.
 
 ## Роль в сборке
 
-- Добавляет блоки и машины для автоматизации и переработки.
-- Обычно работает на энергии (RF/FE) — подключается к общей энергосети.
-- Связан с технической прогрессией сборки (тиры T1–T5).
+Мобильное хранение + автоматизация «на ходу»: магнит, автоподбор и стак-апгрейды сильно упрощают добычу и исследование до/вместе с ME-сетью.
 
 ## Где узнать больше
 
-- Рецепты и предметы — в **JEI/EMI** в игре.
-- Официальное описание и скриншоты — по ссылкам CurseForge/Modrinth выше.
-- Мультиблоки сборки — в разделе [Механизмы](../../machines/).
+- Общая механика ядра — [Sophisticated Core](../sophisticatedcore/).
+- Стационарный вариант — [Sophisticated Storage](../sophisticatedstorage/).
