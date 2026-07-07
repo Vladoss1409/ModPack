@@ -5,14 +5,8 @@ import { getCollection } from 'astro:content';
 
 const base = import.meta.env.BASE_URL;
 const allMachines = (await getCollection('machines')).filter((m) => !m.data.draft);
-const categoryParam = Astro.url.searchParams.get('category');
 const categories = [...new Set(allMachines.map((m) => m.data.category))].sort();
-
-const machines = categoryParam
-  ? allMachines.filter((m) => m.data.category === categoryParam)
-  : allMachines;
-
-machines.sort((a, b) => a.data.name.localeCompare(b.data.name, 'ru'));
+const machines = [...allMachines].sort((a, b) => a.data.name.localeCompare(b.data.name, 'ru'));
 ---
 
 <BaseLayout title="Механизмы" description="Мультиблоки и механизмы сборки">
@@ -26,24 +20,61 @@ machines.sort((a, b) => a.data.name.localeCompare(b.data.name, 'ru'));
     </p>
   </section>
 
-  <CategoryFilter categories={categories} active={categoryParam ?? 'all'} basePath="machines/" />
+  <CategoryFilter categories={categories} />
 
-  <div class="grid gap-4 sm:grid-cols-2">
+  <div id="mod-grid" class="grid gap-4 sm:grid-cols-2">
     {
       machines.map((machine) => (
-        <a href={`${base}machines/${machine.slug}/`} class="wiki-card block no-underline">
-          <div class="mb-2 flex items-start justify-between gap-2">
-            <h3 class="font-semibold text-white">{machine.data.name}</h3>
-            <span class="wiki-badge capitalize">{machine.data.category}</span>
-          </div>
-          <p class="font-mono text-xs text-slate-500">{machine.data.modId}</p>
-          {
-            machine.data.placement.length > 0 && (
+        <div class="filter-item" data-category={machine.data.category}>
+          <a href={`${base}machines/${machine.slug}/`} class="wiki-card block h-full no-underline">
+            <div class="mb-2 flex items-start justify-between gap-2">
+              <h3 class="font-semibold text-white">{machine.data.name}</h3>
+              <span class="wiki-badge capitalize">{machine.data.category}</span>
+            </div>
+            <p class="font-mono text-xs text-slate-500">{machine.data.modId}</p>
+            {machine.data.placement.length > 0 && (
               <p class="mt-2 text-sm text-slate-400 line-clamp-2">{machine.data.placement[0]}</p>
-            )
-          }
-        </a>
+            )}
+          </a>
+        </div>
       ))
     }
   </div>
+
+  <p id="empty-msg" class="mt-6 hidden text-slate-500">Нет механизмов в этой категории.</p>
 </BaseLayout>
+
+<script is:inline>
+  (function () {
+    const filter = document.getElementById('cat-filter');
+    const grid = document.getElementById('mod-grid');
+    const empty = document.getElementById('empty-msg');
+    if (!filter || !grid) return;
+
+    const items = Array.from(grid.querySelectorAll('.filter-item'));
+    const btns = Array.from(filter.querySelectorAll('.cat-btn'));
+
+    function apply(cat) {
+      let visible = 0;
+      items.forEach((el) => {
+        const show = cat === 'all' || el.dataset.category === cat;
+        el.style.display = show ? '' : 'none';
+        if (show) visible++;
+      });
+      btns.forEach((b) => b.classList.toggle('is-active', b.dataset.cat === cat));
+      if (empty) empty.classList.toggle('hidden', visible !== 0);
+    }
+
+    filter.addEventListener('click', (e) => {
+      const btn = e.target.closest('.cat-btn');
+      if (!btn) return;
+      const cat = btn.dataset.cat;
+      apply(cat);
+      const url = cat === 'all' ? location.pathname : location.pathname + '?category=' + cat;
+      history.replaceState(null, '', url);
+    });
+
+    const params = new URLSearchParams(location.search);
+    apply(params.get('category') || 'all');
+  })();
+</script>

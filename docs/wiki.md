@@ -12,7 +12,7 @@ npm install
 npm run dev
 ```
 
-Сборка + индекс поиска Pagefind:
+Сборка (генерирует статический сайт и `search-index.json`):
 
 ```bash
 npm run build
@@ -50,4 +50,4 @@ Push в `main` с изменениями в `wiki/` — workflow `.github/workfl
 
 ## Поиск
 
-Pagefind индексирует весь контент. Deep-link: `?q=mekanism` (также работает `/wiki mekanism` в игре).
+Собственный поиск по `search-index.json` (совпадение по словам, не по буквам). Deep-link: `?q=mekanism` (также работает `/wiki mekanism` в игре).

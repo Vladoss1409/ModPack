@@ -38,7 +38,7 @@ jobs:
         working-directory: wiki
         run: npm ci
 
-      - name: Build wiki + Pagefind index
+      - name: Build wiki
         working-directory: wiki
         env:
           GITHUB_REPOSITORY: ${{ github.repository }}
