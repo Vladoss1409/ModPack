@@ -5,7 +5,6 @@
 var WIKI_URL = 'https://vladoss1409.github.io/ModPack/'
 
 var Style = Java.loadClass('net.minecraft.network.chat.Style')
-var TextColor = Java.loadClass('net.minecraft.network.chat.TextColor')
 var ClickEvent = Java.loadClass('net.minecraft.network.chat.ClickEvent')
 var HoverEvent = Java.loadClass('net.minecraft.network.chat.HoverEvent')
 var ClickAction = Java.loadClass('net.minecraft.network.chat.ClickEvent$Action')
@@ -17,10 +16,8 @@ function wikiUrl(query) {
 }
 
 function wikiClickable(url, label) {
-  return Component.literal(label).withStyle(
+  return Component.literal('§b§n' + label).withStyle(
     Style.EMPTY
-      .withColor(TextColor.fromRgb(0x55FFFF))
-      .withUnderlined(true)
       .withClickEvent(new ClickEvent(ClickAction.OPEN_URL, url))
       .withHoverEvent(
         new HoverEvent(HoverAction.SHOW_TEXT, Component.literal('§7Открыть в браузере'))
