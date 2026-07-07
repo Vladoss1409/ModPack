@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import CategoryFilter from '../components/CategoryFilter.astro';
 import ModCard from '../components/ModCard.astro';
 import { getCollection } from 'astro:content';
+import { logoUrl } from '../lib/logos';
 
 const base = import.meta.env.BASE_URL;
 const allMods = (await getCollection('mods')).filter((m) => !m.data.draft);
@@ -29,6 +30,8 @@ const mods = [...allMods].sort((a, b) => a.data.name.localeCompare(b.data.name, 
             modId={mod.data.modId}
             category={mod.data.category}
             href={`${base}mods/${mod.slug}/`}
+            slug={mod.slug}
+            logoSrc={logoUrl(base, mod.slug)}
             tags={mod.data.tags}
           />
         </div>

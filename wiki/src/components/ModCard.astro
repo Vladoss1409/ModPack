@@ -1,19 +1,28 @@
 ---
+import ModIcon from './ModIcon.astro';
+
 interface Props {
   name: string;
   modId: string;
   category: string;
   href: string;
+  slug: string;
+  logoSrc?: string | null;
   tags?: string[];
 }
 
-const { name, modId, category, href, tags = [] } = Astro.props;
+const { name, modId, category, href, slug, logoSrc = null, tags = [] } = Astro.props;
 ---
 
 <a href={href} class="wiki-card block no-underline">
-  <div class="mb-2 flex items-start justify-between gap-2">
-    <h3 class="font-semibold text-white">{name}</h3>
-    <span class="wiki-badge shrink-0 capitalize">{category}</span>
+  <div class="mb-2 flex items-start gap-3">
+    <ModIcon slug={slug} name={name} category={category} size="md" logoSrc={logoSrc} />
+    <div class="min-w-0 flex-1">
+      <div class="flex items-start justify-between gap-2">
+        <h3 class="font-semibold text-white">{name}</h3>
+        <span class="wiki-badge shrink-0 capitalize">{category}</span>
+      </div>
+    </div>
   </div>
   <p class="mb-2 font-mono text-xs text-slate-500">{modId}</p>
   {

@@ -6,6 +6,7 @@ on:
     paths:
       - 'wiki/**'
       - 'scripts/wiki_scaffold.py'
+      - 'scripts/wiki_extract_logos.py'
       - 'modlist.txt'
       - '.github/workflows/wiki-deploy.yml'
   workflow_dispatch:
