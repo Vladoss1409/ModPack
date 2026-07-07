@@ -76,4 +76,14 @@
   .wiki-prose a {
     @apply text-wiki-accent underline;
   }
+
+  .wiki-icon {
+    @apply inline-block h-[1.125rem] w-[1.125rem] align-[-0.2em] mx-0.5;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+  }
+
+  .wiki-prose table .wiki-icon {
+    @apply h-5 w-5 align-middle;
+  }
 }

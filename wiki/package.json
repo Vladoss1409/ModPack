@@ -7,6 +7,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "extract-logos": "python ../scripts/wiki_extract_logos.py",
+    "extract-icons": "python ../scripts/wiki_extract_icons.py",
     "preview": "astro preview",
     "scaffold": "python ../scripts/wiki_scaffold.py"
   },
