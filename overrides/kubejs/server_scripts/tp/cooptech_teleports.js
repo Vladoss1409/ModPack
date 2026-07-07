@@ -11,6 +11,7 @@
 //   дом   -> player.persistentData ключ 'cooptech_home' (JSON-строка)
 //   варпы -> overworld persistentData ключ 'cooptech_warps' (JSON-объект {имя: запись})
 
+;(function () {
 var Component = Java.loadClass('net.minecraft.network.chat.Component')
 var Style = Java.loadClass('net.minecraft.network.chat.Style')
 var ClickEvent = Java.loadClass('net.minecraft.network.chat.ClickEvent')
@@ -20,7 +21,6 @@ var HoverAction = Java.loadClass('net.minecraft.network.chat.HoverEvent$Action')
 var ResourceLocation = Java.loadClass('net.minecraft.resources.ResourceLocation')
 var ResourceKey = Java.loadClass('net.minecraft.resources.ResourceKey')
 var Registries = Java.loadClass('net.minecraft.core.registries.Registries')
-var JavaString = Java.loadClass('java.lang.String')
 
 var WARPS_KEY = 'cooptech_warps'
 var HOME_KEY = 'cooptech_home'
@@ -249,6 +249,7 @@ function listWarps(ctx) {
 
 ServerEvents.commandRegistry(function (event) {
   var Commands = event.commands
+  var Arguments = event.arguments
 
   // /home
   event.register(
@@ -264,8 +265,8 @@ ServerEvents.commandRegistry(function (event) {
       })
       .then(Commands.literal('list').executes(function (ctx) { return listWarps(ctx) }))
       .then(
-        Commands.argument('name', Commands.STRING()).executes(function (ctx) {
-          return goWarp(ctx, ctx.getArgument('name', JavaString))
+        Commands.argument('name', Arguments.STRING.create(event)).executes(function (ctx) {
+          return goWarp(ctx, Arguments.STRING.getResult(ctx, 'name'))
         })
       )
   )
@@ -276,8 +277,8 @@ ServerEvents.commandRegistry(function (event) {
       .then(Commands.literal('home').executes(function (ctx) { return setHome(ctx) }))
       .then(
         Commands.literal('warp').then(
-          Commands.argument('name', Commands.STRING()).executes(function (ctx) {
-            return setWarp(ctx, ctx.getArgument('name', JavaString))
+          Commands.argument('name', Arguments.STRING.create(event)).executes(function (ctx) {
+            return setWarp(ctx, Arguments.STRING.getResult(ctx, 'name'))
           })
         )
       )
@@ -288,8 +289,8 @@ ServerEvents.commandRegistry(function (event) {
     Commands.literal('delete')
       .then(
         Commands.literal('warp').then(
-          Commands.argument('name', Commands.STRING()).executes(function (ctx) {
-            return deleteWarp(ctx, ctx.getArgument('name', JavaString))
+          Commands.argument('name', Arguments.STRING.create(event)).executes(function (ctx) {
+            return deleteWarp(ctx, Arguments.STRING.getResult(ctx, 'name'))
           })
         )
       )
@@ -297,3 +298,4 @@ ServerEvents.commandRegistry(function (event) {
 })
 
 console.info('[CoopTech] Teleports loaded: /set home, /home, /set warp <name>, /warp <name>, /delete warp <name>, /warp list')
+})()

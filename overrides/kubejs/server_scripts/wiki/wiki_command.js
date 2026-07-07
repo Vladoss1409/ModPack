@@ -41,6 +41,7 @@ function sendWikiLink(source, query) {
 
 ServerEvents.commandRegistry(function (event) {
   var Commands = event.commands
+  var Arguments = event.arguments
   event.register(
     Commands.literal('wiki')
       .executes(function (ctx) {
@@ -48,8 +49,8 @@ ServerEvents.commandRegistry(function (event) {
         return 1
       })
       .then(
-        Commands.argument('query', Commands.STRING()).executes(function (ctx) {
-          var q = ctx.getArgument('query', Java.loadClass('java.lang.String'))
+        Commands.argument('query', Arguments.STRING.create(event)).executes(function (ctx) {
+          var q = Arguments.STRING.getResult(ctx, 'query')
           sendWikiLink(ctx.source, q)
           return 1
         })
