@@ -1,0 +1,25 @@
+{
+  "id": "draconic_fusion_craft",
+  "size": [5, 3, 5],
+  "palette": {
+    "C": { "name": "Crafting Injector (контроллер)", "color": "#9b59b6", "controller": true },
+    "P": { "name": "Draconium Block", "color": "#8e44ad" },
+    "A": { "name": "Awakened Draconium Block", "color": "#e67e22" },
+    "I": { "name": "Energy I/O", "color": "#3498db" },
+    ".": { "name": "пусто", "empty": true }
+  },
+  "layers": [
+    ["PPPPP", "P...P", "P...P", "P...P", "PPPPP"],
+    ["P...P", ".III.", ".I.I.", ".III.", "P...P"],
+    ["PPPPP", "P.A.P", "P.C.P", "P.A.P", "PPPPP"]
+  ],
+  "placement": [
+    "Центральный Crafting Injector — точка сборки",
+    "Energy I/O подключаются к внешнему источнику RF",
+    "Верхний слой — Draconium, нижний — Awakened Draconium по углам"
+  ],
+  "notes": [
+    { "pos": [2, 2, 2], "text": "Crafting Injector — сюда кладутся компоненты для крафта. Требует огромную энергию." },
+    { "pos": [2, 1, 1], "text": "Energy I/O — вход/выход энергии. Подключите к энергосети." }
+  ]
+}

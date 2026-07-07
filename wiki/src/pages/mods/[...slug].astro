@@ -1,0 +1,52 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const mods = await getCollection('mods');
+  return mods.map((mod) => ({
+    params: { slug: mod.slug },
+    props: { mod },
+  }));
+}
+
+const { mod } = Astro.props;
+const { Content } = await render(mod);
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout title={mod.data.name} description={`Справочник: ${mod.data.name}`}>
+  <article>
+    <header class="mb-8">
+      <p class="mb-1 font-mono text-sm text-slate-500">{mod.data.modId} · v{mod.data.version}</p>
+      <h1 class="mb-3 text-3xl font-bold text-white">{mod.data.name}</h1>
+      <div class="flex flex-wrap gap-2">
+        <span class="wiki-badge capitalize">{mod.data.category}</span>
+        {mod.data.tags.map((tag) => <span class="wiki-badge">{tag}</span>)}
+      </div>
+      {
+        mod.data.links && (
+          <div class="mt-4 flex flex-wrap gap-3 text-sm">
+            {mod.data.links.curseforge && (
+              <a href={mod.data.links.curseforge} target="_blank" rel="noopener">CurseForge</a>
+            )}
+            {mod.data.links.modrinth && (
+              <a href={mod.data.links.modrinth} target="_blank" rel="noopener">Modrinth</a>
+            )}
+            {mod.data.links.wiki && (
+              <a href={mod.data.links.wiki} target="_blank" rel="noopener">Официальная вики</a>
+            )}
+          </div>
+        )
+      }
+    </header>
+
+    <div class="wiki-prose">
+      <Content />
+    </div>
+
+    <footer class="mt-10 border-t border-wiki-border pt-6">
+      <a href={base} class="text-sm">← Все моды</a>
+    </footer>
+  </article>
+</BaseLayout>

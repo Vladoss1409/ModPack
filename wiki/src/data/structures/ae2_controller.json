@@ -1,0 +1,25 @@
+{
+  "id": "ae2_controller",
+  "size": [3, 3, 3],
+  "palette": {
+    "C": { "name": "ME Controller (контроллер)", "color": "#00bcd4", "controller": true },
+    "D": { "name": "ME Drive", "color": "#0097a7" },
+    "A": { "name": "ME Cable", "color": "#4dd0e1" },
+    "T": { "name": "ME Terminal", "color": "#26c6da" },
+    ".": { "name": "пусто", "empty": true }
+  },
+  "layers": [
+    [".A.", "A.A", ".A."],
+    ["ADA", "DCD", "ADA"],
+    [".T.", "A.A", ".A."]
+  ],
+  "placement": [
+    "Контроллер — не более 7 блоков в одной сети (без P2P)",
+    "Кабели соединяют все устройства",
+    "Drive и Terminal должны быть в пределах 8 блоков от контроллера"
+  ],
+  "notes": [
+    { "pos": [1, 1, 1], "text": "ME Controller — сердце сети. Без него сеть не заработает." },
+    { "pos": [1, 0, 1], "text": "ME Terminal — точка доступа к хранилищу." }
+  ]
+}

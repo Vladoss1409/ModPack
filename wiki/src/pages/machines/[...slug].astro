@@ -1,0 +1,55 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import MultiblockViewer from '../../components/MultiblockViewer';
+import { getCollection, render } from 'astro:content';
+import type { MultiblockStructure } from '../../lib/structures';
+
+export async function getStaticPaths() {
+  const machines = await getCollection('machines');
+  return machines.map((machine) => ({
+    params: { slug: machine.slug },
+    props: { machine },
+  }));
+}
+
+const { machine } = Astro.props;
+const { Content } = await render(machine);
+const base = import.meta.env.BASE_URL;
+
+const structureModule = await import(`../../data/structures/${machine.data.structure}.json`);
+const structure = structureModule.default as MultiblockStructure;
+---
+
+<BaseLayout title={machine.data.name} description={`Механизм: ${machine.data.name}`}>
+  <article>
+    <header class="mb-6">
+      <p class="mb-1 font-mono text-sm text-slate-500">{machine.data.modId}</p>
+      <h1 class="mb-3 text-3xl font-bold text-white">{machine.data.name}</h1>
+      <div class="flex flex-wrap gap-2">
+        <span class="wiki-badge capitalize">{machine.data.category}</span>
+        {machine.data.tags.map((tag) => <span class="wiki-badge">{tag}</span>)}
+      </div>
+    </header>
+
+    <section class="mb-8">
+      <h2 class="mb-4 text-xl font-semibold text-wiki-glow">3D-схема</h2>
+      <MultiblockViewer client:load structure={structure} placement={machine.data.placement} />
+    </section>
+
+    <div class="wiki-prose">
+      <Content />
+    </div>
+
+    {
+      machine.data.modSlug && (
+        <p class="mt-6">
+          <a href={`${base}mods/${machine.data.modSlug}/`}>← Справочник мода</a>
+        </p>
+      )
+    }
+
+    <footer class="mt-10 border-t border-wiki-border pt-6">
+      <a href={`${base}machines/`} class="text-sm">← Все механизмы</a>
+    </footer>
+  </article>
+</BaseLayout>
