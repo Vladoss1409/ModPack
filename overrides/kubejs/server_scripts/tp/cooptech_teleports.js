@@ -66,7 +66,6 @@ function playerOf(ctx) {
   try {
     return ctx.source.getPlayerOrException()
   } catch (e) {
-    ctx.source.sendFailure(Component.literal('§cЭту команду может выполнять только игрок.'))
     return null
   }
 }
@@ -234,6 +233,8 @@ function deleteWarp(ctx, name) {
 }
 
 function listWarps(ctx) {
+  var player = playerOf(ctx)
+  if (!player) return 0
   var server = ctx.source.getServer()
   var warps = getWarps(server)
   var names = []
@@ -242,15 +243,13 @@ function listWarps(ctx) {
   }
   names.sort()
   if (names.length === 0) {
-    ctx.source.sendSystemMessage(Component.literal('§6[TP]§7 Варпов пока нет. Создайте: §e/warp set <имя>'))
+    player.tell('§6[TP]§7 Варпов пока нет. Создайте: §e/warp set <имя>')
     return 1
   }
-  ctx.source.sendSystemMessage(Component.literal('§6[TP]§f Варпы сервера (§e' + names.length + '§f):'))
+  player.tell('§6[TP]§f Варпы сервера (§e' + names.length + '§f):')
   for (var i = 0; i < names.length; i++) {
     var rec = warps[names[i]]
-    ctx.source.sendSystemMessage(Component.literal(
-      '§7 • §b' + names[i] + '§7 — ' + rec.ownerName + ' §8(/warp ' + names[i] + ')'
-    ))
+    player.tell('§7 • §b' + names[i] + '§7 — ' + rec.ownerName + ' §8(/warp ' + names[i] + ')')
   }
   return 1
 }
@@ -270,7 +269,9 @@ ServerEvents.commandRegistry(function (event) {
   event.register(
     Commands.literal('warp')
       .executes(function (ctx) {
-        ctx.source.sendSystemMessage(Component.literal('§6[TP]§7 Использование: §e/warp <имя>§7, §e/warp list§7, §e/warp set <имя>§7 или §e/warp delete <имя>'))
+        var player = playerOf(ctx)
+        if (!player) return 0
+        player.tell('§6[TP]§7 Использование: §e/warp <имя>§7, §e/warp list§7, §e/warp set <имя>§7 или §e/warp delete <имя>')
         return 1
       })
       .then(Commands.literal('list').executes(function (ctx) { return listWarps(ctx) }))
